@@ -1,18 +1,18 @@
-Getting Ready to Code
+## Introduction to Linux
 
-Before you can even start writing your first program, you'll have to complete a number of small tasks. The first one is logging in.
+The computers in this lab use the Linux operating system. Linux offers a variety of free easy-to-use tools for software development that will help us along our way in constructing and programming our robots.
 
-Logging In
-
-The computers in this lab use the Linux operating system. So...
-
-Welcome to Linux!
+### Logging In
 
 Enter the user name given to you, and hit Enter.
-On the next screen, first click on the gear and select xfce from the menu.
-Insert the password assigned to you, hit Enter, and you should be taken to a desktop screen.
-If a dialog box appears asking you about what configuration to use, select the option with Default.
-Linux Commands
+
+On the next screen, first click on the gear and select "ubuntu" from the menu.
+
+Type in the password assigned to you, hit Enter, and you should be taken to a desktop screen.
+
+A box will pop up telling you about keyboard shortcuts. Click the X and move on to the interesting stuff.
+
+### Basic Linux Commands
 
 An important part of using Linux is becoming familiar with the command line. The following exercise will get you started with a few commands you'll find useful in the coming week.
 
