@@ -1,10 +1,40 @@
-## Welcome to GitHub Pages
+## UTCS Robotics Camp
 
-You can use the [editor on GitHub](https://github.com/UTCS-Robotics-Camp/tutorials-and-exercises/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+### Welcome!
+This site serves as your home base for reference material relating to the UTCS Robotics Camp and for the camp's tutorials and exercises.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In a nutshell, this week's exercises will be broken down into the following:
+- Building the Bot'n'Roll One
+  - Soldering tutorial
+  - Electonics assembly
+  - Mechanical assembly
+  - Testing of the assembled robot
+- First steps with the Bot'n'Roll One
+  - Log into Linux machines
+  - Start Arduino IDE
+  - Load a short program onto your robot
+  - Robot first demo!
+- Programming introduction
+  - Copying source code into your Linux home directory
+  - Compiling "Hello World!"
+  - Programming exercises
+- Controlling your robot
+  - Programming tutorials & exercises on the robot
+- Robotics challenges!
+  - Object avoidance and basic navigation control
+  - Line following
+  - Solve a maze
 
-### Markdown
+Project Illuminate will use the Arduino Uno to control 25 color-changing LED lights. These lights are individually addressable, which means that we can control each one separately.
+
+In this project, you will learn to use the Arduino board to create patterns in the lights. At the end of the week, we will have a project showcase where you can show off your creation (i.e. the patterns your program can make in the lights) and compete for prizes.
+The Arduino Uno programming environment uses the Arduino programming language, which is based on C/C++, so first everyone must complete the C++ tutorial. This tutorial covers only the aspects of C++ you'll need for this project. Additionally, we'll using the Linux Operating System, which is new to many of you, and so the C++ tutorial includes information about how to get started in this environment.
+
+Most of the tutorial and all programming for the project must be completed using Pair (or Group) Programming. Your log must be submitted with the rest of your materials at the end of camp.
+
+Once you are familiar with the aspects of C++ used in this project, you will begin working with your lights and Arduino board.
+
+
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
