@@ -47,10 +47,34 @@ entries:
       url: /programming_introduction.html
       output: web, pdf
 
-    - title: Start Arduino IDE
-      url: /start_arduino.html
+    - title: "First Program: Hello World"
+      url: /first_program.html
       output: web, pdf
 
-    - title: Uploading a Program
-      url: /uploading_a_program.html
+    - title: Simple Math and User Input
+      url: /simple_math_user_input.html
+      output: web, pdf
+
+    - title: Functions
+      url: /functions.html
+      output: web, pdf
+
+    - title: Objects
+      url: /objects.html
+      output: web, pdf
+
+    - title: Decisions
+      url: /decisions.html
+      output: web, pdf
+
+    - title: Repetition
+      url: /repetition.html
+      output: web, pdf
+
+    - title: Arrays
+      url: /arrays.html
+      output: web, pdf
+
+    - title: Compiling and Running via the Command Line
+      url: /compiling_running.html
       output: web, pdf
