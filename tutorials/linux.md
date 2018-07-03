@@ -1,3 +1,13 @@
+---
+title: "Using Linux"
+tags: [linux]
+keywords: linux
+last_updated: July 2, 2018
+summary: ""
+sidebar: tutorials
+permalink: using_linux.html
+---
+
 ## Introduction to Linux
 
 The computers in this lab use the Linux operating system. Linux offers a variety of free easy-to-use tools for software development that will help us along our way in constructing and programming our robots.
@@ -23,13 +33,13 @@ When you're using a terminal to navigate the filesystem, you may want to go back
 pwd will tell you what directory you are currently in. Since you started this little exercise in your home directory, typing pwd at the command line and hitting Enter will tell you that you ended in your home directory, though not with a simple tilde; pwd gives you the full, absolute path. Likely, your terminal has already been configured to display this information at the start of its command prompt, but if not, pwd is a good way to keep from getting lost. Also at any point, you may enter the command cd to return to the home directory.
 The above is essentially a command-based version of what you're used to doing by double clicking on folders. The command line is capable of a great deal more---in fact, you will be using it to compile your tutorial program! But more on that later. First, you'll need to write some code.
 
-Text Editor
+### Text Editor
 
 In this lab, we'll be using a text editor called sublime to write our tutorial program in C++. We'll use a different environment for the project. To open sublime, open up a terminal window, type in sublime_text & and hit Enter. The & tells the computer to allow you to continue to use that terminal while the editor is running.
 
 Using sublime and the command line, you will be able to write and execute your tutorial programs.
 
-Logging Out
+### Logging Out
 
 Before you leave the lab, make sure you save all your work and log out of the computer, so that it's free for the next person to use it. Open up the account menu in the top right-hand corner of your screen, and click to log out.
 

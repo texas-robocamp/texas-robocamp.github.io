@@ -1,0 +1,56 @@
+entries:
+- title: sidebar
+  product: Tutorials
+  folders:
+  - title: Building the Bot'n'Roll One
+    output: web, pdf
+    folderitems:
+
+    - title: Soldering
+      url: /soldering.html
+      output: web, pdf
+      type: homepage
+
+    - title: Electronics assembly
+      url: /electronics_assembly.html
+      output: web, pdf
+
+    - title: Mechanical assembly
+      url: /electronics_assembly.html
+      output: web, pdf
+
+    - title: Testing
+      url: /testing.html
+      output: web, pdf
+
+  - title: Uploading Code
+    output: web, pdf
+    folderitems:
+
+    - title: Log into Linux machines
+      url: /using_linux.html
+      output: web, pdf
+
+    - title: Start Arduino IDE
+      url: /start_arduino.html
+      output: web, pdf
+
+    - title: Uploading a Program
+      url: /uploading_a_program.html
+      output: web, pdf
+
+  - title: Programming Introduction
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction
+      url: /programming_introduction.html
+      output: web, pdf
+
+    - title: Start Arduino IDE
+      url: /start_arduino.html
+      output: web, pdf
+
+    - title: Uploading a Program
+      url: /uploading_a_program.html
+      output: web, pdf
