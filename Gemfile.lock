@@ -232,7 +232,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  ffi (= 1.9.18)
   github-pages
 
 BUNDLED WITH
-   1.16.1
+   1.16.2
