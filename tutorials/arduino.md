@@ -1,10 +1,10 @@
 ---
-title: "Using Linux"
-tags: [linux]
-keywords: linux
-last_updated: July 2, 2018
+title: "Using the Arduino IDE"
+tags: [arduino]
+keywords: arduino
+last_updated: July 4, 2018
 sidebar: tutorials
-permalink: using_linux.html
+permalink: arduino.html
 ---
 
 ## Finding your Machine
