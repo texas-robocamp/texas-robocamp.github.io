@@ -2,6 +2,34 @@ entries:
 - title: sidebar
   product: Tutorials
   folders:
+  - title: Welcome!
+    output: web, pdf
+    folderitems:
+
+    - title: Landing Page
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Using Linux
+      url: /using_linux.html
+      output: web, pdf
+      type: homepage
+
+    - title: Welcome to Camp!
+      url: /welcome.html
+      output: web, pdf
+      type: homepage
+
+  - title: Getting Started
+    output: web, pdf
+    folderitems:
+
+    - title: Using the Arduino IDE
+      url: /arduino.html
+      output: web, pdf
+      type: homepage
+
   - title: Building the Bot'n'Roll One
     output: web, pdf
     folderitems:
@@ -26,10 +54,6 @@ entries:
   - title: Uploading Code
     output: web, pdf
     folderitems:
-
-    - title: Log into Linux machines
-      url: /using_linux.html
-      output: web, pdf
 
     - title: Start Arduino IDE
       url: /start_arduino.html

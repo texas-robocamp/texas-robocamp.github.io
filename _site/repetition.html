@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="">
+<meta name="keywords" content="c++,  c++">
+<title>Repetition | Texas RoboCamp</title>
+<link rel="stylesheet" href="css/syntax.css">
+
+<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">-->
+<link rel="stylesheet" href="css/modern-business.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="css/customstyles.css">
+<link rel="stylesheet" href="css/boxshadowproperties.css">
+<!-- most color styles are extracted out to here -->
+<link rel="stylesheet" href="css/theme-blue.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<!-- Anchor.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/2.0.0/anchor.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+
+<link rel="shortcut icon" href="images/favicon.ico">
+
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<link rel="alternate" type="application/rss+xml" title="texas-robocamp.github.io" href="http://localhost:4000/feed.xml">
+
+    <script>
+        $(document).ready(function() {
+            // Initialize navgoco with default options
+            $("#mysidebar").navgoco({
+                caretHtml: '',
+                accordion: true,
+                openClass: 'active', // open
+                save: false, // leave false or nav highlighting doesn't work right
+                cookie: {
+                    name: 'navgoco',
+                    expires: false,
+                    path: '/'
+                },
+                slide: {
+                    duration: 400,
+                    easing: 'swing'
+                }
+            });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+        });
+
+    </script>
+    <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#tg-sb-link").click(function() {
+                $("#tg-sb-sidebar").toggle();
+                $("#tg-sb-content").toggleClass('col-md-9');
+                $("#tg-sb-content").toggleClass('col-md-12');
+                $("#tg-sb-icon").toggleClass('fa-toggle-on');
+                $("#tg-sb-icon").toggleClass('fa-toggle-off');
+            });
+        });
+    </script>
+    
+
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-static-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!--Include in class "fa fa-lg fa-home" to render the little house-->
+            <a class="navbar-brand" style="padding:0px 0px" href="index.html">&nbsp;<span class="projectTitle">
+                <img src="images/company_logo.png" height="100%" align="top"/><!--Texas RoboCamp--> </span>
+            </a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- toggle sidebar button 
+                    <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
+                -->
+                <!-- entries without drop-downs appear here -->
+
+
+
+
+                
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+                <!--
+                
+			<li>
+
+
+
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:hart@cs.utexas.edu?subject=Texas RoboCamp feedback&body=I have some feedback about the Repetition page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+
+</li>
+
+                -->
+		
+                <!--comment out this block if you want to hide search-->
+                <li>
+                    <!--start search-->
+                    <div id="search-demo-container">
+                        <input type="text" id="search-input" placeholder="">
+                        <ul id="results-container"></ul>
+                    </div>
+                    <script src="js/jekyll-search.js" type="text/javascript"></script>
+                    <script type="text/javascript">
+                            SimpleJekyllSearch.init({
+                                searchInput: document.getElementById('search-input'),
+                                resultsContainer: document.getElementById('results-container'),
+                                dataSource: 'search.json',
+                                searchResultTemplate: '<li><a href="{url}" title="Repetition">{title}</a></li>',
+                    noResultsText: '',
+                            limit: 10,
+                            fuzzy: true,
+                    })
+                    </script>
+                    <!--end search-->
+                </li>
+            </ul>
+        </div>
+        </div>
+        <!-- /.container -->
+</nav>
+
+<!-- Page Content -->
+<div class="container">
+  <div id="main">
+    <!-- Content Row -->
+    <div class="row">
+        
+        
+            <!-- Sidebar Column -->
+            <div class="col-md-3" id="tg-sb-sidebar">
+                
+
+<ul id="mysidebar" class="nav">
+  <li class="sidebarTitle">Tutorials </li>
+  
+  
+  
+  <li>
+      <a href="#">Welcome!</a>
+      <ul>
+          
+          
+          
+          <li><a href="index.html">Landing Page</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="using_linux.html">Using Linux</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="welcome.html">Welcome to Camp!</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Getting Started</a>
+      <ul>
+          
+          
+          
+          <li><a href="arduino.html">Using the Arduino IDE</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Building the Bot'n'Roll One</a>
+      <ul>
+          
+          
+          
+          <li><a href="soldering.html">Soldering</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="electronics_assembly.html">Electronics assembly</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="electronics_assembly.html">Mechanical assembly</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="testing.html">Testing</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Uploading Code</a>
+      <ul>
+          
+          
+          
+          <li><a href="start_arduino.html">Start Arduino IDE</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="uploading_a_program.html">Uploading a Program</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+  
+  <li>
+      <a href="#">Programming Introduction</a>
+      <ul>
+          
+          
+          
+          <li><a href="programming_introduction.html">Introduction</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="first_program.html">First Program: Hello World</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="simple_math_user_input.html">Simple Math and User Input</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="functions.html">Functions</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="objects.html">Objects</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="decisions.html">Decisions</a></li>
+          
+          
+          
+          
+          
+          
+          <li class="active"><a href="repetition.html">Repetition</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="arrays.html">Arrays</a></li>
+          
+          
+          
+          
+          
+          
+          <li><a href="compiling_running.html">Compiling and Running via the Command Line</a></li>
+          
+          
+          
+          
+      </ul>
+   </li>
+     
+      
+      
+      <!-- if you aren't using the accordion, uncomment this block:
+         <p class="external">
+             <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+         </p>
+         -->
+</ul>
+
+<!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above. Otherwise, if placed inside customscripts.js, the script runs before the sidebar code runs and the class never gets inserted.-->
+<script>$("li.active").parents('li').toggleClass("active");</script>
+
+            </div>
+            
+        
+
+        <!-- Content Column -->
+        <div class="col-md-9" id="tg-sb-content">
+            <div class="post-header">
+   <!--<h1 class="post-title-main">Repetition</h1>-->
+</div>
+
+
+
+<div class="post-content">
+
+   
+    <div class="summary"></div>
+   
+
+    
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+
+
+    
+
+    <!--<a target="_blank" href="https://github.com/texas-robocamp/texas-robocamp.github.io/blob/master/pages//repetition.md" class="btn btn-default githubEditButton" role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>-->
+
+    
+
+
+    
+
+  <p>Sometimes we want our code to execute multiple times. It would be really unfortunate if we had to keep typing the same exact lines of code again and again—what if we didn’t know exactly how many times we wanted the code to repeat? Fortunately, we have loops to help us out. A loop is a section of code that the computer runs over and over again until it reaches some stopping criteria. There are two kinds of loops that we will work with: for loops and while loops.</p>
+
+<p>A for loop repeats code for a specific number of times. If you know exactly how many times you want some lines of code to repeat, you’ll want to use this type of loop. For example, let’s say we want to print “Hello World” five times. We could write the following for loop:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Hello World</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+   <span class="c1">//more lines of code can go here
+</span><span class="p">}</span>
+</code></pre></div></div>
+<p>This will print:</p>
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hello World
+Hello World
+Hello World
+Hello World
+Hello World
+</code></pre></div></div>
+<p>Let’s dissect this code. We begin with the word “for”, which tells the computer that we have a for loop. Then, inside the parentheses, we define how many times we want the loop to run, or we “initialize” the loop. The first phrase, int i=0;, defines the loop variable, which is the variable whose value dictates how many times the loop executes. We tell the computer that the loop variable will be an integer named i, and that it will begin by being equal to 0. The second phrase, i &lt; 5;, is a logical expression that works just like those we saw in the last section—when used in loops, the computer will keep executing the loop as long as the expression is true. In this example, the computer will keep looping as long as i is less than 5; when i is greater than or equal to five, it will stop. The third phrase, i++, tells the computer how to modify the loop variable. The shorthand i++ means that i will increase by 1 every time the loop runs. Then, inside curly braces, we put all the code that we want to execute each time the loop runs.</p>
+
+<p>Now we will look at another example. Say we want to count from 0 to 9, and we want to print out the number each time. We can easily use a loop to do this:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">){</span>
+   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"The current number is "</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">".</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>This will print:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>The current number is 0.
+The current number is 1.
+The current number is 2.
+The current number is 3.
+The current number is 4.
+The current number is 5.
+The current number is 6.
+The current number is 7.
+The current number is 8.
+The current number is 9.
+</code></pre></div></div>
+
+<p>Notice how 10 doesn’t print, because we told the loop to stop as soon when i was no longer less than 10. The first time the loop executes, i equals 0, so the loop prints out the message “The current number is 0.” and then adds one to i, making i 1. Then the loop executes again, and we print “The current number is 1.” Then i is increased by 1 again, making it 2, etc.</p>
+
+<p>We can also modify the loop so that the loop variable changes in different ways—just by changing the initialization and the modification pieces. Say we want to count backwards from 4 to 1. We can create the loop like this:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">&gt;=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">--</span><span class="p">){</span>
+   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"The current number is "</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">".</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>Here, we begin with i set to 4. We loop while i &gt; = 1. We tell the computer to subtract one from i each time the loop runs with i–. This loop prints:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">The</span> <span class="n">current</span> <span class="n">number</span> <span class="n">is</span> <span class="mf">4.</span>
+<span class="n">The</span> <span class="n">current</span> <span class="n">number</span> <span class="n">is</span> <span class="mf">3.</span>
+<span class="n">The</span> <span class="n">current</span> <span class="n">number</span> <span class="n">is</span> <span class="mf">2.</span>
+<span class="n">The</span> <span class="n">current</span> <span class="n">number</span> <span class="n">is</span> <span class="mf">1.</span>
+</code></pre></div></div>
+<p>We can also count by numbers other than one and negative one. Let’s say we only want to print out odd numbers. We could change the loop to count by 2s from 1 to 7 in the following way:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">i</span><span class="o">&lt;</span><span class="mi">9</span><span class="p">;</span> <span class="n">i</span><span class="o">+=</span><span class="mi">2</span><span class="p">){</span>
+   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"The current number is "</span> <span class="o">&lt;&lt;</span> <span class="n">i</span> <span class="o">&lt;&lt;</span> <span class="s">".</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+<p>With this loop initialization, we get the following output:</p>
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">The</span> <span class="n">current</span> <span class="n">number</span> <span class="n">is</span> <span class="mf">1.</span>
+<span class="n">The</span> <span class="n">current</span> <span class="n">number</span> <span class="n">is</span> <span class="mf">3.</span>
+<span class="n">The</span> <span class="n">current</span> <span class="n">number</span> <span class="n">is</span> <span class="mf">5.</span>
+<span class="n">The</span> <span class="n">current</span> <span class="n">number</span> <span class="n">is</span> <span class="mf">7.</span>
+</code></pre></div></div>
+<p>The loop begins with i=1 and increases by 2 every time. Notice that it stops before reaching 9. To make more complicated loops, all you have to do is think carefully about the loop counter. Where do you want it to start? Where should it stop? How do you want to count?</p>
+<h3 id="task-71">Task 7.1:</h3>
+<p>Write a loop that prints every third number starting at 15 and going down to 6 (so 6 is included in the loop).</p>
+
+<p>Woot, woot! Making progress. :) Don’t forget to turn your cups to red so that a member of the camp staff can check your code, and don’t forget to switch drivers!
+You can also nest loops inside one another. Let’s say we want to do a simple summation program. Imagine we want to sum each number from 1 to 4 with each number from 1 to 4. So, we essentially want to do this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>num1	+	num2	=	Sum
+1	+	1	=	2
+1	+	2	=	3
+1	+	3	=	4
+1	+	4	=	5
+2	+	1	=	3
+2	+	2	=	4
+2	+	3	=	5
+2	+	4	=	6
+</code></pre></div></div>
+
+<p>At the end, we will have 16 sums (4x4).</p>
+
+<p>In code, we can find these sums using two for loops, one nested inside the other. Let’s think of num1 as the value of one loop and num2 as the value of the other loop. We know from the examples above how to generate a loop that generates the numbers from 1 to 4, so we will do this for num1:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">num1</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">num1</span><span class="o">++</span><span class="p">){</span>
+   <span class="c1">//put code here
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>We know that for each value of num1, we want to sum it with all values of num2, which are the numbers 1 to 4. So we can use another for loop to generate those numbers. Since we want to generate all the values of num2 for each value of num1, let’s put the num2 for loop inside of the num1 for loop, like this:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num1</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">num1</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">num1</span><span class="o">++</span><span class="p">){</span>  <span class="c1">// num1 for-loop
+</span>   <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">num2</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span> <span class="n">num2</span><span class="o">&lt;</span><span class="mi">5</span><span class="p">;</span> <span class="n">num2</span><span class="o">++</span><span class="p">){</span>  <span class="c1">//num2 for-loop
+</span>      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">num1</span> <span class="o">&lt;&lt;</span> <span class="s">" + "</span> <span class="o">&lt;&lt;</span> <span class="n">num2</span> <span class="o">&lt;&lt;</span> <span class="s">" = "</span> <span class="o">&lt;&lt;</span> <span class="n">num1</span><span class="o">+</span><span class="n">num2</span> <span class="o">&lt;&lt;</span> <span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>  <span class="c1">//prints out num1+num2
+</span>   <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>And this gives us the output:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 + 1 = 2
+1 + 2 = 3
+1 + 3 = 4
+1 + 4 = 5
+2 + 1 = 3
+2 + 2 = 4
+2 + 3 = 5
+2 + 4 = 6
+3 + 1 = 4
+3 + 2 = 5
+3 + 3 = 6
+3 + 4 = 7
+4 + 1 = 5
+4 + 2 = 6
+4 + 3 = 7
+4 + 4 = 8
+</code></pre></div></div>
+
+<p>Notice that the first number that prints out is the num1 variable, and the second number is the num2 variable, and the final number is the sum of num1 and num2. Let’s quickly talk through the loop. We begin with num1 being equal to 1 and num2 being equal to 1, and num1+num2 equaling 2. Then the num2 loop advances by 1, because the inner loop has to finish before the outer loop can advance. So num1 is 1 and num2 is 2 and their sum is 3. Then num2 advances by 1 again, and num1 is 1 and num2 is 3 and their sum is 3. Finally, num1 is 1 and num2 is 4 and their sum is 5. The next time num2 is incremented it becomes 5, violating the less than 5 condition of the loop, and so the num2 loop finishes. Now the num1 loop advances by 1, so num1 is 2. Now the num2 loop starts all over again from the beginning, and num2 is 1 and num1+num2 is 3, and so forth and so on. Nested loops can be a little tricky, so if they are confusing, ask for help!</p>
+
+<h3 id="task-72">Task 7.2:</h3>
+
+<p>Write a program that multiplies all the odd numbers between 1 and 9 by all the even numbers between 2 and 10. Hint: follow the example above, but don’t forget to change your loop initializations.</p>
+
+<p>Good work! Don’t forget to turn your cups to red so that a member of the camp staff can check your code, and don’t forget to switch drivers!</p>
+
+<p>We typically use while loops when we don’t know how many times the loop should execute. For example, let’s say you are trying to get input from a user that is a number between 1 and 10. while the user keeps typing in numbers that are too large or too small, you can ask her for new input until she enters a number between 1 and 10. Here’s what this while loop would look like:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">main</span><span class="p">(){</span>
+   <span class="kt">int</span> <span class="n">userInput</span><span class="p">;</span>
+
+   <span class="c1">//get input from user
+</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Enter a number between 1 and 10: "</span><span class="p">;</span>
+   <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">userInput</span><span class="p">;</span>
+
+   <span class="c1">//as long as userInput is less than 1 or greater than 10
+</span>   <span class="k">while</span><span class="p">((</span><span class="n">userInput</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">userInput</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)){</span>
+      <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Read directions!  Enter a number between 1 and 10: "</span><span class="p">;</span>
+      <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">userInput</span><span class="p">;</span>  <span class="c1">//get new input from the user
+</span>   <span class="p">}</span>
+   <span class="c1">//when we reach this line, we know the user entered a number between 1 and 10,
+</span>   <span class="c1">//or else we would still be stuck in the while loop.
+</span>   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"You entered "</span> <span class="o">&lt;&lt;</span> <span class="n">userInput</span> <span class="o">&lt;&lt;</span> <span class="s">".</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>You’ll notice that the logical expressions appear again—this time in the parentheses after the while. Once again, the loop will continue as long as this expression is true. Let’s walk through what is happening in this program. We first get some input from the user. We begin the while loop by checking the input to see if it is less than 1 or greater than 10. If it is, we yell at the user and ask for new input, and we make sure to save the new input to userInput. (Why is this so important? We’ll see in a bit.) Then the program loops back to the beginning of the while loop and checks to see if userInput is less than 1 or greater than 10. If it still is, we execute the loop again and ask for new input. We continue this as many times as necessary until the user cooperates. As soon as the user enters a number between 1 and 10, we break out of the while loop, because we only execute the while loop if userInput is less than 1 or greater than 10. We then print out the number.</p>
+
+<p>In the above program, we made sure to save the new user input to the same variable as the old user input. This step is important because that’s the variable being evaluated in the logical expression—if we didn’t update it, the while loop would never stop! To illustrate this, let’s change the above while loop to make it incorrect by introducing another variable called newUserInput:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span><span class="p">((</span><span class="n">userInput</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">)</span> <span class="o">||</span> <span class="p">(</span><span class="n">userInput</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)){</span>
+   <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"Read directions!  Enter a number between 1 and 10: "</span><span class="p">;</span>
+   <span class="n">cin</span> <span class="o">&gt;&gt;</span> <span class="n">newUserInput</span><span class="p">;</span>  <span class="c1">//get new input from the user and save it to new variable
+</span><span class="p">}</span>
+</code></pre></div></div>
+
+<p>This loop begins by checking to see if userInput is less than 1 or greater than 10. Let’s say that userInput equals 100, so the loop will run. Inside the loop, the program prints out a nasty message to the user and gets new input from the user, the number 5. This time, however, 5 is saved to a different variable called newUserInput. Then the program checks the loop condition again. Since we never changed the value in userInput, it still equals 100, so the loop will run again even though the user just entered a valid number. In fact, this loop will run forever! This is called an infinite loop. To avoid this, always make sure that you update the loop variable somehow by changing its value so that eventually your loop will stop. (To break out of an infinite loop, type Ctrl-C.)</p>
+
+<h3 id="task-73">Task 7.3:</h3>
+
+<p>Create a program that asks the user to enter a number between 5 and 50. If the user enters invalid input, print out a message to the user asking them to try again and keep getting input from the user until they enter a valid number. Bonus: Can you keep track of the number of attempts a user makes to enter a number, and then print it out when they finally enter a valid number?</p>
+
+<p>Good job! You are almost finished. For your last lesson, you’ll learn how to use arrays.</p>
+
+<p>But first, don’t forget to turn your cups to red so that a member of the camp staff can check your code, and don’t forget to switch drivers!</p>
+
+
+<!--
+    <div class="tags">
+        
+        <b>Tags: </b>
+        
+        
+        
+        
+        
+    </div>
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = ''; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+
+-->
+
+</div>
+
+
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2018 Texas RoboCamp. All rights reserved. <br />
+<span>Page last updated:</span> July 2, 2018<br/> Site last generated: Jul 4, 2018 <br />
+<p><img src="images/company_logo.png" alt="Company logo"/></p>
+                </div>
+            </div>
+</footer>
+
+
+        </div>
+    <!-- /.row -->
+</div>
+<!-- /.container -->
+</div>
+<!-- /#main -->
+    </div>
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+
+<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga');ga('create','','auto');ga('require','displayfeatures');ga('send','pageview');</script>
+
+
+</html>

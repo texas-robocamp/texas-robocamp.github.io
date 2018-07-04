@@ -4,23 +4,10 @@ keywords: homepage
 tags: [getting_started]
 sidebar: tutorials
 permalink: index.html
-summary: This week, you'll build a robot and program it to solve a avoid obstacles, draw, and solve a maze.
 ---
 
-### Welcome!
 This site serves as your home base for reference material relating to the UTCS Robotics Camp and for the camp's tutorials and exercises.
 
-We'll progress through the sections in the sidebar in order.
+If this is your first time visiting this site, proceed to the "Using Linux" tutorial in the navigation bar to the left. (Found under "Welcome!/Using Linux") If you are returning, you should pick up where you left off. Clicking on the "Texas RoboCamp" logo at the top of the page will always bring you back here.
 
-- Programming introduction
-  - Copying source code into your Linux home directory
-  - Compiling "Hello World!"
-  - Programming exercises
-- Controlling your robot
-  - Programming tutorials & exercises on the robot
-- Robotics challenges!
-  - Object avoidance and basic navigation control
-  - Line following
-  - Solve a maze
-
-Most of the tutorial and all programming for the project must be completed using Pair (or Group) Programming. 
+In this camp you'll work in pairs to assemble and program your robots. All of the exercises are designed to be completed as pair programming exercises by assigned group. We will be keeping track to make sure that you each take somewhat equal time "driving." Please help us do so by completing pair programming logs at the end of each exercise!
