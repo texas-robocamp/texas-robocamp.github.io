@@ -3,7 +3,7 @@ title: "Repetition"
 tags: [c++]
 keywords: c++
 last_updated: July 2, 2018
-summary: ""
+summary:
 sidebar: tutorials
 permalink: repetition.html
 ---

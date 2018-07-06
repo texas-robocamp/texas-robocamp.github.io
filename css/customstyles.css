@@ -424,10 +424,6 @@ ul#mysidebar {
 span.projectTitle {
     font-family: Helvetica;
     font-weight: bold;
-    padding: 0px 0px;
-    height: 100%;
-    margin:0;
-    vertical-align: top;
 }
 
 .footer {
