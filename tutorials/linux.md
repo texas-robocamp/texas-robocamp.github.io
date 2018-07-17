@@ -9,7 +9,7 @@ permalink: using_linux.html
 
 ## Finding your Machine
 
-With your partner and your box, go to the row labeled with your team number and names. You and your partner should each choose chairs at machines next two each other along your row.  Seat as ordered on your team chart. So, the person with the name at the top will go to the machine at the far end of the row, the second person will go to the machine next to them, and so forth.
+With your partner and your box, go to the row labeled with your team number and names. You and your partner should each choose chairs at machines next to each other along your row.  Seat as ordered on your team chart. So, the person with the name at the top will go to the machine at the far end of the row, the second person will go to the machine next to them, and so forth.
 
 ## Introduction to Linux
 
@@ -65,7 +65,11 @@ An important part of using Linux is becoming familiar with the command line. Her
 | cd    | Change directory.          | Enters a different directory.                |
 | pwd   | Present working directory. | Tells you what directory you are in.         |
 
-When you first open the terminal you will see a command prompt. You will be in your home directory. If you type pwd, you will see the "path" to your home directory. Here are a few handy directory shortcuts that will allow you to more easily navigate Linux. The path given to you by pwd is called an "absolute path." If you type that anywhere in the system, it will always bring you to the same place. Absolute paths begin with "/". A relative path is any path that does not begin with "/". Relative paths are stated relative to your present working directory. If you type "cd ex01" from your home directory, it will go to the directory "ex01" inside your home directory.
+When you first open the terminal you will see a command prompt. You will be in your home directory. If you type pwd, you will see the "path" to your home directory.
+
+The path given to you by pwd is called an "absolute path." If you type an absolute path anywhere in the system, it will always refer to the same place. Absolute paths begin with "/".
+
+A relative path is any path that does not begin with "/". Relative paths are stated relative to your present working directory. If you type "cd ex01" from your home directory, it will go to the directory "ex01" inside your home directory.
 
 Here are a few shortcuts that you can use when forming paths.
 
@@ -105,15 +109,21 @@ Note that the command line has tab-completion. If you start typing the name of a
 
 ## Text Editor
 
-For the C++ tutorials that we will start with, we will use a text editor called sublime. When we begin programming the robot, it uses an Arduino microcontroller, so we will move to the Arduino IDE at that juncture. 
+For the C++ tutorials that we will start with, we will use a text editor called sublime.
 
 To open sublime you can do one of two things:
 
-* Open up a terminal window, type in sublime_text & and hit Enter. The & tells the computer to allow you to continue to use that terminal while the editor is running.
+* Open up a terminal window, type in "sublime_text &" and hit Enter. The & tells the computer to allow you to continue to use that terminal while the editor is running.
 
 * Open the lens as before, type in sublime_text and hit Enter. You do not need the & in the lens.
 
 Using sublime and the command line, you will be able to write and execute your tutorial programs.
+
+## Arduino IDE
+
+The robot, it uses an Arduino microcontroller, so for times when we program the robot, we will want to use the Arduino IDE (Integrated Development Environment).
+
+Opening arduino is the same as opening Sublime, except that you will type "arduino" in either the terminal or the lens.
 
 ## Logging Out
 

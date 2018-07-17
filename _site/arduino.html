@@ -6,7 +6,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="">
 <meta name="keywords" content="arduino,  arduino">
-<title>Using the Arduino IDE | Texas RoboCamp</title>
+<title>Firing Up the Robot | Texas RoboCamp</title>
 <link rel="stylesheet" href="css/syntax.css">
 
 <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -130,7 +130,7 @@
 
 
 
-  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:hart@cs.utexas.edu?subject=Texas RoboCamp feedback&body=I have some feedback about the Using the Arduino IDE page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
+  <a class="email" title="Submit feedback" href="#" onclick="javascript:window.location='mailto:hart@cs.utexas.edu?subject=Texas RoboCamp feedback&body=I have some feedback about the Firing Up the Robot page: ' + window.location.href;"><i class="fa fa-envelope-o"></i> Feedback</a>
 
 </li>
 
@@ -149,7 +149,7 @@
                                 searchInput: document.getElementById('search-input'),
                                 resultsContainer: document.getElementById('results-container'),
                                 dataSource: 'search.json',
-                                searchResultTemplate: '<li><a href="{url}" title="Using the Arduino IDE">{title}</a></li>',
+                                searchResultTemplate: '<li><a href="{url}" title="Firing Up the Robot">{title}</a></li>',
                     noResultsText: '',
                             limit: 10,
                             fuzzy: true,
@@ -215,7 +215,7 @@
           
           
           
-          <li class="active"><a href="arduino.html">Using the Arduino IDE</a></li>
+          <li class="active"><a href="arduino.html">Firing Up the Robot</a></li>
           
           
           
@@ -374,7 +374,7 @@
         <!-- Content Column -->
         <div class="col-md-9" id="tg-sb-content">
             <div class="post-header">
-   <!--<h1 class="post-title-main">Using the Arduino IDE</h1>-->
+   <!--<h1 class="post-title-main">Firing Up the Robot</h1>-->
 </div>
 
 
@@ -418,204 +418,68 @@ $('#toc').on('click', 'a', function() {
 
     
 
-  <h2 id="finding-your-machine">Finding your Machine</h2>
-
-<p>With your partner and your box, go to the row labeled with your team number and names. You and your partner should each choose chairs at machines next two each other along your row.  Seat as ordered on your team chart. So, the person with the name at the top will go to the machine at the far end of the row, the second person will go to the machine next to them, and so forth.</p>
-
-<h2 id="introduction-to-linux">Introduction to Linux</h2>
-
-<p>The computers in this lab use the Linux operating system. Linux offers a variety of free easy-to-use tools for software development that will help us along our way in constructing and programming our robots.</p>
-
-<h3 id="logging-in">Logging In</h3>
-
-<ol>
-  <li>Enter the user name given to you, and hit Enter.</li>
-  <li>On the next screen, first click on the gear and select “ubuntu” from the menu.</li>
-  <li>Type in the password assigned to you, hit Enter, and you should be taken to a desktop screen.</li>
-  <li>A box will pop up telling you about keyboard shortcuts. Click the X and move on to the interesting stuff.</li>
-</ol>
-
-<h3 id="getting-to-a-web-browser">Getting to a Web Browser</h3>
-
-<p>By default, the Ubuntu logo will be displayed on the launcher to the left of the monitor in the upper left-hand corner.</p>
-
-<ol>
-  <li>Click on the Ubuntu logo icon.</li>
-</ol>
-
+  <div style="background-color:rgba(255, 255, 0, 0.5)">
+<b>SYNCHRONIZE</b>
 <ul>
-  <li>This will open the “lens”.</li>
+<li>There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the section marked GROUP SECTION.</li>
 </ul>
+</div>
 
-<ol>
-  <li>Type in either “google-chrome” or “firefox” depending on which browser you would like to use.</li>
-</ol>
+<h2 id="microcontrollers">Microcontrollers</h2>
 
+<p>At the heart of your robot, and what you will spend much of the week programming, is an Atmega 328 microcontroller. A microcontroller is like a entire computer on a single microchip. It has storage, a processor, and memory, much like any other computer does.</p>
+
+<p>Microcontrollers are designed primarily to be embedded in other devices. Many devices that you are familiar with have some type of microcontroller driving them.</p>
+
+<p>There are actually two microcontrollers on the Bot’n Roll One. The second is a PIC18F45K22. On the Bot’n’Roll, this comes pre-loaded with all of the software that we want on it.</p>
+
+<h2 id="arduino">Arduino</h2>
+
+<div style="background-color:rgba(0, 255, 0, 0.5)">
+<b>TIP</b>
 <ul>
-  <li>No, neither browser is better than the other for this camp. This is purely a matter of personal preference.</li>
+<li>Don't forget to open external links in new tabs if you go to them for extra reading. You'll want to get back to the tutorial quickly.</li>
 </ul>
+</div>
 
-<ol>
-  <li>Go to <a href="https://utcs-robotics-camp.github.io/texas-robocamp.github.io/">https://utcs-robotics-camp.github.io/texas-robocamp.github.io/</a> to get to this site.</li>
-</ol>
+<p>Arduino is an open-source electronics platform designed around Atmega microcontrollers. You can find more information on Arduinos <a href="https://www.arduino.cc/en/Guide/Introduction">“Here”</a></p>
 
-<h3 id="getting-to-a-terminal">Getting to a Terminal</h3>
+<p>Arduinos makes the previously very difficult-to-enter world of microcontrollers accessible to programmers who already knew how to program in C++.</p>
 
-<ol>
-  <li>
-    <p>Click on the Ubuntu logo icon.</p>
-  </li>
-  <li>
-    <p>Type in “terminal.”</p>
-  </li>
-  <li>
-    <p>A terminal window will open.</p>
-  </li>
-</ol>
+<p>Part of this is by standardizing how pieces interact with the Arduino. Whereas there are many ways to connect devices to an Atmega microcontroller, there are a few <em>very well documented</em> ways to various devices it to an Arduino.</p>
 
-<h3 id="changing-windows">Changing Windows</h3>
+<p>Another part of this is by offering an extensive API (Application Program Interface) for developers who want to use parts of the microcontroller. The API handles the small parts of interacting with the Atmega microcontroller so developers can concentrate on the problem that they want to solve.</p>
 
+<p>Arduino microcontrollers also are at the heart of a number of projects that enthusiasts at all levels can take on. For instance, <a href="https://www.adafruit.com/category/17?gclid=EAIaIQobChMI2LD6vtWl3AIVjYbACh0IvwY0EAAYASAAEgJKDPD_BwE">“Adafruit”</a> offers a number of kits based on Arduinos for enthusiasts to assemble and program.</p>
+
+<p>One of my (Justin’s) favorite projects for the Arduino microcontroller is building 3D printers. The RAMPS (RepRap Arduino Mega Pololu Shield) board is designed to attach to an Arduino in order to control a 3D printer.</p>
+
+<p>Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.</p>
+
+<p><img src="/images/hypercube.jpg" alt="HyperCube CoreXY" /></p>
+
+<p><img src="/images/hypercube_owl.jpg" alt="HyperCube Owl" /></p>
+
+<h2 id="loading-your-first-program">Loading Your First Program</h2>
+
+<div style="background-color:rgba(255, 255, 0, 0.5)">
+<b>GROUP SECTION</b>
 <ul>
-  <li>This is similar to operating systems such as Windows and Mac OS. Hit alt-tab to cycle windows, or click on the icons on the launcher.</li>
+<li>People will have the same questions while we go through the basics for the first time. Let's do it together!</li>
 </ul>
+</div>
 
-<h3 id="locking-frequently-used-programs-to-the-launcher">Locking Frequently-Used Programs to the Launcher</h3>
+<h2 id="git">Git</h2>
 
-<ol>
-  <li>
-    <p>Right-click on the application that you would like to lock to the launcher.</p>
-  </li>
-  <li>
-    <p>Click “Lock to Launcher.”</p>
-  </li>
-</ol>
+<p>Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won’t. We’re just going to tell you what to type here.</p>
 
-<h3 id="basic-linux-commands">Basic Linux Commands</h3>
-
-<p>An important part of using Linux is becoming familiar with the command line. Here a few commands you will need during the course of this camp. Try them out.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>ls</td>
-      <td>List.</td>
-      <td>Lists the contents of the current directory.</td>
-    </tr>
-    <tr>
-      <td>mkdir</td>
-      <td>Make directory.</td>
-      <td>Makes a directory.</td>
-    </tr>
-    <tr>
-      <td>cd</td>
-      <td>Change directory.</td>
-      <td>Enters a different directory.</td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td>Present working directory.</td>
-      <td>Tells you what directory you are in.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>When you first open the terminal you will see a command prompt. You will be in your home directory. If you type pwd, you will see the “path” to your home directory. Here are a few handy directory shortcuts that will allow you to more easily navigate Linux. The path given to you by pwd is called an “absolute path.” If you type that anywhere in the system, it will always bring you to the same place. Absolute paths begin with “/”. A relative path is any path that does not begin with “/”. Relative paths are stated relative to your present working directory. If you type “cd ex01” from your home directory, it will go to the directory “ex01” inside your home directory.</p>
-
-<p>Here are a few shortcuts that you can use when forming paths.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>~</td>
-      <td>Home directory.</td>
-      <td>A space set aside for each user to store their files.</td>
-    </tr>
-    <tr>
-      <td>.</td>
-      <td>The current directory.</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>..</td>
-      <td>The parent directory.</td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td>/</td>
-      <td>The root directory.</td>
-      <td>The very top of the computer’s filesystem.</td>
-    </tr>
-    <tr>
-      <td>pwd</td>
-      <td>Present working directory.</td>
-      <td>Tells you what directory you are in.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>Here’s a quick exercise to try this all out.</p>
-
-<ol>
-  <li>
-    <p>mkdir linux_exercise</p>
-  </li>
-  <li>
-    <p>ls</p>
-  </li>
-  <li>
-    <p>cd linux_exercise</p>
-  </li>
-  <li>
-    <p>ls ..</p>
-  </li>
-  <li>
-    <p>cd ..</p>
-  </li>
-  <li>
-    <p>ls</p>
-  </li>
-  <li>
-    <p>mkdir linux_exercise/subdirectory</p>
-  </li>
-  <li>
-    <p>cd ~/linux_exercise/subdirectory</p>
-  </li>
-  <li>
-    <p>pwd</p>
-  </li>
-  <li>
-    <p>cd ~</p>
-  </li>
-</ol>
-
-<p>The above is essentially a command-based version of what you’re used to doing by double clicking on folders. The command line is capable of a great deal more—in fact, you will be using it to compile your tutorial program! But more on that later. First, you’ll need to write some code.</p>
-
-<h3 id="tab-completion">Tab Completion</h3>
-
-<p>Note that the command line has tab-completion. If you start typing the name of a unique file, directory, or command and hit tab, it will finish the name for you. If there is more than one match, all possible options are displayed.</p>
-
-<h2 id="text-editor">Text Editor</h2>
-
-<p>For the C++ tutorials that we will start with, we will use a text editor called sublime. When we begin programming the robot, it uses an Arduino microcontroller, so we will move to the Arduino IDE at that juncture.</p>
-
-<p>To open sublime you can do one of two things:</p>
-
+<div style="background-color:rgba(127, 255, 255, 0.5)">
+<b>OPEN A TERMINAL AND DO THIS</b>
 <ul>
-  <li>
-    <p>Open up a terminal window, type in sublime_text &amp; and hit Enter. The &amp; tells the computer to allow you to continue to use that terminal while the editor is running.</p>
-  </li>
-  <li>
-    <p>Open the lens as before, type in sublime_text and hit Enter. You do not need the &amp; in the lens.</p>
-  </li>
+<li>cd</li>
+<li>git clone git@github.com:UTCS-Robotics-Camp/exercises.git</li>
 </ul>
-
-<p>Using sublime and the command line, you will be able to write and execute your tutorial programs.</p>
-
-<h2 id="logging-out">Logging Out</h2>
-
-<p>Before you leave the lab, make sure you save all your work and log out of the computer, so that it’s free for the next person to use it. Open up the account menu in the top right-hand corner of your screen, and click to log out.</p>
-
-<p>Also, please do not reboot the computer. If you are experiencing technical difficulties, resist the urge to try turning the machine off and on again, and instead notify one of the camp staff.</p>
+</div>
 
 <h2 id="next-step">Next Step</h2>
 
@@ -661,7 +525,7 @@ $('#toc').on('click', 'a', function() {
             <div class="row">
                 <div class="col-lg-12 footer">
                &copy;2018 Texas RoboCamp. All rights reserved. <br />
-<span>Page last updated:</span> July 4, 2018<br/> Site last generated: Jul 4, 2018 <br />
+<span>Page last updated:</span> July 4, 2018<br/> Site last generated: Jul 17, 2018 <br />
 <p><img src="images/company_logo.png" alt="Company logo"/></p>
                 </div>
             </div>

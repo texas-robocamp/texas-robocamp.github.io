@@ -25,7 +25,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Using the Arduino IDE
+    - title: Firing Up the Robot
       url: /arduino.html
       output: web, pdf
       type: homepage
