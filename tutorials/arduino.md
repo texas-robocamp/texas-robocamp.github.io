@@ -78,6 +78,11 @@ The names of the buttons are as follows: Verify, Upload, New, Open, and Save. Le
 
 - The final button is the **save** button. Use this to save any programs you've written.
 
+<div style="background-color:rgba(255,0,0,0.5)">
+<b>RED CUP: Upload LED Code [Tutorial 2]</b>
+<p></p>
+<p>Now that you understand how to upload code to the robot, go ahead and upload the LED code. Once you've got it working, flip your cup to red so a counselor can check that you've successfully done so.</p>
+</div>
 
 ## Git
 
@@ -94,4 +99,4 @@ Git is a version control system. We could spend the whole week discussing the in
 
 ## Next Step
 
-Proceed to ["Welcome!"](texas-robocamp.github.io/welcome.html)
+Proceed to ["Welcome!"](welcome.html)

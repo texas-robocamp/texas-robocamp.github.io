@@ -34,20 +34,6 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Landing Page
-      url: /index.html
-      output: web, pdf
-      type: homepage
-
-    - title: Welcome to Camp!
-      url: /welcome.html
-      output: web, pdf
-      type: homepage
-
-  - title: Building the Bot'n'Roll One
-    output: web, pdf
-    folderitems:
-
     - title: Mechanical assembly
       url: /mechanical_assembly.html
       output: web, pdf
