@@ -8,6 +8,12 @@
   
   
   <url>
+    <loc>http://localhost:4000/using_arduino.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/arduino.html</loc>
   </url>
   
@@ -27,6 +33,12 @@
   
   <url>
     <loc>http://localhost:4000/decisions.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/electronics_assembly.html</loc>
   </url>
   
   
@@ -56,7 +68,25 @@
   
   
   <url>
+    <loc>http://localhost:4000/robot_programming_introduction.html</loc>
+  </url>
+  
+  
+  
+  <url>
     <loc>http://localhost:4000/using_linux.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/maze_solving.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/mechanical_assembly.html</loc>
   </url>
   
   
@@ -80,6 +110,18 @@
   </url>
   
   
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/soldering.html</loc>
+  </url>
+  
+  
+  
+  <url>
+    <loc>http://localhost:4000/testing.html</loc>
+  </url>
   
   
   

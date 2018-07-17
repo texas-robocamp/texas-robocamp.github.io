@@ -4,6 +4,17 @@
 
 
 {
+"title": "Using the Arduino IDE",
+"tags": "arduino",
+"keywords": "arduino",
+"url": "using_arduino.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Firing Up the Robot",
 "tags": "arduino",
 "keywords": "arduino",
@@ -41,6 +52,17 @@
 "tags": "c++",
 "keywords": "c++",
 "url": "decisions.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Electronics Assembly",
+"tags": "electronics",
+"keywords": "",
+"url": "electronics_assembly.html",
 "summary": ""
 }
 ,
@@ -92,10 +114,43 @@
 
 
 {
+"title": "Introduction",
+"tags": "robot programming",
+"keywords": "",
+"url": "robot_programming_introduction.html",
+"summary": ""
+}
+,
+
+
+
+{
 "title": "Using Linux",
 "tags": "linux",
 "keywords": "linux",
 "url": "using_linux.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Maze Solving",
+"tags": "c++ programming",
+"keywords": "maze algorithm",
+"url": "maze_solving.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Mechanical Assembly",
+"tags": "electronics",
+"keywords": "",
+"url": "mechanical_assembly.html",
 "summary": ""
 }
 ,
@@ -136,6 +191,28 @@
 ,
 
 
+
+
+
+{
+"title": "Soldering",
+"tags": "electronics",
+"keywords": "",
+"url": "soldering.html",
+"summary": ""
+}
+,
+
+
+
+{
+"title": "Testing",
+"tags": "electronics",
+"keywords": "",
+"url": "testing.html",
+"summary": ""
+}
+,
 
 
 
