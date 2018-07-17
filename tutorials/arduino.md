@@ -49,6 +49,7 @@ Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.
 
 ![HyperCube Owl](images/hypercube_owl.jpg)
 
+
 ## Loading Your First Program
 
 <div style="background-color:rgba(255, 255, 0, 0.5)">
@@ -62,6 +63,15 @@ The first program we're going to load is a simple program that blinks the LEDs o
 
 First, let's go ahead and open up the Arduino IDE. In case you forgot, this can be done by typing "arduino" in either the terminal or the lens. Now, navigate to "File-> Examples -> BnrOneA -> Basic" and select "LED". You should see a new window pop up, with a program already written.
 
+Next, we'll need to connect the robot to your computer. All neccessary software should all be set up on your computer, so the only thing you have to do is establish the connection through the Arduino IDE. To do this, navigate to "Tools -> Board" and select the "Arduino Uno" board. Then, navigate to "Tools -> Serial Port", and select the port titled "ttyUSB#". The # corresponds to which USB port you have the car plugged into.
+
+<div style="background-color:rgba(0,255,0,0.5)">
+<b>TIP</b>
+<p></p>
+<p>Whenever you disconnect the robot from your computer, you'll need to re-connect to the robot through the IDE to re-upload code!</p>
+</div>
+
+
 Now, let's go ahead and upload this code to the robot. To do so, you'll need to understand the menu bar at the top of the IDE. It should look just like this:
 
 ![IDE Toolbar](images/ide_toolbar.png)
@@ -72,7 +82,7 @@ The names of the buttons are as follows: Verify, Upload, New, Open, and Save. Le
 
 - The next button is the **upload** button. Once you've verified that your code works, selecting this button will upload the code to the robot. 
 
-- The next button is the **new** button. You'll use this to create new scratch programs.
+- The next button is the **new** button. You'll use this to create new programs.
 
 - The next button is the **open** button. You can use this to open up any scratch files that are located on your computer.
 
@@ -84,6 +94,7 @@ The names of the buttons are as follows: Verify, Upload, New, Open, and Save. Le
 <p>Now that you understand how to upload code to the robot, go ahead and upload the LED code. Once you've got it working, flip your cup to red so a counselor can check that you've successfully done so.</p>
 </div>
 
+
 ## Git
 
 Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. We're just going to tell you what to type here.
@@ -94,6 +105,16 @@ Git is a version control system. We could spend the whole week discussing the in
 <li>cd</li>
 <li>git clone git@github.com:UTCS-Robotics-Camp/exercises.git</li>
 </ul>
+</div>
+
+## Moving the Robot
+
+Now that you've got the examples downloaded, let's go ahead and get the robot moving! Upload the exercise titled "obstacle_avoidance" onto your robot, unplug it from your computer, and then place it down and watch it go! We'll go more in depth about what this code does later.
+
+<div style="background-color:rgba(255,0,0,0.5)">
+<b>RED CUP: Upload Obstacle Avoidance Code [Tutorial 2]</b>
+<p></p>
+<p>Once you've got the car moving, flip your cup to red so that a counselor can verify that you've got it working.</p>
 </div>
 
 
