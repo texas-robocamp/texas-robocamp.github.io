@@ -34,33 +34,34 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Landing Page
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Welcome to Camp!
+      url: /welcome.html
+      output: web, pdf
+      type: homepage
+
+  - title: Building the Bot'n'Roll One
+    output: web, pdf
+    folderitems:
+
+    - title: Mechanical assembly
+      url: /mechanical_assembly.html
+      output: web, pdf
+
     - title: Soldering
       url: /soldering.html
       output: web, pdf
-      type: homepage
 
     - title: Electronics assembly
       url: /electronics_assembly.html
       output: web, pdf
 
-    - title: Mechanical assembly
-      url: /electronics_assembly.html
-      output: web, pdf
-
     - title: Testing
       url: /testing.html
-      output: web, pdf
-
-  - title: Uploading Code
-    output: web, pdf
-    folderitems:
-
-    - title: Start Arduino IDE
-      url: /start_arduino.html
-      output: web, pdf
-
-    - title: Uploading a Program
-      url: /uploading_a_program.html
       output: web, pdf
 
   - title: Programming Introduction
@@ -101,4 +102,16 @@ entries:
 
     - title: Compiling and Running via the Command Line
       url: /compiling_running.html
+      output: web, pdf
+
+  - title: Programming the Robot
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction
+      url: /robot_programming_introduction.html
+      output: web, pdf
+
+    - title: Solve a Maze
+      url: /maze_solving.html
       output: web, pdf
