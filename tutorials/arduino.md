@@ -94,4 +94,4 @@ Git is a version control system. We could spend the whole week discussing the in
 
 ## Next Step
 
-Proceed to ["Welcome!"](welcome.html)
+Proceed to ["Welcome!"](texas-robocamp.github.io/welcome.html)
