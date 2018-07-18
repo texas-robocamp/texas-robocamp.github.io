@@ -98,6 +98,10 @@ entries:
       url: /robot_programming_introduction.html
       output: web, pdf
 
+    - title: Follow a Line
+      url: /line_following.html
+      output: web, pdf
+
     - title: Solve a Maze
       url: /maze_solving.html
       output: web, pdf
