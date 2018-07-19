@@ -64,8 +64,7 @@ Sometimes we need to tell you something tangential to the line of thought of the
 <div style="background-color:rgba(0, 255, 0, 0.5)">
 <b>TIP</b>
 <ul>
-<li>Sometimes, the tutorial will offer extra reading material off-site. Make sure that you know how to get back to where we are in the tutorial when you do this. I would suggest opening any external links in a new tab.</li>
-<li>You can open a link in a new tab by right-clicking it and selecting "Open link in new tab" in either Google Chrome or Firefox.</li>
+<li>Don't get distracted by the tips. They're intended to help you, not side-track you.</li>
 </ul>
 </div>
 
@@ -140,9 +139,14 @@ It will look like this:
 <li>Please flip your cup to red.</li>
 <li>A counselor will come by to mark your progress.</li>
 </ul>
+<br>
+<b>RED CUP: You need something!</b>
+<ul>
+<li>A counselor will give you your first post-it note to stick on the back of your robot.</li>
+</ul>
 </div>
 
-At this point, please **actually** flip your cup to red in order to indicate that you have reached this point in the tutorial and wait for a counselor to come by and mark your progress.
+At this point, please **actually** flip your cup to red.
 
 ## Next Step
 

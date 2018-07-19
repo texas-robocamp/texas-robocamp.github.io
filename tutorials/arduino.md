@@ -27,15 +27,16 @@ There are actually two microcontrollers on the Bot'n Roll One. The second is a P
 <div style="background-color:rgba(0, 255, 0, 0.5)">
 <b>TIP</b>
 <ul>
-<li>Don't forget to open external links in new tabs if you go to them for extra reading. You'll want to get back to the tutorial quickly.</li>
+<li>Open external links in new tabs if you go to them for extra reading. You'll want to get back to the tutorial quickly.</li>
+<li>You can do this by right-clicking the link and selecting "Open link in new tab" from the menu that pops up.</li>
 </ul>
 </div>
 
 Arduino is an open-source electronics platform designed around Atmega microcontrollers. You can find more information on Arduinos ["Here"](https://www.arduino.cc/en/Guide/Introduction)
 
-Arduinos makes the previously very difficult-to-enter world of microcontrollers accessible to programmers who already knew how to program in C++.
+Arduinos makes the previously very difficult-to-enter world of microcontrollers accessible to programmers who already know how to program in C++.
 
-Part of this is by standardizing how pieces interact with the Arduino. Whereas there are many ways to connect devices to an Atmega microcontroller, there are a few *very well documented* ways to various devices it to an Arduino.
+Part of this is by standardizing how pieces interact with the Arduino. Whereas there are many ways to connect devices to an Atmega microcontroller and program them, there are a few *very well documented* ways to do this with many devices on an Arduino.
 
 Another part of this is by offering an extensive API (Application Program Interface) for developers who want to use parts of the microcontroller. The API handles the small parts of interacting with the Atmega microcontroller so developers can concentrate on the problem that they want to solve.
 
@@ -49,9 +50,6 @@ Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.
 
 ![HyperCube Owl](images/hypercube_owl.jpg)
 
-
-## Loading Your First Program
-
 <div style="background-color:rgba(255, 255, 0, 0.5)">
 <b>GROUP SECTION</b>
 <ul>
@@ -59,45 +57,9 @@ Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.
 </ul>
 </div>
 
-The first program we're going to load is a simple program that blinks the LEDs on the robot. Here, you'll learn how to navigate through the Arduino IDE so that you can build and upload your own programs.
-
-First, let's go ahead and open up the Arduino IDE. In case you forgot, this can be done by typing "arduino" in either the terminal or the lens. Now, navigate to "File-> Examples -> BnrOneA -> Basic" and select "LED". You should see a new window pop up, with a program already written.
-
-Next, we'll need to connect the robot to your computer. All neccessary software should all be set up on your computer, so the only thing you have to do is establish the connection through the Arduino IDE. To do this, navigate to "Tools -> Board" and select the "Arduino Uno" board. Then, navigate to "Tools -> Serial Port", and select the port titled "ttyUSB#". The # corresponds to which USB port you have the car plugged into.
-
-<div style="background-color:rgba(0,255,0,0.5)">
-<b>TIP</b>
-<p></p>
-<p>Whenever you disconnect the robot from your computer, you'll need to re-connect to the robot through the IDE to re-upload code!</p>
-</div>
-
-
-Now, let's go ahead and upload this code to the robot. To do so, you'll need to understand the menu bar at the top of the IDE. It should look just like this:
-
-![IDE Toolbar](images/ide_toolbar.png)
-
-The names of the buttons are as follows: Verify, Upload, New, Open, and Save. Let's go through what each of these does.
-
-- The first button is the **verify** button. This is used to compile your code and check for errors. Go ahead and click that button, and you'll see the terminal at the bottom output some build information. You don't need to worry about what it's saying for now.
-
-- The next button is the **upload** button. Once you've verified that your code works, selecting this button will upload the code to the robot. 
-
-- The next button is the **new** button. You'll use this to create new programs.
-
-- The next button is the **open** button. You can use this to open up any scratch files that are located on your computer.
-
-- The final button is the **save** button. Use this to save any programs you've written.
-
-<div style="background-color:rgba(255,0,0,0.5)">
-<b>RED CUP: Upload LED Code [Tutorial 2]</b>
-<p></p>
-<p>Now that you understand how to upload code to the robot, go ahead and upload the LED code. Once you've got it working, flip your cup to red so a counselor can check that you've successfully done so.</p>
-</div>
-
-
 ## Git
 
-Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. We're just going to tell you what to type here.
+Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. None of these projects are designed to take more than a week, so we're just going to tell you what to type here.
 
 <div style="background-color:rgba(127, 255, 255, 0.5)">
 <b>OPEN A TERMINAL AND DO THIS</b>
@@ -107,6 +69,83 @@ Git is a version control system. We could spend the whole week discussing the in
 </ul>
 </div>
 
+## Set up the Arduino IDE
+
+We need to get the library that drives the robot. A library is a collection of software that is distributed to write other software. For instance, video game designers often use graphics libraries that are already written in order to allow them to concentrate on writing the game, rather than the details that are the same from game-to-game. The Bot'n Roll robot comes with a software library, and to use it, we need to install it.
+
+To get it, we'll download it from the internet and install it into the Arduino IDE.
+
+<b>OPEN A TERMINAL AND DO THIS</b>
+<ul>
+<li>cd ~</li>
+<li>wget http://botnroll.com/onea/downloads/BnrOneA.zip</li>
+</ul>
+</div>
+
+Open up the Arduino IDE.
+
+<div style="background-color:rgba(127, 255, 255, 0.5)">
+<b>OPEN A TERMINAL AND DO THIS</b>
+<ul>
+<li>arduino</li>
+</ul>
+</div>
+
+Go to the Arduino IDE.
+
+- Navigate to "Sketch -> Import Library -> Add Library".
+- Click BnrOneA.zip and hit OK.
+
+<div style="background-color:rgba(0,255,0,0.5)">
+<b>TIP</b>
+<ul>
+<li>You may get some warnings saying that Bluetooth cannot be used. Don't worry. We're not using Bluetooth.</li>
+</ul>
+</div>
+
+Next, we'll need to configure the IDE to connect to the robot.
+
+- Plug the robot into the computer using the USB cable in your box.
+- Navigate to "Tools -> Board" and select the "Arduino Uno" board. 
+- Navigate to "Tools -> Serial Port", and select "ttyUSB#". The # corresponds to which USB port you have the robot plugged into.
+
+## Loading Your First Program
+
+The first program we're going to load is a simple program that blinks an LED on the robot. Here, you'll learn how to navigate through the Arduino IDE so that you can build and upload your own programs.
+
+In the Arduino IDE, navigate to "File-> Open", which will give you a file open dialog. In your home directory, you will now have a directory called "exercises." Under "exercises/ex01_LED" you will find "ex01_LED.ino". Open this file.
+
+Now, let's go ahead and upload this code to the robot. To do so, you'll need to understand the menu bar at the top of the IDE. It should look just like this:
+
+![IDE Toolbar](images/ide_toolbar.png)
+
+The names of the buttons are as follows: Verify, Upload, New, Open, and Save. Let's go through what each of these does.
+
+- The first button is the **verify** button. This is used to compile your code and check for errors.
+
+- The next button is the **upload** button. Once you've verified that your code works, selecting this button will upload the code to the robot.
+
+- The next button is the **new** button. You'll use this to create new programs.
+
+- The next button is the **open** button. You can use this to open up any scratch files that are located on your computer.
+
+- The final button is the **save** button. Use this to save any programs you've written.
+
+Now that you understand how to upload code to the robot, go ahead and upload the LED code.
+
+
+<div style="background-color:rgba(0,255,0,0.5)">
+<b>TIP</b>
+<ul>
+<li>If after hitting the verify button, the Arduino IDE doesn't stay "Done Compiling" near the bottom, and "Binary sketch size: X."
+You should flip your red cup to get some help at this point.</li>
+<li>If after hitting the upload button, the Arduino IDE doesn't stay "Done Uploading" near the bottom, and "Binary sketch size: X."
+You should flip your red cup to get some help at this point.</li>
+<li>Whenever you disconnect the robot from your computer, you'll need to re-connect to the robot through the IDE to re-upload code!</li>
+</ul>
+</div>
+
+
 ## Moving the Robot
 
 Now that you've got the examples downloaded, let's go ahead and get the robot moving! Upload the exercise titled "obstacle_avoidance" onto your robot, unplug it from your computer, and then place it down and watch it go! We'll go more in depth about what this code does later.
@@ -114,7 +153,7 @@ Now that you've got the examples downloaded, let's go ahead and get the robot mo
 <div style="background-color:rgba(255,0,0,0.5)">
 <b>RED CUP: Upload Obstacle Avoidance Code [Tutorial 2]</b>
 <p></p>
-<p>Once you've got the car moving, flip your cup to red so that a counselor can verify that you've got it working.</p>
+<p>Once you've got the robot moving, flip your cup to red so that a counselor can verify that you've got it working.</p>
 </div>
 
 

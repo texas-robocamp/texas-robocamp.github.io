@@ -30,26 +30,6 @@ entries:
       output: web, pdf
       type: homepage
 
-  - title: Building the Bot'n'Roll One
-    output: web, pdf
-    folderitems:
-
-    - title: Mechanical assembly
-      url: /mechanical_assembly.html
-      output: web, pdf
-
-    - title: Soldering
-      url: /soldering.html
-      output: web, pdf
-
-    - title: Electronics assembly
-      url: /electronics_assembly.html
-      output: web, pdf
-
-    - title: Testing
-      url: /testing.html
-      output: web, pdf
-
   - title: Programming Introduction
     output: web, pdf
     folderitems:
