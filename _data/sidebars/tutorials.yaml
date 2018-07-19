@@ -85,3 +85,7 @@ entries:
     - title: Solve a Maze
       url: /maze_solving.html
       output: web, pdf
+      
+    - title: Using LEDs
+      url: /led.html
+      output: web, pdf
