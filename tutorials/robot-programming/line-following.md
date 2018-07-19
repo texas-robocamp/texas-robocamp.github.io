@@ -28,6 +28,6 @@ From there, you'll have to think about how to apply the value returned by `readL
 
 ## Task X
 
-Now that you've got some ideas on where to start, it's time to begin programming! Remember, the goal is to have thecar follow the line. As one final hint, the only BnrOneA functions you should need to get through this exercise are the `move(speedL,speedR)` and `readAdc(byte)` functions.
+Now that you've got some ideas on where to start, it's time to begin programming! Remember, the goal is to have the car follow the line. As one final hint, the only BnrOneA functions you should need to get through this exercise are the `move(speedL,speedR)` and `readAdc(byte)` functions.
 
 {% include cup-callout.html task="X" %}
