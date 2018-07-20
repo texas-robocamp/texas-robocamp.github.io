@@ -31,7 +31,7 @@ Next, we define our main function by saying int main(). This tells the computer 
 
 We only have one command for this program. We tell the computer to use the cout function and then put what we want to print after <<. You can think of the double left-angle brackets as an arrow pointing toward cout, meaning that we are sending something (in this case, "Hello World\n ") to cout. We put quotation marks around the words we want to display (this is called a string), and end the string with "\n". This is a special character that tells the computer to go to the next line, kind of like hitting Enter at the end of a line when you are typing. In C++, every code line (ones without braces) ends in a semi-colon. So, we are telling the computer to send our string to cout to be displayed on the screen. We then use a closing brace to end the function, and with it, the program.
 
-### Task 2.1:
+### Task 1:
 Modify the Hello World program so that it prints, "Hello World and Your Name". For example, if your name is Justine, it would display, Hello World and Justine. Next, add a second line of text.
 
 Yay! You have written your first C++ program!

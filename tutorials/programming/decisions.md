@@ -71,7 +71,7 @@ int main(){
    cout << "The ticket is $" << ticketPrice << ".\n";
 }
 ```
-### Task 6.1:
+### Task 5.1:
 Modify the above code so that it prints out a separate message for each different level of ticket. For example, if the driver was going over 60 mph, the program could print "You should severely punish the driver for endangering people!" and for a non-speeding ticket, the program could print, "Congratulate the driver on maintaining a safe speed."
 
 Thanks for enabling better communication. Now, don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
@@ -127,7 +127,7 @@ if (!(wearingSeatbelt == "n")){
 }
 ```
 
-### Task 6.2:
+### Task 5.2:
 Finish implementing the seat belt law for the driver who goes over 40mph (just follow the format above). Then come up with another law and add it to your code. Be as creative and ridiculous as you want, and if you need help, ask for it!
 
 Now, we'll move on to loops.

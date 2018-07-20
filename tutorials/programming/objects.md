@@ -124,7 +124,7 @@ The += operator means that you increase the value of the variable to the left of
 
 These objects do a great job of cleaning up our code—consider having to keep track of Alison and Bob's bank account info without them and what happens when we want to add a third bank account—all those variables add up!
 
-### Task 5.1:
+### Task 4.1:
 
 Using this code as a base, add some money to Alison's account and then output her balance.
 
@@ -216,7 +216,7 @@ Inside our member functions we have access to our member variables, as if we had
 
 Outside of the class definition, we use the dot notation to call an object's member functions; in this case, we have our bobBankAccount object, followed by a period, followed by the function call. Just as with the function calls you've made previously, you start with the function name, followed by any arguments wrapped in parentheses.
 
-### Task 5.2:
+### Task 4.2:
 
 Add another bank account to the example above. Deposit $500 dollars into Alison's account, then withdraw $400 from Bob's account and place it in the account you created. Then print out the balances from all three accounts. (You'll need to write the withdraw function. How is it similar to the deposit function? How is it different? What happens if you attempt to withdraw an amount greater than your balance?)
 
@@ -224,7 +224,7 @@ Good job!
 
 Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
 
-### Task 5.3:
+### Task 4.3:
 
 Create a superhero class. The fields should include the superhero's name, arch-nemesis, weakness, and sidekick (these are all strings). You are welcome to add some extra fields of your own. Create a default constructor, some methods to set the fields, and a method to print the information in the fields. Then make some instances of the superhero class using your favorite superheroes for inspiration, set the fields appropriately, and print their information.
 

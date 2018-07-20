@@ -81,7 +81,7 @@ The current number is 5.
 The current number is 7.
 ```
 The loop begins with i=1 and increases by 2 every time. Notice that it stops before reaching 9. To make more complicated loops, all you have to do is think carefully about the loop counter. Where do you want it to start? Where should it stop? How do you want to count?
-### Task 7.1:
+### Task 6.1:
 Write a loop that prints every third number starting at 15 and going down to 6 (so 6 is included in the loop).
 
 Woot, woot! Making progress. :) Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
@@ -142,7 +142,7 @@ And this gives us the output:
 
 Notice that the first number that prints out is the num1 variable, and the second number is the num2 variable, and the final number is the sum of num1 and num2. Let's quickly talk through the loop. We begin with num1 being equal to 1 and num2 being equal to 1, and num1+num2 equaling 2. Then the num2 loop advances by 1, because the inner loop has to finish before the outer loop can advance. So num1 is 1 and num2 is 2 and their sum is 3. Then num2 advances by 1 again, and num1 is 1 and num2 is 3 and their sum is 3. Finally, num1 is 1 and num2 is 4 and their sum is 5. The next time num2 is incremented it becomes 5, violating the less than 5 condition of the loop, and so the num2 loop finishes. Now the num1 loop advances by 1, so num1 is 2. Now the num2 loop starts all over again from the beginning, and num2 is 1 and num1+num2 is 3, and so forth and so on. Nested loops can be a little tricky, so if they are confusing, ask for help!
 
-### Task 7.2:
+### Task 6.2:
 
 Write a program that multiplies all the odd numbers between 1 and 9 by all the even numbers between 2 and 10. Hint: follow the example above, but don't forget to change your loop initializations.
 
@@ -182,7 +182,7 @@ while((userInput < 1) || (userInput > 10)){
 
 This loop begins by checking to see if userInput is less than 1 or greater than 10. Let's say that userInput equals 100, so the loop will run. Inside the loop, the program prints out a nasty message to the user and gets new input from the user, the number 5. This time, however, 5 is saved to a different variable called newUserInput. Then the program checks the loop condition again. Since we never changed the value in userInput, it still equals 100, so the loop will run again even though the user just entered a valid number. In fact, this loop will run forever! This is called an infinite loop. To avoid this, always make sure that you update the loop variable somehow by changing its value so that eventually your loop will stop. (To break out of an infinite loop, type Ctrl-C.)
 
-### Task 7.3:
+### Task 6.3:
 
 Create a program that asks the user to enter a number between 5 and 50. If the user enters invalid input, print out a message to the user asking them to try again and keep getting input from the user until they enter a valid number. Bonus: Can you keep track of the number of attempts a user makes to enter a number, and then print it out when they finally enter a valid number?
 

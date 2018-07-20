@@ -89,13 +89,13 @@ rem = 5%2;
 
 This is very useful in programming, since you can easily decide is a number is even, odd, or a multiple of some other number.
 
-### Task 3.1:
+### Task 2.1:
 
 Write a program that reverses the program above. This program will take the user's weight on the moon and convert it to Earth weight. Hint: What's the mathematical opposite of multiplication?
 
 Good job! Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
 
-### Task 3.2:
+### Task 2.2:
 
 Write a program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
 

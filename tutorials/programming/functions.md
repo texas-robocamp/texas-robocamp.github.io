@@ -46,7 +46,7 @@ What's interesting is how we call, or run, the function. Inside of main, we call
 
 The way that this program works is the following: the computer begins running the program inside the main function. When it gets to the printGreeting function, it "jumps" to where we defined the printGreeting function and starts executing that code. When it gets to the end of the printGreeting function, it jumps back to the main function exactly where it left off and continues executing the rest of the code in main.
 
-### Task 4.1:
+### Task 3.1:
 Type in the code above and see that it executes. Modify it so that main calls printGreeting() twice. How does the output change?
 
 Good work! Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
@@ -101,7 +101,7 @@ Hello Clifford the Big Red Dog!
 That's pretty convenient.
 ```
 
-### Task 4.2:
+### Task 3.2:
 Using this code as a base, add two calls to printGreeting() in main so that both of you are also greeted.
 Now that you've been greeted, don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
 We can also use functions to do computation for us and return the answers back to main. For example, let's imagine that we want to write a function called squareANum that calculates the square of a number. We know from math class that the square of a number is that number multiplied by itself. So, let's write a function that takes a floating point number and squares it. After we figure out the square of the number (which we'll call numSquared), we'll need a way to return our answer back to the function that called it. To do this, we simply say:
@@ -147,7 +147,7 @@ Note that you must either a) write a function's code earlier in the program text
 float squareANum(float num);
 Function prototypes usually appear before the first function and after the include files.
 
-### Task 4.3
+### Task 3.3
 
 Write a program similar to the one above that triples a number and adds 5 to it.
 Yay! Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
@@ -172,7 +172,7 @@ int main(){
 
 We just have to remember to send the function all parameters it expects as arguments when we call it. Although we can have different numbers and types of parameters, a function can only return one value, so think carefully about what result you want from a function before you write it.
 
-### Task 4.4
+### Task 3.4
 
 Modify the printGreeting function to also take a string birthdayMonth parameter, and print out a message that tells them how old they will be the next time it is that month. For the Ronald McDonald example, the output might be, "You will be 50 next January".
 

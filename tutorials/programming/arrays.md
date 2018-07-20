@@ -65,13 +65,13 @@ int main(){
 }
 ```
 
-### Task 8.1:
+### Task 7.1:
 
 Change the program above so that it stores and uses 7 grades instead of 5 to calculate the average.
 
 Yay! Two more :) Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
 
-### Task 8.2:
+### Task 7.2:
 
 Write a program that asks a user to enter 10 numbers, puts those numbers in an array, and then prints out the numbers in the array backwards? Hint: use a loop that counts backwards.
 
@@ -91,7 +91,7 @@ You can use a multidimensional array in exactly the same way as a one-dimensiona
 
 `letterArray[3][1]="a";`
 
-### Task 8.3:
+### Task 7.3:
 
 Determine the correct code to access the elements containing letters y and z in the diagram above.
 
