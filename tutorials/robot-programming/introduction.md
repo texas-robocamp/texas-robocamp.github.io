@@ -58,7 +58,7 @@ The `move()` function takes two arguments: speedL and speedR. These values defin
 Serial.print("No objects detected");
 ```
 
-The `print()` function for the Serial class works in a similar fashion to the `printf()` function in C. Use this to output debugging information. To view the output, you'll need to look at the Serial Monitor, which can be found at "Tools -> Serial Monitor". 
+The `print()` function for the Serial class works in a similar fashion to the `printf()` function in C. Use this to output debugging information. To view the output, you'll need to look at the Serial Monitor, which can be found at "Tools -> Serial Monitor".
 
 <div style="background-color:rgba(0,255,0,0.5)">
 <b>TIP</b>
@@ -88,13 +88,13 @@ The `brake()` function also takes two arguments: torqueL and torqueR. These valu
 
 ### Additional Functions
 
-Technically, you now have all of the functions that you need in order to get the robot to avoid obstacles. However, there are some additional functions for the BnrOneA class that you may find useful. Remember that to call any of these functions, you have to type `one.functionName()`. 
+Technically, you now have all of the functions that you need in order to get the robot to avoid obstacles. However, there are some additional functions for the BnrOneA class that you may find useful. Remember that to call any of these functions, you have to type `one.functionName()`.
 
 ```
 void stop()
 ```
 
-This function cuts energy to both motors on the Bot'n'Roll, causing them to rotate freely until they stop. This is the same as calling `move(0,0)` 
+This function cuts energy to both motors on the Bot'n'Roll, causing them to rotate freely until they stop. This is the same as calling `move(0,0)`
 
 ```
 void led(state)
@@ -106,7 +106,7 @@ This function can set the LED on or off, depending on the state passed in. Passi
 
 ## Task X
 
-Now that you understand these functions, we can start coding! Your first programming task on the robot is to implement obstacle avoidance. 
+Now that you understand these functions, we can start coding! Your first programming task on the robot is to implement obstacle avoidance.
 
 The default behavior of the obstacle avoidance program is to turn away when the robot senses obstacles on one side, or back up when the robot senses obstacles on both sides. This is bad driving! The robot should tell us when it's about to turn or back up. The objective of your first robot program is signalling.
 
@@ -117,7 +117,7 @@ For beeping, you may find these functions useful:
 - tone(pin, frequency, duration)
 - notone(pin)
 
-Note: The buzzer that emits sound is located on digital pin 9. 
+Note: The buzzer that emits sound is located on digital pin 9.
 
 <div style="background-color:rgba(255,0,0,0.5)">
 <b>RED CUP: Track Progress [Task X]</b>
@@ -127,4 +127,3 @@ Note: The buzzer that emits sound is located on digital pin 9.
   <li>Camp Staff: <strong>TODO: LOCATION UNKNOWN</strong> Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors.</li>
 </ul>
 </div>
-
