@@ -8,8 +8,8 @@ sidebar: tutorials
 permalink: robot_programming_introduction.html
 ---
 
-## Obstacle Avoidance
-Now that you understand the basics, let's start programming the robot! Your first task will be to implement obstacle detection and avoidance. This will involve monitoring the robot's sensors, and adjusting your movement accordingly to ensure that the robot does not get trapped. We'll be opting to do a navigation method called turn-and-push **TODO not sure if that's exactly what it was called**. You've probably seen this method before - it's what Roombas do to avoid collisions as well! The method goes as follows:
+## Turn and Push
+Now that you understand the basics, let's start programming the robot! Your first task will be to implement obstacle detection and avoidance. This will involve monitoring the robot's sensors, and adjusting your movement accordingly to ensure that the robot does not get trapped. We'll be opting to do a navigation method called turn-and-push. You've probably seen this method before - it's what Roombas do to avoid collisions as well! The method goes as follows:
 
 - If the robot sees an obstacle on one side, back up, turn towards the clear side, and continue forwards
 - If the robot sees obstacles on both sides, back up
