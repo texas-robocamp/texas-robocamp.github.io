@@ -21,7 +21,7 @@ First, a few preliminaries.
 
 ## Cups
 
-You have received a pair of cups which are taped to each other. One is red. One is blue. At this time, you should place you pair of cups on top of the computer monitor in front of you, with the blue cup facing up.
+You have received a pair of cups which are taped to each other. One is red. One is blue. At this time, you should place your pair of cups on top of the computer monitor in front of you, with the blue cup facing up.
 
 * When the red cup is facing upward, it means:
 
