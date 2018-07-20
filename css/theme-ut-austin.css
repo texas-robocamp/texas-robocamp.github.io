@@ -84,7 +84,7 @@ a[data-toggle="tooltip"] {
 
 /* not sure if using this ...*/
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-    border-color: #72ac4a !important;
+    border-color: #808080 !important;
 }
 
 .btn-primary {
@@ -137,6 +137,18 @@ li.sidebarTitle {
     margin-top: 2px;
 }
 
+.navbar-toggle {
+    border-color: #808080;
+}
+
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #808080;
+}
+
+.navbar-inverse .navbar-toggle:hover .icon-bar {
+    background-color: white;
+}
+
 /* FOOTER */
 
 footer {
@@ -167,4 +179,15 @@ footer {
 
 .alert-success {
     background-color: rgba(166, 205, 87, 0.4);
+}
+
+.alert-dark {
+    color: #1b1e21;
+    background-color: #d6d8d9;
+    border-color: #c6c8ca;
+}
+
+img.cup-icon {
+    height: 24px;
+    margin: 0;
 }

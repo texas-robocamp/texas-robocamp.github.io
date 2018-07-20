@@ -2,7 +2,6 @@
 title: "Mechanical Assembly"
 tags: [electronics]
 keywords:
-last_updated: July 2, 2018
 summary:
 sidebar: tutorials
 permalink: mechanical_assembly.html

@@ -2,7 +2,6 @@
 title: "Using Linux"
 tags: [linux]
 keywords: linux
-last_updated: July 2, 2018
 sidebar: tutorials
 permalink: using_linux.html
 ---

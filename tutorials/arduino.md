@@ -2,12 +2,12 @@
 title: "Firing Up the Robot"
 tags: [arduino]
 keywords: arduino
-last_updated: July 17, 2018
 sidebar: tutorials
 permalink: arduino.html
 ---
 
-{% include callout_synchronize.html comment="There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the section marked GROUP SECTION." %}
+{% include note.html content="There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the next synchronization marker." %}
+
 ## Microcontrollers
 
 At the heart of your robot, and what you will spend much of the week programming, is an Atmega 328 microcontroller. A microcontroller is like a entire computer on a single microchip. It has storage, a processor, and memory, much like any other computer does.
@@ -43,24 +43,14 @@ Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.
 
 ![HyperCube Owl](images/hypercube_owl.jpg)
 
-<div style="background-color:rgba(255, 255, 0, 0.5)">
-<b>GROUP SECTION</b>
-<ul>
-<li>People will have the same questions while we go through the basics for the first time. Let's do it together!</li>
-</ul>
-</div>
+{% include callout_synchronize.html comment="People will have the same questions while we go through the basics for the first time. Let's do it together!" %}
 
 ## Git
 
 Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Since we're only here for a week, we're just going to tell you what to type here.
 
-<div style="background-color:rgba(127, 255, 255, 0.5)">
-<b>OPEN A TERMINAL AND DO THIS</b>
-<ul>
-<li>cd</li>
-<li>git clone git@github.com:UTCS-Robotics-Camp/exercises.git</li>
-</ul>
-</div>
+{% include terminal_command.html command="git clone git@github.com:UTCS-Robotics-Camp/exercises.git" %}
+
 
 ## Set up the Arduino IDE
 
@@ -68,22 +58,14 @@ We need to get the library that drives the robot. A library is a collection of s
 
 To get it, we'll download it from the internet and install it into the Arduino IDE.
 
-<div style="background-color:rgba(127, 255, 255, 0.5)">
-<b>OPEN A TERMINAL AND DO THIS</b>
-<ul>
-<li>cd</li>
-<li>wget http://botnroll.com/onea/downloads/BnrOneA.zip</li>
-</ul>
-</div>
+{{ site.data.alerts.terminal_commands }}
+cd
+wget http://botnroll.com/onea/downloads/BnrOneA.zip
+{{ site.data.alerts.terminal_commands_end }}
 
 Open up the Arduino IDE.
 
-<div style="background-color:rgba(127, 255, 255, 0.5)">
-<b>OPEN A TERMINAL AND DO THIS</b>
-<ul>
-<li>arduino</li>
-</ul>
-</div>
+{% include terminal_command.html command="arduino" %}
 
 Go to the Arduino IDE.
 
@@ -167,7 +149,6 @@ It should say:
 "LCD Test OK !!"
 
 "www.botnroll.com"
-
 
 
 ## Moving the Robot

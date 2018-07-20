@@ -2,7 +2,6 @@
 title: "Compiling and Executing from the Command Line"
 tags: [c++]
 keywords: c++
-last_updated: July 2, 2018
 summary:
 sidebar: tutorials
 permalink: compile_run.html

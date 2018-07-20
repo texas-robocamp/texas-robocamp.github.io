@@ -2,7 +2,6 @@
 title: "Introduction to C++ Programming"
 tags: [c++]
 keywords: c++
-last_updated: July 2, 2018
 summary:
 sidebar: tutorials
 permalink: programming_introduction.html

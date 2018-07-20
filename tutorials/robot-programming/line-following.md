@@ -2,7 +2,6 @@
 title: "Line Following"
 tags: [robot programming]
 keywords:
-last_updated: July 17, 2018
 summary:
 sidebar: tutorials
 permalink: line_following.html

@@ -2,7 +2,6 @@
 title: "Introduction"
 tags: [robot programming]
 keywords:
-last_updated: July 5, 2018
 summary:
 sidebar: tutorials
 permalink: robot_programming_introduction.html

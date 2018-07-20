@@ -2,7 +2,6 @@
 title: "First Program: Hello World"
 tags: [c++]
 keywords: c++
-last_updated: July 2, 2018
 summary:
 sidebar: tutorials
 permalink: first_program.html

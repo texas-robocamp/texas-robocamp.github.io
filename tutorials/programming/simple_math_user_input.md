@@ -2,7 +2,6 @@
 title: "Simple Math and User Input"
 tags: [c++]
 keywords: c++
-last_updated: July 2, 2018
 summary:
 sidebar: tutorials
 permalink: simple_math_user_input.html

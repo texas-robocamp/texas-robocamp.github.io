@@ -2,7 +2,6 @@
 title: "Testing"
 tags: [electronics]
 keywords:
-last_updated: July 2, 2018
 summary:
 sidebar: tutorials
 permalink: testing.html

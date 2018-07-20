@@ -2,7 +2,6 @@
 title: "Welcome!"
 tags: [welcome]
 keywords: welcome
-last_updated: July 4, 2018
 summary:
 sidebar: tutorials
 permalink: welcome.html
@@ -56,10 +55,11 @@ Sometimes we need to tell you something tangential to the line of thought of the
 
 Sometimes we just want you to type something into the computer so we can get on to the next thing. In-depth instruction on that command would slow down the camp, so we just tell you what to do. You can literally copy-paste the commands, minus the bullets.
 
-{{site.data.alerts.note}}
-<b>OPEN A TERMINAL AND DO THIS</b>
-
-{{site.data.alerts.end}}
+{{ site.data.alerts.terminal_commands }}
+cd
+ls
+pwd
+{{ site.data.alerts.terminal_commands_end }}
 
 ## Pair Programming
 

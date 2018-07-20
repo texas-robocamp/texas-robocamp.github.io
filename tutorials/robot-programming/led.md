@@ -2,7 +2,6 @@
 title: "LED"
 tags: [c++ programming]
 keywords: LED
-last_updated: July 18, 2018
 summary:
 sidebar: tutorials
 permalink: led.html
