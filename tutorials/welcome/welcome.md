@@ -33,14 +33,8 @@ You have received a pair of cups which are taped to each other. One is red. One 
 
   * Neither of those two conditions are currently true.
 
-<div style="background-color:rgba(0, 0, 200, 0.5)">
-<b>BLUE CUP: Initial Setup</b>
-<ul>
-<li>Please place your cup on your monitor such that the blue cup is facing upward now. If you need help, you will indicate such by flipping it to red from now on.</li>
-<li> Once you have completed this, keep going through the tutorial.
-</li>
-</ul>
-</div>
+{% include callout_blue_cup.html task="Initial Setup" comment="If you need help, you will indicate such by flipping it to red from now on. Once you have completed this, keep going through the tutorial." %}
+
 
 At this point, please **actually** flip your cup to blue, and start using the cups as needed. 
 
@@ -48,12 +42,7 @@ At this point, please **actually** flip your cup to blue, and start using the cu
 
 There are some activities that we will do as one big group. For instance, sections of the tutorial are accompanied by brief lectures or group activities. Sections that are done as a group will be marked with a yellow box to indicate that you should wait to synchronize with the other campers.
 
-<div style="background-color:rgba(255, 255, 0, 0.5)">
-<b>SYNCHRONIZE</b>
-<ul>
-<li>Just kidding. Keep going.</li>
-</ul>
-</div>
+{% include callout_synchronize.html  comment="Just kidding. Keep going." %}
 
 Seriously, that yellow box is just there to show you what it looks like.
 
@@ -61,25 +50,16 @@ Seriously, that yellow box is just there to show you what it looks like.
 
 Sometimes we need to tell you something tangential to the line of thought of the tutorial, but important to point out, or to highlight something so you do not forget to do it. We'll mark these boxes green.
 
-<div style="background-color:rgba(0, 255, 0, 0.5)">
-<b>TIP</b>
-<ul>
-<li>Don't get distracted by the tips. They're intended to help you, not side-track you.</li>
-</ul>
-</div>
+{% include tip.html content="Don't get distracted by the tips. They're intended to help you, not side-track you." %}
 
 ## Command Line Instructions
 
 Sometimes we just want you to type something into the computer so we can get on to the next thing. In-depth instruction on that command would slow down the camp, so we just tell you what to do. You can literally copy-paste the commands, minus the bullets.
 
-<div style="background-color:rgba(127, 255, 255, 0.5)">
+{{site.data.alerts.note}}
 <b>OPEN A TERMINAL AND DO THIS</b>
-<ul>
-<li>cd</li>
-<li>ls</li>
-<li>pwd</li>
-</ul>
-</div>
+
+{{site.data.alerts.end}}
 
 ## Pair Programming
 
@@ -133,6 +113,7 @@ At designated points through your progress on this website, you will be asked to
 
 It will look like this:
 
+{% include callout_red_cup.html task="Tutorial 1" %}
 <div style="background-color:rgba(255, 0, 0, 0.5)">
 <b>RED CUP: Track Progress [Tutorial 1]</b>
 <ul>

@@ -1,0 +1,170 @@
+body {
+    font-family:
+    /* Safari for OS X and iOS (San Francisco)*/
+        -apple-system,
+        /* Chrome < 56 for OS X (San Francisco) */
+        BlinkMacSystemFont,
+        /* Windows */
+        "Segoe UI",
+        /* Android */
+        "Roboto",
+        /* Basic web fallback */
+        "Helvetica Neue", Arial, sans-serif,
+        /* Emoji fonts */
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+.summary {
+    color: #808080;
+    border-left: 5px solid #E50E51;
+    font-size:16px;
+}
+
+h3 {color: #333f48; }
+h4 {color: #808080; }
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
+    background-color: #248ec2;
+    color: white;
+}
+
+.nav > li.active > a {
+    background-color: #bf5700;
+}
+
+.nav > li > a:hover {
+    background-color: #bf5700;
+}
+
+div.navbar-collapse .dropdown-menu > li > a:hover {
+    background-color: #bf5700;
+}
+
+.navbar-inverse .navbar-nav>li>a, .navbar-inverse .navbar-brand {
+    color: #808080;
+}
+
+.navbar-inverse .navbar-nav>li>a:hover, a.fa.fa-home.fa-lg.navbar-brand:hover {
+     color: #808080;
+}
+
+.nav li.thirdlevel > a {
+    background-color: #FAFAFA !important;
+    color: #72ac4a;
+    font-weight: bold;
+}
+
+a[data-toggle="tooltip"] {
+    color: #649345;
+    font-style: italic;
+    cursor: default;
+}
+
+
+.navbar-inverse {
+    background-color: #f1f1f1;
+    /*border-color: #5b893c;*/
+    border: none;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    color: #5b893c;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus {
+    background-color: #5b893c;
+    color: #808080;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+    color: #fff;
+    background-color: #808080
+}
+
+/* not sure if using this ...*/
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: #72ac4a !important;
+}
+
+.btn-primary {
+    color: #808080;
+    background-color: #5b893c;
+    border-color: #5b893c;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.open .dropdown-toggle.btn-primary {
+    background-color: #72ac4a;
+    border-color: #5b893c;
+}
+
+.printTitle {
+    color: #5b893c !important;
+}
+
+body.print h1 {color: #5b893c !important; font-size:28px;}
+body.print h2 {color: #595959 !important; font-size:24px;}
+body.print h3 {color: #E50E51 !important; font-size:14px;}
+body.print h4 {color: #679DCE !important; font-size:14px; font-style: italic;}
+
+.anchorjs-link:hover {
+    color: #4f7233;
+}
+
+div.sidebarTitle {
+    color: #333f48;
+}
+
+li.sidebarTitle {
+    margin-top:20px;
+    font-weight:normal;
+    font-size:130%;
+    color: #333f48;
+    margin-bottom:10px;
+    margin-left: 5px;
+}
+
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover {
+    background-color: #808080;
+}
+
+#header-logo {
+    height: 80%;
+    margin-top: 2px;
+}
+
+/* FOOTER */
+
+footer {
+    color: #808080;
+}
+
+#footer-logo {
+    height: 24px;
+    opacity: .8;
+}
+
+/* CALLOUTS */
+
+.synchronize {
+    border-left-color: rgb(255, 214, 0);
+    background-color: rgba(255, 214, 0, 0.1);
+}
+
+.blue-cup {
+    border-left-color: rgb(0, 95, 134);
+    background-color: rgba(0, 95, 134, 0.1);
+}
+
+.red-cup {
+    border-left-color: rgb(133, 0, 0);
+    background-color: rgba(133, 0, 0, 0.1);
+}
+
+.alert-success {
+    background-color: rgba(166, 205, 87, 0.4);
+}

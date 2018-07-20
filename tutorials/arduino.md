@@ -7,13 +7,7 @@ sidebar: tutorials
 permalink: arduino.html
 ---
 
-<div style="background-color:rgba(255, 255, 0, 0.5)">
-<b>SYNCHRONIZE</b>
-<ul>
-<li>There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the section marked GROUP SECTION.</li>
-</ul>
-</div>
-
+{% include callout_synchronize.html comment="There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the section marked GROUP SECTION." %}
 ## Microcontrollers
 
 At the heart of your robot, and what you will spend much of the week programming, is an Atmega 328 microcontroller. A microcontroller is like a entire computer on a single microchip. It has storage, a processor, and memory, much like any other computer does.
@@ -24,13 +18,12 @@ There are actually two microcontrollers on the Bot'n Roll One. The second is a P
 
 ## Arduino
 
-<div style="background-color:rgba(0, 255, 0, 0.5)">
-<b>TIP</b>
+{{ site.data.alerts.tip }}
 <ul>
 <li>Open external links in new tabs if you go to them for extra reading. You'll want to get back to the tutorial quickly.</li>
 <li>You can do this by right-clicking the link and selecting "Open link in new tab" from the menu that pops up.</li>
 </ul>
-</div>
+{{ site.data.alerts.end }}
 
 Arduino is an open-source electronics platform designed around Atmega microcontrollers. You can find more information on Arduinos ["Here"](https://www.arduino.cc/en/Guide/Introduction)
 
@@ -97,12 +90,7 @@ Go to the Arduino IDE.
 - Navigate to "Sketch -> Import Library -> Add Library".
 - Click BnrOneA.zip and hit OK.
 
-<div style="background-color:rgba(0,255,0,0.5)">
-<b>TIP</b>
-<ul>
-<li>You may get some warnings saying that Bluetooth cannot be used. Don't worry. We're not using Bluetooth.</li>
-</ul>
-</div>
+{% include tip.html content="You may get some warnings saying that Bluetooth cannot be used. Don't worry. We're not using Bluetooth." %}
 
 Next, we'll need to configure the IDE to connect to the robot.
 
@@ -137,8 +125,8 @@ The names of the buttons are as follows: Verify, Upload, New, Open, and Save. Le
 Now that you understand how to upload code to the robot, go ahead and upload the LED code.
 
 
-<div style="background-color:rgba(0,255,0,0.5)">
-<b>TIP</b>
+{{ site.data.alerts.tip }}
+
 <ul>
 <li>If after hitting the verify button, the Arduino IDE doesn't stay "Done Compiling" near the bottom, and "Binary sketch size: X."
 You should flip your red cup to get some help at this point.</li>
@@ -146,7 +134,7 @@ You should flip your red cup to get some help at this point.</li>
 You should flip your red cup to get some help at this point.</li>
 <li>Whenever you disconnect the robot from your computer, you'll need to re-connect to the robot through the IDE to re-upload code!</li>
 </ul>
-</div>
+{{ site.data.alerts.end }}
 
 - Once you have uploaded the LED code one of the LEDs on your robot should blink.
 

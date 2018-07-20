@@ -20,7 +20,7 @@ When placing the 3 x 2 pin header, be sure to place the short end into the PCB.
 
 Don't turn on the board yet. Check in so we can praise your solder work and catch any accidental shorts that might fry your robot.
 
-{% include cup-callout.html task="X" %}
+{% include callout_red_cup.html task="X" %}
 
 {% include note.html content="The camp staff will help you use a [multimeter](https://en.wikipedia.org/wiki/Multimeter) to check that the 5V, 3.3V and VIN voltages are correct."%}
 

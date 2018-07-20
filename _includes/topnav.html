@@ -10,14 +10,14 @@
             </button>
             <!--Include in class "fa fa-lg fa-home" to render the little house-->
             <a class="navbar-brand" style="padding:0px 0px" href="index.html">&nbsp;<span class="projectTitle">
-                <img src="images/company_logo.png" height="100%" align="top"/><!--{{site.topnav_title}}--> </span>
+                <img id="header-logo" src="images/texas-robocamp.svg"/><!--{{site.topnav_title}}--> </span>
             </a>
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <!-- toggle sidebar button 
-                    <li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>
-                -->
+                <!-- toggle sidebar button -->
+                    <!--<li><a id="tg-sb-link" href="#"><i id="tg-sb-icon" class="fa fa-toggle-on"></i> Nav</a></li>-->
+
                 <!-- entries without drop-downs appear here -->
 
 {% assign topnav = site.data[page.topnav] %}
@@ -54,11 +54,10 @@
                 </li>
                 {% endfor %}
                 {% endfor %}
-                <!--
+
                 {% if site.feedback_disable == null or site.feedback_disable == false %}
-			{% include feedback.html %}
-                -->
-		{% endif %}
+			        {% include feedback.html %}
+		        {% endif %}
                 <!--comment out this block if you want to hide search-->
                 <li>
                     <!--start search-->
