@@ -29,11 +29,16 @@ How should this function work? Conceptually, let's imagine that the line is cove
 |:---:|:---:|:---:|:---:|:---:|
 |far left|slight left|straight|slight right| far right|
 
-From there, you'll have to think about how to apply the value returned by `readLine()` to each wheel in order to get the desired turn you're looking for. You'll also want to think about what the value for the extremes should be. Are there any particular constraints we have to keep in mind? You may find it useful to scale the value by a constant factor to account for those contraints. Also, think about what directions the wheels need to be moved in order to accomplish an even turn. In order to turn, one wheel will need to move forwards while the other moves backwards. 
+From there, you'll have to think about how to apply the value returned by `readLine()` to each wheel in order to get the desired turn you're looking for. You'll also want to think about what the value for the extremes should be. Are there any particular constraints we have to keep in mind? You may find it useful to scale the value by a constant factor to account for those contraints. Also, think about what directions the wheels need to be moved in order to accomplish an even turn. In order to turn, one wheel will need to move forwards while the other moves backwards.
 
 ### Task X.2
 
 Now that you've got some ideas on where to start, it's time to begin programming! Remember, the goal is to have the car follow the line. As one final hint, the only BnrOneA functions you should need to get through this exercise are the `move(speedL,speedR)` and `readAdc(byte)` functions.
 
-Once you want to test out your line following robot, go to the bridge to test it out on the track. Be sure to race your fellow campers! We'll time your robot and you can report your best times!
-
+<div style="background-color:rgba(255,0,0,0.5)">
+<b>RED CUP: Track Progress [Task X.2]</b>
+<ul>
+<li>Please flip your cup to red.</li><li>A camp staff member will bring you to a course to drive your robot through.</li>
+  <li>Camp Staff: Bring the group to the bridge to test that the robot can successfully accomplish this task.</li>
+</ul>
+</div>
