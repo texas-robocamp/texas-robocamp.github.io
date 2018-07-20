@@ -81,6 +81,8 @@ Operator |	Operation
 /	     | division
 %	     | modulus (remainder)
 
+When you divide two integers, the remainder of the two numbers is left out. This is called integer division. For example, `5 / 2` will give you 2, not 2.5. If you want the full value, you must change one or both of the numbers to floats. 
+
 The % operator gives you the remainder of integer division. So if you want the remainder of `5 / 2` (which is 1), you would say:
 
 ```cpp
