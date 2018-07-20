@@ -125,7 +125,7 @@ Using sublime and the command line, you will be able to write and execute your t
 
 ## Arduino IDE
 
-The robot, it uses an Arduino microcontroller, so for times when we program the robot, we will want to use the Arduino IDE (Integrated Development Environment).
+The robot uses an Arduino microcontroller, so for times when we program the robot, we will want to use the Arduino IDE (Integrated Development Environment).
 
 Opening arduino is the same as opening Sublime, except that you will type "arduino" in either the terminal or the lens.
 
