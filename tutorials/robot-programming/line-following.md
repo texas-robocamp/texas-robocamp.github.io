@@ -7,8 +7,6 @@ sidebar: tutorials
 permalink: line_following.html
 ---
 
-## Line Following
-
 In this next step, you'll be writing a program to follow a line. We'll be providing you with some of the outline for figuring out how to do this, but a lot of all this will be on your own.
 
 ## Understanding the Sensor

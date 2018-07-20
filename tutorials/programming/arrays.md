@@ -76,7 +76,7 @@ Write a program that asks a user to enter 10 numbers, puts those numbers in an a
 
 Almost there! Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
 
-### Multidimensional Arrays
+## Multidimensional Arrays
 
 One really cool feature of arrays is that you can have multidimensional arrays. Let's return to the motel example from earlier, where we had a one-story motel. Imagine that we add a second floor to the motel of exactly the same length as the ground floor. Let's pretend we had to give a motel guest directions to their room. We would start by telling them the floor that they were on, and then which room on that floor was theirs. Multi-dimensional arrays work the same way, except the floors are numbered from 0. To make this a little clearer, consider this diagram below, which represents an array called `letterArray`:
 
@@ -96,8 +96,10 @@ You can use a multidimensional array in exactly the same way as a one-dimensiona
 
 Determine the correct code to access the elements containing letters y and z in the diagram above.
 
+{% include callout_red_cup.html task="X" %}
+
+## Wrap-up
+
 Congratulations! You have finished the C++ tutorial!
 
-Don't forget to turn your cups to red so that a member of the camp staff can check your code.
-
-Once your project team is finished, one of the camp staff will bring you the materials for your project and explain how to get started. Until then, you can explore coding and the Linux environment, and you can let your other team members know that you are available if they have questions.
+Until we move on to robot programming, you can explore coding and the Linux environment, and you can let your neighbors know that you are available if they have questions.
