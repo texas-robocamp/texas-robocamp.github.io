@@ -14,9 +14,12 @@ Now that you understand the basics, let's start programming the robot! Your firs
 - If the robot sees an obstacle on one side, back up, turn towards the clear side, and continue forwards
 - If the robot sees obstacles on both sides, back up
 
-## History
+### History
 Grey Walter was a neuroscientist, who in the late 1940s created the first autonomous robots, Elsie and Elmer. These robots were phototropic, meaning they followed light, and were also sensitive to touch. These two sensory systems combined together with a motor helped him create "behavior" for these robots, to the point where they could move across a room autonomously. Because of the slow movement of the robots, Walter called them tortoises and believed they taught us the secrets to the organization of life. This movement behavior is now known as the turn and push behavior which we want to create to avoid obstacles. Below is an image of the path of one of Walter's tortoises. You can see the turn and push behavior in the path.
-![alt text][images/turn_and_push.png]
+
+![Tortoises](images/turn_and_push.png)
+
+### Getting Started
 
 You'll probably find it helpful to use the obstacle_avoidance code as a starting point, so go ahead and open that up again. You'll notice that the bulk of the code is divided into two functions, `setup()` and `loop()`. The setup function is called first, and initalizes the robot. The code inside of this function is all neccessary, and is used to establish connections to the robot and ensure that it starts without any motors running. The actual obstacle detection will be done inside of `loop()`.
 
@@ -24,15 +27,14 @@ You'll probably find it helpful to use the obstacle_avoidance code as a starting
 void loop() {
   int sensor = one.obstacleSensors();
   if(sensor == 0){
-    one.move(50,50);
     Serial.print("No objects detected");
     one.lcd1("No objects detected");
-
+    one.move(50,50);
   }
   else {
-    one.brake(50,50);
     Serial.print("Object detected");
     one.lcd1("Object detected");
+    one.brake(50,50);
   }
 }
 ```
@@ -50,12 +52,6 @@ int sensor = one.obstacleSensors();
 ```
 
 The `obstacleSensors()` function returns an `int` based on what the robot's front sensors are detecting. If you receive 0, no obstacles are being detected. If you receive 1, then an obstacle is being detected on the left sensor. Receiving 2 indicates that an obstacle has been detected on the right sensor. Finally, receiving a 3 means that obstacles were detected on both the right and left sensors.
-
-```
-one.move(50,50);
-```
-
-The `move()` function takes two arguments: speedL and speedR. These values define the speed of each motor, which ranges from -100 to 100. -100 corresponds to the max speed in reverse, and 100 corresponds to the max speed in the forward direction. An input of 0 stops the motor.
 
 
 ```
@@ -84,11 +80,31 @@ This function is actually one of many different lcdX functions, and each one tak
 - lcdX(num1, num2, num3)
 - lcdX(num1, num2, num3, num4)
 
+### Task X.1
+
+Now that you know about `obstacleSensors()`, `Serial.print()`, and `one.lcdX`, let's write some code to see how they work. Write a program that prints to both the serial monitor and the LCD screen every time one of the sensors detects an object. 
+
+## Moving the Car
+
+The remaining functions from the obstacle_avoidance code that we haven't talked about all involve controlling the movement of the car.
+
+```
+one.move(50,50);
+```
+
+The `move()` function takes two arguments: speedL and speedR. These values define the speed of each motor, which ranges from -100 to 100. -100 corresponds to the max speed in reverse, and 100 corresponds to the max speed in the forward direction. An input of 0 stops the motor.
+
 ```
 one.brake(50,50);
 ```
 
 The `brake()` function also takes two arguments: torqueL and torqueR. These values define the braking power of each motor, which ranges between 0 and 100. Zero corresponds to stopping without braking, whereas 100 corresponds to stopping with the maximum braking torque.
+
+### Task X.2 
+Now that you know how to make the car start and stop, let's test out these functions! Write a program that has the car drive forwards for 2 seconds, brakes, and repeats.
+
+Before you write this program, however, you'll need to know about one more function, `void delay(milliseconds)`. This function returns no value, and has the program wait for a specified amount of milliseconds before executing the next line of code. 
+
 
 ### Additional Functions
 
@@ -108,7 +124,7 @@ This function can set the LED on or off, depending on the state passed in. Passi
 
 
 
-## Task X
+## Task X.3
 
 Now that you understand these functions, we can start coding! Your first programming task on the robot is to implement obstacle avoidance.
 
@@ -116,7 +132,7 @@ The default behavior of the obstacle avoidance program is to turn away when the 
 
 We will let you decide how to signal. We suggest a beep for backing up, and lights for turning.
 
-### Helpful Functions
+### Beeping Functions
 For beeping, you may find these functions useful:
 - tone(pin, frequency, duration)
 - notone(pin)
