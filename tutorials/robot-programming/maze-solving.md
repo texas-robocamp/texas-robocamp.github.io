@@ -30,3 +30,5 @@ Once you have developed a general rule, it's time to start programming and then 
   <li>Camp Staff: Bring the group to one of the mazes and ensure that the robot is able to complete the maze.</li>
 </ul>
 </div>
+
+Finally, let's attach some [LEDs](led.html) to the robot.

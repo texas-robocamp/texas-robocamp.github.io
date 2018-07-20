@@ -127,3 +127,5 @@ Note: The buzzer that emits sound is located on digital pin 9.
   <li>Camp Staff: <strong>TODO: LOCATION UNKNOWN</strong> Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors.</li>
 </ul>
 </div>
+
+Now, let's get the robot to [follow a line](line_following.html).

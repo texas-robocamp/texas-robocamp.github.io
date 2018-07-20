@@ -42,3 +42,5 @@ Now that you've got some ideas on where to start, it's time to begin programming
   <li>Camp Staff: Bring the group to the bridge to test that the robot can successfully accomplish this task.</li>
 </ul>
 </div>
+
+Now that your robot can follow a line, we can try to [solve a maze](maze_solving.html).
