@@ -59,7 +59,7 @@ Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.
 
 ## Git
 
-Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Since we're only here for a week, so we're just going to tell you what to type here.
+Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Since we're only here for a week, we're just going to tell you what to type here.
 
 <div style="background-color:rgba(127, 255, 255, 0.5)">
 <b>OPEN A TERMINAL AND DO THIS</b>
@@ -79,7 +79,7 @@ To get it, we'll download it from the internet and install it into the Arduino I
 <b>OPEN A TERMINAL AND DO THIS</b>
 <ul>
 <li>cd</li>
-<li>wget http://botnroll.com/onea/downloads/BnrOneA.zi</li>
+<li>wget http://botnroll.com/onea/downloads/BnrOneA.zip</li>
 </ul>
 </div>
 
