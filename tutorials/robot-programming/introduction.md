@@ -14,6 +14,10 @@ Now that you understand the basics, let's start programming the robot! Your firs
 - If the robot sees an obstacle on one side, back up, turn towards the clear side, and continue forwards
 - If the robot sees obstacles on both sides, back up
 
+## History
+Grey Walter was a neuroscientist, who in the late 1940s created the first autonomous robots, Elsie and Elmer. These robots were phototropic, meaning they followed light, and were also sensitive to touch. These two sensory systems combined together with a motor helped him create "behavior" for these robots, to the point where they could move across a room autonomously. Because of the slow movement of the robots, Walter called them tortoises and believed they taught us the secrets to the organization of life. This movement behavior is now known as the turn and push behavior which we want to create to avoid obstacles. Below is an image of the path of one of Walter's tortoises. You can see the turn and push behavior in the path.
+![alt text][images/turn_and_push.png]
+
 You'll probably find it helpful to use the obstacle_avoidance code as a starting point, so go ahead and open that up again. You'll notice that the bulk of the code is divided into two functions, `setup()` and `loop()`. The setup function is called first, and initalizes the robot. The code inside of this function is all neccessary, and is used to establish connections to the robot and ensure that it starts without any motors running. The actual obstacle detection will be done inside of `loop()`.
 
 ```
