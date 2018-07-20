@@ -60,12 +60,7 @@ Serial.print("No objects detected");
 
 The `print()` function for the Serial class works in a similar fashion to the `printf()` function in C. Use this to output debugging information. To view the output, you'll need to look at the Serial Monitor, which can be found at "Tools -> Serial Monitor".
 
-<div style="background-color:rgba(0,255,0,0.5)">
-<b>TIP</b>
-<p></p>
-<p>Make sure that the baums setting on the monitor is the same value as the number passed into Serial.begin(), or your output will not be understandable.</p>
-</div>
-
+{% include tip.html content="Make sure that the baud setting on the monitor is the same value as the number passed into Serial.begin(), or your output will not be understandable." %}
 
 ```
 one.lcd1("No objects detected");
@@ -123,7 +118,6 @@ void led(state)
 This function can set the LED on or off, depending on the state passed in. Passing in 0 turns the LED off, and passing in 1 turns the LED on.
 
 
-
 ## Task 8.3
 
 Now that you understand these functions, we can start coding! Your first programming task on the robot is to implement obstacle avoidance.
@@ -139,13 +133,6 @@ For beeping, you may find these functions useful:
 
 Note: The buzzer that emits sound is located on digital pin 9.
 
-<div style="background-color:rgba(255,0,0,0.5)">
-<b>RED CUP: Track Progress [Task 8]</b>
-<ul>
-<li>Please flip your cup to red.</li><li>A camp staff member will bring you to an open space to drive your robot into.</li>
-<li>Feel free to run your robot at your desk while you wait, but try not to create chaos in doing so.</li>
-  <li>Camp Staff: <strong>TODO: LOCATION UNKNOWN</strong> Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors.</li>
-</ul>
-</div>
+{% include callout_red_cup.html task="8.3" %}
 
 Now, let's get the robot to [follow a line](line_following.html).

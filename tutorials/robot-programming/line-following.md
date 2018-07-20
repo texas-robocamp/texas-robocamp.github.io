@@ -15,7 +15,7 @@ In this next step, you'll be writing a program to follow a line. We'll be provid
 ## Understanding the Sensor
 Your car has many sensors on it. The Line Follower is an array of 8 analog infrared sensors, which you will use to follow the line. Bot'n'Roll provides a function `readAdc(byte)` which allows for you to detect the values being reported by each of the sensors. Since there are 8 infrared sensors on the Line Sensor, the permitted values for byte are 0-7. This function will return an `int` between 0 and 1023.
 
-### Task X.1 
+### Task 9.1 
 
 Now that you've learned about the `readAdc(bytes)` function, let's write some code to see how it works! Create a new program that outputs the sensor values for each infrared sensor on the LCD display. Remember, since there are 8 different sensors on the Line Follower, you'll probably want to use the lcdX function that takes in four numbers.What do the outputs look like when the sensors are over a dark object? What about a light one?
 
@@ -31,16 +31,10 @@ How should this function work? Conceptually, let's imagine that the line is cove
 
 From there, you'll have to think about how to apply the value returned by `readLine()` to each wheel in order to get the desired turn you're looking for. You'll also want to think about what the value for the extremes should be. Are there any particular constraints we have to keep in mind? You may find it useful to scale the value by a constant factor to account for those contraints. Also, think about what directions the wheels need to be moved in order to accomplish an even turn. In order to turn, one wheel will need to move forwards while the other moves backwards.
 
-### Task X.2
+### Task 9.2
 
 Now that you've got some ideas on where to start, it's time to begin programming! Remember, the goal is to have the car follow the line. As one final hint, the only BnrOneA functions you should need to get through this exercise are the `move(speedL,speedR)` and `readAdc(byte)` functions.
 
-<div style="background-color:rgba(255,0,0,0.5)">
-<b>RED CUP: Track Progress [Task X.2]</b>
-<ul>
-<li>Please flip your cup to red.</li><li>A camp staff member will bring you to a course to drive your robot through.</li>
-  <li>Camp Staff: Bring the group to the bridge to test that the robot can successfully accomplish this task.</li>
-</ul>
-</div>
+{% include callout_red_cup.html task="9.2" %}
 
 Now that your robot can follow a line, we can try to [solve a maze](maze_solving.html).
