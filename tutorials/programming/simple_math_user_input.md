@@ -101,4 +101,4 @@ Write a program that asks the user for two numbers, and then prints out the sum 
 
 Woot, woot! Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
 
-Next, you'll learn about functions.
+Next, you'll learn about [functions](functions.html).

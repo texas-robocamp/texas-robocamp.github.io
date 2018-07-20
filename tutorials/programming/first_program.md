@@ -36,4 +36,4 @@ Modify the Hello World program so that it prints, "Hello World and Your Name". F
 
 Yay! You have written your first C++ program!
 Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
-Now, you'll learn how to perform simple math.
+Now, you'll learn how to perform [simple math](simple_math_user_input.html).

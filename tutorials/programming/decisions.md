@@ -130,7 +130,7 @@ if (!(wearingSeatbelt == "n")){
 ### Task 5.2:
 Finish implementing the seat belt law for the driver who goes over 40mph (just follow the format above). Then come up with another law and add it to your code. Be as creative and ridiculous as you want, and if you need help, ask for it!
 
-Now, we'll move on to loops.
+Now, we'll move on to [loops](repetition.html).
 Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
 
 

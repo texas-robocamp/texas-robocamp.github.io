@@ -232,5 +232,4 @@ Congratulations, you are well on your way to mastering the complex subject that 
 
 Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
 
-Now, let's move on to decisions.
-
+Now, let's move on to [decisions](decisions.html).

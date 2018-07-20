@@ -186,6 +186,6 @@ This loop begins by checking to see if userInput is less than 1 or greater than 
 
 Create a program that asks the user to enter a number between 5 and 50. If the user enters invalid input, print out a message to the user asking them to try again and keep getting input from the user until they enter a valid number. Bonus: Can you keep track of the number of attempts a user makes to enter a number, and then print it out when they finally enter a valid number?
 
-Good job! You are almost finished. For your last lesson, you'll learn how to use arrays.
+Good job! You are almost finished. For your last lesson, you'll learn how to use [arrays](arrays.html).
 
 But first, don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!

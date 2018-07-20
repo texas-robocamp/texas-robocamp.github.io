@@ -177,4 +177,4 @@ We just have to remember to send the function all parameters it expects as argum
 Modify the printGreeting function to also take a string birthdayMonth parameter, and print out a message that tells them how old they will be the next time it is that month. For the Ronald McDonald example, the output might be, "You will be 50 next January".
 
 You've done a great a job learning about functions. Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
-Now, let's learn about a special data representation, the object.Z
+Now, let's learn about a special data representation, the [object](objects.html).
