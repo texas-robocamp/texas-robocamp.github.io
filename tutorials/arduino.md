@@ -59,7 +59,7 @@ Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.
 
 ## Git
 
-Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. None of these projects are designed to take more than a week, so we're just going to tell you what to type here.
+Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Since we're only here for a week, so we're just going to tell you what to type here.
 
 <div style="background-color:rgba(127, 255, 255, 0.5)">
 <b>OPEN A TERMINAL AND DO THIS</b>
@@ -75,10 +75,11 @@ We need to get the library that drives the robot. A library is a collection of s
 
 To get it, we'll download it from the internet and install it into the Arduino IDE.
 
+<div style="background-color:rgba(127, 255, 255, 0.5)">
 <b>OPEN A TERMINAL AND DO THIS</b>
 <ul>
-<li>cd ~</li>
-<li>wget http://botnroll.com/onea/downloads/BnrOneA.zip</li>
+<li>cd</li>
+<li>wget http://botnroll.com/onea/downloads/BnrOneA.zi</li>
 </ul>
 </div>
 
@@ -109,11 +110,13 @@ Next, we'll need to configure the IDE to connect to the robot.
 - Navigate to "Tools -> Board" and select the "Arduino Uno" board. 
 - Navigate to "Tools -> Serial Port", and select "ttyUSB#". The # corresponds to which USB port you have the robot plugged into.
 
-## Loading Your First Program
+## Loading Your First Program - Blinking an LED
+
+### exercises/ex01_LED
 
 The first program we're going to load is a simple program that blinks an LED on the robot. Here, you'll learn how to navigate through the Arduino IDE so that you can build and upload your own programs.
 
-In the Arduino IDE, navigate to "File-> Open", which will give you a file open dialog. In your home directory, you will now have a directory called "exercises." Under "exercises/ex01_LED" you will find "ex01_LED.ino". Open this file.
+- In the Arduino IDE, navigate to "File-> Open", which will give you a file open dialog. In your home directory, you will now have a directory called "exercises." Under "exercises/ex01_LED" you will find "ex01_LED.ino". Open this file.
 
 Now, let's go ahead and upload this code to the robot. To do so, you'll need to understand the menu bar at the top of the IDE. It should look just like this:
 
@@ -145,17 +148,61 @@ You should flip your red cup to get some help at this point.</li>
 </ul>
 </div>
 
+- Once you have uploaded the LED code one of the LEDs on your robot should blink.
+
+- Unplug your robot and flip your power switch to on, your LED should still blink. It not, use your red cup so we can help you to debug this.
+
+- Now plug your robot back in and test the serial monitor.
+
+- In the Arduino IDE go to Tools->Serial Monitor
+
+A screen should pop up. The top should say /dev/ttyUSB#.
+
+Text should be scrolling down it saying "LED ON" "LED OFF." If it is not, get camp staff to help you.
+
+Next, let's fire up the LCD screen on the front and tune it.
+
+## Turning on the LCD, and tuning it
+
+### exercises/ex02_LCD
+
+- Turn off your robot. The LED should stop blinking.
+
+- Now load exercises/ex02_LCD/ex02_LCD.ino in the same way that you loaded the LED exercise.
+
+Once loaded, unplug your robot from the computer. You may notice that you can't read your LCD screen. We can assume by now that you know how the compiler works, so the problem must be the tuning of the LCD screen.
+
+- Look on the left-hand side of your robot next to the screen and see two dials. Use your screwdriver to adjust the brightness and contrast settings on your LCD until you are happy with the display.
+
+It should say:
+
+"LCD Test OK !!"
+
+"www.botnroll.com"
+
+
 
 ## Moving the Robot
 
-Now that you've got the examples downloaded, let's go ahead and get the robot moving! Upload the exercise titled "obstacle_avoidance" onto your robot, unplug it from your computer, and then place it down and watch it go! We'll go more in depth about what this code does later.
+### exercises/ex03_Basic_Motion
+
+Let's go ahead and get the robot moving!
+
+- Load exercises/ex03_Basic_Motion/ex03_Basic_Motion.ino, and compile and load it onto the robot.
 
 <div style="background-color:rgba(255,0,0,0.5)">
-<b>RED CUP: Upload Obstacle Avoidance Code [Tutorial 2]</b>
-<p></p>
-<p>Once you've got the robot moving, flip your cup to red so that a counselor can verify that you've got it working.</p>
+<b>RED CUP: Track Progress [Tutorial 2]</b>
+<ul>
+<li>We're going to use this exercise to verify that your robot operates properly.</li>
+<li>Please flip your cup to red.</li><li>A camp staff member will bring you to an open space to drive your robot into.</li>
+<li>Feel free to run your robot at your desk while you wait, but try not to create chaos in doing so.</li>
+<li>Camp Staff: Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors.</li>
+</ul>
 </div>
 
+If everything worked properly, then your robot should have driven up to the wall and stopped.
+
+If it didn't, then camp staff should help you to repair your robot so you are ready to move on in the tutorials.
 
 ## Next Step
 
