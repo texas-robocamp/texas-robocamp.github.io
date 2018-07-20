@@ -124,7 +124,7 @@ Note: The buzzer that emits sound is located on digital pin 9.
 <ul>
 <li>Please flip your cup to red.</li><li>A camp staff member will bring you to an open space to drive your robot into.</li>
 <li>Feel free to run your robot at your desk while you wait, but try not to create chaos in doing so.</li>
-<li>Camp Staff: **TODO: LOCATION UNKNOWN**Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors.</li>
+  <li>Camp Staff: <strong>TODO: LOCATION UNKNOWN</strong> Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors.</li>
 </ul>
 </div>
 
