@@ -67,7 +67,7 @@ entries:
       output: web, pdf
 
     - title: Compiling and Running via the Command Line
-      url: /compiling_running.html
+      url: /compile_run.html
       output: web, pdf
 
   - title: Programming the Robot
