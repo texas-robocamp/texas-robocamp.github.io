@@ -34,7 +34,7 @@ By default, the Ubuntu logo will be displayed on the launcher to the left of the
 
   * No, neither browser is better than the other for this camp. This is purely a matter of personal preference.
 
-3. Go to <https://utcs-robotics-camp.github.io/texas-robocamp.github.io/> to get to this site.
+3. Go to <https://utcs-robotics-camp.github.io/> to get to this site.
 
 ### Getting to a Terminal
 
@@ -60,10 +60,12 @@ By default, the Ubuntu logo will be displayed on the launcher to the left of the
 
 An important part of using Linux is becoming familiar with the command line. Here a few commands you will need during the course of this camp. Try them out.
 
-| ls    | List.                      | Lists the contents of the current directory. |
-| mkdir | Make directory.            | Makes a directory.                           |
-| cd    | Change directory.          | Enters a different directory.                |
-| pwd   | Present working directory. | Tells you what directory you are in.         |
+Command | Example | What it does
+------- | ------- | ------------
+ls | `ls .` | Lists the contents of the current directory.
+mkdir | `mkdir new` | Makes a directory.
+cd | `cd new` | Enters a different directory.
+pwd | `pwd` | Tells you what directory you are in.
 
 When you first open the terminal you will see a command prompt. You will be in your home directory. If you type pwd, you will see the "path" to your home directory.
 
@@ -73,11 +75,13 @@ A relative path is any path that does not begin with "/". Relative paths are sta
 
 Here are a few shortcuts that you can use when forming paths.
 
-| ~     | Home directory.            | A space set aside for each user to store their files. |
-| .     | The current directory.     |                                                       |
-| ..    | The parent directory.      |                                                       |
-| /     | The root directory.        | The very top of the computer's filesystem.            |
-| pwd   | Present working directory. | Tells you what directory you are in.                  |
+ Command | Meaning | Detail 
+ ------- | ------- | ------
+ ~     | Home directory.            | A space set aside for each user to store their files. 
+ .     | The current directory.     |                                                       
+ ..    | The parent directory.      |                                                       
+ /     | The root directory.        | The very top of the computer's filesystem.            
+ pwd   | Present working directory. | Tells you what directory you are in.                  
 
 Here's a quick exercise to try this all out.
 
@@ -109,9 +113,9 @@ Note that the command line has tab-completion. If you start typing the name of a
 
 ## Text Editor
 
-For the C++ tutorials that we will start with, we will use a text editor called sublime.
+For the C++ tutorials that we will start with, we will use a text editor called Sublime.
 
-To open sublime you can do one of two things:
+To open Sublime you can do one of two things:
 
 * Open up a terminal window, type in "sublime_text &" and hit Enter. The & tells the computer to allow you to continue to use that terminal while the editor is running.
 
