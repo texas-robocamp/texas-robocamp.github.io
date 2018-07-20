@@ -8,7 +8,7 @@ sidebar: tutorials
 permalink: maze_solving.html
 ---
 ## Maze Solving
-Your next task is to create a maze-solving algorithm. The maze in which the robots will be tested is *simply connected*, which means that all its walls will be connected together. In order to traverse the maze, the robot will be traveling along the line, so you will need to expand on the line follower program you created in the previous step.
+Your next task is to create a maze-solving algorithm. The maze in which the robots will be tested is *simply connected*, which means that all of its walls will be connected together. In order to traverse the maze, the robot will be traveling along the line, so you will need to expand on the line follower program you created in the previous step.
 
 ## Develop a maze solving rule
 You want your robot to be able to solve any maze we give it, so before you start programming, you need to develop a general rule for our robot to follow that will always lead it to the end of the maze. This will give you a good sense of what you are trying to develop.

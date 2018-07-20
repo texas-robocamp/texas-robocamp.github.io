@@ -9,12 +9,12 @@ permalink: robot_programming_introduction.html
 ---
 
 ## Turn and Push
-Now that you understand the basics, let's start programming the robot! Your first task will be to implement obstacle detection and avoidance. This will involve monitoring the robot's sensors, and adjusting your movement accordingly to ensure that the robot does not get trapped. We'll be opting to do a navigation method called turn-and-push. You've probably seen this method before - it's what Roombas do to avoid collisions as well! The method goes as follows:
+Now that you understand the basics, let's start programming the robot! Your first task will be to implement obstacle detection and avoidance. This will involve monitoring the robot's sensors, and adjusting your movement accordingly to ensure that the robot does not get trapped. We'll be opting to do a navigation method called turn and push. You've probably seen this method before - it's what Roombas do to avoid collisions as well! The method goes as follows:
 
 - If the robot sees an obstacle on one side, back up, turn towards the clear side, and continue forwards
 - If the robot sees obstacles on both sides, back up
 
-### History
+### History of Turn and Push
 Grey Walter was a neuroscientist, who in the late 1940s created the first autonomous robots, Elsie and Elmer. These robots were phototropic, meaning they followed light, and were also sensitive to touch. These two sensory systems combined together with a motor helped him create "behavior" for these robots, to the point where they could move across a room autonomously. Because of the slow movement of the robots, Walter called them tortoises and believed they taught us the secrets to the organization of life. This movement behavior is now known as the turn and push behavior which we want to create to avoid obstacles. Below is an image of the path of one of Walter's tortoises. You can see the turn and push behavior in the path.
 
 ![Tortoises](images/turn_and_push.png)
@@ -58,7 +58,7 @@ The `obstacleSensors()` function returns an `int` based on what the robot's fron
 Serial.print("No objects detected");
 ```
 
-The `print()` function for the Serial class works in a similar fashion to the `printf()` function in C. Use this to output debugging information. To view the output, you'll need to look at the Serial Monitor, which can be found at "Tools -> Serial Monitor".
+The `print()` function for the Serial class works in a similar fashion to how you've used cout in C++. Use this to output debugging information. To view the output, you'll need to look at the Serial Monitor, which can be found at "Tools -> Serial Monitor".
 
 {% include tip.html content="Make sure that the baud setting on the monitor is the same value as the number passed into Serial.begin(), or your output will not be understandable." %}
 
@@ -77,7 +77,9 @@ This function is actually one of many different lcdX functions, and each one tak
 
 ### Task 8.1
 
-Now that you know about `obstacleSensors()`, `Serial.print()`, and `one.lcdX`, let's write some code to see how they work. Write a program that prints to both the serial monitor and the LCD screen every time one of the sensors detects an object. 
+Now that you know about `obstacleSensors()`, `Serial.print()`, and `lcdX`, let's write some code to see how they work. Write a program that prints to both the serial monitor and the LCD screen every time one of the sensors detects an object. Have the program specifically print out "left", "right", or "both", depending on which sensors are activated. 
+
+{% include tip.html content="Don't forget that `lcdX` is not an actual function name - `lcd1` and `lcd2` are the actual function names!" %}
 
 ## Moving the Car
 
@@ -98,7 +100,13 @@ The `brake()` function also takes two arguments: torqueL and torqueR. These valu
 ### Task 8.2 
 Now that you know how to make the car start and stop, let's test out these functions! Write a program that has the car drive forwards for 2 seconds, brakes, and repeats.
 
-Before you write this program, however, you'll need to know about one more function, `void delay(milliseconds)`. This function returns no value, and has the program wait for a specified amount of milliseconds before executing the next line of code. 
+Before you write this program, however, you'll need to know about one more function, `void delay(milliseconds)`. This function returns no value, and has the program wait for a specified amount of milliseconds before executing the next line of code. So, if you wanted to wait 5 seconds before running the next line of code, you would do:
+
+```
+//Do something
+delay(5000);
+//Do something else
+```
 
 
 ### Additional Functions
@@ -117,22 +125,22 @@ void led(state)
 
 This function can set the LED on or off, depending on the state passed in. Passing in 0 turns the LED off, and passing in 1 turns the LED on.
 
+## Beeping
 
-## Task 8.3
+The default behavior of the obstacle avoidance program is to turn away when the robot senses obstacles on one side, or back up when the robot senses obstacles on both sides. This is bad driving! The robot should tell us when it's about to turn or back up. The objective of your first robot program is signalling. We will let you decide how to signal. We suggest a beep for backing up, and lights for turning.
 
-Now that you understand these functions, we can start coding! Your first programming task on the robot is to implement obstacle avoidance.
+In order to make your car beep, you'll need two more functions, `tone(pin,frequency,duration)` and `noTone(pin)`.
 
-The default behavior of the obstacle avoidance program is to turn away when the robot senses obstacles on one side, or back up when the robot senses obstacles on both sides. This is bad driving! The robot should tell us when it's about to turn or back up. The objective of your first robot program is signalling.
+The `tone(pin,frequency,duration)` function generates a square wave of the specified frequency on the specified pin. The `duration` parameter is optional. If you do not put a value for duration, the wave will continue until `noTone(pin)` is called. The pin you'll be using for sound is pin 9.
 
-We will let you decide how to signal. We suggest a beep for backing up, and lights for turning.
+### Task 8.3 
+Now that you know how to produce sound on your car, write a program that makes the car beep for 5 seconds.
 
-### Beeping Functions
-For beeping, you may find these functions useful:
-- tone(pin, frequency, duration)
-- notone(pin)
 
-Note: The buzzer that emits sound is located on digital pin 9.
+## Task 8.4
 
-{% include callout_red_cup.html task="8.3" %}
+You should now have all of the pieces to write the turn and push behavior! Your first major programming task is now to implement that behavior.
+
+{% include callout_red_cup.html task="8.4" %}
 
 Now, let's get the robot to [follow a line](line_following.html).

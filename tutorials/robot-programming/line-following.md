@@ -17,7 +17,9 @@ Your car has many sensors on it. The Line Follower is an array of 8 analog infra
 
 ### Task 9.1 
 
-Now that you've learned about the `readAdc(bytes)` function, let's write some code to see how it works! Create a new program that outputs the sensor values for each infrared sensor on the LCD display. Remember, since there are 8 different sensors on the Line Follower, you'll probably want to use the lcdX function that takes in four numbers.What do the outputs look like when the sensors are over a dark object? What about a light one?
+Now that you've learned about the `readAdc(byte)` function, let's write some code to see how it works! Create a new program that outputs the sensor values for each infrared sensor on the LCD display. What do the outputs look like when the sensors are over a dark object? What about a light one?
+
+{% include tip.html content="Remember, since there are 8 different sensors on the Line Follower, you'll probably want to use the lcdX function that takes in four numbers!" %}
 
 
 ## Linear functions for following lines

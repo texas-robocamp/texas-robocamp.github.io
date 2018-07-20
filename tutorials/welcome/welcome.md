@@ -114,18 +114,6 @@ At designated points through your progress on this website, you will be asked to
 It will look like this:
 
 {% include callout_red_cup.html task="Tutorial 1" %}
-<div style="background-color:rgba(255, 0, 0, 0.5)">
-<b>RED CUP: Track Progress [Tutorial 1]</b>
-<ul>
-<li>Please flip your cup to red.</li>
-<li>A counselor will come by to mark your progress.</li>
-</ul>
-<br>
-<b>RED CUP: You need something!</b>
-<ul>
-<li>A counselor will give you your first post-it note to stick on the back of your robot.</li>
-</ul>
-</div>
 
 At this point, please **actually** flip your cup to red.
 
