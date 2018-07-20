@@ -16,9 +16,9 @@ When you build a motel, you have to decide ahead of time how many rooms you want
 
 `float gradeArray[5];`
 
-The brackets with the number mean that we are constructing an array that is five units in length named gradeArray. We declare it as a float because we plan on storing floating point numbers in each of the "rooms" in the array. We can substitute the number 5 with any length of array we want, but once we declare our array to be a certain size, we can't change it.
+The brackets with the number mean that we are constructing an array that is five units in length named `gradeArray`. We declare it as a float because we plan on storing floating point numbers in each of the "rooms" in the array. We can substitute the number 5 with any length of array we want, but once we declare our array to be a certain size, we can't change it.
 
-Now that we've declared an array, we need to put things inside it. Inside our main function, we'll enter five grades into the array. When you put a value into an array, you have to tell the computer where to put it, just like the front desk in a motel would assign you a room. Like rooms in a motel, locations, or elements, in an array are numbered—in an array, though, the numbers are from 0 to one less than the size of the array. In gradeArray, then, there are five elements, which are numbered 0, 1, 2, 3, and 4. We talk about a specific elements of an array by writing the name of the array and then putting the location number in brackets, like this: gradeArray[0] . Let's put some values into them in the following code:
+Now that we've declared an array, we need to put things inside it. Inside our main function, we'll enter five grades into the array. When you put a value into an array, you have to tell the computer where to put it, just like the front desk in a motel would assign you a room. Like rooms in a motel, locations, or elements, in an array are numbered—in an array, though, the numbers are from 0 to one less than the size of the array. In `gradeArray`, then, there are five elements, which are numbered 0, 1, 2, 3, and 4. We talk about a specific elements of an array by writing the name of the array and then putting the location number in brackets, like this: `gradeArray[0]` . Let's put some values into them in the following code:
 
 ```cpp
 gradeArray[0] = 98.3;
@@ -28,7 +28,7 @@ gradeArray[3] = 90.5;
 gradeArray[4] = 95.0;
 ```
 
-Now that we have our grades in an array, we want to calculate our final grade by averaging them all together. To do so, we need to visit each element in the array (imagine going from door to door in a motel) and add together the values in each position. Finally, we need to divide them by the number of values in the array. To do this systematically, we can use a for loop. We will loop through each element in the array and add its value to a variable called gradeSum that we initialize ahead of time. After we finish the loop, we will divide gradeSum by 5 to get the average. Here's the code for this program:
+Now that we have our grades in an array, we want to calculate our final grade by averaging them all together. To do so, we need to visit each element in the array (imagine going from door to door in a motel) and add together the values in each position. Finally, we need to divide them by the number of values in the array. To do this systematically, we can use a for loop. We will loop through each element in the array and add its value to a variable called `gradeSum` that we initialize ahead of time. After we finish the loop, we will divide `gradeSum` by 5 to get the average. Here's the code for this program:
 
 ```cpp
 #include <iostream>
@@ -79,7 +79,7 @@ Almost there! Don't forget to turn your cups to red so that a member of the camp
 
 ### Multidimensional Arrays
 
-One really cool feature of arrays is that you can have multidimensional arrays. Let's return to the motel example from earlier, where we had a one-story motel. Imagine that we add a second floor to the motel of exactly the same length as the ground floor. Let's pretend we had to give a motel guest directions to their room. We would start by telling them the floor that they were on, and then which room on that floor was theirs. Multi-dimensional arrays work the same way, except the floors are numbered from 0. To make this a little clearer, consider this diagram below, which represents an array called letterArray:
+One really cool feature of arrays is that you can have multidimensional arrays. Let's return to the motel example from earlier, where we had a one-story motel. Imagine that we add a second floor to the motel of exactly the same length as the ground floor. Let's pretend we had to give a motel guest directions to their room. We would start by telling them the floor that they were on, and then which room on that floor was theirs. Multi-dimensional arrays work the same way, except the floors are numbered from 0. To make this a little clearer, consider this diagram below, which represents an array called `letterArray`:
 
 |row/col|	0	|1	|2	|3	|4|
 |-|-|-|-|-|-|
@@ -87,7 +87,7 @@ One really cool feature of arrays is that you can have multidimensional arrays. 
 1|	| |	x| | |
 2| |	z| | | |
 
-We can see that the position of the letter w is row 0, column 4. We can write this position as letterArray[0][4]. The position of letter x is row 1, column 2, so we write that as letterArray[1][2]. Remember, row first, then column.
+We can see that the position of the letter w is row 0, column 4. We can write this position as `letterArray[0][4]`. The position of letter x is row 1, column 2, so we write that as `letterArray[1][2]`. Remember, row first, then column.
 
 You can use a multidimensional array in exactly the same way as a one-dimensional array, and you can assign values the same way, too:
 
