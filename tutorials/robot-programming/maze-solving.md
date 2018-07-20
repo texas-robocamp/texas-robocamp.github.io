@@ -20,4 +20,4 @@ Look at the example maze below, and use it to help you develop the rule you want
 The maze is built with black lines so you can build off of your line follower code. The maze will have both T-intesections and four way intersections. In these cases, which way should the robot go first? Try to make the robot turn in the same direction, whichever you choose, every time it is faced with this choice. The end of the maze will be marked by a black rectangle, at which point the robot must stop. 
 
 ## Task X
-Once you have developed a general rule, it's time to start programming and then testing!
+Once you have developed a general rule, it's time to start programming and then testing! After you think your program works, come test out your maze solving robot on one of our mazes!
