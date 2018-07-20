@@ -30,4 +30,6 @@ From there, you'll have to think about how to apply the value returned by `readL
 
 Now that you've got some ideas on where to start, it's time to begin programming! Remember, the goal is to have the car follow the line. As one final hint, the only BnrOneA functions you should need to get through this exercise are the `move(speedL,speedR)` and `readAdc(byte)` functions.
 
+Once you want to test out your line following robot, go to the bridge to test it out on the track. Be sure to race your fellow campers! We'll time your robot and you can report your best times!
+
 {% include cup-callout.html task="X" %}
