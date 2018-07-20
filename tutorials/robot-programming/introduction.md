@@ -80,7 +80,7 @@ This function is actually one of many different lcdX functions, and each one tak
 - lcdX(num1, num2, num3)
 - lcdX(num1, num2, num3, num4)
 
-### Task X.1
+### Task 8.1
 
 Now that you know about `obstacleSensors()`, `Serial.print()`, and `one.lcdX`, let's write some code to see how they work. Write a program that prints to both the serial monitor and the LCD screen every time one of the sensors detects an object. 
 
@@ -100,7 +100,7 @@ one.brake(50,50);
 
 The `brake()` function also takes two arguments: torqueL and torqueR. These values define the braking power of each motor, which ranges between 0 and 100. Zero corresponds to stopping without braking, whereas 100 corresponds to stopping with the maximum braking torque.
 
-### Task X.2 
+### Task 8.2 
 Now that you know how to make the car start and stop, let's test out these functions! Write a program that has the car drive forwards for 2 seconds, brakes, and repeats.
 
 Before you write this program, however, you'll need to know about one more function, `void delay(milliseconds)`. This function returns no value, and has the program wait for a specified amount of milliseconds before executing the next line of code. 
@@ -124,7 +124,7 @@ This function can set the LED on or off, depending on the state passed in. Passi
 
 
 
-## Task X.3
+## Task 8.3
 
 Now that you understand these functions, we can start coding! Your first programming task on the robot is to implement obstacle avoidance.
 
@@ -140,7 +140,7 @@ For beeping, you may find these functions useful:
 Note: The buzzer that emits sound is located on digital pin 9.
 
 <div style="background-color:rgba(255,0,0,0.5)">
-<b>RED CUP: Track Progress [Task X]</b>
+<b>RED CUP: Track Progress [Task 8]</b>
 <ul>
 <li>Please flip your cup to red.</li><li>A camp staff member will bring you to an open space to drive your robot into.</li>
 <li>Feel free to run your robot at your desk while you wait, but try not to create chaos in doing so.</li>
