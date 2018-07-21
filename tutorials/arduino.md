@@ -6,7 +6,7 @@ sidebar: tutorials
 permalink: arduino.html
 ---
 
-{% include note.html content="There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the next synchronization marker." %}
+{% include note.html content="There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the next synchronization marker. Don't worry about reading all of this material, and please proceed to the yellow synchronization marker on this page when it is time." %}
 
 ## Microcontrollers
 
@@ -110,11 +110,11 @@ Now that you understand how to upload code to the robot, go ahead and upload the
 {{ site.data.alerts.tip }}
 
 <ul>
-<li>If after hitting the verify button, the Arduino IDE doesn't stay "Done Compiling" near the bottom, and "Binary sketch size: X."
-You should flip your red cup to get some help at this point.</li>
-<li>If after hitting the upload button, the Arduino IDE doesn't stay "Done Uploading" near the bottom, and "Binary sketch size: X."
-You should flip your red cup to get some help at this point.</li>
-<li>Whenever you disconnect the robot from your computer, you'll need to re-connect to the robot through the IDE to re-upload code!</li>
+<li>If after hitting the verify button, the Arduino IDE doesn't tay "Done Compiling" near the bottom, and "Binary sketch size: X" then something is wrong. 
+Flip your red cup to get some help if this is the case.</li>
+<li>If after hitting the upload button, the Arduino IDE doesn't say "Done Uploading" near the bottom, and "Binary sketch size: X" then something is wrong. 
+Flip your red cup to get some help if this is the case.</li>
+<li>Whenever you disconnect the robot from your computer you will need to re-connect to the robot to upload code!</li>
 </ul>
 {{ site.data.alerts.end }}
 
@@ -161,9 +161,9 @@ Let's go ahead and get the robot moving!
 
 We're going to use this exercise to verify that your robot operates properly. A camp staff member will bring you to an open space to drive your robot into. When you're ready to begin, flip your cup. Feel free to run your robot at your desk while you wait, but try not to create chaos in doing so.
 
-{% include callout_red_cup.html task="X" comment="Please flip your cup to red to indicate that you're ready to have your robot tested."%}
+{% include callout_red_cup.html task="[Tutorial 2]" comment="Please flip your cup to red to indicate that you're ready to have your robot tested."%}
 
-{% include note.html content="Camp Staff: Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors."%}
+{% include note.html content="Camp Staff: Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors. If it does not, inspect their code and test their hardware for assembly errors. It is important that the robots be debugged before proceeding to later Arduino tutorials."%}
 
 If everything worked properly, then your robot should have driven up to the wall and stopped.
 
@@ -171,4 +171,4 @@ If it didn't, then camp staff should help you to repair your robot so you are re
 
 ## Next Step
 
-Proceed to ["Welcome!"](welcome.html)
+Proceed to ["Introduction to C++ Programming"](programming_introduction.html)

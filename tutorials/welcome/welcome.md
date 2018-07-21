@@ -64,6 +64,8 @@ Pair programming is a technique by which two people work together to solve a pro
 
 You should spend roughly equal time "driving," typing at the computer. To help you keep track, we have given you a pair programming log.
 
+![Programming log](images/programming_log.png)
+
 Fill it out as follows:
 
 * Put your team number next to the text "Team Number."
@@ -78,7 +80,7 @@ Fill it out as follows:
 
 * When beginning to work on an exercise or tutorial, or any time that you are solving a programming problem, elect a "driver" who will be operating the computer. Write their number into the next line under "Driver," and mark the current date, and start time.
 
-* When switching drivers, mark the "Stop" time. Compute the amount of time that has elapsed and put that into the corresponding box under the number of the current driver. Then, fill out the next line appropriately for the new driver.
+* When switching drivers, mark the "stop" time. Compute the amount of time that has elapsed and put that into the corresponding box under the number of the current driver. Then, fill out the next line appropriately for the new driver.
 
 * When you reach the Subtotal boxes, add up the amount of time that each of you has spent driving.
 
@@ -110,7 +112,7 @@ At designated points through your progress on this website, you will be asked to
 
 It will look like this:
 
-{% include callout_red_cup.html task="Tutorial 1" %}
+{% include callout_red_cup.html task="[Tutorial 1]" %}
 
 At this point, please **actually** flip your cup to red.
 

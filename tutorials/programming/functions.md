@@ -7,6 +7,8 @@ permalink: functions.html
 ---
 
 
+To <b>call</b> a function is to use it.
+
 Functions are a way to organize chunks of your code together. A function is a group of statements about a related subtask that is bundled together by a name. For example, we might have a `getLetter` function that asks the user for a lowercase letter, or an `averageNumbers` function that averages a list of numbers. Functions are important because they allow your code to be modular---you write a function once, and you can use that function over and over.
 
 ## Defining a Function
