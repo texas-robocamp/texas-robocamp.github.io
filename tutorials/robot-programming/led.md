@@ -2,7 +2,6 @@
 title: "LED"
 tags: [c++ programming]
 keywords: LED
-summary:
 sidebar: tutorials
 permalink: led.html
 ---

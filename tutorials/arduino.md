@@ -146,10 +146,10 @@ Once loaded, unplug your robot from the computer. You may notice that you can't 
 
 It should say:
 
-"LCD Test OK !!"
-
-"www.botnroll.com"
-
+```
+LCD Test OK !!
+www.botnroll.com
+```
 
 ## Moving the Robot
 
@@ -159,7 +159,11 @@ Let's go ahead and get the robot moving!
 
 - Load exercises/ex03_Basic_Motion/ex03_Basic_Motion.ino, and compile and load it onto the robot.
 
-{% include callout_red_cup.html task="Tutorial 2" %}
+We're going to use this exercise to verify that your robot operates properly. A camp staff member will bring you to an open space to drive your robot into. When you're ready to begin, flip your cup. Feel free to run your robot at your desk while you wait, but try not to create chaos in doing so.
+
+{% include callout_red_cup.html task="X" comment="Please flip your cup to red to indicate that you're ready to have your robot tested."%}
+
+{% include note.html content="Camp Staff: Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors."%}
 
 If everything worked properly, then your robot should have driven up to the wall and stopped.
 

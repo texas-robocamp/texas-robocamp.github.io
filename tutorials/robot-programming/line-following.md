@@ -2,7 +2,6 @@
 title: "Line Following"
 tags: [robot programming]
 keywords:
-summary:
 sidebar: tutorials
 permalink: line_following.html
 ---
@@ -18,14 +17,14 @@ Now that you've learned about the `readAdc(byte)` function, let's write some cod
 
 {% include tip.html content="Remember, since there are 8 different sensors on the Line Follower, you'll probably want to use the lcdX function that takes in four numbers!" %}
 
-
 ## Linear functions for following lines
+
 There are many ways to attempt to follow a line. The approach we'll be discussing involves defining a linear function for following the line. We'll define a function, `readLine()`, which determines what this value is.
 
 How should this function work? Conceptually, let's imagine that the line is covering every single sensor. This would mean that the robot should keep travelling straight. Now, imagine that only the far left sensor has detected a line. This would mean that the robot should travel towards the left. But what if the line is covering the sensor to the right of that? We would still want the car to travel left, but we would not want the car to go as far to the left as it would've on the farther sensor.
 
-|0|1|2|3|4|
-|:---:|:---:|:---:|:---:|:---:|
+|0        |1         |2       |3           |4         |
+|:-------:|:--------:|:------:|:----------:|:--------:|
 |far left|slight left|straight|slight right| far right|
 
 From there, you'll have to think about how to apply the value returned by `readLine()` to each wheel in order to get the desired turn you're looking for. You'll also want to think about what the value for the extremes should be. Are there any particular constraints we have to keep in mind? You may find it useful to scale the value by a constant factor to account for those contraints. Also, think about what directions the wheels need to be moved in order to accomplish an even turn. In order to turn, one wheel will need to move forwards while the other moves backwards.
@@ -34,6 +33,8 @@ From there, you'll have to think about how to apply the value returned by `readL
 
 Now that you've got some ideas on where to start, it's time to begin programming! Remember, the goal is to have the car follow the line. As one final hint, the only BnrOneA functions you should need to get through this exercise are the `move(speedL,speedR)` and `readAdc(byte)` functions.
 
-{% include callout_red_cup.html task="9.2" %}
+{% include callout_red_cup.html task="9.2" comment="Please flip your cup to red. A camp staff member will bring you to a course to drive your robot through." %}
+
+{% include note.html content="Camp Staff: Bring the group to the bridge to test that the robot can successfully accomplish this task."%}
 
 Now that your robot can follow a line, we can try to [solve a maze](maze_solving.html).

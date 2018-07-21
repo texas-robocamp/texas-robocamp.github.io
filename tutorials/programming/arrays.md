@@ -2,10 +2,11 @@
 title: "Arrays"
 tags: [c++]
 keywords: c++
-summary:
 sidebar: tutorials
 permalink: arrays.html
 ---
+
+## Arrays
 
 Sometimes we want to store lists of data together in one place. For example, it might be handy to have a list of all your grades from science class. You could go back later and average all the grades in the list together to find out your final grade in science. In C++, lists are called arrays, and they have some special properties.
 
@@ -68,13 +69,17 @@ int main(){
 
 Change the program above so that it stores and uses 7 grades instead of 5 to calculate the average.
 
-Yay! Two more :) Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+{% include callout_red_cup.html task="X" %}
+
+Yay! Two more :)
 
 ### Task 7.2:
 
 Write a program that asks a user to enter 10 numbers, puts those numbers in an array, and then prints out the numbers in the array backwards? Hint: use a loop that counts backwards.
 
-Almost there! Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+{% include callout_red_cup.html task="X" %}
+
+Almost there!
 
 ## Multidimensional Arrays
 

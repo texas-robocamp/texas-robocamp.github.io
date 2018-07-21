@@ -2,7 +2,6 @@
 title: "Decisions"
 tags: [c++]
 keywords: c++
-summary:
 sidebar: tutorials
 permalink: decisions.html
 ---
@@ -48,7 +47,7 @@ else{
 
 When we use if statements, we put the conditional clause, which is the logical expression we are checking or testing, in parentheses after the word "if". Then we put all of the code that we want the computer to execute if the conditional clause is true inside of curly braces. After an `if`, we can have: an `else if`, which works exactly the same as an `if` but is only checked by the computer when the if statement is false; an else, which is the code that is executed if the `if` statement is false, or nothing.
 
-{% include note.html content="Please ask questions if any of this explanation didn't make sense—we are happy to explain in person. (Just turn your cups to red!)" %}
+{% include note.html content="Please ask questions if any of this explanation didn't make sense—-we are happy to explain in person. (Just turn your cups to red!)" %}
 
 We now know everything we need to be able to write the speeding ticket program. We will use an if-else pattern for this program, so we will first check if the speed is greater than 60, and if that is false we will check if the speed is greater than 40, and if that is also false, then we will give a $0 speeding ticket.
 

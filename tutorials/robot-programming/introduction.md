@@ -2,7 +2,6 @@
 title: "Introduction"
 tags: [robot programming]
 keywords:
-summary:
 sidebar: tutorials
 permalink: robot_programming_introduction.html
 ---
@@ -14,6 +13,7 @@ Now that you understand the basics, let's start programming the robot! Your firs
 - If the robot sees obstacles on both sides, back up
 
 ### History of Turn and Push
+
 Grey Walter was a neuroscientist, who in the late 1940s created the first autonomous robots, Elsie and Elmer. These robots were phototropic, meaning they followed light, and were also sensitive to touch. These two sensory systems combined together with a motor helped him create "behavior" for these robots, to the point where they could move across a room autonomously. Because of the slow movement of the robots, Walter called them tortoises and believed they taught us the secrets to the organization of life. This movement behavior is now known as the turn and push behavior which we want to create to avoid obstacles. Below is an image of the path of one of Walter's tortoises. You can see the turn and push behavior in the path.
 
 ![Tortoises](images/turn_and_push.png)
@@ -76,7 +76,7 @@ This function is actually one of many different lcdX functions, and each one tak
 
 ### Task 8.1
 
-Now that you know about `obstacleSensors()`, `Serial.print()`, and `lcdX`, let's write some code to see how they work. Write a program that prints to both the serial monitor and the LCD screen every time one of the sensors detects an object. Have the program specifically print out "left", "right", or "both", depending on which sensors are activated. 
+Now that you know about `obstacleSensors()`, `Serial.print()`, and `lcdX`, let's write some code to see how they work. Write a program that prints to both the serial monitor and the LCD screen every time one of the sensors detects an object. Have the program specifically print out "left", "right", or "both", depending on which sensors are activated.
 
 {% include tip.html content="Don't forget that `lcdX` is not an actual function name - `lcd1` and `lcd2` are the actual function names!" %}
 
@@ -132,7 +132,7 @@ In order to make your car beep, you'll need two more functions, `tone(pin,freque
 
 The `tone(pin,frequency,duration)` function generates a square wave of the specified frequency on the specified pin. The `duration` parameter is optional. If you do not put a value for duration, the wave will continue until `noTone(pin)` is called. The pin you'll be using for sound is pin 9.
 
-### Task 8.3 
+### Task 8.3
 Now that you know how to produce sound on your car, write a program that makes the car beep for 5 seconds.
 
 
@@ -140,6 +140,9 @@ Now that you know how to produce sound on your car, write a program that makes t
 
 You should now have all of the pieces to write the turn and push behavior! Your first major programming task is now to implement that behavior.
 
-{% include callout_red_cup.html task="8.4" %}
+{% include callout_red_cup.html task="X" comment="Please flip your cup to red to indicate that you're ready to test your robot."%}
+
+{% include note.html content="Camp Staff: Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors." %}
+
 
 Now, let's get the robot to [follow a line](line_following.html).

@@ -2,7 +2,6 @@
 title: "Soldering"
 tags: [electronics]
 keywords:
-summary:
 sidebar: tutorials
 permalink: soldering.html
 ---

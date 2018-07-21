@@ -3,7 +3,9 @@
                 <div class="col-lg-12 footer">
                &copy;{{ site.time | date: "%Y"  }} {{site.company_name}}. All rights reserved. <br />
 {% if page.last_updated %}<span>Page last updated:</span> {{page.last_updated}}<br/>{% endif %} Site last generated: {{ site.time | date: "%b %-d, %Y"  }} <br />
+                    {% if site.github_editme_path %}<a target="_blank" href="https://github.com/{{site.github_editme_path}}{% unless page.url contains "index.html" %}pages/{% endunless %}{{page.folder}}{{page.url | remove: ".html" | append: ".md"}}" ><i class="fa fa-github fa-lg"></i> Edit this page</a>{% endif %}
 <p><img id="footer-logo" src="{{ "images/texas-robocamp-monochrome.svg" }}" alt="Company logo"/></p>
+
                 </div>
             </div>
 </footer>

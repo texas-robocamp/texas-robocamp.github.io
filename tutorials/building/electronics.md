@@ -2,7 +2,6 @@
 title: "Electronics Assembly"
 tags: [electronics]
 keywords:
-summary:
 sidebar: tutorials
 permalink: electronics_assembly.html
 ---

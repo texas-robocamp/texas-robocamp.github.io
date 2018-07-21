@@ -2,7 +2,6 @@
 title: "Introduction to C++ Programming"
 tags: [c++]
 keywords: c++
-summary:
 sidebar: tutorials
 permalink: programming_introduction.html
 ---

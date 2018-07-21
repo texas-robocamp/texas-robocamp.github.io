@@ -2,7 +2,6 @@
 title: "Mechanical Assembly"
 tags: [electronics]
 keywords:
-summary:
 sidebar: tutorials
 permalink: mechanical_assembly.html
 ---

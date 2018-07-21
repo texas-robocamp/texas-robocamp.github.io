@@ -2,7 +2,6 @@
 title: "Testing"
 tags: [electronics]
 keywords:
-summary:
 sidebar: tutorials
 permalink: testing.html
 ---

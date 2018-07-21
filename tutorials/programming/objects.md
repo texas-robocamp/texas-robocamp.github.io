@@ -2,7 +2,6 @@
 title: "Objects"
 tags: [c++]
 keywords: c++
-summary:
 sidebar: tutorials
 permalink: objects.html
 ---

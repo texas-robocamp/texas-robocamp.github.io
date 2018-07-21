@@ -2,7 +2,6 @@
 title: "Simple Math and User Input"
 tags: [c++]
 keywords: c++
-summary:
 sidebar: tutorials
 permalink: simple_math_user_input.html
 ---
@@ -17,6 +16,8 @@ y = 5 * x;
 ```
 
 and whenever we use the variable x in our program, the computer will know that the x means 4. Likewise, the computer knows that y means 20. When you write variables, try to use better names than x and y. A good variable name describes the value that it stands for. So, if we have a variable that stands for a person's weight on earth, we should call that variable earthWeight. Keep in mind that variables can't have spaces and should not start with numbers.
+
+## Types
 
 In C++ , we are required to define the type of our variables. For example, if we know that a variable will store a decimal point number, we declare it to be a float, which stands for floating (decimal) point number. We always declare our variables inside a function before writing any other code (so for the main function, it would be the first line under int main(){). We do this by saying the variable type and then the names of all the variables that are that type, followed by a semi-colon. For example, we would say float earthWeight for the variable earthWeight described above. For our program, all our variables will be floats, since they are all decimal point numbers. Here's a quick reference of types in C++:
 
@@ -39,6 +40,8 @@ Let's write out an algorithm for this program, so that we make sure the computer
 
 5. Display `moonWeight` to the user
 
+## Getting User Input
+
 The only tricky part of this program will be getting input from the user. To do that, we will need to use a special command called cin. This command takes whatever the user types and saves it to a variable. The syntax (the structure) of the command looks like this:
 
 ```cpp
@@ -47,6 +50,8 @@ cin >> myVariable;
 
 Notice that the structure of cin is analogous to cout, which we learned about in the last lesson! When the computer reaches the cin command in the program, it will display a prompt for the user to type. The user can then type and hit the Enter key, and the computer saves whatever the user typed to the variable called myVariable. In our program, we will replace myVariable with earthWeight.
 
+## Printing a Variable
+
 The last thing we have to address is how to print out the person's weight on the moon after we do the conversion. We can use cout again and simply surround the variable with double left-angle brackets, like this:
 
 ```
@@ -54,6 +59,8 @@ cout << "You would weigh "<< moonWeight << " lbs on the moon.\n";
 ```
 
 This puts together the two strings and the variable moonWeight and sends the whole thing to cout to be displayed.
+
+## Full Program
 
 Now we're ready to write the program. The text preceded by "//" is a comment. Comments are ignored by the computer and are just used by programmers to explain parts of their code. It's good practice to have short comments in your code, so you can remember what that code snippet does when you return to it later.
 
@@ -71,6 +78,8 @@ int main(){
      cout << "You would weigh " << moonWeight << " lbs on the moon.\n";  //print out conversion
 }
 ```
+
+## Operators
 
 There are lots of math operators available in C++. The most common are the following:
 
@@ -92,16 +101,16 @@ rem = 5%2;
 
 This is very useful in programming, since you can easily decide is a number is even, odd, or a multiple of some other number.
 
-### Task 2.1:
+## Task 2.1:
 
 Write a program that reverses the program above. This program will take the user's weight on the moon and convert it to Earth weight. Hint: What's the mathematical opposite of multiplication?
 
-Good job! Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+{% include callout_red_cup.html task="X" %}
 
-### Task 2.2:
+## Task 2.2:
 
 Write a program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
 
-Woot, woot! Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+{% include callout_red_cup.html task="X" %}
 
 Next, you'll learn about [functions](functions.html).

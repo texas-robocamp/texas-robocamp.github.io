@@ -2,21 +2,25 @@
 title: "Repetition"
 tags: [c++]
 keywords: c++
-summary:
 sidebar: tutorials
 permalink: repetition.html
 ---
 
 Sometimes we want our code to execute multiple times. It would be really unfortunate if we had to keep typing the same exact lines of code again and again—what if we didn't know exactly how many times we wanted the code to repeat? Fortunately, we have loops to help us out. A loop is a section of code that the computer runs over and over again until it reaches some stopping criteria. There are two kinds of loops that we will work with: `for` loops and `while` loops.
 
+## For Loops
+
 A for loop repeats code for a specific number of times. If you know exactly how many times you want some lines of code to repeat, you'll want to use this type of loop. For example, let's say we want to print "Hello World" five times. We could write the following `for` loop:
+
 ```cpp
 for (int i=0; i<5; i++){
    cout << "Hello World\n";
    //more lines of code can go here
 }
 ```
+
 This will print:
+
 ```
 Hello World
 Hello World
@@ -24,6 +28,7 @@ Hello World
 Hello World
 Hello World
 ```
+
 Let's dissect this code. We begin with the word "for", which tells the computer that we have a for loop. Then, inside the parentheses, we define how many times we want the loop to run, or we "initialize" the loop. The first phrase, `int i=0;`, defines the loop variable, which is the variable whose value dictates how many times the loop executes. We tell the computer that the loop variable will be an integer named i, and that it will begin by being equal to 0. The second phrase, `i < 5;`, is a logical expression that works just like those we saw in the last section—when used in loops, the computer will keep executing the loop as long as the expression is true. In this example, the computer will keep looping as long as i is less than 5; when `i` is greater than or equal to five, it will stop. The third phrase, `i++`, tells the computer how to modify the loop variable. The shorthand `i++` means that i will increase by 1 every time the loop runs. Then, inside curly braces, we put all the code that we want to execute each time the loop runs.
 
 Now we will look at another example. Say we want to count from 0 to 9, and we want to print out the number each time. We can easily use a loop to do this:
@@ -80,10 +85,17 @@ The current number is 5.
 The current number is 7.
 ```
 The loop begins with `i=1` and increases by 2 every time. Notice that it stops before reaching 9. To make more complicated loops, all you have to do is think carefully about the loop counter. Where do you want it to start? Where should it stop? How do you want to count?
+
 ### Task 6.1:
+
 Write a loop that prints every third number starting at 15 and going down to 6 (so 6 is included in the loop).
 
-Woot, woot! Making progress. :) Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+{% include callout_red_cup.html task="X" %}
+
+Woot, woot! Making progress. :)
+
+## Nested Loops
+
 You can also nest loops inside one another. Let's say we want to do a simple summation program. Imagine we want to sum each number from 1 to 4 with each number from 1 to 4. So, we essentially want to do this:
 
 ```
@@ -100,7 +112,7 @@ num1	+	num2	=	Sum
 
 At the end, we will have 16 sums (4x4).
 
-In code, we can find these sums using two for loops, one nested inside the other. Let's think of num1 as the value of one loop and num2 as the value of the other loop. We know from the examples above how to generate a loop that generates the numbers from 1 to 4, so we will do this for num1:
+In code, we can find these sums using two for loops, one nested inside the other. Let's think of `num1` as the value of one loop and `num2` as the value of the other loop. We know from the examples above how to generate a loop that generates the numbers from 1 to 4, so we will do this for num1:
 
 ```cpp
 for (int num1=1; num1<5; num1++){
@@ -145,7 +157,11 @@ Notice that the first number that prints out is the `num1` variable, and the sec
 
 Write a program that multiplies all the odd numbers between 1 and 9 by all the even numbers between 2 and 10. Hint: follow the example above, but don't forget to change your loop initializations.
 
-Good work! Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+Good work!
+
+{% include callout_red_cup.html task="X" %}
+
+## While Loops
 
 We typically use while loops when we don't know how many times the loop should execute. For example, let's say you are trying to get input from a user that is a number between 1 and 10. while the user keeps typing in numbers that are too large or too small, you can ask her for new input until she enters a number between 1 and 10. Here's what this while loop would look like:
 
@@ -185,6 +201,6 @@ This loop begins by checking to see if `userInput` is less than 1 or greater tha
 
 Create a program that asks the user to enter a number between 5 and 50. If the user enters invalid input, print out a message to the user asking them to try again and keep getting input from the user until they enter a valid number. Bonus: Can you keep track of the number of attempts a user makes to enter a number, and then print it out when they finally enter a valid number?
 
-Good job! You are almost finished. For your last lesson, you'll learn how to use [arrays](arrays.html).
+{% include callout_red_cup.html task="X" %}
 
-But first, don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+Good job! You are almost finished. For your last lesson, you'll learn how to use [arrays](arrays.html).

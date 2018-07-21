@@ -7,7 +7,7 @@ site_title: Texas RoboCamp
 company_name: Texas RoboCamp
 # this appears in the footer
 
-#github_editme_path: texas-robocamp/texas-robocamp.github.io/blob/master/
+#github_editme_path: UTCS-Robotics-Camp/utcs-robotics-camp.github.io/blob/master/
 # if you're using Github, provide the basepath to the branch you've created for reviews, following the sample here. if not, leave this value blank.
 
 disqus_shortname: ""
@@ -74,5 +74,5 @@ description: ""
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: http://texas-robocamp.github.io
+url: http://utcs-robotics-camp.github.io
 baseurl: /

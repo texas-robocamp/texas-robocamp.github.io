@@ -151,7 +151,7 @@ li.sidebarTitle {
 
 /* FOOTER */
 
-footer {
+footer, footer a {
     color: #808080;
 }
 
@@ -159,7 +159,6 @@ footer {
     height: 24px;
     opacity: .8;
 }
-
 /* CALLOUTS */
 
 .synchronize {
@@ -190,4 +189,8 @@ footer {
 img.cup-icon {
     height: 24px;
     margin: 0;
+}
+
+img.maze-image {
+    height: 150px;
 }
