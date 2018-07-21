@@ -10,7 +10,7 @@ This tutorial is aimed at preparing you with a working knowledge of C++ programm
 
 You can see the list of the topics we will be covering in the sidebar. You'll have tasks corresponding to these topics and the lab staff will sign off as you complete them. Don't forget to switch off when pair programming and keep track of who's driving! You can save this log anywhere in your home directory. Once you have completed all tasks in this tutorial, you are free to move on to programming your lights!
 
-## Welcome
+## Overview
 
 In this tutorial, we'll cover the basics of C++ programming so that you'll have all the information you need to complete the project. It's designed for the complete programming novice, so if you're an experienced programmer, skim the following and then feel free to jump right into the example programs!
 

@@ -6,8 +6,6 @@ sidebar: tutorials
 permalink: welcome.html
 ---
 
-## Welcome to Texas RoboCamp!
-
 First, welcome to camp! If you are seated at your workstation then hopefully:
 
 * You have already met your partner for the camp.

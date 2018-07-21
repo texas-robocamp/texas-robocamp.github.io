@@ -25,13 +25,11 @@ The computers in this lab use the Linux operating system. Linux offers a variety
 
 By default, the Ubuntu logo will be displayed on the launcher to the left of the monitor in the upper left-hand corner.
 
-1. Click on the Ubuntu logo icon.
-
-  * This will open the "lens".
+1. Click on the Ubuntu logo icon. This will open the "lens".
 
 2. Type in either "google-chrome" or "firefox" depending on which browser you would like to use.
 
-  * No, neither browser is better than the other for this camp. This is purely a matter of personal preference.
+   {% include note.html content="No, neither browser is better than the other for this camp. This is purely a matter of personal preference." %}
 
 3. Go to <https://utcs-robotics-camp.github.io/> to get to this site.
 
@@ -39,13 +37,13 @@ By default, the Ubuntu logo will be displayed on the launcher to the left of the
 
 1. Click on the Ubuntu logo icon.
 
-2. Type in "terminal."
+2. Type in "terminal".
 
 3. A terminal window will open.
 
 ### Changing Windows
 
-* This is similar to operating systems such as Windows and Mac OS. Hit alt-tab to cycle windows, or click on the icons on the launcher.
+This is similar to operating systems such as Windows and Mac OS. Hit alt-tab to cycle windows, or click on the icons on the launcher.
 
 
 ### Locking Frequently-Used Programs to the Launcher
@@ -54,17 +52,16 @@ By default, the Ubuntu logo will be displayed on the launcher to the left of the
 
 2. Click "Lock to Launcher."
 
-
 ### Basic Linux Commands
 
 An important part of using Linux is becoming familiar with the command line. Here a few commands you will need during the course of this camp. Try them out.
 
-Command | Example | What it does
-------- | ------- | ------------
-ls | `ls .` | Lists the contents of the current directory.
-mkdir | `mkdir new` | Makes a directory.
-cd | `cd new` | Enters a different directory.
-pwd | `pwd` | Tells you what directory you are in.
+Command | Example     | What it does
+------- | ------------| ------------
+ls      | `ls .`      | Lists the contents of the current directory.
+mkdir   | `mkdir new` | Makes a directory.
+cd      | `cd new`    | Enters a different directory.
+pwd     | `pwd`       | Tells you what directory you are in.
 
 When you first open the terminal you will see a command prompt. You will be in your home directory. If you type pwd, you will see the "path" to your home directory.
 
@@ -74,35 +71,28 @@ A relative path is any path that does not begin with "/". Relative paths are sta
 
 Here are a few shortcuts that you can use when forming paths.
 
- Command | Meaning | Detail 
- ------- | ------- | ------
- ~     | Home directory.            | A space set aside for each user to store their files. 
- .     | The current directory.     |                                                       
- ..    | The parent directory.      |                                                       
- /     | The root directory.        | The very top of the computer's filesystem.            
- pwd   | Present working directory. | Tells you what directory you are in.                  
+ Command | Meaning                    | Detail
+ ------- | -------------------------- | ------
+ ~       | Home directory.            | A space set aside for each user to store their files.
+ .       | The current directory.     |
+ ..      | The parent directory.      |
+ /       | The root directory.        | The very top of the computer's filesystem.
+ pwd     | Present working directory. | Tells you what directory you are in.
 
 Here's a quick exercise to try this all out.
 
-1. mkdir linux_exercise
-
-2. ls
-
-3. cd linux_exercise
-
-4. ls ..
-
-5. cd ..
-
-6. ls
-
-7. mkdir linux_exercise/subdirectory
-
-8. cd ~/linux_exercise/subdirectory
-
-9. pwd
-
-10. cd ~
+```
+mkdir linux_exercise
+ls
+cd linux_exercise
+ls ..
+cd ..
+ls
+mkdir linux_exercise/subdirectory
+cd ~/linux_exercise/subdirectory
+pwd
+cd ~
+```
 
 The above is essentially a command-based version of what you're used to doing by double clicking on folders. The command line is capable of a great deal more---in fact, you will be using it to compile your tutorial program! But more on that later. First, you'll need to write some code.
 

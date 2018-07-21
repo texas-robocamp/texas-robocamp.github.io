@@ -3,7 +3,5 @@
 topnav:
 - title: Topnav
   items:
-    - title: Tutorials
-      url: /
     - title: About
       url: /about.html
