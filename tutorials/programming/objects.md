@@ -2,7 +2,6 @@
 title: "Objects"
 tags: [c++]
 keywords: c++
-last_updated: July 2, 2018
 summary:
 sidebar: tutorials
 permalink: objects.html
@@ -10,9 +9,9 @@ permalink: objects.html
 
 Sometimes we want to group different kinds of data together. For example, let's think about a bank account. What kind of information does your bank account store about you? Most important are your bank account number (an integer) and your account balance (a float). It also stores your name and address (both strings). Often in programming, we want to group related data like this together in a single construct, and we can do that with objects.
 
-A class defines an object type, the variables inside the object (such as bank account number and balance), and functions you can perform on the object (such as deposit() and withdraw()). So we begin by defining a class.
+A class defines an object type, the variables inside the object (such as bank account number and balance), and functions you can perform on the object (such as `deposit()` and `withdraw()`). So we begin by defining a class.
 
-The first step is easy enough: type the keyword class, and then choose a class name beginning with an uppercase letter (this is not required, but is the convention followed by programmers). For our bank account example, we'll name the class BankAccount:
+The first step is easy enough: type the keyword `class`, and then choose a class name beginning with an uppercase letter (this is not required, but is the convention followed by programmers). For our bank account example, we'll name the class `BankAccount`:
 
 ```cpp
 class BankAccount {
@@ -34,11 +33,11 @@ class BankAccount {
 };
 ```
 
-The public keyword indicates that the member variables (and functions—we'll add those later) that follow are available to the rest of the program to use. You can also declare a class's variables and functions to be private, but we'll cover that later. Notice, too, that the variables are declared in the same way as before, indicating the type and giving it a descriptive name.
+The `public` keyword indicates that the member variables (and functions—we'll add those later) that follow are available to the rest of the program to use. You can also declare a class's variables and functions to be `private`, but we'll cover that later. Notice, too, that the variables are declared in the same way as before, indicating the type and giving it a descriptive name.
 
-In order to create a BankAccount object, we first need to define a constructor. The constructor is a piece of code that executes when a new object of this class is created. Inside the constructor, we want to set initial values for any member variables we have, otherwise our program may not work as we intend. A constructor is defined in the the same way as a function; the only differences are: 1) the name of the constructor must match the name of the class and 2) the constructor has no return type.
+In order to create a `BankAccount` object, we first need to define a constructor. The constructor is a piece of code that executes when a new object of this class is created. Inside the constructor, we want to set initial values for any member variables we have, otherwise our program may not work as we intend. A constructor is defined in the the same way as a function; the only differences are: 1) the name of the constructor must match the name of the class and 2) the constructor has no return type.
 
-For a brand new BankAccount, when we don't yet know anything about the data that will be put into it, default values of zeroes and empty strings will be fine; we can always set them to something else later. Thus, our BankAccount constructor is defined as follows:
+For a brand new `BankAccount`, when we don't yet know anything about the data that will be put into it, default values of zeroes and empty strings will be fine; we can always set them to something else later. Thus, our `BankAccount` constructor is defined as follows:
 
 ```cpp
 class BankAccount {
@@ -88,9 +87,9 @@ int main() {
 }
 ```
 
-Look at the first line in main. We've created a BankAccount object called alisonBankAccount, and it has been initialized using the default constructor.
+Look at the first line in main. We've created a `BankAccount` object called `alisonBankAccount`, and it has been initialized using the default constructor.
 
-We use dot notation to access and set the public variables of an object, as seen in the remaining lines in main. In dot notation, we access member variables by first writing the name of the object (e.g., alisonBankAccount), then a dot, and then the name of the field we want (e.g., accountNumber). From here, we see that we can create multiple different BankAccounts and populate them all with different balances and information. For example, let's say that in addition to Alison's bank account, we'll make an account for Bob Bobson. Here's the same code as above, but now we've added a second instance of the BankAccount class:
+We use dot notation to access and set the public variables of an object, as seen in the remaining lines in `main`. In dot notation, we access member variables by first writing the name of the object (e.g., `alisonBankAccount`), then a dot, and then the name of the field we want (e.g., `accountNumber`). From here, we see that we can create multiple different `BankAccounts` and populate them all with different balances and information. For example, let's say that in addition to Alison's bank account, we'll make an account for Bob Bobson. Here's the same code as above, but now we've added a second instance of the `BankAccount` class:
 
 ```cpp
 //make two different bank accounts
@@ -112,7 +111,7 @@ bobBankAccount.accountBalance += 300.95;
 cout << "Bob has $" << bobBankAccount.accountBalance << ".  Yay Bob!\n";
 ```
 
-We can give Alison and Bob's BankAccount objects completely different information, and we can also modify the values that the fields hold. Notice how Bob made a timely deposit with the line:
+We can give Alison and Bob's `BankAccount` objects completely different information, and we can also modify the values that the fields hold. Notice how Bob made a timely deposit with the line:
 
 `bobBankAccount.accountBalance += 300.95;`
 
@@ -130,11 +129,11 @@ Using this code as a base, add some money to Alison's account and then output he
 
 Alison says, "Thank you!" Before moving on, don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
 
-In the program above, we declared the member variables as public, but, as mentioned before, another option is private. Private member variables can only be accessed by other objects of their type—in our case, our BankAccountobjects. There are a number of reasons to declare member variables as private, one of which is to maintain quality control on their values—so that account balances can't be set to negative, for instance. In general, you will want to declare variables and functions necessary for the inner workings of the class private and make public the variables and functions necessary for object to be useful to the rest of the program.
+In the program above, we declared the member variables as `public`, but, as mentioned before, another option is `private`. Private member variables can only be accessed by other objects of their type—in our case, our `BankAccount` objects. There are a number of reasons to declare member variables as private, one of which is to maintain quality control on their values—so that account balances can't be set to negative, for instance. In general, you will want to declare variables and functions necessary for the inner workings of the class private and make public the variables and functions necessary for object to be useful to the rest of the program.
 
 Consider the usefulness of using public functions to modify private data, as opposed to leaving the data public. What if we wanted to apply the same set of checks to make sure the account balance is always updated properly—for example, checking for overdrafts or account deposit limits. With our data safely hidden behind the private wall and the use of functions, we can say with confidence our bank account balances are correct.
 
-Returning to our BankAccount class, let's go ahead and declare our member variables as private, as shown below.
+Returning to our `BankAccount` class, let's go ahead and declare our member variables as private, as shown below.
 
 ```cpp
 class BankAccount {
@@ -155,11 +154,11 @@ class BankAccount {
 
 Now that these variables are private, our object is actually fairly useless right now. We left the constructor public, so we can create new objects, but all our data is inaccessible from outside the class because it's declared private. To make our object useful, we'll introduce member functions, which define actions that can be performed on or with the member variables.
 
-Consider what behavior a BankAccount should exhibit. What sorts of actions are necessary? [Think a minute and then read on!]
+Consider what behavior a `BankAccount` should exhibit. What sorts of actions are necessary? [Think a minute and then read on!]
 
-People need to be able to deposit to and withdraw from their accounts, as well as see their current account balance. The latter we can solve with a simple getAccountBalance function that just returns the value stored in accountBalance. The deposit and withdraw operations are a little more complex; both modify the account balance by a given amount. What might the deposit function look like? Would it take any arguments? What kind? Does it need to return anything? [Again, think a minute before continuing!]
+People need to be able to deposit to and withdraw from their accounts, as well as see their current account balance. The latter we can solve with a simple `getAccountBalance` function that just returns the value stored in `accountBalance`. The deposit and withdraw operations are a little more complex; both modify the account balance by a given amount. What might the deposit function look like? Would it take any arguments? What kind? Does it need to return anything? [Again, think a minute before continuing!]
 
-`deposit()` would need a float as an argument, which is the amount being deposited, and then would need to update the accountBalance variable appropriately. It doesn't need to return anything. Since this is a member function, we write its instructions inside the class definition, like this:
+`deposit()` would need a float as an argument, which is the amount being deposited, and then would need to update the `accountBalance` variable appropriately. It doesn't need to return anything. Since this is a member function, we write its instructions inside the class definition, like this:
 
 ```cpp
 #include <iostream>
@@ -188,7 +187,7 @@ class BankAccount {
 };
 ```
 
-Everything under the public keyword and above the private keyword is our class's public members, and everything below the private keyword is the class's private members. We want both functions to be public; they are the rest of the program's interface with our BankAccount data.
+Everything under the public keyword and above the private keyword is our class's public members, and everything below the private keyword is the class's private members. We want both functions to be public; they are the rest of the program's interface with our `BankAccount` data.
 
 Now when we want to deposit money in main, we won't need to type:
 
@@ -214,7 +213,7 @@ The syntax for defining a member function is the same as any other function, onl
 
 Inside our member functions we have access to our member variables, as if we had declared them locally inside the function.
 
-Outside of the class definition, we use the dot notation to call an object's member functions; in this case, we have our bobBankAccount object, followed by a period, followed by the function call. Just as with the function calls you've made previously, you start with the function name, followed by any arguments wrapped in parentheses.
+Outside of the class definition, we use the dot notation to call an object's member functions; in this case, we have our `bobBankAccount` object, followed by a period, followed by the function call. Just as with the function calls you've made previously, you start with the function name, followed by any arguments wrapped in parentheses.
 
 ### Task 4.2:
 

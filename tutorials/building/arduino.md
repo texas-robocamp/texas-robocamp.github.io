@@ -2,7 +2,6 @@
 title: "Using the Arduino IDE"
 tags: [arduino]
 keywords: arduino
-last_updated: July 4, 2018
 sidebar: tutorials
 permalink: using_arduino.html
 ---

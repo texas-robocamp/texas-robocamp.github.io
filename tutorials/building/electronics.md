@@ -2,7 +2,6 @@
 title: "Electronics Assembly"
 tags: [electronics]
 keywords:
-last_updated: July 5, 2018
 summary:
 sidebar: tutorials
 permalink: electronics_assembly.html

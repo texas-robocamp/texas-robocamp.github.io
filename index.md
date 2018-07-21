@@ -3,6 +3,7 @@ title: "Texas RoboCamp"
 keywords: homepage
 tags: [getting_started]
 sidebar: tutorials
+topnav: topnav
 permalink: index.html
 ---
 

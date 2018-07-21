@@ -2,7 +2,6 @@
 title: "Simple Math and User Input"
 tags: [c++]
 keywords: c++
-last_updated: July 2, 2018
 summary:
 sidebar: tutorials
 permalink: simple_math_user_input.html
@@ -50,7 +49,9 @@ Notice that the structure of cin is analogous to cout, which we learned about in
 
 The last thing we have to address is how to print out the person's weight on the moon after we do the conversion. We can use cout again and simply surround the variable with double left-angle brackets, like this:
 
-`cout << "You would weigh "<< moonWeight << " lbs on the moon.\n";`
+```
+cout << "You would weigh "<< moonWeight << " lbs on the moon.\n";
+```
 
 This puts together the two strings and the variable moonWeight and sends the whole thing to cout to be displayed.
 
@@ -81,7 +82,7 @@ Operator |	Operation
 /	     | division
 %	     | modulus (remainder)
 
-When you divide two integers, the remainder of the two numbers is left out. This is called integer division. For example, `5 / 2` will give you 2, not 2.5. If you want the full value, you must change one or both of the numbers to floats. 
+When you divide two integers, the remainder of the two numbers is left out. This is called integer division. For example, `5 / 2` will give you 2, not 2.5. If you want the full value, you must change one or both of the numbers to floats.
 
 The % operator gives you the remainder of integer division. So if you want the remainder of `5 / 2` (which is 1), you would say:
 

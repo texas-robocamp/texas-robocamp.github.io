@@ -2,7 +2,6 @@
 title: "LED"
 tags: [c++ programming]
 keywords: LED
-last_updated: July 18, 2018
 summary:
 sidebar: tutorials
 permalink: led.html
@@ -12,8 +11,9 @@ permalink: led.html
 Connect the white wire to the ground header (labeled as GND) on the Bot'n Roll and the red wire to the 5V header next to the GND header. Next, take the middle green wire and attatch it to pin number 7 on the board.
 
 ## Programming the LEDs
-In the top of the file, add `#include <FastLED.h>` and define the pin number and number of LEDs you have on your strip. Create an array of datatype CRGB with the size of the number of your LEDs. This array is what you will modify to alter the color of each LED. 
-Within the setup function add the following: `FastLED.addLeds<WS2912, DATA_PIN, GRB>(leds, NUM_LEDS);`
+In the top of the file, add `#include <FastLED.h>`, `#define DATA_PIN 7`, and define NUM_LEDS to be the number of LEDs on your strip. Create an array of datatype CRGB with the size of the number of your LEDs. This array is what you will modify to alter the color of each LED. 
+
+Within the setup function add the following: `FastLED.addLeds<WS2812B, DATA_PIN, GRB>(leds, NUM_LEDS);`. 
 
 In order to manipulate the LEDs, you simply modify the contents of the CRGB array. For example, to change the color of the first LED to green, we do `led[0].setRGB(0, 255, 0);`. For the RGB values, you can choose a value from 0 to 255. Click [here](https://www.w3schools.com/colors/colors_rgb.asp) for an RGB color picker.
 
