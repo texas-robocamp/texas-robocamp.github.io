@@ -103,7 +103,7 @@ cout << "You would weigh "<< moonWeight << " lbs on the moon." << endl;
 
 This puts together the two strings and the variable moonWeight and sends the whole thing to cout to be displayed.
 
-## Full Program
+## Exercise 3.2.1: Full Program
 
 Now we're ready to write the program.
 
@@ -159,7 +159,7 @@ rem = 5%2;
 
 This is very useful in programming, since you can easily decide is a number is even, odd, or a multiple of some other number.
 
-## Exercise 3.2.1:
+## Exercise 3.2.2:
 
 Write a program that reverses the program above. This program will take the user's weight on the moon and convert it to Earth weight.
 
@@ -167,12 +167,12 @@ Write a program that reverses the program above. This program will take the user
 What's the mathematical opposite of multiplication?
 {{ site.data.alerts.end }}
 
-## Exercise 3.2.2:
+## Exercise 3.2.3:
 
 Write a program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
 
 {% include callout_red_cup.html task="[Tutorial 3.2]" %}
 
-{% include note.html content="Campers should demonstrate the output of Exercise 3.2.1 and Exercise 3.2.2 to camp staff." %}
+{% include note.html content="Campers should demonstrate the output of Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3 to camp staff." %}
 
 Next, you'll learn about [functions](functions.html).
