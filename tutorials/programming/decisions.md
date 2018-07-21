@@ -6,6 +6,7 @@ sidebar: tutorials
 permalink: decisions.html
 ---
 
+## Decisions
 In this section, we're going to learn how to control the flow of a C++ program. Sometimes, you want your program to do one thing if certain conditions are met and to do another thing if other conditions are true. We make decisions and control the flow of the program using logical expressions and if-else statements.
 
 Let's imagine we have a program that helps police officers in a town give speeding tickets to drivers based on how fast the driver was going. In this imaginary town, the speed limit is 40 mph, but there are extra penalties if a person goes over 60 mph.
@@ -18,7 +19,7 @@ In order to do this, we will need to test the speed that the user types in (we'l
 
 `isSpeeding = driverSpeed > 40;`
 
-In programming languages, the above statement can either be true or false, depending upon the value of `driverSpeed`, so `isSpeeding` will either be true or false. A variable that is either true or false is called a `boolean`. In C++ , a boolean that is true displays as a 1, and a `boolean` that is false displays as a 0 when you print it out to the screen. So, in our line of code above, if the value of the variable `driverSpeed` is 20, and you printed out `isSpeeding`, you would see a 0, because 20 is not greater than 40 and thus the statement is false.
+In C++, the above statement can either be true or false, depending upon the value of `driverSpeed`, so `isSpeeding` will either be true or false. A variable that is either true or false is called a `boolean`. In C++ , a boolean that is true displays as a 1, and a `boolean` that is false displays as a 0 when you print it out to the screen. So, in our line of code above, if the value of the variable `driverSpeed` is 20, and you printed out `isSpeeding`, you would see a 0, because 20 is not greater than 40 and thus the statement is false.
 
 The following chart shows all the logical operators, most of which should be familiar to you from math class:
 
@@ -71,14 +72,25 @@ int main(){
    else{                         //If neither of those were true, the driver wasn't speeding
       ticketPrice = 0;
    }
+
    cout << "The ticket is $" << ticketPrice << ".\n";
 }
 ```
-### Task 5.1:
 
-Modify the above code so that it prints out a separate message for each different level of ticket. For example, if the driver was going over 60 mph, the program could print "You should severely punish the driver for endangering people!" and for a non-speeding ticket, the program could print, "Congratulate the driver on maintaining a safe speed."
+{{ site.data.alerts.tip }}
+  <ul>
+  <li>In the above code we use, \n, which will also give you a new line, like endl</li>
+  <li>\n is one of a set of what are called "escape characters"</li>
+  </ul>
+{{ site.data.alerts.end }}
 
-{% include callout_red_cup.html task="X" %}
+### Exercise 3.5.1:
+
+- Modify the above code so that it prints out a separate message for each different level of ticket.
+
+For example, if the driver was going over 60 mph, the program could print "You should severely punish the driver for endangering people!" and for a non-speeding ticket, the program could print, "Congratulate the driver on maintaining a safe speed."
+
+{% include callout_red_cup.html task="[Exercise 3.5.1]" %}
 
 Thanks for enabling better communication. Don't forget to switch drivers!
 
@@ -142,8 +154,8 @@ if (!(wearingSeatbelt == "n")){
 }
 ```
 
-### Task 5.2:
+### Exercise 3.5.2:
 
-Finish implementing the seat belt law for the driver who goes over 40mph (just follow the format above). Then come up with another law and add it to your code. Be as creative and ridiculous as you want, and if you need help, ask for it!
+- Finish implementing the seat belt law for the driver who goes over 40mph (just follow the format above). Then come up with another law and add it to your code. Be as creative and ridiculous as you want, and if you need help, ask for it!
 
-{% include callout_red_cup.html task="X" %}
+{% include callout_red_cup.html task="[Exercise 3.5.2]" %}

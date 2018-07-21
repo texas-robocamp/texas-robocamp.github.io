@@ -162,7 +162,7 @@ Using the code above as a base, add two calls to printGreeting() in main so that
 
 Now that you've been greeted...
 
-{% include callout_red_cup.html task="Exercise 3.3.1, Exercise 3.3.2, Exercise 3.3.3" %}
+{% include callout_red_cup.html task="[Exercise 3.3.1, Exercise 3.3.2, Exercise 3.3.3]" %}
 
 ## Returning Results
 
@@ -262,8 +262,16 @@ We just have to remember to send the function all parameters it expects as argum
 
 - Modify the `printGreeting` function to also take a `string birthdayMonth` parameter, and print out a message that tells them how old they will be the next time it is that month. For the Ronald McDonald example, the output might be, "You will be 50 next January".
 
-{% include callout_red_cup.html task="Exercise 3.3.4, Exercise 3.3.5" %}
+{% include callout_red_cup.html task="[Exercise 3.3.4, Exercise 3.3.5]" %}
 
 You've done a great a job learning about functions.
 
 Now, let's learn about a special data representation, the [object](objects.html).
+
+## Next
+
+Now, you'll learn how to perform [simple math](simple_math_user_input.html).
+
+## Next Step
+
+Proceed to ["Classes and Objects"](objects.html).

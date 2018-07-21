@@ -1,16 +1,33 @@
 ---
-title: "Objects"
+title: "Classes and Objects"
 tags: [c++]
 keywords: c++
 sidebar: tutorials
 permalink: objects.html
 ---
 
-Sometimes we want to group different kinds of data together. For example, let's think about a bank account. What kind of information does your bank account store about you? Most important are your bank account number (an integer) and your account balance (a float). It also stores your name and address (both strings). Often in programming, we want to group related data like this together in a single construct, and we can do that with objects.
+## Classes
 
-A class defines an object type, the variables inside the object (such as bank account number and balance), and functions you can perform on the object (such as `deposit()` and `withdraw()`). So we begin by defining a class.
+Sometimes we want to group different kinds of data together.
 
-The first step is easy enough: type the keyword `class`, and then choose a class name beginning with an uppercase letter (this is not required, but is the convention followed by programmers). For our bank account example, we'll name the class `BankAccount`:
+For example, think about a bank account. What kind of information does your bank account store about you? 
+
+1. Your bank account number (an integer)
+2. Your account balance (a float).
+3. It also stores your name and address (both strings).
+
+Often we want to group related data single construct, and we can do that with <b>objects</b>.
+
+A <b>class</b> defines a type of object, the variables inside the object (such as bank account number and balance), and functions you can perform on the object (such as `deposit()` and `withdraw()`). So we begin by defining a class.
+
+To start an object, type the keyword `class` and then choose a class name.
+
+{{ site.data.alerts.tip }}
+Though not required, a common convention followed by programmers is to begin class names with an uppercase letter).
+{{ site.data.alerts.end }}
+
+## A Skeleton of a Class
+ For our bank account example, we'll name the class `BankAccount`:
 
 ```cpp
 class BankAccount {
@@ -18,9 +35,41 @@ class BankAccount {
 };
 ```
 
-You'll notice the class definition will be encompassed by curly braces and has a trailing semi-colon. Now we need to add some variables and functions.
+A class definition is encompassed by curly braces and has a trailing semi-colon.
 
-Variables inside a class are called member variables, so the member variables for this class are the account number, account balance, your name, and your address. Adding these to our skeleton definition we get the following:
+
+## Member Variables
+Now we need to add some variables.
+
+Variables inside a class are called <b>member variables</b> or <b>attributes</b>.
+
+The member variables for this class are:
+
+1. account number
+2. account balance
+3. name
+4. address
+
+Adding these to our skeleton definition we get the following:
+
+```cpp
+class BankAccount {
+     int accountNumber;
+     float accountBalance;
+     string name;
+     string address;
+};
+```
+
+{{ site.data.alerts.tip }}
+Notice that the variables are declared in the same way as before, indicating the type and giving them descriptive names.
+{{ site.data.alerts.end }}
+
+## The Public Keyword
+
+Let's suppose that we want to be able to access the variables belonging to a class. By default, they cannot be accessed outside of the scope of the class.
+
+The `public` keyword indicates that the member variables (and functions—we'll add those later) that follow are available to the rest of the program to use.
 
 ```cpp
 class BankAccount {
@@ -32,9 +81,19 @@ class BankAccount {
 };
 ```
 
-The `public` keyword indicates that the member variables (and functions—we'll add those later) that follow are available to the rest of the program to use. You can also declare a class's variables and functions to be `private`, but we'll cover that later. Notice, too, that the variables are declared in the same way as before, indicating the type and giving it a descriptive name.
+{{ site.data.alerts.tip }}
+You can also declare a class's variables and functions to be `private`, which will be covered later.
+{{ site.data.alerts.end }}
 
-In order to create a `BankAccount` object, we first need to define a constructor. The constructor is a piece of code that executes when a new object of this class is created. Inside the constructor, we want to set initial values for any member variables we have, otherwise our program may not work as we intend. A constructor is defined in the the same way as a function; the only differences are: 1) the name of the constructor must match the name of the class and 2) the constructor has no return type.
+## Constructors
+In order to create a `BankAccount` object, we first need to define a constructor.
+
+The constructor is a piece of code that executes when a new object of this class is created. Inside the constructor, we set initial values for any member variables we have, otherwise our program may not work as we intend.
+
+A constructor is defined in the the same way as a function; the only differences are:
+
+1. The name of the constructor must match the name of the class
+2. The constructor has no return type
 
 For a brand new `BankAccount`, when we don't yet know anything about the data that will be put into it, default values of zeroes and empty strings will be fine; we can always set them to something else later. Thus, our `BankAccount` constructor is defined as follows:
 
@@ -55,7 +114,11 @@ class BankAccount {
 };
 ```
 
-We have now defined a basic data structure that holds bank account information, and so we can now write a program that creates a BankAccount object and sets the values of its fields. Notice the class must be declared before the main function where we create our object.
+We have now defined a basic data structure that holds bank account information, and so we can now write a program that creates a BankAccount object and sets the values of its fields.
+
+{{ site.data.alerts.tip }}
+Just like functions must be declared before we can use them (appearing before their first use in the source code), classes must be declared before they are used to create objects.
+{{ site.data.alerts.end }}
 
 ```cpp
 #include <iostream>
@@ -88,7 +151,19 @@ int main() {
 
 Look at the first line in main. We've created a `BankAccount` object called `alisonBankAccount`, and it has been initialized using the default constructor.
 
-We use dot notation to access and set the public variables of an object, as seen in the remaining lines in `main`. In dot notation, we access member variables by first writing the name of the object (e.g., `alisonBankAccount`), then a dot, and then the name of the field we want (e.g., `accountNumber`). From here, we see that we can create multiple different `BankAccounts` and populate them all with different balances and information. For example, let's say that in addition to Alison's bank account, we'll make an account for Bob Bobson. Here's the same code as above, but now we've added a second instance of the `BankAccount` class:
+## Dots
+
+We use the dot to access and set the public variables of an object, as seen in the remaining lines in `main` above.
+
+In dot notation, we access member variables by first writing the name of the object (e.g., `alisonBankAccount`), then a dot, and then the name of the field we want (e.g., `accountNumber`).
+
+## Multiple Objects
+
+We can create multiple different `BankAccounts` and populate them all with different balances and information.
+
+For example, let's say that in addition to Alison's bank account, we'll make an account for Bob Bobson.
+
+Here's the same code as above, but now we've added a second instance of the `BankAccount` class:
 
 ```cpp
 //make two different bank accounts
@@ -122,13 +197,21 @@ The += operator means that you increase the value of the variable to the left of
 
 These objects do a great job of cleaning up our code—consider having to keep track of Alison and Bob's bank account info without them and what happens when we want to add a third bank account—all those variables add up!
 
-### Task 4.1:
+{{ site.data.alerts.tip }}
+Have you switched drivers recently? Frequently enough? Don't forget to switch drivers and update your pair programming log.
+{{ site.data.alerts.end }}
 
-Using this code as a base, add some money to Alison's account and then output her balance.
+### Exercise 3.4.1:
 
-Alison says, "Thank you!" Before moving on, don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+- Using this code as a base, add some money to Alison's account and then output her balance.
 
-In the program above, we declared the member variables as `public`, but, as mentioned before, another option is `private`. Private member variables can only be accessed by other objects of their type—in our case, our `BankAccount` objects. There are a number of reasons to declare member variables as private, one of which is to maintain quality control on their values—so that account balances can't be set to negative, for instance. In general, you will want to declare variables and functions necessary for the inner workings of the class private and make public the variables and functions necessary for object to be useful to the rest of the program.
+## The Private Keyword
+
+There is another keyword that is the cousin of `public`, and that is `private`.
+
+Private member variables can only be accessed the object itself—in our case, our `BankAccount` objects.
+
+There are a number of reasons to declare member variables as private, one of which is to maintain quality control on their values—so that account balances can't be set to negative, for instance. In general, you will want to declare variables and functions necessary for the inner workings of the class private and make public the variables and functions necessary for object to be useful to the rest of the program.
 
 Consider the usefulness of using public functions to modify private data, as opposed to leaving the data public. What if we wanted to apply the same set of checks to make sure the account balance is always updated properly—for example, checking for overdrafts or account deposit limits. With our data safely hidden behind the private wall and the use of functions, we can say with confidence our bank account balances are correct.
 
@@ -151,6 +234,7 @@ class BankAccount {
 };
 ```
 
+## Member Functions
 Now that these variables are private, our object is actually fairly useless right now. We left the constructor public, so we can create new objects, but all our data is inaccessible from outside the class because it's declared private. To make our object useful, we'll introduce member functions, which define actions that can be performed on or with the member variables.
 
 Consider what behavior a `BankAccount` should exhibit. What sorts of actions are necessary? [Think a minute and then read on!]
@@ -214,20 +298,40 @@ Inside our member functions we have access to our member variables, as if we had
 
 Outside of the class definition, we use the dot notation to call an object's member functions; in this case, we have our `bobBankAccount` object, followed by a period, followed by the function call. Just as with the function calls you've made previously, you start with the function name, followed by any arguments wrapped in parentheses.
 
-### Task 4.2:
+### Exercise 3.4.2:
 
-Add another bank account to the example above. Deposit $500 dollars into Alison's account, then withdraw $400 from Bob's account and place it in the account you created. Then print out the balances from all three accounts. (You'll need to write the withdraw function. How is it similar to the deposit function? How is it different? What happens if you attempt to withdraw an amount greater than your balance?)
+- Add another bank account to the example above.
+- Deposit $500 dollars into Alison's account.
+- Then withdraw $400 from Bob's account and place it in the account you created.
+- Then print out the balances from all three accounts.
 
-Good job!
+{{ site.data.alerts.tip }}
+You'll need to write the withdraw function. How is it similar to the deposit function? How is it different? What happens if you attempt to withdraw an amount greater than your balance?
+{{ site.data.alerts.end }}
 
-Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+{% include callout_red_cup.html task="[Exercise 3.4.1, Exercise 3.4.2]" %}
 
-### Task 4.3:
+{{ site.data.alerts.tip }}
+Don't forget to switch drivers!
+{{ site.data.alerts.end }}
 
-Create a superhero class. The fields should include the superhero's name, arch-nemesis, weakness, and sidekick (these are all strings). You are welcome to add some extra fields of your own. Create a default constructor, some methods to set the fields, and a method to print the information in the fields. Then make some instances of the superhero class using your favorite superheroes for inspiration, set the fields appropriately, and print their information.
+### Exercise 3.4.3:
 
-Congratulations, you are well on your way to mastering the complex subject that is object-oriented programming!
+- Create a superhero class.
 
-Don't forget to turn your cups to red so that a member of the camp staff can check your code, and don't forget to switch drivers!
+The fields should include:
 
-Now, let's move on to [decisions](decisions.html).
+  1. The superhero's name
+  2. Arch-nemesis
+  3. Weakness
+  4. Sidekick 
+
+  (These are all strings).
+
+You are welcome to add some extra fields of your own. Create a default constructor, some methods to set the fields, and a method to print the information in the fields. Then make some instances of the superhero class using your favorite superheroes for inspiration, set the fields appropriately, and print their information.
+
+{% include callout_red_cup.html task="[Exercise 3.4.3]" %}
+
+## Next Step
+
+Proceed to ["Decisions"](decisions.html)

@@ -130,6 +130,6 @@ Yay! You have written your first C++ program!
 
 {% include callout_red_cup.html task="[Tutorial 3.1]" %}
 
-## Next
+## Next Step
 
-Now, you'll learn how to perform [simple math](simple_math_user_input.html).
+Proceed to ["Simple Math and User Input"](simple_math_user_input.html).

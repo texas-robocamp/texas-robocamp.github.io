@@ -50,7 +50,7 @@ entries:
       url: /functions.html
       output: web, pdf
 
-    - title: Objects
+    - title: Classes and Objects
       url: /objects.html
       output: web, pdf
 
@@ -81,6 +81,10 @@ entries:
     - title: Solve a Maze
       url: /maze_solving.html
       output: web, pdf
+
+  - title: Are You Ahead of the Group?
+    output: web, pdf
+    folderitems:
       
     - title: Using LEDs
       url: /led.html

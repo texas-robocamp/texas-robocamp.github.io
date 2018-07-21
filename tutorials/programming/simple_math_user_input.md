@@ -171,8 +171,10 @@ What's the mathematical opposite of multiplication?
 
 Write a program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
 
-{% include callout_red_cup.html task="[Tutorial 3.2]" %}
+{% include callout_red_cup.html task="[Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3]" %}
 
 {% include note.html content="Campers should demonstrate the output of Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3 to camp staff." %}
 
-Next, you'll learn about [functions](functions.html).
+## Next Step
+
+Proceed to ["Functions"](functions.html).
