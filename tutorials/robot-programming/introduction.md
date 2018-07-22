@@ -6,39 +6,46 @@ sidebar: tutorials
 permalink: robot_programming_introduction.html
 ---
 
-## Turn and Push
-Now that you understand the basics, let's start programming the robot! Your first task will be to implement obstacle detection and avoidance. This will involve monitoring the robot's sensors, and adjusting your movement accordingly to ensure that the robot does not get trapped. We'll be opting to do a navigation method called turn and push. You've probably seen this method before - it's what Roombas do to avoid collisions as well! The method goes as follows:
 
-- If the robot sees an obstacle on one side, back up, turn towards the clear side, and continue forwards
-- If the robot sees obstacles on both sides, back up
-
-### History of Turn and Push
-
-Grey Walter was a neuroscientist, who in the late 1940s created the first autonomous robots, Elsie and Elmer. These robots were phototropic, meaning they followed light, and were also sensitive to touch. These two sensory systems combined together with a motor helped him create "behavior" for these robots, to the point where they could move across a room autonomously. Because of the slow movement of the robots, Walter called them tortoises and believed they taught us the secrets to the organization of life. This movement behavior is now known as the turn and push behavior which we want to create to avoid obstacles. Below is an image of the path of one of Walter's tortoises. You can see the turn and push behavior in the path.
-
-![Tortoises](images/turn_and_push.png)
 
 ### Getting Started
+Now that you've learned the basics of C++, we can move on to programming on the actual robot! Go ahead and open up the Arduino IDE again - remember, to do so, type `arduino` into either the terminal or the lens.
 
-You'll probably find it helpful to use the obstacle_avoidance code as a starting point, so go ahead and open that up again. You'll notice that the bulk of the code is divided into two functions, `setup()` and `loop()`. The setup function is called first, and initalizes the robot. The code inside of this function is all neccessary, and is used to establish connections to the robot and ensure that it starts without any motors running. The actual obstacle detection will be done inside of `loop()`.
+Before we start writing code, let's take apart a simple Arduino code snippet. We'll start out with some code that just moves the robot around.
 
 ```
+#include <BnrOneA.h>
+#include <EEPROM.h>
+#include <SPI.h>
+BnrOneA one;
+
+#define SSPIN 2
+
+void setup() {
+  // put your setup code here, to run once:
+  Serial.begin(57600);
+  one.spiConnect(SSPIN);
+  one.stop();
+}
+
 void loop() {
-  int sensor = one.obstacleSensors();
-  if(sensor == 0){
-    Serial.print("No objects detected");
-    one.lcd1("No objects detected");
-    one.move(50,50);
-  }
-  else {
-    Serial.print("Object detected");
-    one.lcd1("Object detected");
-    one.brake(50,50);
-  }
+  // put your main code here, to run repeatedly:
+  one.move(50,50);
+  Serial.print("Moving");
 }
 ```
 
-Now that you've gone through the programming tutorials, most of this code should make sense to you. However, you'll notice that there are some function calls that seem unfamiliar. These are functions included in the Bot'n'Roll API, so we'll help you get started on figuring out what they do.
+Arduino prorgams are C++ programs, but the formatting for Arduino programs is special. You'll notice that the the code is divided into two functions, `setup()` and `loop()`. `setup()` is always called first. The code inside of this function is all neccessary, and is used to establish connections to the robot and ensure that it starts without any motors running. Almost all of the code you'll be writing will go inside `loop()`, which runs continually after `setup()` has ended.
+
+Now that you've gone through the programming tutorials, most of this code should make sense to you. However, you'll notice that there are some lines that seem unfamiliar. These are functions included and needed for the Bot'n'Roll API, so we'll help you get started on figuring out what they do.
+
+```
+#include <BnrOneA.h>
+#include <EEPROM.h>
+#include <SPI.h>
+```
+
+These include statements are used to import the libraries you'll need to work with the robot.
 
 ```
 BnrOneA one;
@@ -47,22 +54,43 @@ BnrOneA one;
 This line is initializing an BnrOneA object with the name of one. The BnrOneA object is how you'll send commands and receive information from the robot.
 
 ```
-int sensor = one.obstacleSensors();
+Serial.begin(57600);
 ```
 
-The `obstacleSensors()` function returns an `int` based on what the robot's front sensors are detecting. If you receive 0, no obstacles are being detected. If you receive 1, then an obstacle is being detected on the left sensor. Receiving 2 indicates that an obstacle has been detected on the right sensor. Finally, receiving a 3 means that obstacles were detected on both the right and left sensors.
-
+This sets up the data rate in bits per second (baud) for serial transmission. Since you'll be communicating with the computer, the baud rate is set to 57600. Without this line of code, you wouldn't be able to use the Serial Monitor, which is a useful tool for debugging programs.
 
 ```
-Serial.print("No objects detected");
+one.spiConnect(SSPIN);
 ```
 
-The `print()` function for the Serial class works in a similar fashion to how you've used cout in C++. Use this to output debugging information. To view the output, you'll need to look at the Serial Monitor, which can be found at "Tools -> Serial Monitor".
+This initializes the SPI communication bus. Basically, this is initializing the hardware on the robot to its proper initial state.
+
+```
+one.stop();
+```
+
+This stops the motors on the Bot'n'Roll One. This line of code is just a precaution to ensure that the robot doesn't start moving for no reason.
+
+```
+one.move(speedL,speedR);
+```
+
+The `move()` function takes in two parameters, `speedL` and `speedR`, and moves the left and right motors at the speeds specified. This function takes in values ranging from -100 to 100, where -100 is the maximum speed in reverse, and 100 corresponds to the maximum speed in the forward direction, and 0 stops the motors.
+
+```
+Serial.print("Moving");
+```
+
+The `print()` function for the Serial class works in a similar fashion to how you've used cout in C++. Use this to output debugging information when you're connected to the computer via USB. To view the output, you'll need to look at the Serial Monitor, which can be found at "Tools -> Serial Monitor".
 
 {% include tip.html content="Make sure that the baud setting on the monitor is the same value as the number passed into Serial.begin(), or your output will not be understandable." %}
 
+### Hello World
+
+Now that we're developing software on the actual robot, let's go ahead and write a new "Hello World" program. However, instead of just printing "Hello World" on the computer screen, we're going to print it on the robot's LCD screen! To do this, we'll need to use a new function in the Bot'n'Roll API, `lcdX()`.
+
 ```
-one.lcd1("No objects detected");
+void lcdX()
 ```
 
 This function is actually one of many different lcdX functions, and each one takes in different arguments. The Bot'n'Roll has two LCD screens, so it is valid to call lcd1 or lcd2 to produce output. You may find it useful to use these screens for debugging, since any calls to Serial.print() are only readable when you have the robot connected to your computer. When calling this function, you can pass in any of the following combinations of parameters:
@@ -74,11 +102,34 @@ This function is actually one of many different lcdX functions, and each one tak
 - lcdX(num1, num2, num3)
 - lcdX(num1, num2, num3, num4)
 
+Here are some examples of how you could use these functions:
+
+```
+one.lcd1("The number is",12); // lcdX(string[],num)
+one.lcd2(1,2); // lcdX(num1,num2)
+```
+
 ### Task 8.1
 
-Now that you know about `obstacleSensors()`, `Serial.print()`, and `lcdX`, let's write some code to see how they work. Write a program that prints to both the serial monitor and the LCD screen every time one of the sensors detects an object. Have the program specifically print out "left", "right", or "both", depending on which sensors are activated.
+Now that you know how to use the `lcdX()` functions, go ahead and write your first Hello World program on the robot! Remember, to create a new Arduino program, go to "File -> New". A new window should open up with an empty `setup()` and `loop()` function. Make sure you don't forget to `include` the libraries and write your `setup()` function correctly, or you won't be able to interface with the robot.
 
-{% include tip.html content="Don't forget that `lcdX` is not an actual function name - `lcd1` and `lcd2` are the actual function names!" %}
+{% include callout_red_cup.html task="8.1" %}
+
+Before we start moving the car around, there's one more important function you'll need to learn how to use:
+
+```
+void delay(milliseconds)
+```
+
+This function pauses the program for the amount of time specified in milliseconds. You'll find this function to be useful for many things, such as ensuring that the car moves for a specified period of time, or that the lights stay on/off for a specific amount of time.
+
+{% include tip.html content="There are 1000 milliseconds in 1 second!"}
+
+### Task 8.2
+
+Let's try out using the `delay()` function. Write a program that alternates between showing "Hello World" and "Texas RoboCamp" on the LCD. Have it switch between the two every 5 seconds.
+
+{% include callout_red_cup.html task="8.2" %}
 
 ## Moving the Car
 
@@ -96,7 +147,7 @@ one.brake(50,50);
 
 The `brake()` function also takes two arguments: torqueL and torqueR. These values define the braking power of each motor, which ranges between 0 and 100. Zero corresponds to stopping without braking, whereas 100 corresponds to stopping with the maximum braking torque.
 
-### Task 8.2 
+### Task 8.2
 Now that you know how to make the car start and stop, let's test out these functions! Write a program that has the car drive forwards for 2 seconds, brakes, and repeats.
 
 Before you write this program, however, you'll need to know about one more function, `void delay(milliseconds)`. This function returns no value, and has the program wait for a specified amount of milliseconds before executing the next line of code. So, if you wanted to wait 5 seconds before running the next line of code, you would do:
@@ -134,15 +185,3 @@ The `tone(pin,frequency,duration)` function generates a square wave of the speci
 
 ### Task 8.3
 Now that you know how to produce sound on your car, write a program that makes the car beep for 5 seconds.
-
-
-## Task 8.4
-
-You should now have all of the pieces to write the turn and push behavior! Your first major programming task is now to implement that behavior.
-
-{% include callout_red_cup.html task="X" comment="Please flip your cup to red to indicate that you're ready to test your robot."%}
-
-{% include note.html content="Camp Staff: Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors." %}
-
-
-Now, let's get the robot to [follow a line](line_following.html).
