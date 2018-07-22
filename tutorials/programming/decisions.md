@@ -6,7 +6,6 @@ sidebar: tutorials
 permalink: decisions.html
 ---
 
-## Decisions
 In this section, we're going to learn how to control the flow of a C++ program. Sometimes, you want your program to do one thing if certain conditions are met and to do another thing if other conditions are true. We make decisions and control the flow of the program using logical expressions and if-else statements.
 
 Let's imagine we have a program that helps police officers in a town give speeding tickets to drivers based on how fast the driver was going. In this imaginary town, the speed limit is 40 mph, but there are extra penalties if a person goes over 60 mph.
@@ -159,3 +158,7 @@ if (!(wearingSeatbelt == "n")){
 - Finish implementing the seat belt law for the driver who goes over 40mph (just follow the format above). Then come up with another law and add it to your code. Be as creative and ridiculous as you want, and if you need help, ask for it!
 
 {% include callout_red_cup.html task="[Exercise 3.5.2]" %}
+
+## Next Step
+
+Proceed to ["Repetition"](repetition.html)

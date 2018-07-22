@@ -6,9 +6,7 @@ sidebar: tutorials
 permalink: arrays.html
 ---
 
-## Arrays
-
-Sometimes we want to store lists of data together in one place. For example, it might be handy to have a list of all your grades from science class. You could go back later and average all the grades in the list together to find out your final grade in science. In C++, lists are called arrays, and they have some special properties.
+Sometimes we want to store lists of data together in one place. For example, it might be handy to have a list of all your grades from science class. You could go back later and average all the grades in the list together to find out your final grade in science.
 
 You can think of an array like a motel. Let's begin by imagining a single-story motel complex. The rooms are laid out in a row right next to each other. If you stand in front of room 7, you know that room 8 will be right next door, and room 9 will be after room 8. Arrays work in the same way. We can put values inside each of the "rooms" in the array, and since they are numbered logically, we can quickly find any "room" we need.
 
@@ -65,19 +63,19 @@ int main(){
 }
 ```
 
-### Task 7.1:
+### Exercise 3.7.1:
 
-Change the program above so that it stores and uses 7 grades instead of 5 to calculate the average.
+- Change the program above so that it stores and uses 7 grades instead of 5 to calculate the average.
 
-{% include callout_red_cup.html task="X" %}
+{% include callout_red_cup.html task="[Exercise 3.7.1]" %}
 
 Yay! Two more :)
 
-### Task 7.2:
+### Exercise 3.7.2:
 
 Write a program that asks a user to enter 10 numbers, puts those numbers in an array, and then prints out the numbers in the array backwards? Hint: use a loop that counts backwards.
 
-{% include callout_red_cup.html task="X" %}
+{% include callout_red_cup.html task="[Exercise 3.7.2]" %}
 
 Almost there!
 
@@ -97,14 +95,22 @@ You can use a multidimensional array in exactly the same way as a one-dimensiona
 
 `letterArray[3][1]="a";`
 
-### Task 7.3:
+### Exercise 3.7.3:
 
 Determine the correct code to access the elements containing letters y and z in the diagram above.
 
-{% include callout_red_cup.html task="X" %}
+{% include callout_red_cup.html task="[Exercise 3.7.2]" %}
 
 ## Wrap-up
 
 Congratulations! You have finished the C++ tutorial!
 
-Until we move on to robot programming, you can explore coding and the Linux environment, and you can let your neighbors know that you are available if they have questions.
+Now you can move on to programming the robot. Since you have already done an Arduino tutorial, and you've now done a C++ tutorial, you're on your own for this one!
+
+{{ site.data.alerts.tip }}
+Feel free to use your red cup at any time to get help and instruction from camp staff.
+{{ site.data.alerts.end }}
+
+## Next Step
+
+Proceed to ["Robot Programming Introduction"](robot_programming_introduction.html)
