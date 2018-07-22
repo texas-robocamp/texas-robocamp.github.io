@@ -49,7 +49,7 @@ Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.
 
 Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Since we're only here for a week, we're just going to tell you what to type here.
 
-{% include terminal_command.html command="git clone git@github.com:UTCS-Robotics-Camp/exercises.git" %}
+{% include terminal_command.html command="git clone git@github.com:Texas-Robotics-Camp/exercises.git" %}
 
 
 ## Set up the Arduino IDE
