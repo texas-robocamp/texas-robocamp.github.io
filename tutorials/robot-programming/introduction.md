@@ -200,9 +200,7 @@ one.lcd2(1, 2); // lcd#(num1,num2)
 
 - Create a new Arduino program, go to "File -> New".
 
-- Copy the short program above into your Arduino IDE to set up your program, and save your program in an appropriate place on your computer (along with the other exercises you've done is a good idea).
-
-- Edit this program so the robot does not start to move when it is running.
+- Copy the short program above into your Arduino IDE to set up your program, and save your program in an appropriate place on your computer (along with the other exercises you've done is a good idea). Just like the other exercises, give your program and the folder you work in the same name.
 
 - Make this program say "Hello World!" on the first line in the LCD, and "Texas RoboCamp!" on the second line.
 
