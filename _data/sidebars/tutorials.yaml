@@ -90,6 +90,10 @@ entries:
     output: web, pdf
     folderitems:
       
+    - title: Optional Challenges and Tutorials
+      url: /bonus_tutorial_intro.html
+      output: web, pdf
+      
     - title: Using LEDs
       url: /led.html
       output: web, pdf
