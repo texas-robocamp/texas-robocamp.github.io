@@ -1,5 +1,5 @@
 ---
-title: "Introduction"
+title: "Robot Programming Introduction"
 tags: [robot programming]
 keywords:
 sidebar: tutorials
@@ -8,10 +8,12 @@ permalink: robot_programming_introduction.html
 
 
 
-### Getting Started
-Now that you've learned the basics of C++, we can move on to programming on the actual robot! Go ahead and open up the Arduino IDE again - remember, to do so, type `arduino` into either the terminal or the lens.
+## Getting Started
+Now that you've learned the basics of C++, we can move on to programming on the robot!
 
-Before we start writing code, let's take apart a simple Arduino code snippet. We'll start out with some code that just moves the robot around.
+- Open up the Arduino IDE.
+
+Before we start writing code, let's look at a simple Arduino code snippet. We'll start out with some code that just moves the robot around.
 
 ```
 #include <BnrOneA.h>
@@ -35,9 +37,19 @@ void loop() {
 }
 ```
 
-Arduino prorgams are C++ programs, but the formatting for Arduino programs is special. You'll notice that the the code is divided into two functions, `setup()` and `loop()`. `setup()` is always called first. The code inside of this function is all neccessary, and is used to establish connections to the robot and ensure that it starts without any motors running. Almost all of the code you'll be writing will go inside `loop()`, which runs continually after `setup()` has ended.
+### The Two Functions We'll Be Working With
+Arduino programs are C++ programs.
 
-Now that you've gone through the programming tutorials, most of this code should make sense to you. However, you'll notice that there are some lines that seem unfamiliar. These are functions included and needed for the Bot'n'Roll API, so we'll help you get started on figuring out what they do.
+After practicing C++ the first thing that you are likely to notice is the lack of a `main`.
+
+Instead, the code that we will be using is divided into two functions, `setup` and `loop`.
+
+`setup` is always called first. It is sort of like a constructor for setting up the robot. Things in `setup` happen once, when the robot is started.
+
+`loop`, on the other hand, is called over and over. You can think of there being a `while` loop running on the robot which runs the `loop` command repeatedly as long as the power switch on the side of the robot is flipped on.
+
+
+### The Header Files
 
 ```
 #include <BnrOneA.h>
@@ -45,25 +57,47 @@ Now that you've gone through the programming tutorials, most of this code should
 #include <SPI.h>
 ```
 
-These include statements are used to import the libraries you'll need to work with the robot.
+`BnrOneA.h` contains code specific to the Bot'n Roll One A robot which we are programming. There is a whole API which has been defined to access the functionality of this robot, and we will go step-by-step through this API 
+
+`EEPROM.h` allows you to interact with the EEPROM on the Atmega328 microcontroller. This is sort of like saving files to a hard drive. Information on the EEPROM persists when the robot is shut off. This could be useful, for instance, if you solved a maze and wanted to store the solution to it, or if you programmed your robot to draw a picture on the floor and wanted to store the picture.
+
+`SPI.h` gives you access to the Serial Peripheral Interface, and lets you write data over the USB port.
+
+### The BnrOneA Class - Your Primary Interface to the Bot'n Roll API
 
 ```
 BnrOneA one;
 ```
 
-This line is initializing an BnrOneA object with the name of one. The BnrOneA object is how you'll send commands and receive information from the robot.
+The `BnrOneA` class is your primary interface to interacting with the robot, through which you will read data from and control the robot.
+
+### The rest of the code
+
+Here, we'll quickly tell you what's going on with the rest of the code.
 
 ```
 Serial.begin(57600);
 ```
 
-This sets up the data rate in bits per second (baud) for serial transmission. Since you'll be communicating with the computer, the baud rate is set to 57600. Without this line of code, you wouldn't be able to use the Serial Monitor, which is a useful tool for debugging programs.
+This sets serial connection and specifies its speed (baud).
+
+
+{{ site.data.alerts.tip }}
+<ul>
+<li>When using the Serial Monitor, make sure that the baud setting on the monitor is the same value as the number passed into Serial.begin(), or your output will not be understandable.</li>
+<li>Similarly, if you decide to write C++ code which communicates over the USB port, you will need the baud rates to match between the robot and computer sides of the connection, or it will not work properly.</li>
+</ul>
+{{ site.data.alerts.end }}
 
 ```
 one.spiConnect(SSPIN);
 ```
 
-This initializes the SPI communication bus. Basically, this is initializing the hardware on the robot to its proper initial state.
+The Bot'n Roll uses SPI to communicate between the two microcontrollers on the robot: the Atmega328 - which we will be programming using Arduino, and the PIC18F45K22 - which we will not directly be programming.
+
+The BnrOneA class formats messages to the PIC18F45K22, which are communicated using SPI. The PIC18F45K22 then directly handles some of the low-level control of the robot.
+
+This line of code configures the connection between the two microcontrollers so the robot can operate properly.
 
 ```
 one.stop();
@@ -75,25 +109,35 @@ This stops the motors on the Bot'n'Roll One. This line of code is just a precaut
 one.move(speedL,speedR);
 ```
 
-The `move()` function takes in two parameters, `speedL` and `speedR`, and moves the left and right motors at the speeds specified. This function takes in values ranging from -100 to 100, where -100 is the maximum speed in reverse, and 100 corresponds to the maximum speed in the forward direction, and 0 stops the motors.
+The `move` function takes in two parameters, `speedL` and `speedR`, and moves the left and right motors at the speeds specified. This function takes in values ranging from -100 to 100, where -100 is the maximum speed in reverse, and 100 corresponds to the maximum speed in the forward direction, and 0 stops the motors.
+
+{{ site.data.alerts.tip }}
+You can turn the robot by moving the motors at different speeds. 
+<ul>
+<li>-100, 100 would turn the robot as hard to the left as possible</li>
+<li>100, 50, would turn the robot less sharply to the right, navigating the robot in a circle..</li>
+</ul>
+{{ site.data.alerts.end }}
 
 ```
 Serial.print("Moving");
 ```
 
-The `print()` function for the Serial class works in a similar fashion to how you've used cout in C++. Use this to output debugging information when you're connected to the computer via USB. To view the output, you'll need to look at the Serial Monitor, which can be found at "Tools -> Serial Monitor".
+The `Serial.print` function for the Serial class similarly to `cout` in C++. It allows you to send data across the USB cable back to the computer.
 
-{% include tip.html content="Make sure that the baud setting on the monitor is the same value as the number passed into Serial.begin(), or your output will not be understandable." %}
-
-### Hello World
+## Hello World
 
 Now that we're developing software on the actual robot, let's go ahead and write a new "Hello World" program. However, instead of just printing "Hello World" on the computer screen, we're going to print it on the robot's LCD screen! To do this, we'll need to use a new function in the Bot'n'Roll API, `lcdX()`.
+
+### The `lcd` Function
 
 ```
 void lcdX()
 ```
 
-This function is actually one of many different lcdX functions, and each one takes in different arguments. The Bot'n'Roll has two LCD screens, so it is valid to call lcd1 or lcd2 to produce output. You may find it useful to use these screens for debugging, since any calls to Serial.print() are only readable when you have the robot connected to your computer. When calling this function, you can pass in any of the following combinations of parameters:
+This function is actually one of many different lcdX functions, and each one takes in different arguments. The Bot'n'Roll has two lines of LCD output. Calling `lcd1` or `lcd2` specifies which line you would like for your text to appear on. There is no concept of a "carriage return," "\n," or `endl` that is useful here.
+
+When calling this functions accept the following combinations of parameters:
 
 - lcdX(string[])
 - lcdX(num)
@@ -105,15 +149,23 @@ This function is actually one of many different lcdX functions, and each one tak
 Here are some examples of how you could use these functions:
 
 ```
-one.lcd1("The number is",12); // lcdX(string[],num)
-one.lcd2(1,2); // lcdX(num1,num2)
+one.lcd1("The number is", 12); // lcdX(string[],num)
+one.lcd2(1, 2); // lcdX(num1,num2)
 ```
 
-### Task 8.1
+### Exercise 4.1
 
-Now that you know how to use the `lcdX()` functions, go ahead and write your first Hello World program on the robot! Remember, to create a new Arduino program, go to "File -> New". A new window should open up with an empty `setup()` and `loop()` function. Make sure you don't forget to `include` the libraries and write your `setup()` function correctly, or you won't be able to interface with the robot.
+- Write your first Hello World program on the robot!
 
-{% include callout_red_cup.html task="8.1" %}
+- Create a new Arduino program, go to "File -> New".
+
+- Copy the short program above into your Arduino IDE to set up your program, and save your program in an appropriate place on your computer (along with the other exercises you've done is a good idea).
+
+- Edit this program so the robot does not start to move when it is running.
+
+- Make this program say "Hello World!" on the first line in the LCD, and "Texas RoboCamp!" on the second line.
+
+{% include callout_red_cup.html task="[Exercise 4.1]" %}
 
 Before we start moving the car around, there's one more important function you'll need to learn how to use:
 
@@ -123,7 +175,9 @@ void delay(milliseconds)
 
 This function pauses the program for the amount of time specified in milliseconds. You'll find this function to be useful for many things, such as ensuring that the car moves for a specified period of time, or that the lights stay on/off for a specific amount of time.
 
-{% include tip.html content="There are 1000 milliseconds in 1 second!"}
+{{ site.data.alerts.tip }}
+There are 1000 milliseconds in 1 second!"
+{{ site.data.alerts.end }}
 
 ### Task 8.2
 

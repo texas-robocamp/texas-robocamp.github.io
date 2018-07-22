@@ -70,7 +70,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Introduction
+    - title: Robot Programming Introduction
       url: /robot_programming_introduction.html
       output: web, pdf
 
