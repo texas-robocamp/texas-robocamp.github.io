@@ -145,9 +145,7 @@ one.spiConnect(SSPIN);
 The Bot'n Roll uses SPI to communicate between the two microcontrollers on the robot: the Atmega328 - which we will be programming using Arduino, and the PIC18F45K22 - which we will not directly be programming.
 
 {{ site.data.alerts.tip }}
-<ul>
-<li>The BnrOneA class formats messages to the PIC18F45K22, which are communicated using SPI. The PIC18F45K22 then directly handles some of the low-level control of the robot.
-</ul>
+The BnrOneA class formats messages to the PIC18F45K22, which are communicated using SPI. The PIC18F45K22 then directly handles some of the low-level control of the robot.
 {{ site.data.alerts.end }}
 
 This line of code configures the connection between the two microcontrollers so the robot can operate properly.
