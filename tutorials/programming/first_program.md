@@ -122,7 +122,7 @@ If it was not, one or more errors will be printed to the terminal. See if you ca
 
 - Modify the Hello World program so that it prints, "Hello \<Your Name\> and \<Your Partners Name\>".
 
-For example, if your name is Justine and your partner is Justin, it would display, Hello World and Justine and Justin.
+For example, if your name is Justine and your partner is Justin, it would display, Hello Justine and Justin.
 
 - Next, add a second line of text that says, "Programming is actually pretty fun when you get right down to it."
 
