@@ -4,4 +4,4 @@ topnav:
 - title: Topnav
   items:
     - title: About
-      url: /about.html
+      external_url: https://apps.cs.utexas.edu/camp/robotics

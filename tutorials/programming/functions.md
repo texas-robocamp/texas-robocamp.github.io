@@ -268,10 +268,6 @@ You've done a great a job learning about functions.
 
 Now, let's learn about a special data representation, the [object](objects.html).
 
-## Next
-
-Now, you'll learn how to perform [simple math](simple_math_user_input.html).
-
 ## Next Step
 
 Proceed to ["Classes and Objects"](objects.html).

@@ -49,19 +49,12 @@ Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.
 
 Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Since we're only here for a week, we're just going to tell you what to type here.
 
-{% include terminal_command.html command="git clone git@github.com:UTCS-Robotics-Camp/exercises.git" %}
+{% include terminal_command.html command="git clone https://github.com/texas-robocamp/exercises.git" %}
 
 
 ## Set up the Arduino IDE
 
 We need to get the library that drives the robot. A library is a collection of software that is distributed to write other software. For instance, video game designers often use graphics libraries that are already written in order to allow them to concentrate on writing the game, rather than the details that are the same from game-to-game. The Bot'n Roll robot comes with a software library, and to use it, we need to install it.
-
-To get it, we'll download it from the internet and install it into the Arduino IDE.
-
-{{ site.data.alerts.terminal_commands }}
-cd
-wget http://botnroll.com/onea/downloads/BnrOneA.zip
-{{ site.data.alerts.terminal_commands_end }}
 
 Open up the Arduino IDE.
 
@@ -69,7 +62,8 @@ Open up the Arduino IDE.
 
 Go to the Arduino IDE.
 
-- Navigate to "Sketch -> Import Library -> Add Library".
+- Navigate to "Sketch -> Include Library -> Add .ZIP Library".
+- In the dialog, double-click "exercises/" to open the folder.
 - Click BnrOneA.zip and hit OK.
 
 {% include tip.html content="You may get some warnings saying that Bluetooth cannot be used. Don't worry. We're not using Bluetooth." %}
