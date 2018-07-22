@@ -74,6 +74,10 @@ entries:
       url: /robot_programming_introduction.html
       output: web, pdf
 
+    - title: The Bot'n Roll Library
+      url: /botnroll_library.html
+      output: web, pdf
+
     - title: Turn and Push
       url: /turn_and_push.html
       output: web, pdf
@@ -96,4 +100,8 @@ entries:
       
     - title: Using LEDs
       url: /led.html
+      output: web, pdf
+      
+    - title: Infrared Signals to the Robot
+      url: /infrared_signals.html
       output: web, pdf
