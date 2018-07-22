@@ -71,49 +71,6 @@ Interested in learning more? <a href="http://students.iitk.ac.in/roboclub/lectur
 
 `byte obstacleSensors()`
 
-### Binary Code
-
-Oddly enough, now is a good time to discuss binary.
-
-We all know that computers represent data as 1s and 0s, but what does that really mean? Well, it's about to become immediately relevant to your ability to program this robot.
-
-Binary is called a numerical base.
-
-Decimal is the base that we are used to, where there are 10 digits (0-9), and we add additional digits to make bigger numbers.
-
-In binary, there are two digits (0 & 1), and we add additional digits to make bigger numbers.
-
-Binary was chosen as the numerical system for computers because computers use transistors, which can be thought of as switches which only go on or off, to represent basically everything. Since a switch can only be on or off, this naturally maps to there being two values for each digit in the computer's number system. Hence binary.
-
-Each switch, a 1 or 0 is called a bit.
-
-8 bits make a byte.
-
-{{ site.data.alerts.tip }}
-<ul>
-<li>If you have heard of 8-bit, 16-bit, 32-bit, or 64-bit computer architectures, this refers to the number of bits used to represent an integer and other basic things in the computer.</li>
-<li>Notice that the lengths are all powers of two. This is no mistake. Using powers of two is typically more efficient when designing things for computers.</li>
-</ul>
-{{ site.data.alerts.end }}
-
-We need to know a couple more things before we can understand binary. We need to quickly understand exponents.
-
-Left-Hand-Side    | Equals
---------|-------------
-2	| 2
-2 * 2	    |4
-2 * 2 * 2	| 8
-2 * 2 * 2 * 2	| 16
-
-We can also state these as exponents.
-
-Left-Hand-Side    | Exponent    | Equals
---------|-------------|-------------
-2	| 2	| 2
-2 * 2	    |4	    |4
-2 * 2 * 2	| 8	| 8
-2 * 2 * 2 * 2	| 16	| 16
-
 ```
 one.move(speedL,speedR);
 ```

@@ -90,6 +90,14 @@ entries:
       url: /maze_solving.html
       output: web, pdf
 
+  - title: More in Depth
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction to the In-Depth Tutorials
+      url: /in_depth_introduction.html
+      output: web, pdf
+
   - title: Are You Ahead of the Group?
     output: web, pdf
     folderitems:
