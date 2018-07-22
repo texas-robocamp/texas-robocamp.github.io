@@ -74,5 +74,5 @@ description: ""
 # the description is used in the feed.xml file
 
 # needed for sitemap.xml file only
-url: http://utcs-robotics-camp.github.io
+url: http://texas-robocamp.github.io
 baseurl: /
