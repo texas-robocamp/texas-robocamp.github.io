@@ -161,7 +161,7 @@ if (!(wearingSeatbelt == "n")){
 
 ## Switch-statements
 
-Switch-statements allow you to check the value of a variable against many cases in a compact way. Say you want to write a program that prints out "hello" in different languages based on an input language code that ranges between 0 to 4. Writing an if-statement (or nested if-statement) for each of the 5 case sounds tedious. However, you only need to write one switch-statement for all the cases:
+Switch-statements allow you to check the value of a variable against many cases in a compact way. Say you want to write a program that prints out "hello" in different languages based on an input language code. Writing an if-statement (or nested if-statement) for every language sounds tedious. However, you only need to write one switch-statement for all the cases:
 
 ```cpp
 [...] // the initial stuff
@@ -170,10 +170,10 @@ int language;
 cin >> language;
 
 switch (language) {
-  case 0:
-      cout << "Hello\n";
-      break; //This terminates the switch so we don't check all the other cases.
-  case 1:
+  case 0: // if the language code is 0
+      cout << "Hello\n"; // print out "Hello" in English
+      break; // This terminates the switch so we don't check all the other cases.
+  case 1: // if the language code is 1
       // do something else
       break;
   // Have as many cases as you want
