@@ -53,7 +53,7 @@ If you declare a variable outside any of the functions in your program, as is do
 
 Why would you want to do this?
 
-Well, in this program, the variable `one` is accessed in `setup`, but can also be accessed in `loop`.
+Well, in this program, the global variable `one` is accessed in `setup`, but can also be accessed in `loop`.
 
 The variable `Serial` is also global, but it is declared in the Arduino library.
 
@@ -144,7 +144,11 @@ one.spiConnect(SSPIN);
 
 The Bot'n Roll uses SPI to communicate between the two microcontrollers on the robot: the Atmega328 - which we will be programming using Arduino, and the PIC18F45K22 - which we will not directly be programming.
 
-The BnrOneA class formats messages to the PIC18F45K22, which are communicated using SPI. The PIC18F45K22 then directly handles some of the low-level control of the robot.
+{{ site.data.alerts.tip }}
+<ul>
+<li>The BnrOneA class formats messages to the PIC18F45K22, which are communicated using SPI. The PIC18F45K22 then directly handles some of the low-level control of the robot.
+</ul>
+{{ site.data.alerts.end }}
 
 This line of code configures the connection between the two microcontrollers so the robot can operate properly.
 
