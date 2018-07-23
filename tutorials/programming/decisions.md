@@ -159,6 +159,35 @@ if (!(wearingSeatbelt == "n")){
 
 {% include callout_red_cup.html task="[Exercise 3.5.2]" %}
 
+## Switch-statements
+
+Switch-statements allow you to check the value of a variable against many cases in a compact way. Say you want to write a program that prints out "hello" in different languages based on an input language code. Writing an if-statement (or nested if-statement) for every language sounds tedious. However, you only need to write one switch-statement for all the cases:
+
+```cpp
+[...] // the initial stuff
+
+int language;
+cin >> language;
+
+switch (language) {
+  case 0: // if the language code is 0
+      cout << "Hello\n"; // print out "Hello" in English
+      break; // This terminates the switch so we don't check all the other cases.
+  case 1: // if the language code is 1
+      // do something else
+      break;
+  // Have as many cases as you want
+  default:
+      // do something if none of the cases above apply. This is optional.
+}
+```
+
+### Exercise 3.5.3
+
+- Complete the example above so that when the program runs, a user can type a number between 0 to 4, and get a greeting back in one of the five languages you chose.
+
+{% include callout_red_cup.html task="[Exercise 3.5.3]" %}
+
 ## Next Step
 
 Proceed to ["Repetition"](repetition.html)
