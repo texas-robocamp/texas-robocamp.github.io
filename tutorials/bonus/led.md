@@ -1,6 +1,6 @@
 ---
 title: "Using LEDs"
-tags: [c++ programming]
+tags: [LEDs]
 keywords: LED
 sidebar: tutorials
 permalink: led.html

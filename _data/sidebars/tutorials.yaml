@@ -82,20 +82,16 @@ entries:
       url: /turn_and_push.html
       output: web, pdf
 
+    - title: The Line Follower & Binary
+      url: /line_follower_binary.html
+      output: web, pdf
+
     - title: Follow a Line
       url: /line_following.html
       output: web, pdf
 
     - title: Solve a Maze
       url: /maze_solving.html
-      output: web, pdf
-
-  - title: More in Depth
-    output: web, pdf
-    folderitems:
-
-    - title: Introduction to the In-Depth Tutorials
-      url: /in_depth_introduction.html
       output: web, pdf
 
   - title: Are You Ahead of the Group?
@@ -106,10 +102,14 @@ entries:
       url: /bonus_tutorial_intro.html
       output: web, pdf
       
-    - title: Using LEDs
+    - title: LEDS and FastLED
       url: /led.html
       output: web, pdf
       
     - title: Infrared Signals to the Robot
       url: /infrared_signals.html
+      output: web, pdf
+      
+    - title: Playing Music and Sounds
+      url: /sound.html
       output: web, pdf

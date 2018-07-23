@@ -1,9 +1,9 @@
 ---
-title: "The Line Follower & Binary"
+title: "Binary"
 tags: [Binary]
 keywords:
 sidebar: tutorials
-permalink: line_follower_binary.html
+permalink: binary.html
 ---
 
 

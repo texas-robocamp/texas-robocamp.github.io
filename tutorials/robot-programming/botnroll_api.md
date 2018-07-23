@@ -19,6 +19,13 @@ Here's a list of the functions from the Bot'n Roll Library, for your convenience
 
 You can find all of these functions in `BnrOneA.h`.
 
+{{ site.data.alerts.tip }}
+
+There are a handful of functions that you're simply unlikely to ever use on the robot. Most are documented in the Software Manual, though some are not, and are documented <a href="/less_used_functions.html">here</a>. Some of those functions appear in the above list.
+
+{{ site.data.alerts.end }}
+
+
 ## `lcd#`
 
 You already saw the `lcd#` function in the "Hello World" exercise on the robot.
@@ -35,12 +42,6 @@ This initializes the connection between the Arduino microcontroller and the PIC 
 
 There really is no reason that you are likely to want to change this code during the camp.
 
-### `minBat`
-
-`void minBat(float batmin);`
-
-Let's suppose that you only want the robot to operate if the batteries are charged above a certain threshold. Maybe the robot is racing, or is about to take on a long task. This function will prevent the robot from operating and display an error message if the battery is too low.
-
 ### `obstacleEmitters`
 
 `void obstacleEmitters(boolean state)`
@@ -53,95 +54,87 @@ This could be useful if, for instance, you wanted to try to control the robot us
 If `void obstacleEmitters(true)` is not called at the start of your program, then using the obstacle sensors on your robot may not work.
 {{ site.data.alerts.end }}
 
-### `setPID`
-
-{{ site.data.alerts.tip }}
-We're documenting this for the sake of completeness, but you probably won't tinker with this too much this week.
-{{ site.data.alerts.end }}
-
-`void setPID(int kp,int ki,int kd)`
-
-The motors on the robot use what is called PID (proportional-integral-derivative) control to control the speeds at which the motors move. This is implemented on the PIC microcontroller. The ints `kp`, `ki`, and `kd` are called the <b>PID gains</b>. They are the parameters for PID control. The robot has good defaults for these, so there really isn't a reason to tamper with them. Setting different values may cause the robot to move faster, or it may cause it to accelerate and decelerate wildly, making your robot difficult for you to control.
-
-{{ site.data.alerts.tip }}
-Interested in learning more? <a href="http://students.iitk.ac.in/roboclub/lectures/PID.pdf">HERE</a> is a brief tutorial.
-{{ site.data.alerts.end }}
-
 ## `obstacleSensors`
 
 `byte obstacleSensors()`
 
-```
-one.move(speedL,speedR);
-```
-
-The `move` function takes in two parameters, `speedL` and `speedR`, and moves the left and right motors at the speeds specified. This function takes in values ranging from -100 to 100, where -100 is the maximum speed in reverse, and 100 corresponds to the maximum speed in the forward direction, and 0 stops the motors.
-
 {{ site.data.alerts.tip }}
-You can turn the robot by moving the motors at different speeds. 
-<ul>
-<li>-100, 100 would turn the robot as hard to the left as possible</li>
-<li>100, 50, would turn the robot less sharply to the right, navigating the robot in a circle..</li>
-</ul>
+byte obstacleSensors()` uses binary in a very direct way, as some of you may have noticed. We will explore this more in-depth when we discuss the line following sensor.
 {{ site.data.alerts.end }}
 
-### Task 8.2
+`obstacleSensors` will return one of four values
 
-Let's try out using the `delay()` function. Write a program that alternates between showing "Hello World" and "Texas RoboCamp" on the LCD. Have it switch between the two every 5 seconds.
+Value    | Means
+--------|-------------
+0	| Neither sensor is activated
+1	| The left sensor is activated
+2	| The right sensor is activated
+3	| Both sensors are activated
 
-{% include callout_red_cup.html task="8.2" %}
+Additionally, when an obstacle sensor is activated, a corresponding LED will blink.
 
-## Moving the Car
+### Exercise 4.2.1
 
-The remaining functions from the obstacle_avoidance code that we haven't talked about all involve controlling the movement of the car.
+- Start by copying the "empty" program from ["Robot Programming Introduction"](/robot_programming_introduction.html) into your Arduino IDE, and saving it in a sensible place.
+- Write a short program that will print "Left Sensor Activated" when the left sensor is activated, "Right Sensor Activated" when the right sensor is activated, and "Both Sensors Activated" when both sensors are activated on the LCD on the robot.
 
-```
-one.move(50,50);
-```
+{{ site.data.alerts.tip }}
+Remember that Arduino programs must have the same name as the directory that they are stored in.
+{{ site.data.alerts.end }}
 
-The `move()` function takes two arguments: speedL and speedR. These values define the speed of each motor, which ranges from -100 to 100. -100 corresponds to the max speed in reverse, and 100 corresponds to the max speed in the forward direction. An input of 0 stops the motor.
+### Exercise 4.2.2
+- Add `obstacleEmitters(false)` to the `setup` function in your program, and run it again.
+- What happens?
 
-```
-one.brake(50,50);
-```
+### Exercise 4.2.3
+- Comment out `obstacleEmitters(false)`, and run it again.
+- What happens?
 
-The `brake()` function also takes two arguments: torqueL and torqueR. These values define the braking power of each motor, which ranges between 0 and 100. Zero corresponds to stopping without braking, whereas 100 corresponds to stopping with the maximum braking torque.
+### Exercise 4.2.4
+- Uncomment `obstacleEmitters(false)`.
+- Change it to say `obstacleEmitters(true)`.
+- What happens?
 
-### Task 8.2
-Now that you know how to make the car start and stop, let's test out these functions! Write a program that has the car drive forwards for 2 seconds, brakes, and repeats.
+### Exercise 4.2.5
+- Comment out `obstacleEmitters(true)`, and run it again.
+- What happens?
 
-Before you write this program, however, you'll need to know about one more function, `void delay(milliseconds)`. This function returns no value, and has the program wait for a specified amount of milliseconds before executing the next line of code. So, if you wanted to wait 5 seconds before running the next line of code, you would do:
+{% include callout_red_cup.html task="[Exercises 4.2.1 - 4.2.5]" %}
 
-```
-//Do something
-delay(5000);
-//Do something else
-```
+## `led`
 
+`void led(boolean state)`
 
-### Additional Functions
+This turns on and off the LED, based on whether it is passed `true` or `false`. It works exactly as in `ex01_LED`, so look there if you want to use the LED.
 
-Technically, you now have all of the functions that you need in order to get the robot to avoid obstacles. However, there are some additional functions for the BnrOneA class that you may find useful. Remember that to call any of these functions, you have to type `one.functionName()`.
+## `readButton`
 
-```
-void stop()
-```
+`byte readButton()`
 
-This function cuts energy to both motors on the Bot'n'Roll, causing them to rotate freely until they stop. This is the same as calling `move(0,0)`
+This allows you to use the buttons on the right-hand side of the LCD screen on your robot.
 
-```
-void led(state)
-```
+Value    | Means
+--------|-------------
+0	| No button is pressed
+1	| PB1 is pressed
+2	| PB2 is pressed
+3	| PB3 is pressed
 
-This function can set the LED on or off, depending on the state passed in. Passing in 0 turns the LED off, and passing in 1 turns the LED on.
+If more than one button is pressed, the value of the lowest pressed button is returned.
 
-## Beeping
+### Exercise 4.2.6
 
-The default behavior of the obstacle avoidance program is to turn away when the robot senses obstacles on one side, or back up when the robot senses obstacles on both sides. This is bad driving! The robot should tell us when it's about to turn or back up. The objective of your first robot program is signalling. We will let you decide how to signal. We suggest a beep for backing up, and lights for turning.
+In some of the upcoming exercises, you'll need to make your robot select different settings which the user can control using the buttons on the robot. To prepare you, we'll quickly try out the buttons.
 
-In order to make your car beep, you'll need two more functions, `tone(pin,frequency,duration)` and `noTone(pin)`.
+- Use a switch statement to print out which button has been pressed on the LCD of the robot.
+- "No button is pressed," "PB1 is pressed," "PB2 is pressed," or "PB3 is pressed," as in the table above.
 
-The `tone(pin,frequency,duration)` function generates a square wave of the specified frequency on the specified pin. The `duration` parameter is optional. If you do not put a value for duration, the wave will continue until `noTone(pin)` is called. The pin you'll be using for sound is pin 9.
+### Exercise 4.2.7
 
-### Task 8.3
-Now that you know how to produce sound on your car, write a program that makes the car beep for 5 seconds.
+We also want you to understand global variables, so let's try a variation on this.
+
+- Use a global variable to store the value of the last button which was pressed.
+- On LCD line 1, display "PB1," "PB2," or "PB3."
+- On LCD line 2, display whether or not a button is currently being pressed.
+
+{% include callout_red_cup.html task="[Exercises 4.2.6, 4.2.7]" %}

@@ -21,3 +21,9 @@ Want to do this? Proceed to ["Using LEDs"](led.html)
 You can control the infrared LEDs and phototransistors on the robot to do custom projects either to remotely control the robot or do something entirely different that you've come up with. We'd potentially like to hack the system so that these can be used to signal the start of head-to-head races between the robots. If you'd be interested in helping us develop that, then this may be a good place to start.
 
 Want to do this? Proceed to ["Infrared Signals to the Robot"](infrared_signals.html)
+
+## Playing Music and Sounds
+
+The robot does in fact have a tiny speaker on it, and it can play either simple music using the `tone` command from the Arduino library, or potentially more complicated sounds (though, be wary, as you may run out of memory).
+
+Want to do this? Proceed to ["Sound"](sound.html)
