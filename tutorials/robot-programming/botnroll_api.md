@@ -6,7 +6,8 @@ sidebar: tutorials
 permalink: botnroll_library.html
 ---
 
-In this tutorial, you will see how to use the functionality from the Bot'n Roll Library. We're going to go through all of the functions with brief exercises, to familiarize you with your robot.
+
+{% include callout_synchronize.html comment="This tutorial introduces you to the functionality from the Bot'n Roll Library. We will walk through the first few functions together, and you will work on some brief exercises to become more familiar with your robot." %}
 
 ## Software Manual
 The robot comes with a software manual that you may find helpful in this week's adventure. You can find it [here](forms/software_manual.pdf)
@@ -103,3 +104,7 @@ Remember that Arduino programs must have the same name as the directory that the
 - What happens?
 
 {% include callout_red_cup.html task="[Exercises 4.2.1 - 4.2.5]" %}
+
+## Next Step
+
+Proceed to ["Move The Robot"](move_the_robot.html)

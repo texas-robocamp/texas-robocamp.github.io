@@ -74,12 +74,12 @@ entries:
       url: /robot_programming_introduction.html
       output: web, pdf
 
-    - title: The Bot'n Roll Library
+    - title: First Few Functions
       url: /botnroll_library.html
       output: web, pdf
 
-    - title: Turn and Push
-      url: /turn_and_push.html
+    - title: Move the Robot
+      url: /move_the_robot.html
       output: web, pdf
 
     - title: The Line Follower & Binary
