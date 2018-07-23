@@ -1,15 +1,15 @@
 ---
-title: "The Bot'n Roll Library"
+title: "First Few Functions"
 tags: [robot programming]
 keywords:
 sidebar: tutorials
 permalink: botnroll_library.html
 ---
 
-In this tutorial, you will see how to the functionality from the Bot'n Roll Library. We're going to go through all of the functions with brief exercises, to familiarize you with your robot.
+In this tutorial, you will see how to use the functionality from the Bot'n Roll Library. We're going to go through all of the functions with brief exercises, to familiarize you with your robot.
 
 ## Software Manual
-The robot comes with a software manual that you may find helpful in this weeks adventure. You can find it [here](forms/software_manual.pdf)
+The robot comes with a software manual that you may find helpful in this week's adventure. You can find it [here](forms/software_manual.pdf)
 
 ## Function List
 
@@ -35,7 +35,7 @@ This turns on and off the LED, based on whether it is passed `true` or `false`. 
 
 You already saw the `lcd#` function in the "Hello World" exercise on the robot.
 
-As you can see from the function list, the `lcd#` function takes a variety of different arguments, to allow you to use it in various ways. The library does not come with a method for formatting text, though, as you become more advanced in your C++ programming, you will probably find that you are able to format a string without the assistance of the various methods provided.
+As you can see from the functions list, the `lcd#` function takes a variety of different arguments, to allow you to use it in various ways. The library does not come with a method for formatting text, though, as you become more advanced in your C++ programming, you will probably find that you are able to format a string without the assistance of the various methods provided.
 
 ## Setup Routines
 
@@ -52,8 +52,6 @@ There really is no reason that you are likely to want to change this code during
 `void obstacleEmitters(boolean state)`
 
 This turns on and off the LEDs which are used for obstacle detection.
-
-This could be useful if, for instance, you wanted to try to control the robot using a television remote (an infrared one).
 
 {{ site.data.alerts.tip }}
 If `void obstacleEmitters(true)` is not called at the start of your program, then using the obstacle sensors on your robot may not work.
