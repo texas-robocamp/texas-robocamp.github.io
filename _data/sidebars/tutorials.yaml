@@ -82,16 +82,12 @@ entries:
       url: /move_the_robot.html
       output: web, pdf
 
-    - title: (Optional) Turn & Push
+    - title: Turn & Push
       url: /turn_and_push.html
       output: web, pdf
 
     - title: The Line Follower
       url: /line_follower.html
-      output: web, pdf
-
-    - title: Follow a Line
-      url: /line_following.html
       output: web, pdf
 
   - title: Are You Ahead of the Group?

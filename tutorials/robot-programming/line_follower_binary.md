@@ -23,58 +23,69 @@ The PIC microcontroller has an 8-channel analog to digital converter on it. This
 The PIC has 8 ADC channels, which can be accessed by calling either the corresponding `readAdc#` function, or by providing 0-7 to `readAdc`. 
 
 ## The Line Follower Device
-Look under your robot at the line follower. It has 8 little black blocks on it. These blocks are used to detect how much light us coming up off the ground to the robot. 
+Look under your robot at the line follower. It has 8 little black blocks on it. These blocks are used to detect how much light us coming up off the ground to the robot.
 
-### Binary Code
+Each of those blocks is hooked up to a separate channel of the ADC. Consequently, the ADC will read each of them and return a value between 0-1023.
 
-Oddly enough, now is a good time to discuss binary.
+## Exercise 4.5
 
-We all know that computers represent data as 1s and 0s, but what does that really mean? Well, it's about to become immediately relevant to your ability to program this robot.
+### The Line Follower Test Target
 
-Binary is called a numerical base.
+- Print the test target out on Printer 303.
 
-Decimal is the base that we are used to, where there are 10 digits (0-9), and we add additional digits to make bigger numbers.
+{{ site.data.alerts.terminal_commands }}
+cd ~/forms
+wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/line.PDF
+lpr -Plw303 line.PDF
+{{ site.data.alerts.terminal_commands_end }}
 
-In binary, there are two digits (0 & 1), and we add additional digits to make bigger numbers.
+- Go get the line target off of the printer.
 
-Binary was chosen as the numerical system for computers because computers use transistors, which can be thought of as switches which only go on or off, to represent basically everything. Since a switch can only be on or off, this naturally maps to there being two values for each digit in the computer's number system. Hence binary.
+### Tips on Serial.print
 
-Each switch, a 1 or 0 is called a bit.
+{{ site.data.alerts.tip }}
+For this exercise we're going to use a bit of the Arduino IDE that we haven't used in a while, which is the Serial Monitor. If you don't recall how to open this up, look it up in the <a href="/robot_programming_introduction.html">Robot Programming Introduction</a>.
+{{ site.data.alerts.end }}
 
-8 bits make a byte.
+- `Serial.print` is used to send text data on the USB port.
+- You can see what has been printed using the Serial Monitor in the Arduino IDE.
+- `Serial.print(number)` will print a number.
+- `Serial.print(" ")` will print a space.
+- `Serial.println() will give you a new line.
+
+### Program the Exercise
+
+For this exercise we want you to read the values off of the line follower, while running it over the line target. You're going to need to write a short program to do this.
+
+Here's what your program should do.
+- Read each of the values from the line follower using the `readAdc` function(s).
+- Print each value onto the USB port using the `Serial.print` functions.
+- Print a space following each value from the line follower.
+- Print a new line at the end of the 8 values.
+
+When you hook this up, the numbers are going to scream past on the screen really quickly, so we suggest adding a `delay` after the for loop to make everything much easier to read.
 
 {{ site.data.alerts.tip }}
 <ul>
-<li>If you have heard of 8-bit, 16-bit, 32-bit, or 64-bit computer architectures, this refers to the number of bits used to represent an integer and other basic things in the computer.</li>
-<li>Notice that the lengths are all powers of two. This is no mistake. Using powers of two is typically more efficient when designing things for computers.</li>
+<li>
+The easiest way to implement this is with a for loop and the `int readAdc(byte)` function.
+</li>
+<li>Count from 0 to 7 using the for loop.</li>
+<li>Inside the loop, read the value in the corresponding ADC channel.</li>
+<li>`Serial.print` that value and a space.</li>
+<li>After the for loop, use `Serial.println`.</li>
 </ul>
 {{ site.data.alerts.end }}
 
-We need to know a couple more things before we can understand binary. We need to quickly understand exponents.
 
-Left-Hand-Side    | Equals
---------|-------------
-2	| 2
-2 * 2	    |4
-2 * 2 * 2	| 8
-2 * 2 * 2 * 2	| 16
+### Try the Line Follower
 
-We can also state these as exponents, which just means multiplying the number by itself as many times as is in the exponent.
+- Move the line target around under the robot.
+- You should notice that the numbers where the black line is present are different from the numbers where there is no black.
+  - How are they different?
 
-Left-Hand-Side    | Exponent    | Equals
---------|-------------|-------------
-2	| 2<sup>1</sup>	| 2
-2 * 2	    | 2<sup>2</sup>	    |4
-2 * 2 * 2	| 2<sup>3</sup>	| 8
-2 * 2 * 2 * 2	| 2<sup>4</sup>	| 16
+{% include callout_red_cup.html task="[Exercise 4.5]" %}
 
-Okay, but here's one which will really blow your mind if you haven't seen it before.
+## Next Step
 
- Exponent    | Equals
--------------|-------------
-2<sup>0</sup>	| 1
-
-{{ site.data.alerts.tip }}
-Explaining this would really get the camp off-course, but if you are curious, you can learn more <a href="http://scienceline.ucsb.edu/getkey.php?key=2626">here</a>.
-{{ site.data.alerts.end }}
-
+If you have gotten to this point this early in the camp, then you are way ahead of where we expected you to be. Try some of the challenges under [Are You Ahead of the Group?/Optional Challenges and Tutorials](/bonus_tutorial_intro.html)

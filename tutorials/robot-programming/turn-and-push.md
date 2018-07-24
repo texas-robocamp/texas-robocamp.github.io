@@ -6,12 +6,6 @@ sidebar: tutorials
 permalink: turn_and_push.html
 ---
 
-{{ site.data.alerts.tip }}
-<ul>
-<li>This tutorial is optional. You can succeed in the next tutorial without doing this one first.</li>
-</ul>
-{{ site.data.alerts.end }}
-
 In this tutorial, you will learn a simple way to allow your robot to navigate its environment. Variations of what happens in this paper have been adapted for many robots, including space vehicles and the Roomba vacuum cleaning robot.
 
 ## Grey Walter's Tortoises
@@ -49,4 +43,6 @@ If your program is successful, when encountering a wall, it should eventually tu
 {% include note.html content="Camp Staff: We're building an L-shaped box to test turn and push in. The robot has completed the challenge if it starts in one leg of the L and successfully makes it to the other leg.." %}
 
 
-Now, let's get the robot to [follow a line](line_following.html).
+## Next Step
+
+Proceed to ["The Line Follower"](line_follower.html)
