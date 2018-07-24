@@ -110,6 +110,17 @@ There are "customized activities" at the end of the camp, which invite you to be
 
 At designated points through your progress on this website, you will be asked to notify camp staff of your progress.
 
+Your progress will be logged in a progress log. You're about to see what your first progress log looks like.
+
+
+{{ site.data.alerts.terminal_commands }}
+HI
+{{ site.data.alerts.terminal_commands_end }}
+
+{{ site.data.alerts.tip }}
+We don't want you printing things unless instructed to by the camp. Please refrain from printing things using `lpr` unless either instructed to do so or unless you have previously obtained permission from a counselor to do so.
+{{ site.data.alerts.end }}
+
 It will look like this:
 
 {% include callout_red_cup.html task="[Tutorial 1]" %}

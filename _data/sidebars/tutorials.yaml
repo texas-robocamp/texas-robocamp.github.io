@@ -74,24 +74,24 @@ entries:
       url: /robot_programming_introduction.html
       output: web, pdf
 
-    - title: First Few Functions
-      url: /botnroll_library.html
+    - title: First Few Functions & Exploring the Obstacle Detector
+      url: /first_few_functions.html
       output: web, pdf
 
-    - title: Move the Robot
+    - title: Exploring the Robot's Motion
       url: /move_the_robot.html
       output: web, pdf
 
-    - title: The Line Follower & Binary
-      url: /line_follower_binary.html
+    - title: (Optional) Turn & Push
+      url: /turn_and_push.html
+      output: web, pdf
+
+    - title: The Line Follower
+      url: /line_follower.html
       output: web, pdf
 
     - title: Follow a Line
       url: /line_following.html
-      output: web, pdf
-
-    - title: Solve a Maze
-      url: /maze_solving.html
       output: web, pdf
 
   - title: Are You Ahead of the Group?

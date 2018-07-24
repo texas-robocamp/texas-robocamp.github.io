@@ -204,7 +204,7 @@ one.lcd2(1, 2); // lcd#(num1,num2)
 
 - Make this program say "Hello World!" on the first line in the LCD, and "Texas RoboCamp!" on the second line.
 
-## Another Useful Function
+## `delay`
 One function that you will find helpful this week is `delay`
 
 ```

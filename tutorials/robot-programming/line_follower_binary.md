@@ -1,11 +1,29 @@
 ---
-title: "Binary"
+title: "The Line Follower"
 tags: [Binary]
 keywords:
 sidebar: tutorials
-permalink: binary.html
+permalink: line_follower.html
 ---
 
+## Back to the Bot'n Roll Library
+
+The `BnrOneA` class still has a significant amount of functionality that we haven't yet touched, one of those is the use of the analog-to-digital converter
+
+### `int readAdc(byte), int readAdc#()`
+
+The PIC microcontroller has an 8-channel analog to digital converter on it. This allows us to hook electronics components up to the robot and read information off of them. The data comes in as analog data; that is to say, electrical voltages. An <b>analog-to-digital (ADC)</b> converter converts these voltages to digital information, allowing us to use it in our computer programs.
+
+{{ site.data.alerts.tip }}
+<ul>
+<li>You can think of the analog data sort of like a dimmer switch on a light. More electricity makes the light brighter. The problem for the microcontroller is that it doesn't work with voltages as analog circuits do. It works with binary, discrete representations. The <b>analog-to-digital (ADC)</b> will convert the voltage into a number that can be understood by the computer.</li>
+</ul>
+{{ site.data.alerts.end }}
+
+The PIC has 8 ADC channels, which can be accessed by calling either the corresponding `readAdc#` function, or by providing 0-7 to `readAdc`. 
+
+## The Line Follower Device
+Look under your robot at the line follower. It has 8 little black blocks on it. These blocks are used to detect how much light us coming up off the ground to the robot. 
 
 ### Binary Code
 

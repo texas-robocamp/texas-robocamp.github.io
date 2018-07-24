@@ -40,14 +40,6 @@ The robot automatically looks for obstacles every 20 milliseconds. `obstacleSens
 
 In general, you're going to want to use `obstacleSensors`, and the difference between the two functions is not that significant to us right now.
 
-## `int readAdc(byte), int readAdc#()`
-
-These functions access the Analog-to-Digital converter on the PIC.
-
-The PIC has 8 ADC channels, which can be accessed by calling either the corresponding `readAdc#` function, or by providing 0-7 to `readAdc`.
-
-There is nothing hooked up to the ADC. Supposing that something was connected to it, this could be useful. The ADC returns values between 0-1024, scaled between 0 and 5V.
-
 ## `void servo#(byte position)`
 
 In theory, the robot can control two servos. In practice, it has no servos connected to it. There are more details on using this functionality in the software manual.
