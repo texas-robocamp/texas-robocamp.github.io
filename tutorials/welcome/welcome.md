@@ -108,18 +108,30 @@ There are "customized activities" at the end of the camp, which invite you to be
 
 ## Tracking your Progress
 
-At designated points through your progress on this website, you will be asked to notify camp staff of your progress.
+### Progress Logs
 
 Your progress will be logged in a progress log. You're about to see what your first progress log looks like.
 
-
 {{ site.data.alerts.terminal_commands }}
-HI
+cd
+mkdir forms
+cd forms
+wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/tutorials_checklist_1.pdf
+wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/pair_programming_log.pdf
+lpr -Plw303 tutorials_checklist_1.pdf
+lpr -Plw303 pair_programming_log.pdf
 {{ site.data.alerts.terminal_commands_end }}
+
+- Go get your checklist and pair programming log off of printer 303, which us under the television monitor by the lounge area.
+- Get some tape from a counselor to affix it to the top of your box.
 
 {{ site.data.alerts.tip }}
 We don't want you printing things unless instructed to by the camp. Please refrain from printing things using `lpr` unless either instructed to do so or unless you have previously obtained permission from a counselor to do so.
 {{ site.data.alerts.end }}
+
+### Red Cups to Mark Progress
+
+At designated points through your progress on this website, you will be asked to notify camp staff of your progress.
 
 It will look like this:
 
