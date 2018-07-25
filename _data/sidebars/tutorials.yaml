@@ -94,6 +94,10 @@ entries:
     output: web, pdf
     folderitems:
       
+    - title: git & github
+      url: /git.html
+      output: web, pdf
+      
     - title: Optional Challenges and Tutorials
       url: /bonus_tutorial_intro.html
       output: web, pdf

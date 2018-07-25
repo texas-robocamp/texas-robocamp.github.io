@@ -6,7 +6,11 @@ sidebar: tutorials
 permalink: bonus_tutorial_intro.html
 ---
 
-Texas RoboCamp welcomes campers with multiple levels of experience. As a result, some of you are probably ahead of the group. That's okay! We invite you to try challenging interesting stuff with your robot.
+Texas RoboCamp welcomes campers with multiple levels of experience. As a result, some of you are probably ahead of the group. That's okay!
+
+We invite you to try challenging interesting stuff with your robot.
+
+For groups who are way ahead, we'd like you to <u>start</u> your journey by learning to use git. Proceed to the [git tutorial](/git.html).
 
 ## Line Following Race
 
