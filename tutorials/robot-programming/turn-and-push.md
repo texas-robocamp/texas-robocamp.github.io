@@ -28,7 +28,7 @@ By turning and pushing, the robot would eventually make its way around the obsta
 
 The Roomba does something similar as it vacuums. When its bump sensor is hit, it turns and begins its wandering behavior again.
 
-## Challenge 4.4
+## Challenge 5
 
 Following light is not part of this challenge
 
@@ -38,7 +38,7 @@ Following light is not part of this challenge
 
 If your program is successful, when encountering a wall, it should eventually turn so as to avoid hitting the wall, rather than becoming stuck! We will test the success of your robot by putting it into a pen with a wall. If the robot can get to the other side, you have passed the Turn & Push Challenge, and receive all of the bragging rights associated therewith.
 
-{% include callout_red_cup.html task="[Challenge 4.4]" comment="Please flip your cup to red to indicate that you're ready to test your robot."%}
+{% include callout_red_cup.html task="[Challenge 5]" comment="Please flip your cup to red to indicate that you're ready to test your robot."%}
 
 {% include note.html content="Camp Staff: We're building an L-shaped box to test turn and push in. The robot has completed the challenge if it starts in one leg of the L and successfully makes it to the other leg.." %}
 

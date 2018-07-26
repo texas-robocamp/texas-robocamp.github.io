@@ -1,5 +1,5 @@
 ---
-title: "Optional Challenges and Tutorials Intro"
+title: "Bonus Material Intro"
 tags: [robot programming]
 keywords: BONUS
 sidebar: tutorials

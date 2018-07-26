@@ -90,7 +90,7 @@ entries:
       url: /line_follower.html
       output: web, pdf
 
-  - title: Are You Ahead of the Group?
+  - title: Bonus Material!
     output: web, pdf
     folderitems:
       
