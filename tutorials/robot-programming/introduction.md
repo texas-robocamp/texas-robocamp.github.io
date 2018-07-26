@@ -237,4 +237,4 @@ You can modify this exercise to use whatever cheer you like. The point is to lea
 
 ## Next Step
 
-Proceed to ["The Bot'n Roll Library"](botnroll_library.html)
+Proceed to ["First Few Functions & Exploring the Obstacle Detector"](/first_few_functions.html)
