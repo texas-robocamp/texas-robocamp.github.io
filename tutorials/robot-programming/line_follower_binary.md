@@ -240,4 +240,4 @@ Now we're going to make it so you only see where the line is under the line foll
 
 ## Next Step
 
-If you have gotten to this point this early in the camp, then you are way ahead of where we expected you to be. Try some of the challenges under [Are You Ahead of the Group?/Optional Challenges and Tutorials](/bonus_tutorial_intro.html)
+Proceed to ["Line Following"](/line_following.html)
