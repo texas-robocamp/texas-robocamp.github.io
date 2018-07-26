@@ -97,9 +97,7 @@ The formulas for your controller now look like `K_c + (K_p * p + K_d * d)` `K_c 
 
 Probably the best known controller is the PID controller, where I stands for <b>integral</b>, and, yes, it means the same thing as in calculus.
 
-Taking the integral isn't terribly hard. You can take the difference of the two "errors" (how far off the direction you wanted to be facing you were, or, equivalently, your current `d` term, and your past `d` term.
-
-This now gives you 4 terms with 4 gains.
+In practice, you can compute your numerical integral by adding up your errors over time to arrive at area under the curve for your potential.
 
 - <b>Constant gain</b> (`K_c`).
 - <b>Proportional gain</b> (`K_p`).
