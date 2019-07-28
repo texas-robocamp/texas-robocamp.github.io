@@ -6,15 +6,13 @@ sidebar: tutorials
 permalink: simple_math_user_input.html
 ---
 
-Now let's move on to some simple math programs.
+Let's write a program to convert a weight on earth a weight on the moon. An object that weighs 1.0 pounds on Earth would weigh 0.1654 pounds on the moon.
 
-Let's start by writing a program that converts a person's weight on earth to their weight on the moon. An object that weighs 1.0 pounds on Earth would weigh 0.1654 pounds on the moon.
+In C++, multiplication is represented with the * symbol.
 
-In C++, we represent multiplication with the * symbol.
+This program will ask the user of our program their weight, store that information, do the conversion, and then print their moon weight.
 
-This program, will ask the user of our program their weight, store that information, do the conversion, and then print their moon weight.
-
-The easiest way to do this is to save all the numbers in the program as <b>variables</b>. Just like in math class, a variable is a letter or a word that stands for a number or a mathematical formula.
+To do this the program will save all the numbers it needs in <b>variables</b>. A variable is a letter or a word that stands for a number or a mathematical formula.
 
 For example, we can say:
 
@@ -52,9 +50,9 @@ Variables names can't have spaces in them and cannot start with numbers.
 
 C++ requires that we define the type of our variables.
 
-For example, if we know that a variable could store a number with a decimal, it should be a float, which stands for floating (decimal) point number.
+For example, a variable storing a number with a decimal should be a float, which stands for floating (decimal) point number.
 
-We always declare our variables before they are used. Generally we do this by saying the variable type and then the names of all the variables that are that type at the first line of the function.
+Variables must be declared before they are used. Generally this is done by saying the variable type and then the names of all the variables that are that type at the first line of the function.
 
 Here's a quick reference of types in C++:
 
@@ -173,7 +171,7 @@ Write a program that asks the user for two numbers, and then prints out the sum 
 
 {% include callout_red_cup.html task="[Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3]" %}
 
-{% include note.html content="Campers should demonstrate the output of Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3 to camp staff." %}
+{% include note.html content="Campers should demonstrate the output of Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3, and show their code to camp staff." %}
 
 ## Next Step
 

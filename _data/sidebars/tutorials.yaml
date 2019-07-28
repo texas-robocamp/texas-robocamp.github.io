@@ -11,8 +11,8 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: Using Linux
-      url: /using_linux.html
+    - title: Getting Started
+      url: /getting_started.html
       output: web, pdf
       type: homepage
 
@@ -21,12 +21,13 @@ entries:
       output: web, pdf
       type: homepage
 
-  - title: Getting Started
-    output: web, pdf
-    folderitems:
+    - title: Using Linux
+      url: /using_linux.html
+      output: web, pdf
+      type: homepage
 
-    - title: Firing Up the Robot
-      url: /arduino.html
+    - title: Cloning the Tutorials
+      url: /cloning.html
       output: web, pdf
       type: homepage
 
@@ -70,6 +71,11 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Firing Up the Robot
+      url: /arduino.html
+      output: web, pdf
+      type: homepage
+
     - title: Robot Programming Introduction
       url: /robot_programming_introduction.html
       output: web, pdf
@@ -101,10 +107,6 @@ entries:
   - title: Bonus Material!
     output: web, pdf
     folderitems:
-      
-    - title: git & github
-      url: /git.html
-      output: web, pdf
       
     - title: Optional Challenges and Tutorials
       url: /bonus_tutorial_intro.html

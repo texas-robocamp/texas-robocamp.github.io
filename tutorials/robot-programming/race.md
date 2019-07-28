@@ -16,6 +16,8 @@ Now we're going to race our robot against each other.
 - Have a counselor time your robot.
 - The winner wins the race, and nothing more. This is just for fun.
 
+The counselors will draw a leaderboard on the whiteboard as teams start clocking in times. It will look something like this:
+
 Team    | Time
 --------|-------------
 0       | 0:00        

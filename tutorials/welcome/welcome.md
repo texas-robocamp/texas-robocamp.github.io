@@ -6,10 +6,7 @@ sidebar: tutorials
 permalink: welcome.html
 ---
 
-First, welcome to camp! If you are seated at your workstation then hopefully:
-
-* You have already met your partner for the camp.
-* You have completed, or are well on the way to completing the assembly of your Bot'n'Roll One!
+First, welcome to camp! You should be seated at a workstation next to your partner. If you have not yet taken the time to introduce yourselves to each other, spend a minute or two to get to know each other. You'll be working together all week.
 
 This week you will go through a mostly self-paced tutorial on how to program your robot. Your tutorial will be interspersed with instruction, challenges and activities on the robot, and outside activities like visits to tech companies and lectures from scientists working in robotics. We have done everything that we could think of to pack as much fun as possible into this week.
 
@@ -58,7 +55,54 @@ ls
 pwd
 {{ site.data.alerts.terminal_commands_end }}
 
-## Pair Programming
+## Keeping Track of your Robot
+
+Every team in this camp will have a virtually identical robot. To tell them apart, we will give you sticky notes and boxes to store them in.
+
+When you come back here with your robots, you will write you team number onto the sticky note and stick it to the top of your robot. Your robot and its parts should always stay in its box. Don't worry about this at this time.
+
+## Tutorials
+
+Everyone will work and learn at a different pace. To accomodate this, this camp comprises a series of mostly self-paced tutorials. Each of these tutorials is documented on this website. You can easily navigate the tutorials using the navigation bar on the left. You can always return to the top of the website by clicking on the "Texas RoboCamp" logo in the upper left-hand corner.
+
+## Where You Sit
+
+Every time you enter the lab, your assigned seat will change. This is so we can group campers together who are working on similar activities, so we can better help you as a group. Please make sure to look for the sign indicating where you should sit every time you enter into the lab, and sit in the corresponding area.
+
+## Challenges and Activities
+
+Tutorials prepare you for programming challenges and activities by providing you with the tools that you need in order to complete the task.
+
+Once you have learned enough skills to solve a programming challenge or take part in an activity, the tutorial will present you with an activity or challenge to participate in.
+
+Because the week is self-paced, feel free to take longer on activities and challenges that you really enjoy. Be wary that some later activities and challenges build on skills that you develop in earlier ones, so make sure that you *do* complete each activity.
+
+There are bonus activities at the end of the camp, which invite you to become creative in the way that you use what you have learned or improve the performance of something that you have written to try to improve the performance of your robot.
+
+## Tracking your Progress
+
+### Progress Logs
+
+Your progress will be logged in a progress log. You're about to see what your first progress log looks like.
+
+{{ site.data.alerts.terminal_commands }}
+cd
+mkdir forms
+cd forms
+wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/tutorials_checklist_1.pdf
+wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/pair_programming_log.pdf
+lpr -Plw303 tutorials_checklist_1.pdf
+lpr -Plw303 pair_programming_log.pdf
+{{ site.data.alerts.terminal_commands_end }}
+
+- Go get your checklist and pair programming log off of printer 303, which us under the television monitor by the lounge area.
+- When you have your box, you will get some tape from a counselor to affix it to the top of your box.
+
+{{ site.data.alerts.tip }}
+We don't want you printing things unless instructed to by the camp. Please refrain from printing things using `lpr` unless either instructed to do so or unless you have previously obtained permission from a counselor to do so.
+{{ site.data.alerts.end }}
+
+### Pair Programming
 
 Pair programming is a technique by which two people work together to solve a programming problem. In this camp, you and your partner will work together to program your robot. You will keep each other on task and motivated. You will talk through coding issues when you do not know how to solve them.
 
@@ -86,49 +130,6 @@ Fill it out as follows:
 
 * Try to change drivers every 30 minutes.
 
-## Keeping Track of your Robot
-
-Everyone in this camp has a virtually identical robot. To tell them apart, we will give you sticky notes.
-
-In the next few minutes, you will write you team number onto the sticky note and stick it to the top of your robot. Don't worry about this at this time.
-
-## Tutorials
-
-Everyone will work and learn at a different pace. To accomodate this, this camp comprises a series of mostly self-paced tutorials. Each of these tutorials is documented on this website. You can easily navigate the tutorials using the navigation bar on the left. You can always return to the top of the website by clicking on the "Texas RoboCamp" logo in the upper left-hand corner.
-
-## Challenges and Activities
-
-Tutorials prepare you for programming challenges and activities by providing you with the tools that you need in order to complete the task.
-
-Once you have learned enough skills to solve a programming challenge or take part in an activity, the tutorial will present you with an activity or challenge to participate in.
-
-Because the week is self-paced, feel free to take longer on activities and challenges that you really enjoy. Be wary that some later activities and challenges build on skills that you develop in earlier ones, so make sure that you *do* complete each activity.
-
-There are "customized activities" at the end of the camp, which invite you to become creative in the way that you use what you have learned or improve the performance of something that you have written to try to improve the performance of your robot.
-
-## Tracking your Progress
-
-### Progress Logs
-
-Your progress will be logged in a progress log. You're about to see what your first progress log looks like.
-
-{{ site.data.alerts.terminal_commands }}
-cd
-mkdir forms
-cd forms
-wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/tutorials_checklist_1.pdf
-wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/pair_programming_log.pdf
-lpr -Plw303 tutorials_checklist_1.pdf
-lpr -Plw303 pair_programming_log.pdf
-{{ site.data.alerts.terminal_commands_end }}
-
-- Go get your checklist and pair programming log off of printer 303, which us under the television monitor by the lounge area.
-- Get some tape from a counselor to affix it to the top of your box.
-
-{{ site.data.alerts.tip }}
-We don't want you printing things unless instructed to by the camp. Please refrain from printing things using `lpr` unless either instructed to do so or unless you have previously obtained permission from a counselor to do so.
-{{ site.data.alerts.end }}
-
 ### Red Cups to Mark Progress
 
 At designated points through your progress on this website, you will be asked to notify camp staff of your progress.
@@ -141,4 +142,4 @@ At this point, please **actually** flip your cup to red.
 
 ## Next Step
 
-Proceed to ["Firing Up the Robot."](/arduino.html)
+Proceed to ["Using Linux."](/using_linux.html)
