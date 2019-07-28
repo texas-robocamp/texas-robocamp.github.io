@@ -14,7 +14,11 @@ First, a few preliminaries.
 
 ## Cups
 
-You have received a pair of cups which are taped to each other. One is red. One is blue. At this time, you should place your pair of cups on top of the computer monitor in front of you, with the blue cup facing up.
+You have received a pair of cups which are taped to each other.
+
+{% include note.html content="Actually, you didn't. We accidentally locked them in the workshop that we'll be in tomorrow. For today, just raise your hand when you need help." %}
+
+One is red. One is blue. At this time, you should place your pair of cups on top of the computer monitor in front of you, with the blue cup facing up.
 
 * When the red cup is facing upward, it means:
 
@@ -35,19 +39,17 @@ At this point, please **actually** flip your cup to blue, and start using the cu
 
 There are some activities that we will do as one big group. For instance, sections of the tutorial are accompanied by brief lectures or group activities. Sections that are done as a group will be marked with a yellow box to indicate that you should wait to synchronize with the other campers.
 
-{% include callout_synchronize.html  comment="Just kidding. Keep going." %}
-
-Seriously, that yellow box is just there to show you what it looks like.
+{% include callout_synchronize.html  comment="This is just to show you what it looks like. Keep going." %}
 
 ## Tips
 
-Sometimes we need to tell you something tangential to the line of thought of the tutorial, but important to point out, or to highlight something so you do not forget to do it. We'll mark these boxes green.
+Sometimes we need to tell you something tangential to the line of thought of the tutorial, but important to point out. Tips look like this.
 
 {% include tip.html content="Don't get distracted by the tips. They're intended to help you, not side-track you." %}
 
 ## Command Line Instructions
 
-Sometimes we just want you to type something into the computer so we can get on to the next thing. In-depth instruction on that command would slow down the camp, so we just tell you what to do. You can literally copy-paste the commands, minus the bullets.
+Sometimes we just want you to type something into the computer and we just tell you what it is. You should literally copy-paste these commands when you see a box like this. The commands below are just an example, and are harmless, but not productive.
 
 {{ site.data.alerts.terminal_commands }}
 cd
@@ -63,7 +65,7 @@ When you come back here with your robots, you will write you team number onto th
 
 ## Tutorials
 
-Everyone will work and learn at a different pace. To accomodate this, this camp comprises a series of mostly self-paced tutorials. Each of these tutorials is documented on this website. You can easily navigate the tutorials using the navigation bar on the left. You can always return to the top of the website by clicking on the "Texas RoboCamp" logo in the upper left-hand corner.
+This camp comprises a series of mostly self-paced tutorials. Each tutorial is documented on this website. You can navigate the tutorials using the navigation bar on the left. You can always return to the top of the website by clicking on the "Texas RoboCamp" logo in the upper left-hand corner.
 
 ## Where You Sit
 
@@ -89,9 +91,9 @@ Your progress will be logged in a progress log. You're about to see what your fi
 cd
 mkdir forms
 cd forms
-wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/tutorials_checklist_1.pdf
+wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/camper_checklist_1.pdf
 wget https://github.com/texas-robocamp/texas-robocamp.github.io/raw/master/forms/pair_programming_log.pdf
-lpr -Plw303 tutorials_checklist_1.pdf
+lpr -Plw303 camper_checklist_1.pdf
 lpr -Plw303 pair_programming_log.pdf
 {{ site.data.alerts.terminal_commands_end }}
 

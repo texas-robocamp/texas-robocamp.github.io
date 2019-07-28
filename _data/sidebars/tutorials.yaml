@@ -71,55 +71,7 @@ entries:
     output: web, pdf
     folderitems:
 
-    - title: Firing Up the Robot
-      url: /arduino.html
+    - title: Introduction to Arduino
+      url: /arduino_intro.html
       output: web, pdf
       type: homepage
-
-    - title: Robot Programming Introduction
-      url: /robot_programming_introduction.html
-      output: web, pdf
-
-    - title: First Few Functions & Exploring the Obstacle Detector
-      url: /first_few_functions.html
-      output: web, pdf
-
-    - title: Exploring the Robot's Motion
-      url: /move_the_robot.html
-      output: web, pdf
-
-    - title: Turn & Push
-      url: /turn_and_push.html
-      output: web, pdf
-
-    - title: The Line Follower
-      url: /line_follower.html
-      output: web, pdf
-
-    - title: Line Following
-      url: /line_following.html
-      output: web, pdf
-
-    - title: Race!
-      url: /race.html
-      output: web, pdf
-
-  - title: Bonus Material!
-    output: web, pdf
-    folderitems:
-      
-    - title: Optional Challenges and Tutorials
-      url: /bonus_tutorial_intro.html
-      output: web, pdf
-      
-    - title: LEDS and FastLED
-      url: /led.html
-      output: web, pdf
-      
-    - title: Infrared Signals to the Robot
-      url: /infrared_signals.html
-      output: web, pdf
-      
-    - title: Playing Music and Sounds
-      url: /sound.html
-      output: web, pdf

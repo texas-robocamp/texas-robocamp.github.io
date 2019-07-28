@@ -3,7 +3,7 @@ title: "Firing Up the Robot"
 tags: [arduino]
 keywords: arduino
 sidebar: tutorials
-permalink: arduino.html
+permalink: robot_startup.html
 ---
 
 {% include note.html content="There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the next synchronization marker. Don't worry about reading all of this material, and please proceed to the yellow synchronization marker on this page when it is time." %}
@@ -44,13 +44,6 @@ Here are a couple of pictures of mine. Mine is a HyperCube CoreXY.
 ![HyperCube Owl](images/hypercube_owl.jpg)
 
 {% include callout_synchronize.html comment="People will have the same questions while we go through the basics for the first time. Let's do it together!" %}
-
-## Git
-
-Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Since we're only here for a week, we're just going to tell you what to type here.
-
-{% include terminal_command.html command="git clone https://github.com/texas-robocamp/exercises.git" %}
-
 
 ## Set up the Arduino IDE
 

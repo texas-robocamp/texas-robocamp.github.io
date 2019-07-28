@@ -8,7 +8,7 @@ permalink: cloning.html
 
 ## Git
 
-Git is a version control system. We could spend the whole week discussing the ins and outs of version control.. so we won't. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Since we're only here for a week, we're just going to tell you what to type here.
+Git is a version control system. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Explaining the details of this would waste time, so we're just going to tell you what to type here.
 
 
 {{ site.data.alerts.terminal_commands }}

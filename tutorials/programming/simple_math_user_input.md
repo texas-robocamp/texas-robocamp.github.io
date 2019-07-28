@@ -6,15 +6,15 @@ sidebar: tutorials
 permalink: simple_math_user_input.html
 ---
 
-Let's write a program to convert a weight on earth a weight on the moon. An object that weighs 1.0 pounds on Earth would weigh 0.1654 pounds on the moon.
+An object that weighs 1.0 pounds on Earth would weigh 0.1654 pounds on the moon.
 
 In C++, multiplication is represented with the * symbol.
 
-This program will ask the user of our program their weight, store that information, do the conversion, and then print their moon weight.
+This program will ask the user their Earth weight, store that information, do the conversion, and then print their moon weight.
 
-To do this the program will save all the numbers it needs in <b>variables</b>. A variable is a letter or a word that stands for a number or a mathematical formula.
+The program will save all the numbers it needs in <b>variables</b>. A variable stores a number or a mathematical formula.
 
-For example, we can say:
+For example:
 
 ```cpp
 x = 4;
@@ -22,9 +22,9 @@ y = 5 * x;
 ```
 
 {{ site.data.alerts.tip }}
-Unlike in math class, the `=` sign means <b>assignment</b>. It sets the value of the variable, but does not state that those two things are equal forever.
+Unlike in mathematical formulas, the `=` sign means <b>assignment</b>. It sets the value of the variable, but does not state that those two things are equal.
 
-So if you write:
+So in this short program:
 <br>
 <br>
 y = 0;
@@ -35,20 +35,20 @@ y = 5;
 <br>
 <br>
 
-Then at the end, `x` has `0` in it, NOT 5.
+At the end, `x` has `0` in it, NOT 5.
 {{ site.data.alerts.end }}
 
 {{ site.data.alerts.tip }}
-When you name your variables, try to use better names than x and y. A good variable name describes the value that it stands for.
+A good variable name describes the value that it stands for. When naming variables, use better names than x and y. 
 {{ site.data.alerts.end }}
 
 {{ site.data.alerts.tip }}
-Variables names can't have spaces in them and cannot start with numbers.
+Variables names cannot have spaces in them and cannot start with numbers.
 {{ site.data.alerts.end }}
 
 ## Types
 
-C++ requires that we define the type of our variables.
+C++ requires types for variables.
 
 For example, a variable storing a number with a decimal should be a float, which stands for floating (decimal) point number.
 
@@ -63,7 +63,7 @@ int	    | 4 or 134
 string	| "Hello World"
 bool	| true/false
 
-Let's write an algorithm for this program, so that we make sure the computer has all the information it needs to do the program.
+Let's write an algorithm for this program.
 
 1. Save the conversion factor (0.1654) as the variable `conversionFactor`
 
@@ -77,7 +77,7 @@ Let's write an algorithm for this program, so that we make sure the computer has
 
 ## Getting User Input
 
-This program will require input from the user. To get that input, we will use `cin`.
+This program will require input from the user. To get that input, use `cin`.
 
 `cin` takes whatever the user types and assigns it to a variable. The <b>syntax</b> (the structure) of the command looks like this:
 
@@ -93,24 +93,22 @@ When the computer reaches `cin` in the program, it will display a prompt for the
 
 ## Printing a Variable
 
-The last thing we have to address is how to print out the person's weight on the moon after we do the conversion. We do this by using a second `<<`, just like before `endl` in the previous tutorial.
+To print out the person's weight on the moon, use a second `<<`, just like before `endl` in the previous tutorial.
 
 ```
-cout << "You would weigh "<< moonWeight << " lbs on the moon." << endl;
+cout << "Something weighing" << earthWeight << "lbs on earth would would weigh "<< moonWeight << " lbs on the moon." << endl;
 ```
 
-This puts together the two strings and the variable moonWeight and sends the whole thing to cout to be displayed.
+This sends the whole sequence of things to cout to be displayed.
 
 ## Exercise 3.2.1: Full Program
 
-Now we're ready to write the program.
+{% include note.html content="Any text preceded by `//` is a comment.
+<br>Comments are ignored by the compiler and are used by programmers to explain parts of their code." %}
 
-Any text preceded by `//` is a comment.
-
-Comments are ignored by the compiler and are used by programmers to explain parts of their code.
 
 {{ site.data.alerts.tip }}
-It's good practice to have short comments in your code, so you can remember what that code snippet does when you return to it later.
+It's good practice to have short comments in your code, so you can remember what it does later.
 {{ site.data.alerts.end }}
 
 ```cpp
@@ -126,13 +124,13 @@ int main(){
   cin >> earthWeight; //Store what the user types as earthWeight
   conversionFactor = 0.1654;
   moonWeight = earthWeight*conversionFactor;
-  cout << "You would weigh " << moonWeight << " lbs on the moon." << endl;  //print out conversion
+  cout << "Something weighing" << earthWeight << "lbs on earth would would weigh "<< moonWeight << " lbs on the moon." << endl;  //print out conversion
 }
 ```
 
 ## Operators
 
-There are lots of math operators available in C++. The most common are the following:
+Some common math operators in C++:
 
 Operator |	Operation
 :-------:|:---------
@@ -159,7 +157,7 @@ This is very useful in programming, since you can easily decide is a number is e
 
 ## Exercise 3.2.2:
 
-Write a program that reverses the program above. This program will take the user's weight on the moon and convert it to Earth weight.
+Write a program that takes a weight on the moon and converts it to Earth weight.
 
 {{ site.data.alerts.tip }}
 What's the mathematical opposite of multiplication?

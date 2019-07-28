@@ -6,13 +6,11 @@ sidebar: tutorials
 permalink: functions.html
 ---
 
-<b>Functions</b> are a way to organize your code.
+A <b>functions</b> is a group of instructions. Often, functions are used to organize code by breaking long programs into shorter functions that are combined into the longer program.
 
-A function is a group of instructions.
+We might have a `getLetter` function that asks the user for a lowercase letter, or an `averageNumbers` function that averages a list of numbers.
 
-For example, we might have a `getLetter` function that asks the user for a lowercase letter, or an `averageNumbers` function that averages a list of numbers.
-
-Functions are important because they allow your code to be modular---you write a function once, and you can use that function over and over.
+Functions allow code to be modular --- write a function once, and use that function many times.
 
 ## Defining a Function
 

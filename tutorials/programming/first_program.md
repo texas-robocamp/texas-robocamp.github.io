@@ -118,7 +118,7 @@ Hopefully, your program just compiled.
 
 {% include note.html content="Remember, this is a relative path, so this literally tells the computer, \"Run the HelloWorld that is in this directory.\"" %}
 
-{% include note.html content="Many things can go wrong when you are programming, so please ask for help before you get frustrated! (Just turn your cups to red!)" %}
+{% include note.html content="Many things can go wrong when you are programming. Turn your cups to red to get help." %}
 
 {% include callout_synchronize.html comment="Many of you will have problems right now, so, we'll synchronize to get everyone through their errors." %}
 
@@ -129,8 +129,6 @@ Hopefully, your program just compiled.
 For example, if your name is Justine and your partner is Justin, it would display, Hello Justine and Justin.
 
 - Next, add a second line of text that says, "Programming is actually pretty fun when you get right down to it."
-
-Yay! You have written your first C++ program!
 
 {% include callout_red_cup.html task="[Tutorial 3.1]" %}
 

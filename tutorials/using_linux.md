@@ -29,14 +29,14 @@ permalink: using_linux.html
 
 ## Basic Linux Commands
 
-An important part of using Linux is becoming familiar with the command line. Here a few commands you will need during the course of this camp. Try them out.
+Here a few commands you will need during the course of this camp. Try them out.
 
 Command | Example | What it does
 ------- | ------- | ------------
 ls | `ls .` | Lists the contents of the current directory.
 mkdir | `mkdir new` | Makes a directory.
 cd | `cd new` | Enters a different directory.
-pwd | `pwd` | Tells you what directory you are in.
+pwd | `pwd` | Tells you what directory you are in. "Present Working Directory"
 
 When you first open the terminal you will see a command prompt. You will be in your home directory. If you type pwd, you will see the "path" to your home directory.
 
@@ -46,13 +46,12 @@ A relative path is any path that does not begin with "/". Relative paths are sta
 
 Here are a few shortcuts that you can use when forming paths.
 
- Command | Meaning | Detail 
+ Shortcut | Meaning | Detail 
  ------- | ------- | ------
  ~     | Home directory.            | A space set aside for each user to store their files. 
  .     | The current directory.     |                                                       
  ..    | The parent directory.      |                                                       
  /     | The root directory.        | The very top of the computer's filesystem.            
- pwd   | Present working directory. | Tells you what directory you are in.                  
 
 Here's a quick exercise to try this all out.
 
@@ -76,35 +75,35 @@ Here's a quick exercise to try this all out.
 
 10. cd ~
 
-The above is essentially a command-based version of what you're used to doing by double clicking on folders. The command line is capable of a great deal more---in fact, you will be using it to compile your tutorial program! But more on that later. First, you'll need to write some code.
+This is basically a text-based version of double clicking on folders, but the command line is a powerful tool which you will use all week.
 
 ## Tab Completion
 
-Note that the command line has tab-completion. If you start typing the name of a unique file, directory, or command and hit tab, it will finish the name for you. If there is more than one match, all possible options are displayed.
+The command line has tab-completion. If you start typing the name of a file, directory, or command and hit tab, it will finish the name for you. If there is more than one match, all possible options are displayed.
 
 ## Text Editor
 
-For the C++ tutorials that we will start with, we will use a text editor called Sublime.
+For the C++ tutorials, we will use a text editor called Sublime.
 
 To open Sublime you can do one of two things:
 
-* Open up a terminal window, type in "sublime_text &" and hit Enter. The & tells the computer to allow you to continue to use that terminal while the editor is running.
+* Open a terminal, type "sublime_text &", hit Enter. The & tells the computer to allow you to continue to use that terminal while the editor is running.
 
-* Open the lens as before, type in sublime_text and hit Enter. You do not need the & in the lens.
+* Open the lens as before, type in sublime_text, hit Enter. You do not need the & in the lens.
 
-Using sublime and the command line, you will be able to write and execute your tutorial programs.
+Using sublime and the command line, you will write and execute your tutorial programs.
 
 ## Arduino IDE
 
-The robot uses an Arduino microcontroller, so for times when we program the robot, we will want to use the Arduino IDE (Integrated Development Environment).
+The robot uses an Arduino microcontroller. For programming the robot, we will use the Arduino IDE (Integrated Development Environment).
 
 Opening arduino is the same as opening Sublime, except that you will type "arduino" in either the terminal or the lens.
 
 ## Logging Out
 
-Before you leave the lab, make sure you save all your work and log out of the computer, so that it's free for the next person to use it. Open up the account menu in the top right-hand corner of your screen, and click to log out.
+Before you leave the lab, make sure you save all your work and log out of the computer so that it's free for the next person to use it. Open the account menu in the top right-hand corner of your screen and click log out.
 
-Also, please do not reboot the computer. If you are experiencing technical difficulties, resist the urge to try turning the machine off and on again, and instead notify one of the camp staff.
+{% include note.html content="Please do not reboot the computer. If you are experiencing technical difficulties, notify one of the camp staff."%}
 
 ## Next Step
 
