@@ -9,7 +9,7 @@ permalink: using_linux.html
 
 ## Getting to a Terminal
 
-1. Click on the Ubuntu logo icon.
+1. Click on the 3x3 formation of dots in the lower left-hand corner.
 
 2. Type in "terminal."
 
@@ -89,7 +89,7 @@ To open Sublime you can do one of two things:
 
 * Open a terminal, type "sublime_text &", hit Enter. The & tells the computer to allow you to continue to use that terminal while the editor is running.
 
-* Open the lens as before, type in sublime_text, hit Enter. You do not need the & in the lens.
+* Open the lens (the dots) as before, type in sublime_text, hit Enter. You do not need the & in the lens.
 
 Using sublime and the command line, you will write and execute your tutorial programs.
 
