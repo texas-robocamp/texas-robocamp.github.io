@@ -70,7 +70,7 @@ defaults:
 # these are defaults used for the frontmatter for these file types
 
 sidebars:
-- tutorials
+  - virtual 
 
 # It may be necessary to create a separate sidebar for the virtual camp, but I don't think we
 # have to do that.

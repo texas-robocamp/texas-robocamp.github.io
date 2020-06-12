@@ -1,0 +1,135 @@
+entries:
+- title: sidebar
+  product: Tutorials
+  folders:
+  - title: Welcome!
+    output: web, pdf
+    folderitems:
+
+    - title: Landing Page
+      url: /index.html
+      output: web, pdf
+      type: homepage
+
+    - title: Getting Started
+      url: /getting_started.html
+      output: web, pdf
+      type: homepage
+
+    - title: Welcome to Camp!
+      url: /welcome.html
+      output: web, pdf
+      type: homepage
+
+    - title: Using Linux
+      url: /using_linux.html
+      output: web, pdf
+      type: homepage
+
+    - title: Cloning the Tutorials
+      url: /cloning.html
+      output: web, pdf
+      type: homepage
+
+  - title: Programming Introduction
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction
+      url: /programming_introduction.html
+      output: web, pdf
+
+    - title: "First Program: Hello World"
+      url: /first_program.html
+      output: web, pdf
+
+    - title: Simple Math and User Input
+      url: /simple_math_user_input.html
+      output: web, pdf
+
+    - title: Functions
+      url: /functions.html
+      output: web, pdf
+
+    - title: Classes and Objects
+      url: /objects.html
+      output: web, pdf
+
+    - title: Decisions
+      url: /decisions.html
+      output: web, pdf
+
+    - title: Repetition
+      url: /repetition.html
+      output: web, pdf
+
+    - title: Arrays
+      url: /arrays.html
+      output: web, pdf
+
+  - title: Programming the Robot
+    output: web, pdf
+    folderitems:
+
+    - title: Fixing your .bashrc
+      url: /fixing_profile.html
+      output: web, pdf
+      type: homepage
+
+    - title: Introduction to Arduino
+      url: /arduino_intro.html
+      output: web, pdf
+      type: homepage
+
+    - title: Firing Up the Robot
+      url: /robot_startup.html
+      output: web, pdf
+      type: homepage
+
+    - title: Robot Programming Introduction
+      url: /robot_programming_introduction.html
+      output: web, pdf
+
+    - title: First Few Functions & Exploring the Obstacle Detector
+      url: /first_few_functions.html
+      output: web, pdf
+
+    - title: Exploring the Robot's Motion
+      url: /move_the_robot.html
+      output: web, pdf
+
+    - title: Turn & Push
+      url: /turn_and_push.html
+      output: web, pdf
+
+    - title: The Line Follower
+      url: /line_follower.html
+      output: web, pdf
+
+    - title: Line Following
+      url: /line_following.html
+      output: web, pdf
+
+    - title: Race!
+      url: /race.html
+      output: web, pdf
+
+  - title: Bonus Material!
+    output: web, pdf
+    folderitems:
+      
+    - title: Optional Challenges and Tutorials
+      url: /bonus_tutorial_intro.html
+      output: web, pdf
+      
+    - title: LEDS and FastLED
+      url: /led.html
+      output: web, pdf
+      
+    - title: Infrared Signals to the Robot
+      url: /infrared_signals.html
+      output: web, pdf
+      
+    - title: Playing Music and Sounds
+      url: /sound.html
+      output: web, pdf
