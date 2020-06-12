@@ -14,9 +14,13 @@ Install ruby and bundler.
 
 ### Viewing Locally
 
-Then
+#### Physical Camp
 
-    bundle exec jekyll serve
+    bundle exec jekyll serve --config configs/config.yml
+
+#### Virtual Camp
+
+    bundle exec jekyll serve --config configs/config_virtual.yml
 
 ### Adding a Tutorial
 
