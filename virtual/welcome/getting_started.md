@@ -3,7 +3,7 @@ title: "Getting Started"
 tags: [startup]
 keywords: startup
 last_updated: July 2, 2018
-sidebar: tutorials
+sidebar: virtual
 permalink: getting_started.html
 ---
 

@@ -2,7 +2,7 @@
 title: "Welcome!"
 tags: [welcome]
 keywords: welcome
-sidebar: tutorials
+sidebar: virtual 
 permalink: welcome.html
 ---
 

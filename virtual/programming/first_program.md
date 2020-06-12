@@ -2,7 +2,7 @@
 title: "First Program: Hello World"
 tags: [c++]
 keywords: c++
-sidebar: tutorials
+sidebar: virtual
 permalink: first_program.html
 ---
 

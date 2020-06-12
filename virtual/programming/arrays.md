@@ -2,7 +2,7 @@
 title: "Arrays"
 tags: [c++]
 keywords: c++
-sidebar: tutorials
+sidebar: virtual
 permalink: arrays.html
 ---
 

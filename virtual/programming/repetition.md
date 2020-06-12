@@ -2,7 +2,7 @@
 title: "Repetition"
 tags: [c++]
 keywords: c++
-sidebar: tutorials
+sidebar: virtual
 permalink: repetition.html
 ---
 

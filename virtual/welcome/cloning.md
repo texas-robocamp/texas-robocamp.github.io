@@ -2,7 +2,7 @@
 title: "Cloning the Tutorials"
 tags: [cloning]
 keywords: cloning
-sidebar: tutorials
+sidebar: virtual
 permalink: cloning.html
 ---
 

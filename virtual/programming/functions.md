@@ -2,7 +2,7 @@
 title: "Functions"
 tags: [c++]
 keywords: c++
-sidebar: tutorials
+sidebar: virtual
 permalink: functions.html
 ---
 

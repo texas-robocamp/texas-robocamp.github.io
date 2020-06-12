@@ -2,7 +2,7 @@
 title: "Decisions"
 tags: [c++]
 keywords: c++
-sidebar: tutorials
+sidebar: virtual
 permalink: decisions.html
 ---
 

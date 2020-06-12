@@ -2,7 +2,7 @@
 title: "Classes and Objects"
 tags: [c++]
 keywords: c++
-sidebar: tutorials
+sidebar: virtual
 permalink: objects.html
 ---
 

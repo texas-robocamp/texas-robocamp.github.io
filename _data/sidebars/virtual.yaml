@@ -2,6 +2,20 @@ entries:
 - title: sidebar
   product: Tutorials
   folders:
+  - title: Before We Begin
+    output: web, pdf
+    folderitems:
+
+    - title: Introduction to the Robot?
+      url: /404.html
+      output: web, pdf
+      type: homepage
+
+    - title: Firing Up the Robot
+      url: /robot_startup.html
+      output: web, pdf
+      type: homepage
+
   - title: Welcome!
     output: web, pdf
     folderitems:
@@ -70,21 +84,6 @@ entries:
   - title: Programming the Robot
     output: web, pdf
     folderitems:
-
-    - title: Fixing your .bashrc
-      url: /fixing_profile.html
-      output: web, pdf
-      type: homepage
-
-    - title: Introduction to Arduino
-      url: /arduino_intro.html
-      output: web, pdf
-      type: homepage
-
-    - title: Firing Up the Robot
-      url: /robot_startup.html
-      output: web, pdf
-      type: homepage
 
     - title: Robot Programming Introduction
       url: /robot_programming_introduction.html

@@ -2,7 +2,7 @@
 title: "Simple Math and User Input"
 tags: [c++]
 keywords: c++
-sidebar: tutorials
+sidebar: virtual
 permalink: simple_math_user_input.html
 ---
 
