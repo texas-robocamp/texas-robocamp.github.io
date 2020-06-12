@@ -6,7 +6,7 @@ sidebar: tutorials
 permalink: functions.html
 ---
 
-A <b>function</b> is a group of instructions. Often, functions are used to organize code by breaking long programs into shorter functions that are combined into the longer program.
+A <b>functions</b> is a group of instructions. Often, functions are used to organize code by breaking long programs into shorter functions that are combined into the longer program.
 
 We might have a `getLetter` function that asks the user for a lowercase letter, or an `averageNumbers` function that averages a list of numbers.
 
@@ -42,6 +42,8 @@ Finally we have a code block inside curly braces.
 
 {% include note.html content="We're taking off the training wheels. Organize your code yourself now into directories that you create. Try to keep on top of being organized. Be prepared to demo everything to camp staff to verify your progress." %}
 
+*I very distinctly recall some campers using the exact same file over and over and just rewriting over it. We may want to suggest a specific organizing strategy or just draw attention to the previous practice being a very bad idea*
+
 Let's try writing a very simple function that prints the greeting "Hello World!". We will <b>call</b> (run) this function from main. It won't take any parameters or return anything, so the return type of this function will be <b>void</b>, the return type for a function which returns nothing. Here's how we would set it up:
 
 ```cpp
@@ -61,7 +63,7 @@ Here, we made the printGreeting function exactly like we made main. We declared 
 
 What's interesting is how we call, or run, the function. Inside of main, we call the function by naming it and then following it by a set of empty parentheses, which we'll explain in a minute. As always, we end the line with a semi-colon.
 
-The way that this program works is the following: the computer begins running the program inside the main function. When it gets to the `printGreeting` function, it "jumps" to where we defined the `printGreeting` function and starts executing that code. When it gets to the end of the `printGreeting` function, it jumps back to the `main` function exactly where it left off and continues executing the rest of the code in main.
+The way that this program works is the following: the computer begins running the program inside the `main` function. When it gets to the `printGreeting` function, it "jumps" to where we defined the `printGreeting` function and starts executing that code. When it gets to the end of the `printGreeting` function, it jumps back to the `main` function exactly where it left off and continues executing the rest of the code in main.
 
 - Type in the code above and see that it executes.
 
@@ -90,6 +92,8 @@ The general layout of this program will be:
 {{ site.data.alerts.tip }}
 We know that this sounds complicated, but we you'll master it.
 {{ site.data.alerts.end }}
+
+*Grammar, also another example where the tip might be suggesting that they go ahead and try it, despite the fact that there is more explanation coming*
 
 When a function takes a parameter, we tell the function the type of the parameter, as well as give it a name, much like a variable.
 
@@ -124,9 +128,11 @@ int main(){
 
 Here, we got a `string userName` from the user and sent it to the `printGreeting` function by placing it inside the parentheses.
 
-Before going further, we need to discuss the difference between arguments and parameters. The value that is placed in the parentheses is called the <b>argument</b> to the function. (Or, if there are more than one, they are the arguments) Arguments differ from parameters in that arguments are what you send to a function and parameters are what a function expects to receive.
+Before going further, we need to discuss the difference between arguments and parameters. The value that is placed in the parentheses is called the <b>argument</b> to the function. (Or, if there are more than one, they are the arguments) Arguments differ from parameters in that arguments are what you send to a function and parameters are what a function expects to receive. *Should this be two sentences? It's a big deal and maybe a hard concept to wrap around if you're brand new to coding*
 
-When the `printGreeting` function is called from `main`, the argument `userName`'s value is copied to the parameter `name` in `printGreeting`. While the computer is executing the code in `printGreeting`, it can't use the variable `userName`, because that variable is only defined (available) in main (due to scoping). So that's why we have a parameter name—the value of `userName` gets copied to `name` so that the program has access to that data. When the computer finishes executing `printGreeting` and returns to `main`, it can again use the variable `userName`, but it can no longer use `name`. This is again a case of scoping, which is where the variable is defined and can be used.
+When the `printGreeting` function is called from `main`, the *argument* `userName`'s value is copied to the *parameter* `name` in `printGreeting`. While the computer is executing the code in `printGreeting`, it can't use the variable `userName`, because that variable is only defined (available) in main (due to scoping). So that's why we have a parameter name—the value of `userName` gets copied to `name` so that the program has access to that data. When the computer finishes executing `printGreeting` and returns to `main`, it can again use the variable `userName`, but it can no longer use `name`. This is again a case of scoping, which is where the variable is defined and can be used.
+
+*This is our largest paragraph so far. It may be a good idea to break down this info, since it is a foundational concept and reinforces scoping*
 
 As we mentioned before, on of the reasons that functions are so great is that we can reuse them and give them different arguments. For example, without changing the `printGreeting` function at all, we can use it to print greetings to three different people:
 
@@ -152,11 +158,11 @@ And we would get the following output:
 Hello Alison!
 Hello Brian!
 Hello Clifford the Big Red Dog!
-That's pretty convenient.
+That's pretty convenient. //This doesn't actually get printed out, should we move it?
 ```
 
 ### Exercise 3.3.3:
-Using the code above as a base, add two calls to printGreeting() in main so that both of you are also greeted.
+Using the code above as a base, add ~~two calls~~ a call to printGreeting() in main so that ~~both of~~ you are also greeted.
 
 Now that you've been greeted...
 
@@ -174,7 +180,9 @@ To do this, we say:
 return numSquared;
 ```
 
-This is called the <b>return statement</b>, and it is always the last line executed in a function.
+This is called the **return statement**, and it is *always* the last line executed in a function.
+
+*I added em to always. Should we maybe also say why?*
 
 Since we know that we are squaring floats, we will be returning a float, so the return type of this function will be a float as well.
 
@@ -231,6 +239,8 @@ Function prototypes usually appear before the first function and after the inclu
 
 - Write a program similar to the one above that triples a number and adds 5 to it.
 
+*Should we maybe also make them use a prototype here? We did just mention it*
+
 ## Multiple Parameters
 
 We can also write functions that take multiple parameters---and those parameters can even have different types.
@@ -264,8 +274,11 @@ We just have to remember to send the function all parameters it expects as argum
 
 You've done a great a job learning about functions.
 
-Now, let's learn about a special data representation, the [object](objects.html).
+Now, let's learn about a special data representation, the [object](objects.html). 
 
 ## Next Step
 
 Proceed to ["Classes and Objects"](objects.html).
+
+*This link is redundant, we should delete one of them*
+
