@@ -6,7 +6,7 @@ sidebar: virtual
 permalink: decisions.html
 ---
 
-**TODO** *It might be more beneficial to bring back the bank account example; it would help keep the curriculum feel unified. Checking to see if they're maintaining a minimum balance --> fees; overdrawing fee could both be used in a withdraw function*
+**TODO** *It might be more beneficial to bring back the bank account example; it would help keep the curriculum feel unified. We actually explicitly mention overdraws and deposit limits, so it would be good continuity. We could also make the switch statement have something to do with types of bank accounts - say savings accts have a different deposit limit*
 
 In this section, we're going to learn how to control the flow of a C++ program. Sometimes, you want your program to do one thing if certain conditions are met and to do another thing if other conditions are ~~true~~ *met? To stay consistent*. We make decisions and control the flow of the program using logical expressions and if-else statements.
 
@@ -25,20 +25,24 @@ In C++, the above statement can either be true or false, depending upon the valu
 
 The following chart shows all the logical operators, most of which should be familiar to you from math class:
 
-|Logical Operator |Meaning             |Example of True Statement|
-|------:|------------------------------|:-----------------------:|
-|`>``   | greater than                 | `5 > 4`                 |
+
+| Logical Operator | Meaning             | Example of True Statement |
+|---:|---|:---:|
+|`>`   | greater than                 | `5 > 4`                 |
 |`>=`   | greater than or equal to     | `5 >= 5`                |
-|`<``   | less than	                   | `2 < 5`                 |
+|`<`   | less than	                   | `2 < 5`                 |
 |`<=`   | less than or equal to        | `2 <= 3`                |
 |`==`   | is exactly the same as       | `3 == 3`                |
 |`!=`   | is not the same as           | `3 != 5`                |
 
-The last two operations, `==` and `!=`, are called equivalency operators because they check if two things are exactly the same, or equivalent. For example, 9==9 is true because 9 is exactly the same as 9. Additionally, if we have a variable `myVar` and is set to 9, then `myVar==9` is true. However, 9=="nine" is false because an integer (9) is never exactly the same as a `string` ("nine"). In general in C++, you cannot use logical operators to compare strings at all.
+**TODO** *Add this to global documentation*
+
+
+The last two operations, `==` and `!=`, are called equivalency operators because they check if two things are exactly the same, or equivalent. For example, 9==9 is true because 9 is exactly the same as 9. Additionally, if we have a variable `myVar` and is set to 9, then `myVar==9` is true. However, 9=="nine" is false because an integer (9) is never exactly the same as a `string` ("nine"). In general, you cannot use logical operators to compare strings at all in C++.
 
 ## If-statements
 
-To test values and perform a set of instructions (or not) based on the result, we use if statements, which are used in programming exactly the same way we use it in real life. "If" something is true, we do one thing; "else" (otherwise) we do something else. To come back to the speeding ticket program we described above, we could test whether the variable `driverSpeed` is greater than 40 by using the following syntax:
+To test values and perform a set of instructions (or not) based on the result, we use **if statements**, which are used in programming exactly the same way we use it in real life. **If** something is true, we do one thing; **else** (otherwise) we do something else. To come back to the speeding ticket program we described above, we could test whether the variable `driverSpeed` is greater than 40 by using the following syntax:
 ```cpp
 if (driverSpeed > 40){
    ticketPrice = 100;

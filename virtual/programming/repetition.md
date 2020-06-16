@@ -6,9 +6,8 @@ sidebar: virtual
 permalink: repetition.html
 ---
 
-**TODO** *Style suggestion: should we maybe be putting the code in-line here as we explain it? The ROS docs take this approach and I think it makes information a lot more consumable*
 
-Sometimes we want our code to execute multiple times. It would be really unfortunate if we had to keep typing the same exact lines of code again and again—what if we didn't know exactly how many times we wanted the code to repeat? Fortunately, we have **loops** *new keyword?* to help us out. A loop is a section of code that the computer runs over and over again until it reaches some stopping criteria. There are two kinds of loops that we will work with: `for` loops and `while` loops.
+Sometimes we want our code to execute multiple times. It would be really unfortunate if we had to keep typing the same exact lines of code again and again—what if we didn't know exactly how many times we wanted the code to repeat? Fortunately, we have **loops** to help us out. A loop is a section of code that the computer runs over and over again until it reaches some stopping criteria. There are two kinds of loops that we will work with: `for` loops and `while` loops.
 
 ## For Loops
 
@@ -31,21 +30,38 @@ Hello World
 Hello World
 ```
 
-Let's dissect this code
+Let's dissect this code:
 
-We begin with the word `for`, which tells the computer that we have a for loop.
+```cpp
+for
+```
 
-Then, inside the parentheses, we define how many times we want the loop to run.
+The word `for` tells the computer that we have a for loop.
 
-The first phrase, `int i=0;`, defines the loop variable, which is the variable whose value dictates how many times the loop executes.
+```cpp
+(int i=0; i<5;i++)
+```
 
-We tell the computer that the loop variable will be an integer named i, and that it will begin by being equal to 0.
+Inside the parentheses, we define how many times we want the loop to run.
 
-The second phrase, `i < 5;`, is a logical expression that works just like those we saw in the last section—when used in loops, the computer will keep executing the loop as long as the expression is true.
+```cpp
+int i=0;
+```
+The first phrase defines the **loop variable**, which is the variable whose value dictates how many times the loop executes. In this example, our loop varible is `i`, and is set to zero.
+
+```cpp
+i<5;
+```
+
+The second phrase is a logical expression that works just like those we saw in the last section. When used in loops, the computer will keep executing the loop as long as the expression is true.
 
 In this example, the computer will keep looping as long as `i` *change to var* is less than 5; when `i` is greater than or equal to five, it will stop.
 
-The third phrase, `i++`, tells the computer how to modify the loop variable. The shorthand `i++` means that i will increase by 1 every time the loop runs.
+```cpp
+i++
+```
+
+This tells the computer how to modify the loop variable. The shorthand `i++` means that i will increase by 1 every time the loop runs. This has the same effect as `i+=1`; either one would work in the loop.
 
 Then, inside curly braces, we put all the code that we want to execute each time the loop runs.
 
@@ -72,7 +88,7 @@ The current number is 8.
 The current number is 9.
 ```
 
-Notice how 10 doesn't print, because we told the loop to stop as soon when `i` was no longer less than 10. The first time the loop executes, `i` equals 0, so the loop prints out the message "The current number is 0." and then adds one to `i`, making `i` 1. Then the loop executes again, and we print "The current number is 1." Then `i` is increased by 1 again, making it 2, etc.
+Notice how 10 doesn't print, because we told the loop to stop as soon when `i` was no longer less than 10. The first time the loop executes, `i = 0`, so the loop prints out the message "The current number is 0." and then adds one to `i`, making `i` 1. Then the loop executes again, and we print "The current number is 1." Then `i` is increased by 1 again, making it 2, etc., until it has printed 10 times.
 
 We can also modify the loop so that the loop variable changes in different ways---just by changing the initialization and the modification pieces. Say we want to count backwards from 4 to 1. We can create the loop like this:
 
@@ -114,7 +130,7 @@ Woot, woot! Making progress. :)
 
 ## Nested Loops
 
-You can also nest loops inside one another. Let's say we want to do a simple summation program. Imagine we want to sum each number from 1 to 4 with each number from 1 to 4. So, we essentially want to do this:
+You can also **nest** loops inside one another. Let's say we want to do a simple summation program. Imagine we want to sum each number from 1 to 4 with each number from 1 to 4. So, we essentially want to do this:
 
 ```
 num1	+	num2	=	Sum
@@ -169,13 +185,25 @@ And this gives us the output:
 4 + 4 = 8
 ```
 
-Notice that the first number that prints out is the `num1` variable, and the second number is the `num2` variable, and the final number is the sum of `num1` and `num2`. Let's quickly talk through the loop. We begin with `num1` being equal to 1 and `num2` being equal to 1, and `num1+num2` equaling 2. Then the `num2` loop advances by 1, because the inner loop has to finish before the outer loop can advance. So `num1` is 1 and `num2` is 2 and their sum is 3. Then `num2` advances by 1 again, and `num1` is 1 and `num2` is 3 and their sum is 3. Finally, `num1` is 1 and `num2` is 4 and their sum is 5. The next time `num2` is incremented it becomes 5, violating the less than 5 condition of the loop, and so the `num2` loop finishes. Now the `num1` loop advances by 1, so `num1` is 2. Now the `num2` loop starts all over again from the beginning, and `num2` is 1 and `num1+num2` is 3, and so forth and so on. Nested loops can be a little tricky, so if they are confusing, ask for help!
+Notice that the first number that prints out is the `num1` variable, and the second number is the `num2` variable, and the final number is the sum of `num1` and `num2`. 
 
-*Really big paragraph, may want to break it down*
+Let's go through these loops. We begin with `num1` being equal to 1 and `num2` being equal to 1, and `num1+num2` equaling 2. 
+
+Then, `num2` loop advances by 1, because the inner loop has to finish before the outer loop can advance. So `num1` is 1 and `num2` is 2 and their sum is 3. Then `num2` advances by 1 again, and `num1` is 1 and `num2` is 3 and their sum is 3. 
+
+Finally, `num1` is 1 and `num2` is 4 and their sum is 5. 
+
+The next time `num2` is incremented it becomes 5, which violates the `num2<5` condition of the loop. So, the `num2` loop finishes. 
+
+Now the `num1` loop advances by 1, setting `num1` to 2. Now the `num2` loop starts all over again from the beginning, and `num2` is 1 and `num1+num2` is 3, and so forth and so on. 
+
+Nested loops can be a little tricky, so if they are confusing, ask for help!
 
 ### Exercise 3.6.2:
 
-- Write a program that multiplies all the odd numbers between 1 and 9 by all the even numbers between 2 and 10. Hint: follow the example above, but don't forget to change your loop initializations.
+- Write a program that multiplies all the odd numbers between 1 and 9 by all the even numbers between 2 and 10. 
+
+  - Hint: follow the example above, but don't forget to change your loop initializations.
 
 Good work!
 
@@ -183,7 +211,7 @@ Good work!
 
 ## While Loops
 
-We typically use while loops when we don't know how many times the loop should execute. For example, let's say you are trying to get input from a user that is a number between 1 and 10. while the user keeps typing in numbers that are too large or too small, you can ask her for new input until she enters a number between 1 and 10. Here's what this while loop would look like:
+We typically use `while` loops *when we don't know how many times the loop should execute*. For example, let's say you are trying to get input from a user that is a number between 1 and 10. **While** the user keeps typing in numbers that are too large or too small, you can ask her for new input until she enters a number between 1 and 10. Here's what this while loop would look like:
 
 ```cpp
 int main(){
@@ -208,10 +236,26 @@ You'll notice that the logical expressions appear again—this time in the paren
 
 Let's walk through what is happening in this program.
 
+```cpp
+int userInput;
+
+//get input from user
+cout << "Enter a number between 1 and 10: ";
+cin >> userInput;
+```
 
 We first get some input from the user.
 
+```cpp
+while((userInput < 1) || (userInput > 10)){
+```
+
 We begin the while loop by checking the input to see if it is less than 1 or greater than 10.
+
+```cpp
+  cout << "Read directions!  Enter a number between 1 and 10: ";
+  cin >> userInput;  //get new input from the user
+```
 
 If it is, we yell at the user and ask for new input, and we make sure to save the new input to `userInput`. (Why is this so important? We'll see in a bit.)
 
@@ -222,6 +266,10 @@ If it still is, we execute the loop again and ask for new input.
 We continue this as many times as necessary until the user cooperates.
 
 As soon as the user enters a number between 1 and 10, we break out of the while loop, because we only execute the while loop if `userInput` is less than 1 or greater than 10.
+
+```cpp
+cout << "You entered " << userInput << ".\n";
+```
 
 We then print out the number.
 
@@ -240,7 +288,7 @@ Inside the loop, the program prints out a nasty message to the user and gets new
 
 Then the program checks the loop condition again. Since we never changed the value in `userInput`, it still equals 100, so the loop will run again even though the user just entered a valid number.
 
-In fact, this loop will run forever! This is called an infinite loop. To avoid this, always make sure that you update the loop variable somehow by changing its value so that eventually your loop will stop.
+In fact, this loop will run forever! This is called an **infinite loop**. To avoid these, always make sure that you update the loop variable somehow by changing its value so that eventually your loop will stop.
 
 {{ site.data.alerts.tip }}
 If your program ends up in an infinite loop, you need to know how to terminate it. Go into your terminal and type Ctrl-C to terminate it if this happens.

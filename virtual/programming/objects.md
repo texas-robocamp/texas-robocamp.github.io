@@ -12,15 +12,13 @@ Sometimes we want to group different kinds of data together.
 
 For example, think about a bank account. What kind of information does your bank account store about you? 
 
-1. Your bank account number (an integer)
-2. Your account balance (a float).
-3. It also stores your name and address (both strings).
+1. Your bank account number (`int`)
+2. Your account balance (`float`).
+3. It also stores your name and address (both are `string`s).
 
-Often we want to group related data *with a* single construct, and we can do that with **objects**.
+Often we want to group related data with a **single** construct, and we can do that with **objects**.
 
-A **class** defines a type of object, the **variables** inside the object (such as bank account number and balance), and **functions** you can perform on the object (such as `deposit()` and `withdraw()`). So we begin by defining a class.
-
-*Added em for variables and functions*
+A **class** defines a **type** of object, the **variables** inside the object (such as bank account number and balance), and **functions** you can perform on the object (such as `deposit()` and `withdraw()`). So we begin by defining a class.
 
 To start an object, type the keyword `class` and then choose a class name.
 
@@ -90,9 +88,7 @@ You can also declare a class's variables and functions to be `private`, which wi
 ## Constructors
 In order to create a `BankAccount` object, we first need to define a **constructor**.
 
-*Constructor should be a keyword*
-
-The constructor is a piece of code that executes when a new ~~object~~ *instance?* of this class is created. Inside the constructor, we set initial values for any member variables we have, otherwise our program may not work as we intend.
+The **constructor** is a piece of code that executes when a new ~~object~~ *instance?* of this class is created. Inside the constructor, we set the initial values for any member variables we have. Otherwise, our program may not work as we intend.
 
 A constructor is defined in the the same way as a function; the only differences are:
 
@@ -118,7 +114,7 @@ class BankAccount {
 };
 ```
 
-We have now defined a basic data structure that holds bank account information, and so we can now write a program that creates a BankAccount object and sets the values of its fields.
+We have now defined a basic data structure that holds bank account information, and so we can now write a program that creates a `BankAccount` object and sets the values of its variables.
 
 {{ site.data.alerts.tip }}
 Just like functions must be declared before we can use them (appearing before their first use in the source code), classes must be declared before they are used to create objects.
@@ -159,11 +155,15 @@ Look at the first line in main. We've created a `BankAccount` object called `ali
 
 We use the dot to access and set the public variables of an object, as seen in the remaining lines in `main` above.
 
-In dot notation, we access member variables by first writing the name of the object (e.g., `alisonBankAccount`), then a dot, and then the name of the ~~field~~ *variable? we should stay consistent so as to reinforce what these words mean* we want (e.g., `accountNumber`).
+In dot notation, we access member variables by first writing the name of the object (e.g., `alisonBankAccount`), then a dot, then the name of the variable we want (e.g., `accountNumber`). This becomes 
+
+```cpp
+alisonBankAccount.accountNumber
+```
 
 ## Multiple Objects
 
-We can create multiple different *instances of* `BankAccounts` and populate them all with different balances and information.
+We can create multiple different **instances** of `BankAccounts` and populate them all with different balances and information, just like we can have different `int`s and `string`s.
 
 For example, let's say that in addition to Alison's bank account, we'll make an account for Bob Bobson.
 
@@ -175,7 +175,7 @@ BankAccount alisonBankAccount;
 BankAccount bobBankAccount;
 
 //assign two different account numbers
-alisonBankAccount.accountNumber = 14538;  //assign the account a number
+alisonBankAccount.accountNumber = 14538;
 bobBankAccount.accountNumber = 54324;
 
 //assign different account balances
@@ -191,21 +191,24 @@ cout << "Bob has $" << bobBankAccount.accountBalance << ".  Yay Bob!\n";
 
 We can give Alison and Bob's `BankAccount` objects completely different information, and we can also modify the values that the fields hold. Notice how Bob made a timely deposit with the line:
 
-`bobBankAccount.accountBalance += 300.95;`
+```
+bobBankAccount.accountBalance += 300.95;
+```
 
-The += operator means that you increase the value of the variable to the left of the += by the value on the right side of the += and save it as the same variable. In other words, the following two lines are equivalent:
+The `+=` operator means that you increase the value of the variable to the left of the `+=` by the value on the right side of the `+=` and save it as the same variable. In other words, the following two lines are equivalent:
 
-`bobBankAccount.accountBalance += 300.95;`
+```
+bobBankAccount.accountBalance += 300.95;
 
-`bobBankAccount.accountBalance = bobBankAccount.accountBalance + 300.95;`
+bobBankAccount.accountBalance = bobBankAccount.accountBalance + 300.95;
+```
 
 These objects do a great job of cleaning up our code—consider having to keep track of Alison and Bob's bank account info without them and what happens when we want to add a third bank account—all those variables add up!
 
-*Got rid of a pair programming reminder*
 
 ### Exercise 3.4.1:
 
-- Using this code as a base, add some money to Alison's account and then output her balance.
+- Using this code as a base, subtract some money to Alison's account and then output her balance.
 
 ## The Private Keyword
 
@@ -221,6 +224,11 @@ Returning to our `BankAccount` class, let's go ahead and declare our member vari
 
 ```cpp
 class BankAccount {
+  private:
+     int accountNumber;
+     float accountBalance;
+     string name;
+     string address;
   public:
       BankAccount() {
           accountNumber = 0;
@@ -228,24 +236,16 @@ class BankAccount {
           name = "";
           address = "";
       }
-  private:
-     int accountNumber;
-     float accountBalance;
-     string name;
-     string address;
 };
 ```
-
-*Is this acceptable syntax? I know it doesn't actually matter, but I've always put private before public.*
-
-*Now might also be a good time to be calling these as self variables and mention the self keyword*
 
 ## Member Functions
 Now that these variables are private, our object is actually fairly useless right now. We left the constructor public, so we can create new objects, but all our data is inaccessible from outside the class because it's declared private. To make our object useful, we'll introduce member functions, which define actions that can be performed on or with the member variables.
 
-Consider what behavior a `BankAccount` should exhibit. What sorts of actions are necessary? [Think a minute and then read on!]
+{{ site.data.alerts.tip }}
+Consider what behavior a `BankAccount` should exhibit. What sorts of actions are necessary? Think a minute and then read on!
+{{ site.data.alerts.end }}
 
-*This could be a tip? It'll grab their attention a bit more*
 
 People need to be able to deposit to and withdraw from their accounts, as well as see their current account balance. The latter we can solve with a simple `getAccountBalance` function that just returns the value stored in `accountBalance`. The deposit and withdraw operations are a little more complex; both modify the account balance by a given amount. What might the deposit function look like? Would it take any arguments? What kind? Does it need to return anything? [Again, think a minute before continuing!]
 
@@ -282,10 +282,13 @@ Everything under the public keyword and above the private keyword is our class's
 
 Now when we want to deposit money in main, we won't need to type:
 
- `bobBankAccount.accountBalance += 300.95;`
+```
+bobBankAccount.accountBalance += 300.95;
+```
 
-Instead, we'll be able to say:
- `bobBankAccount.deposit(300.95);`
+```
+bobBankAccount.deposit(300.95);
+```
 
 Thus, our modified main looks like this:
 
@@ -298,13 +301,15 @@ int main(){
 }
 ```
 
-There are a few new things to note.
+There are a few new things to note:
 
-The syntax for defining a member function is the same as any other function, only it goes inside the class definition.
+  - The syntax for defining a member function is the same as any other function, only it goes inside the class definition.
 
-Inside our member functions we have access to our member variables, as if we had declared them locally inside the function.
+  -Inside our member functions we have access to our member variables, as if we had declared them locally inside the function.
 
-Outside of the class definition, we use the dot notation to call an object's member functions; in this case, we have our `bobBankAccount` object, followed by a period, followed by the function call. Just as with the function calls you've made previously, you start with the function name, followed by any arguments wrapped in parentheses.
+  - Outside of the class definition, we use the dot notation to call an object's member functions.
+
+      - In this case, we have our `bobBankAccount` object, followed by a dot, followed by the function call. Just as with the function calls you've made previously, you start with the function name, followed by any arguments wrapped in parentheses.
 
 ### Exercise 3.4.2:
 
@@ -318,10 +323,6 @@ You'll need to write the withdraw function. How is it similar to the deposit fun
 {{ site.data.alerts.end }}
 
 {% include callout_red_cup.html task="[Exercise 3.4.1, Exercise 3.4.2]" %}
-
-{{ site.data.alerts.tip }}
-Don't forget to switch drivers!
-{{ site.data.alerts.end }}
 
 ### Exercise 3.4.3:
 

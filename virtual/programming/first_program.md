@@ -49,45 +49,63 @@ int main(){
 }
 ```
 
-Look at the code line-by-line.
+Let's look at this code line-by-line.
 
-Compiling is when the computer turns the text written in C++ into the machine code that it can run.
+```cpp
+#include <iostream>
+``` 
 
-`#include <iostream>` <b>includes</b> *the* `iostream` *library?* when compiling the program, making its contents available to our program.
+This line **includes** `iostream` into our program, making its contents available to our program. This is done during compilation, which is when the computer turns the text written in C++ into the machine code that the computer can actually run.
 
-`iostream` is what is a <b>header</b> or a <b>header file</b>. It contains the code needed to interface a library called the "Standard Input/Output Streams Library."
+`iostream` is what is called a <b>header</b> or a <b>header file</b>. It contains the code needed to interface a library called the *Standard Input/Output Streams Library*.
 
 Including `iostream` allows us to use `cout`.
 
-In general you will enclose header names in angle brackets (when you write your own headers, you will probably enclose them in double quotes). **TODO** *I feel like this is an important enough statement to make it a separate sentence? Even undergrads tend to overlook this distinction*
+In general you will enclose header names in angle brackets. When you write your own headers, you will probably enclose them in double quotes. 
 
-The next line, `using namespace std`; tells the compiler that if things are included in the `std` namespace, that it doesn't need to lead the name with `std`. In the program here, we use `cout`, but if we did not <b>use</b> the `std` namespace, we would write it as `std::cout`.
+```cpp
+using namespace std;
+```
+
+This line tells the compiler that if things are included in the `std` namespace, they don't need to lead the name with `std`. In the program here, `cout` is a part of the `std` namespace. If we did not **use** the `std` namespace, we would write it as `std::cout`.
 
 {{ site.data.alerts.tip }}
-For the purposes of this camp, just include `using namespace std` in your programs. Namespacing will become important if you continue programming, but we only use one namespace in this camp.
+For the purposes of this camp, just include <code>using namespace std</code> in your programs. Namespacing will become important if you continue programming, but we only use one namespace in this camp.
 {{ site.data.alerts.end }}
 
-The next line defines the `main` function by saying `int main()`. This tells the computer that there is a function called `main` that returns an integer (more on this later).
+```cpp
+int main(){
+```
 
-The code for `main`, like the code for all functions, is enclosed in curly braces. This is called a <b>block</b>.
+This next line defines the `main` function. This tells the computer that there is a function called `main` that **returns** an integer (more on this later).
 
-We only have one command for this program. We tell the computer to use `cout` and then put what we want to print after `<<`.
+The code for `main`, like the code for all functions, is wrapped in curly braces. We call the code wrapped in braces a **block**. In this line, we are beginning the block with an opening brace.
 
-The double left-angle brackets are like an arrow pointing toward cout, sending something into it (in this case, `"Hello World"`) to `cout`.
+```cpp
+cout << "Hello World!" << endl;
+```
 
-After `"Hello World"` there is `<< endl`, telling the program to end the line of text. If you don't do this, there is no guarantee that your text will show up on the screen, and it will not be followed by a <b>newline</b>, which literally tells the terminal to go to a new line. This is kind of like hitting enter at the end of a line.
+We only have one command for this program. Here we tell the computer to use `cout` and then put what we want to print after `<<`.
 
-We put quotation marks around the words we want to display (this is called a <b>string</b>). In C++, every line of code (ones without braces) ends in a semi-colon.
+The double left-angle brackets are like an arrow pointing toward `cout`, sending something into it (in this case, `"Hello World"`) to `cout`.
+
+After `"Hello World"` there is `<< endl`, which tells the program to end the line of text. If you don't do this, there is no guarantee that your text will show up on the screen, and it will not be followed by a **newline** which literally tells the terminal to go to a new line. This is kind of like hitting `enter` at the end of a line when you're typing text.
+
+We put quotation marks around the words we want to display (this is called a <b>string</b>). In cpp, every line of code (ones without braces) ends in a semi-colon.
 
 So, you are telling the computer to send `"Hello World!"` as a string to `cout` to be displayed on the screen.
 
-One last line in our program is `return 0`. This <b>returns</b> the number zero. We will get into what this means in a later tutorial, but for now, we can understand it as telling the computer that our program ran properly.
+```cpp
+return 0;
+```
+
+This last line **returns** the number zero. We will get into what this means in a later tutorial, but for now, we can understand it as telling the computer that our program ran properly.
 
 We then use a closing brace to end the function, and with it, the program.
 
 ## Compiling and Executing from the Command Line
 
-Compiling code is the act of turning your code into a program that the machine can <b>execute</b> or run.
+Like we mentioned earlier, compiling code is the act of turning your code into a program that the machine can **execute** or run.
 
 To compile your code, we will use the GNU C++ compiler, better known as `g++`.
 
@@ -124,9 +142,9 @@ Hopefully, your program just compiled.
 
 ## Exercise 3.1:
 
-- Modify the Hello World program so that it prints, "Hello \<Your Name\> ~~and \<Your Partners Name\>~~".
+- Modify the Hello World program so that it prints, "Hello \<Your Name\>!"
 
-For example, if your name is Justine ~~and your partner is Justin~~, it would display, Hello Justine. ~~and Justin.~~
+    - For example, if your name is Justine, it would display, `Hello Justine!`
 
 - Next, add a second line of text that says, "Programming is actually pretty fun when you get right down to it."
 

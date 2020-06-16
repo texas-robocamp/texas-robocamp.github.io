@@ -89,4 +89,4 @@ At this point, please ~~**actually** flip your cup to red.~~ mark your progress 
 
 ## Next Step
 
-Proceed to ["Using Linux."](/using_linux.html)
+Proceed to ["Cloning the Tutorials."](/cloning.html)
