@@ -15,6 +15,8 @@ permalink: first_few_functions.html
 
 Here's a list of the functions from ~~the Bot'n Roll Library~~ *I think it would still be useful to list all the functions available here*, for your convenience.
 
+*will want to keep this as a reference, but the docs should be more detail*
+
 ![Bot'n Roll Functions](images/software_function_list.png)
 
 You can find all of these functions in ~~`BnrOneA.h`~~ **TODO** *name of our header*.
@@ -39,18 +41,6 @@ As you can see from the functions list, the `lcd#` function takes a variety of d
 
 ## Setup Routines
 
-### `obstacleEmitters`
-
-**TODO** *Do we want this? Might be something to give to them just so they can play with the sensors?*
-
-`void obstacleEmitters(boolean state)`
-
-This turns on and off the LEDs which are used for obstacle detection.
-
-{{ site.data.alerts.tip }}
-If `void obstacleEmitters(true)` is not called at the start of your program, then using the obstacle sensors on your robot may not work.
-{{ site.data.alerts.end }}
-
 ## `obstacleSensors`
 
 `byte obstacleSensors()`
@@ -61,7 +51,7 @@ byte obstacleSensors()` uses binary in a very direct way, as some of you may hav
 
 `obstacleSensors` will return one of four values
 
-**TODO** *Our sensor does not work like this, we need to decide whether to change the function or change the sensor to be more akin to the phyiscal robot*
+**TODO** *Make exercise to have them develop something like this*
 
 Value    | Means
 --------|-------------
