@@ -6,6 +6,16 @@ entries:
     output: web, pdf
     folderitems:
 
+    - title: Setting up Your Virtual Machine
+      url: vm.html
+      output: web, pdf
+      type: homepage
+
+    - title: Getting Started with Linux
+      url: /using_linux.html
+      output: web, pdf
+      type: homepage
+
     - title: Introduction to the Robot?
       url: /404.html
       output: web, pdf
@@ -25,18 +35,8 @@ entries:
       output: web, pdf
       type: homepage
 
-    - title: Getting Started
-      url: /getting_started.html
-      output: web, pdf
-      type: homepage
-
     - title: Welcome to Camp!
       url: /welcome.html
-      output: web, pdf
-      type: homepage
-
-    - title: Using Linux
-      url: /using_linux.html
       output: web, pdf
       type: homepage
 
