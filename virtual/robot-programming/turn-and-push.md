@@ -34,9 +34,9 @@ Following light is not part of this challenge
 
 - Start with the "empty" program.
 - Make the robot move forward.
-- When the obstacle sensor is triggered, rather than stopping the robot, make it go in reverse and to one side (you pick) for a moment. Use the ~~`delay`~~ *lr.sleep()?* function to regulate how long it does this.
+- When the obstacle sensor is triggered, rather than stopping the robot, make it go in reverse and to one side (you pick) for a moment. Use the `sleep` function to regulate how long it does this.
 
-If your program is successful, when encountering a wall, it should eventually turn so as to avoid hitting the wall, rather than becoming stuck! We will test the success of your robot by ~~putting it into a pen with a wall~~ *running it in our virtual maze*. If the robot can get to the other side, you have passed the Turn & Push Challenge, and receive all of the bragging rights associated therewith.
+If your program is successful, when encountering a wall, it should eventually turn so as to avoid hitting the wall, rather than becoming stuck! We will test the success of your robot by running it in our virtual maze **TODO** *We could totally make a maze and make this a race too*. If the robot can get to the other side, you have passed the Turn & Push Challenge, and receive all of the bragging rights associated therewith.
 
 {% include callout_red_cup.html task="[Challenge 5]" comment="Please flip your cup to red to indicate that you're ready to test your robot."%}
 

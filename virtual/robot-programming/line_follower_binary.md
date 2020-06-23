@@ -6,11 +6,13 @@ sidebar: virtual
 permalink: line_follower.html
 ---
 
-In this tutorial, we're going to do quite a lot, and it's going to be challenging. I've given you quite a lot of direction here, so you ~~basically end up with the same program as I wrote, but hopefully~~should be able to figure out how to do it. You're going to need a lot of help from the counselors. This is the hardest program you've written so far this camp. It will be challenging, but that's okay! This is how you learn.
+In this tutorial, we're going to do quite a lot, and it's going to be challenging. We've given you quite a lot of direction here, so you should be able to figure out how to do it. You're going to need a lot of help from the counselors. This is the hardest program you've written so far this camp. It will be challenging, but that's okay! This is how you learn.
 
-I'm going to tell you what this program does so you can see where this is all going.
+We're going to tell you what this program does so you can see where this is all going.
 
-The first program that you will write will allow you to use the ~~Arduino~~ *simulated? This isn't necessarily true as far as the real abstraction is concerned though...* serial monitor to see the numbers returned by the line follower. It lets you explore the raw, numerical data that the device sees, and how each number is in a position corresponding to the line. What I've said will make sense once you've tried it out.
+The first program that you will write will allow you to see the numbers returned by the line follower. It lets you explore the raw, numerical data that the device sees, and how each number is in a position corresponding to the line. What I've said will make sense once you've tried it out.
+
+**TODO** *Still not sure what to do about this paragraph. Do we explain the abstraction going on here?*
 
 The second program that you write will allow you to <b>threshold</b> the data coming off of the line follower, to determine what is a line and what is not. It will use the LCD on the robot to print asterisks wherever the line is under the line follower, and dashes wherever there isn't.
 
@@ -28,21 +30,21 @@ If it looks like that, there's a line all of the way to the right of the robot.
 
 Under the line that looks like that, it will print the number that is the value of the threshold. You will learn about thresholds in this exercise.
 
-My program says this right now.
+Our program says this right now.
 
 `----**----------`
 
 `10`
 
-Just kidding. I want you to find the threshold for yourself. Mine is much bigger than 10.
+Just kidding. We want you to find the threshold for yourself. Ours is much bigger than 10.
 
-## Back to the ~~Bot'n Roll Library~~ **TODO** *what do we want to call this*
+## Back to the Robot Documentation
 
-The `BnrOneA` class still has a significant amount of functionality that we haven't yet touched, one of those is the use of the analog-to-digital converter
+The `Robot` class still has a significant amount of functionality that we haven't yet touched, one of those is the use of the analog-to-digital converter
 
-### `int readAdc(byte), int readAdc#()`
+### `int readAdc(int sensorNum)`
 
-The PIC microcontroller has an 8-channel analog to digital converter on it. This allows us to hook electronics components up to the robot and read information off of them. The data comes in as analog data; that is to say, electrical voltages. An <b>analog-to-digital (ADC)</b> converter converts these voltages to digital information, allowing us to use it in our computer programs.
+On our real robot, a line sensor has an 8-channel analog to digital converter on it. This allows us to hook electronics components up to the robot and read information off of them. The data comes in as analog data; that is to say, electrical voltages. An <b>analog-to-digital (ADC)</b> converter converts these voltages to digital information, allowing us to use it in our computer programs.
 
 {{ site.data.alerts.tip }}
 <ul>
@@ -50,11 +52,12 @@ The PIC microcontroller has an 8-channel analog to digital converter on it. This
 </ul>
 {{ site.data.alerts.end }}
 
-The PIC has 8 ADC channels, which can be accessed by calling either the corresponding `readAdc#` function, or by providing 0-7 to `readAdc`. 
+For the purposes of our simulation, we actually use a camera to visualize the ground, and then split up the image into eight separate greyscale rectangles - one for each index of the line sensor.
 
-**TODO** *Do we want to explain how these sensors work in real life? I think it's still interesting, but we could also explain how we abstract this too if we want*
 
 ## The Line Follower Device
+**TODO** *If we want them to see the line follower, we're gonna need to make the camera a different color or something, right now it's just a little grey cube (I think)*
+
 Look under your robot at the line follower. **TODO** *At some point we need to explain basic usage of Gazebo* It has 8 little black blocks on it. These blocks are used to detect how much light us coming up off the ground to the robot.
 
 Each of those blocks is hooked up to a separate channel of the ADC. Consequently, the ADC will read each of them and return a value between 0-1023 *is this still true?*.
@@ -63,9 +66,7 @@ Each of those blocks is hooked up to a separate channel of the ADC. Consequently
 
 ### The Line Follower Test Target
 
-- Get a "Line Test Target" from a counselor.
-
-*Removed reference to serial printing, since we're using cout*
+- Launch the target world.
 
 ### Program the Exercise
 
@@ -77,7 +78,10 @@ Here's what your program should do.
 - Print a space following each value from the line follower.
 - Print a new line at the end of the 8 values.
 
-When you hook this up, the numbers are going to scream past on the screen really quickly, so we suggest adding a `delay` after the for loop to make everything much easier to read.
+**TODO** *How do we want them to print? We could just go on the LCD but that might clutter the whole thing?*
+
+When you hook this up, the numbers are going to scream past on the screen really quickly, so we suggest adding a `sleep` after the for loop to make everything much easier to read.
+
 
 *I think this is still true?*
 
@@ -96,7 +100,7 @@ The easiest way to implement this is with a for loop and the `int readAdc(byte)`
 
 ### Try the Line Follower
 
-- Move the line target around under the robot. *We could still maybe do this?*
+- Move the robot around under the line target. **TODO** *explain how to do this*
 - You should notice that the numbers where the black line is present are different from the numbers where there is no black.
   - How are they different?
 
