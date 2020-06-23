@@ -2,6 +2,15 @@ entries:
 - title: sidebar
   product: Tutorials
   folders:
+  - title: Resources
+    output: web, pdf
+    folderitems:
+
+      - title: Documentation
+        url: docs.html
+        output: web, pdf
+        type: homepage
+
   - title: Before We Begin
     output: web, pdf
     folderitems:
