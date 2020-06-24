@@ -23,7 +23,7 @@ We think that you're ready for a slightly harder tutorial. So I'm just going to 
 - Use a **loop** to check each ADC channel.
 - **If** a channel has a higher value than the one stored, store that value.
 - Always store the channel corresponding to the highest value as well.
-- Put this into a **function**.
+- Put this into a **function**. *I'm not sure this is doable? They'd need to pass something by reference since they're returning both the threshold for printasterisks and the index of the line*
 - Test that your detector works by using the `printAsterisks` function from the previous tutorial.
 
 {% include callout_red_cup.html task="[Exercise 7.1.1]" %}

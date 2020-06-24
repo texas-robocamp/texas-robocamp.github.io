@@ -29,7 +29,14 @@ Returns the sensor value currently being read at the `sensorNum` [0-7] position 
 
 ### int readButton()
 
-Returns the value of which button was most recently pressed. **TODO** what is the range
+Returns the value of which button was most recently pressed.
+Possible return values:
+
+---| ---
+0 | no button pressed
+1 | Button 1 pressed
+2 | Button 2 pressed
+3 | Button 3 pressed
 
 ### void ledLeft(bool on)
 
