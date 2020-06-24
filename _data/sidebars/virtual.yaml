@@ -122,6 +122,10 @@ entries:
       url: /race.html
       output: web, pdf
 
+    - title: Leaderboard
+      url: /leaders.html
+      output: web, pdf
+
   - title: Bonus Material!
     output: web, pdf
     folderitems:

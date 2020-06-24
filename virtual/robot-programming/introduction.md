@@ -29,8 +29,6 @@ int main(int argc, char **argv) {
 
     BnrOneA bot;
 
-    ros::Rate loop_rate(500);
-
     while(ros::ok()) {
         //Your code goes here!    
 

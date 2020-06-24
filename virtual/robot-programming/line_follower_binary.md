@@ -14,7 +14,7 @@ The first program that you will write will allow you to see the numbers returned
 
 **TODO** *Still not sure what to do about this paragraph. Do we explain the abstraction going on here?*
 
-The second program that you write will allow you to <b>threshold</b> the data coming off of the line follower, to determine what is a line and what is not. It will use the LCD on the robot to print asterisks wherever the line is under the line follower, and dashes wherever there isn't.
+The second program that you write will allow you to **threshold** the data coming off of the line follower, to determine what is a line and what is not. It will use the LCD on the robot to print asterisks wherever the line is under the line follower, and dashes wherever there isn't.
 
 That will look something like this.
 
@@ -44,7 +44,7 @@ The `Robot` class still has a significant amount of functionality that we haven'
 
 ### `int readAdc(int sensorNum)`
 
-On our real robot, a line sensor has an 8-channel analog to digital converter on it. This allows us to hook electronics components up to the robot and read information off of them. The data comes in as analog data; that is to say, electrical voltages. An <b>analog-to-digital (ADC)</b> converter converts these voltages to digital information, allowing us to use it in our computer programs.
+On our real robot, a line sensor has an 8-channel analog to digital converter on it. This allows us to hook electronics components up to the robot and read information off of them. The data comes in as analog data; that is to say, electrical voltages. An **analog-to-digital (ADC)** converter converts these voltages to digital information, allowing us to use it in our computer programs.
 
 {{ site.data.alerts.tip }}
 <ul>
@@ -110,13 +110,13 @@ The easiest way to implement this is with a for loop and the `int readAdc(byte)`
 
 If you did the last exercise properly, you should have noticed that ABOVE some value, you could assure that the number being returned by the line follower was the the line being picked up. Beneath some value, what you saw was the white paper reflecting light back.
 
-The difference between the region where the line was and the region where there was no line is called a <b>threshold</b>. We are going to use a threshold to determine where the line is.
+The difference between the region where the line was and the region where there was no line is called a **threshold**. We are going to use a threshold to determine where the line is.
 
 {{ site.data.alerts.tip }}
 Also, weirdly, the line follower seems to pick up the shadows of the wheels. Don't worry about it, and simply realize that even when you account for the wheels, the threshold is still higher than the value for the shadow.
 {{ site.data.alerts.end }}
 
-Uh-oh! We're going to have you follow a line out on the bridge, but the lighting is different and the paper is different in the lab! What we'll do to account for this is write a small user interface where you can tune your threshold. While we're at it, we'll also experiment with the line follower and the LCD, and learn a bit about strings in C++.
+Uh-oh! We're going to have you follow a line on a racetrack, but the lighting may be different! What we'll do to account for this is write a small user interface where you can tune your threshold. While we're at it, we'll also experiment with the line follower and the LCD, and learn a bit about strings in C++.
 
 ## Exercise 6.1.2
 
@@ -127,28 +127,39 @@ The next few exercises will build up to a small user interface that will allow y
 - Have `loop` call `printAsterisks`.
 
 ```cpp
-void printAsterisks() {
+void printAsterisks(BnrOneA robot) {
 
 }
 
-void loop() {
-  printAsterisks();
+int main(int argc, char **argv) {
+    
+    ros::init(argc, argv, "robot");
+
+    BnrOneA bot;
+
+    while(ros::ok()) {
+
+        printAsterisks(bot);
+        ros::spinOnce();
+        
+    }
+
+    return 0;
 }
 ```
 
-**TODO** *Change this boilerplate*
-
 {{ site.data.alerts.tip }}
-It's going to be tempting to put a `delay` in there somewhere. <strike>Even some of the counselors will tell you to do this.</strike> <em>Let's just make sure they know not to recommend this</em> Do yourself a favor and resist that urge. Your program will work better and look better if you avoid this.
+It's going to be tempting to put a <code>sleep</code> in here somewhere. Do yourself a favor and resist that urge. Your program will work better and look better if you avoid this.
 {{ site.data.alerts.end }}
 
 There's a type that we didn't tell you about way back in ["Simple Math and User Input"](/simple_math_user_input.html) called `char`.
 
-`char` stands for <b>character</b>.
+`char` stands for **character**.
 Each `char` is 1 byte, meaning that it can represent 256 different numbers.
 Each `char` is `unsigned`, meaning that it cannot be negative.
+So, a `char` is a number from [0,255] which is used to represent a character.
 
-One way to represent text is called a C string. This is different from a C++ `string`. A C string is an array of type `char`.
+One way to represent text is called a C string. This is different from a C++ `string`. A C string is an **array** of type `char`. 
 
 *I feel like this is a major detail that students might just gloss over. May want to elaborate more?*
 
@@ -161,19 +172,24 @@ Every number from 0-255 is associated with a unique, printable character. This i
 </ul>
 {{ site.data.alerts.end }}
 
-- Remember the `one.lcd1` command? Use that in your program to print 2 asterisks ("*") on the top line of the LCD on your robot.
+- Remember the `bot.lcd1` command? Use that in your program to print 2 asterisks ("*") on the top line of the LCD on your robot.
 - Now try it using a C string.
   - Make a global variable to store your C string in. Call it `lineUI`.
   - Make `lineUI` 17 chars long.
   - Make a `for` loop to fill `lineUI`.
 
+**TODO** *I think this is now the first time we mention global variables, so we'll want to take a second and talk about it*
+
 ```cpp
-void printAsterisks() {
+char lineUI[16];
+
+void printAsterisks(BnrOneA bot) {
+
   for(int i = 0; i < 16; i++) {
     lineUI[i] = '*';
   }
   lineUI[16] = 0;
-  one.lcd1(lineUI);
+  bot.lcd1(lineUI);
 }
 
 void loop() {
@@ -181,13 +197,11 @@ void loop() {
 }
 ```
 
-**TODO** *change this*
-
 - What the heck? You can do that?
-  - Yes! Single quotes surround a <b>character-literal</b> in C.
-  - Just like a string can be surrounded in double-quotes (which is called a <b>string-literal</b>), a single character can be surrounded in single-quotes.
+  - Yes! Single quotes surround a **character-literal** in C.
+  - Just like a string can be surrounded in double-quotes (which is called a **string-literal**), a single character can be surrounded in single-quotes.
 - You probably also noticed that I set `lineUI[16] = 0;`
-  - C strings are <b>null terminated</b>. This means that you put a 0 at the end of the string to mean that the string is done.
+  - C strings are **null terminated**. This means that you put a 0 at the end of the string to mean that the string is done.
 
 {{ site.data.alerts.tip }}
 Null termination allows us to have shorter or longer strings stored in the same memory. This means that if we only wanted lineUI to be 8 characters long, we'd just put a zero in `lineUI[8]`.
@@ -201,7 +215,7 @@ In our UI, what we want is for the top line to show us where the line is. Eventu
 
 However, we run into a problem. There are 8 sensors on the line sensor, and 16 characters on the top line. So, we'll want 2 asterisks for every sensor on the line follower. If we have that, and ONLY asterisks turned on for each sensor on the line follower that sees a part of the line, then we will be able to see the line the way that the robot sees it!
 
-- Modify the `for` loop from the example above to <b>iterate</b> through the loop 8 times so that only 8 asterisks show up on the LCD.
+- Modify the `for` loop from the example above to **iterate** through the loop 8 times so that only 8 asterisks show up on the LCD.
   - Don't forget to change your null terminator.
   - Your for loop should now count from 0-7. `int i = 0; i < 8`!
 - Modify the `for` loop so that it only iterates 8 times, but still prints 16 characters.
@@ -210,18 +224,23 @@ However, we run into a problem. There are 8 sensors on the line sensor, and 16 c
   - That, however, will skip ever other entry in `lineUI`, so, make it also fill in `i * 2 + 1` with an asterisk every time it iterates through the `for` loop.
   - Try it out!
 
+{{ site.data.alerts.tip }}
+If these steps don't make sense, try just printing out the values of <code>i*2</code> and <code>i*2+1</code>. You should notice a pattern!
+{{ site.data.alerts.end }}
+
 {% include callout_red_cup.html task="[Exercise 6.1.2]" %}
 
 ## Exercise 6.1.3
 
 Now we're going to write another UI. This should all go into your current program.
 
-- Add a global variable. Make it an integer. Call it `thresh`. Set it to zero ~~either~~ at initialization ~~or in `setup`~~.
+- Add a new variable before the loop block. Make it an integer. Call it `thresh`, and set it to zero.
 - In `printAsterisks` print the value of `thresh` on line 2 of the robot's LCD.
-- Add some code to `loop` that responds to button presses. **TODO** *Another button case*
-  - When PB1 is pushed, add 10 to `thresh`.
-  - When PB2 is pushed, subtract 10 from `thresh`.
-- Try it out. The number on the second line should very quickly rise when pressing the top button and very quickly drop when pressing the lower button.
+  - You'll need to change the function parameters for `printAsterisks` so that you can access `thresh`!
+- Add some code to the loop block that responds to button presses. 
+  - When button 1 is pushed, add 10 to `thresh`.
+  - When button 2 is pushed, subtract 10 from `thresh`.
+- Try it out. The number on the second line should rise when pressing the top button and drop when pressing the lower button.
 
 {% include callout_red_cup.html task="[Exercise 6.1.3]" %}
 
@@ -229,8 +248,8 @@ Now we're going to write another UI. This should all go into your current progra
 
 Now we're going to make it so you only see where the line is under the line follower, allowing you to see the line the way that your robot does.
 
-- Make a global array of type `int`. Make it 8 elements. Name it `adc`.
-- Modify `loop` so that it reads the ADC using `one.readAdc`.
+- Make a global array of type `int` with 8 elements. Name it `adc`.
+- Modify the loop so that it reads the ADC using `one.readAdc`.
   - Use a `for` loop so that it fills the `adc` variable.
 - Modify the `for` loop in `printAsterisks`.
   - Every time `adc[i] > thresh`, it should put 2 asterisks.
@@ -238,8 +257,6 @@ Now we're going to make it so you only see where the line is under the line foll
 - Run your program. Put the line target under the line follower. Push the up button until there are only asterisks under the line follower sensors that are over the line, and dashes everywhere else.
 - Move the target around and see how the robot can now "see" the line.
   - Ideally, you only see the line in one place on the LCD, and it is only 2 asterisks wide.
-
-**TODO** *Another LCD case*
 
 {% include callout_red_cup.html task="[Exercise 6.1.4]" %}
 
