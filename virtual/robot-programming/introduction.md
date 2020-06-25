@@ -11,7 +11,7 @@ permalink: robot_programming_introduction.html
 Now that you've learned the basics of C++, we can move on to programming on the robot!
 
 ## A Brief Introduction to ROS
-You will be using the Robot Operating System (ROS) to develop software for your robot. ROS is an open-source meta-operating system for robots which is used around the world for robotics software development and research. 
+You will be using the **Robot Operating System** (ROS) to develop software for your robot. ROS is an open-source meta-operating system for robots which is used around the world for robotics software development and research. 
 
 We've developed software for you to use ROS without needing to explore the complexities of this system, but if you're interested in exploring ROS after the camp, their [website](http://wiki.ros.org) provides many tutorials and has a vast community of developers.
 
@@ -97,7 +97,7 @@ Here we see our usual return statement from main, which simply returns zero. Thi
 Now that we're developing software on the actual robot, let's go ahead and write a new "Hello World" program. However, instead of just printing "Hello World" on the computer screen, we're going to print it on the robot's LCD screen! 
 
 You might notice that there isn't actually an LCD screen on our robot. In the world of simulation, we developers have to make design choices that may differ from what a robot would look like in real life. 
-This is a great example of one of these design choices. In simulation, printing out information on an actual screen on the robot would be difficult to read, since we're viewing the robot from above in Gazebo instead of being able to physically lean down and view what is being printed on the LCD. Because of this, we've built an additional UI where the LCD information will appear. 
+This is a great example of one of these design choices. In simulation, printing out information on an actual screen on the robot would be difficult to read, since we're viewing the robot from above in Gazebo instead of being able to physically lean down and view what is being printed on the LCD. Because of this, we've built an additional UI (User Interface) where the LCD information will appear. 
 
 We will continue to refer to the screen as an LCD and name our function `lcd` so that if there were actual development on the physical robot, we would only have to change the behavior of our robot object instead of the code printing to the LCD. 
 
@@ -122,9 +122,9 @@ one.lcd2("I'm doing great thanks");
 
 - Write your first Hello World program on the robot!
 
-- Create a new Arduino program, go to "File -> New".
+- Create a new progam **TODO** *However that works*
 
-- Copy the short program above into your package to set up your program, and save your program inside your workspace (along with the other exercises you've done is a good idea). Just like the other exercises, give your program and the folder you work in the same name.
+- Copy the short program above into your package to set up your program, and save your program inside your workspace. Just like the other exercises, give your program and the folder you work in the same name.
 
 - Make this program say "Hello World!" on the first line in the LCD, and "Texas RoboCamp!" on the second line.
 

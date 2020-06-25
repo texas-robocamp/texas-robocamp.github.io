@@ -53,3 +53,48 @@ Prints `string` to the top text on the GUI
 ### void lcd2(const std::string &string)
 
 Prints `string` to the bottom text on the GUI
+
+## ROS Documentation
+
+### Roslaunch
+
+Roslaunch commands look like this:
+
+```
+roslaunch <package_name> <launch_file>
+```
+
+Here's one example, which launches the basic world:
+
+```
+roslaunch robocamp empty_camp.launch
+```
+**TODO** *placeholder*
+
+### Rosrun
+
+Rosrun commands look like this:
+
+```
+rosrun <package_name> <file_name>
+```
+
+One common rosrun you'll probably be using is
+
+```
+rosrun robocamp teleop_robot
+```
+**TOOD** *kinda placeholder too*
+
+### bool ros::Rate::sleep()
+
+This function pauses the program for any remaining time left in the `Rate` cycle. The time for this is defined by the constructor for the instance of `ros::Rate` being used.
+
+As an example:
+
+```cpp
+ros::Rate r(10);
+r.sleep();
+```
+
+

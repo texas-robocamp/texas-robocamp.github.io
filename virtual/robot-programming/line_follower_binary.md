@@ -234,12 +234,11 @@ If these steps don't make sense, try just printing out the values of <code>i*2</
 
 Now we're going to write another UI. This should all go into your current program.
 
-- Add a new variable before the loop block. Make it an integer. Call it `thresh`, and set it to zero.
+- Add a new global variable, `double thresh`, and set it to zero.
 - In `printAsterisks` print the value of `thresh` on line 2 of the robot's LCD.
-  - You'll need to change the function parameters for `printAsterisks` so that you can access `thresh`!
 - Add some code to the loop block that responds to button presses. 
-  - When button 1 is pushed, add 10 to `thresh`.
-  - When button 2 is pushed, subtract 10 from `thresh`.
+  - When button 1 is pushed, add .01 to `thresh`.
+  - When button 2 is pushed, subtract .01 from `thresh`.
 - Try it out. The number on the second line should rise when pressing the top button and drop when pressing the lower button.
 
 {% include callout_red_cup.html task="[Exercise 6.1.3]" %}
@@ -253,7 +252,7 @@ Now we're going to make it so you only see where the line is under the line foll
   - Use a `for` loop so that it fills the `adc` variable.
 - Modify the `for` loop in `printAsterisks`.
   - Every time `adc[i] > thresh`, it should put 2 asterisks.
-  - Every time `adc[i]` is not ` > thresh`, it should put 2 dashes.
+  - Every time `adc[i]` is not `> thresh`, it should put 2 dashes.
 - Run your program. Put the line target under the line follower. Push the up button until there are only asterisks under the line follower sensors that are over the line, and dashes everywhere else.
 - Move the target around and see how the robot can now "see" the line.
   - Ideally, you only see the line in one place on the LCD, and it is only 2 asterisks wide.
