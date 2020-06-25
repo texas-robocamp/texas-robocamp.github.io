@@ -7,9 +7,9 @@ sidebar: virtual
 permalink: using_linux.html
 ---
 
-## Introduction to ~~Linux~~ *should we be calling it Ubuntu? I hesitate to use the words interchangably because that would probably confuse campers*
+## Introduction to Linux 
 
-~~The computers in this lab~~ Most robotics programming is done using **TODO** *motivate this better* the Linux operating system. Linux offers a variety of free easy-to-use tools for software development that will help us along our way in constructing and programming our robots.
+Most robotics programming is done using the Linux operating system. This is mainly due to the large amount of open-source robotics software that has been developed on it - in fact, Linux itself is **open-source**. Open-source software is software that is free to use, distribute to others, and modify. This means that you can download the entire source code for Linux online - and even help contribute to it! Linux offers a variety of free easy-to-use tools for software development that will help us along our way in constructing and programming our robots. We will be using the **Ubuntu distribution** of Linux, which is one of many different distributions (versions) of the Linux operating system. Ubuntu is one of the most popular Linux distros, and is the main operating system used here in UTCS.
 
 ### Logging In
 
@@ -43,13 +43,23 @@ By default, the Ubuntu logo will be displayed on the launcher to the left of the
 
 3. A terminal window will open.
 
+### Terminator
+
+There are lots of different alternatives to the basic terminal. We **highly** recommend that you use Terminator, which is already installed on your machine. Terminator works very similarly to the basic terminal, but has the added feature of being able to have multiple panes open at once in the same window. We will often need multiple terminals open; using terminator makes it easier to keep track of these.
+
+- `ctrl` + `shift` + `o`: Split the current window horizontally
+
+- `ctrl` + `shift` + `e`: Split the current pane vertically
+
+- `ctrl` + `shift` + `w`: Close the current window
+
 ## The Super Key
 
 Much like how Windows has the start key and MacOS has the command key, Linux has what we call the `super` key. By default, this will be either your start or command key. Pressing `super` by itself will also open the applications overview.
 
 ## Changing Windows
 
-* This is similar to operating systems such as Windows and Mac OS. Hit `alt`+`tab` or `super`+`tab` to cycle windows, or click on the icons on the launcher.
+This is similar to operating systems such as Windows and Mac OS. Hit `alt`+`tab` or `super`+`tab` to cycle windows, or click on the icons on the launcher.
 
 ## Snapping Windows
 The version of Linux we're using let's you easily maximize windows and snap them to half of the screen. To do so, simply press `super`+`arrow-key` 
@@ -127,27 +137,27 @@ This is basically a text-based version of double clicking on folders, but the co
 
 The command line has tab-completion. If you start typing the name of a file, directory, or command and hit tab, it will finish the name for you. If there is more than one match, all possible options are displayed.
 
-## Text Editor
+{{site.data.alerts.tip}}
+Don't forget about tab completion! It's a HUGE timesaver, especially when you have to type long commands.
+{{site.data.alerts.end}}
 
-For the C++ tutorials, we will use a text editor called Sublime.
+## Bash History
+By default, all of your previous commands are stored in the order you typed them in ~/.bash_history. This allows for you to easily run previous commands without having to type them over and over, simply by hitting the `up-arrow` on your keyboard while you're in the terminal. Try it right now, and you should see `cd ~` appear on your screen (unless you've typed a new command since we explored the basic commands.)
 
-To open Sublime you can do one of two things:
+## VSCode 
 
-* Open a terminal, type "sublime_text &", hit Enter. The & tells the computer to allow you to continue to use that terminal while the editor is running.
+We will using an IDE called Visual Studio Code (VSCode) to develop our software during the camp. An **IDE** is an Integrated Development Environment, and they are very useful when writing software due to features like syntax highlighting, code completion, debugging tools, etc. VSCode has an large library of extensions that can be used to add new features on top of it - you can even design your own extensions to help you out if you can't find the right tool for the job! 
 
-* Open the lens (the dots) as before, type in sublime_text, hit Enter. You do not need the & in the lens.
+To open VSCode you can do one of two things:
 
-Using sublime and the command line, you will write and execute your tutorial programs.
+* Open a terminal, type `code` and hit Enter.
 
-*We should probably still have a recommended text editor - imho Atom is way better than sublime but idk which would be more user friendly. It might be worth spending some time exploring what's easiest, since we can install whatever we want onto the VM*
+* Open the applications overview and type `vscode` and select the icon for VSCode.
 
-## ~~arduino IDE~~  
-
-**TODO** *Maybe VSCode*
 
 ## Shutting Down
 
-Before you leave the lab, make sure you save all your work and log out of the computer so that it's free for the next person to use it. Open the account menu in the top right-hand corner of your screen, click the shut down icon, and select shut down from the power options.
+Before you finish for the day, make sure you save all your work and turn off the computer. Open the account menu in the top right-hand corner of your screen, click the shut down icon, and select shut down from the power options.
 
 {% include note.html content="Please do not unplug the USB before your computer has fully shut down, as this may corrupt files on the USB. If you are experiencing technical difficulties, notify one of the camp staff."%}
 
