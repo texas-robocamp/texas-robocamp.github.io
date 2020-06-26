@@ -11,6 +11,18 @@ This page contains a list of all the functions you'll be using when working with
 
 ## C++ Documentation
 
+### Compiling C++ Code
+
+```
+g++ <file_name> -o <executable_name>
+```
+
+For example, if you have a file called `HelloWorld.cpp`, and want to compile it into an executable called `Hello`, you would do:
+
+```
+g++ HelloWorld.cpp -o Hello
+```
+
 ### Logical Operators
 
 | Logical Operator | Meaning             | Example of True Statement |
