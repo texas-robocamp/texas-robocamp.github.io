@@ -174,14 +174,18 @@ Every number from 0-255 is associated with a unique, printable character. This i
 
 - Remember the `bot.lcd1` command? Use that in your program to print 2 asterisks ("*") on the top line of the LCD on your robot.
 - Now try it using a C string.
-  - Make a global variable to store your C string in. Call it `lineUI`.
+  - Make a **global** variable to store your C string in. Call it `lineUI`.
   - Make `lineUI` 17 chars long.
   - Make a `for` loop to fill `lineUI`.
 
-**TODO** *I think this is now the first time we mention global variables, so we'll want to take a second and talk about it*
+### Global Variables
+
+You're about to see your first example of a **global variable**. We've mentioned the concept of **scoping** a few times already, which is where one can access a particular variable. A variable that is global can be seen *everywhere* in the file. 
+
+In practice, we try not to make too many variables global, because this can lead to confusing behavior in more complicated programs. Sometimes, however, we want every part of our program to have access to a variable. In these cases, we choose to make our variables global.
 
 ```cpp
-char lineUI[16];
+char lineUI[16]; //global variable
 
 void printAsterisks(BnrOneA bot) {
 
@@ -194,11 +198,12 @@ void printAsterisks(BnrOneA bot) {
 
 void loop() {
   printAsterisks();
+  bot.lcd2(lineUI); //Notice how we can reference lineUI in both functions!
 }
 ```
 
-- What the heck? You can do that?
-  - Yes! Single quotes surround a **character-literal** in C.
+- What the heck is '*'?
+  - Single quotes surround a **character-literal** in C.
   - Just like a string can be surrounded in double-quotes (which is called a **string-literal**), a single character can be surrounded in single-quotes.
 - You probably also noticed that I set `lineUI[16] = 0;`
   - C strings are **null terminated**. This means that you put a 0 at the end of the string to mean that the string is done.

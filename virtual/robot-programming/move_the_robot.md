@@ -30,7 +30,7 @@ You can turn the robot by moving the motors at different speeds.
 
 ### Exercise 4.3.1
 
-- Again, Start by copying the "empty" program from ["Robot Programming Introduction"](/robot_programming_introduction.html) into your ~~Arduino IDE~~ **TODO** *however the script thing works, and saving it in a sensible place.
+- Again, Start by copying the "empty" program from ["Robot Programming Introduction"](/robot_programming_introduction.html) into your ~~Arduino IDE~~ **TODO** *however the script thing works*, and saving it in a sensible place.
 - Fill in the program so the robot moves when it's started, using `move`, and stops when it sees an obstacle.
 
 {{ site.data.alerts.tip }}

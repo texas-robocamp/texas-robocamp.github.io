@@ -30,7 +30,7 @@ void ledLeft(boolean state)
 void ledRight(boolean state)
 ```
 
-These functions turn on and off the left and right LEDs respectively, based on whether it is passed `true` or `false`. It works exactly as in `ex01_LED` **TODO** *Do we want to provide an example for this?*, so look there if you want to use the LED.
+These functions turn on and off the left and right LEDs respectively, based on whether it is passed `true` or `false`. **TODO** *Do we want to provide an example for this?*, so look there if you want to use the LED.
 
 ## `lcd#`
 
@@ -57,7 +57,7 @@ These functions will return the distance (in meters) from the left or right obst
 
 ### Exercise 4.2.1
 
-**TODO** *This would be a good place to have them connect the LEDs with the obstacle sensors
+**TODO** *This would be a good place to have them connect the LEDs with the obstacle sensors*
 
 - Start by copying the "empty" program from ["Robot Programming Introduction"](/robot_programming_introduction.html) into your ~~Arduino IDE~~, and saving it in a sensible place.
 - Write a short program that will print "Left Sensor Activated" when the left sensor is activated, "Right Sensor Activated" when the right sensor is activated, and "Both Sensors Activated" when both sensors are activated on the LCD on the robot.
