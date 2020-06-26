@@ -82,7 +82,7 @@ class BankAccount {
 ```
 
 {{ site.data.alerts.tip }}
-You can also declare a class's variables and functions to be `private`, which will be covered later.
+You can also declare a class's variables and functions to be <code>private</code>, which will be covered later.
 {{ site.data.alerts.end }}
 
 ## Constructors
@@ -243,7 +243,7 @@ class BankAccount {
 Now that these variables are private, our object is actually fairly useless right now. We left the constructor public, so we can create new objects, but all our data is inaccessible from outside the class because it's declared private. To make our object useful, we'll introduce member functions, which define actions that can be performed on or with the member variables.
 
 {{ site.data.alerts.tip }}
-Consider what behavior a `BankAccount` should exhibit. What sorts of actions are necessary? Think a minute and then read on!
+Consider what behavior a <code>BankAccount</code> should exhibit. What sorts of actions are necessary? Think a minute and then read on!
 {{ site.data.alerts.end }}
 
 

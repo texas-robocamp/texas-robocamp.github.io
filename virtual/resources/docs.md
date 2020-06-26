@@ -8,6 +8,28 @@ permalink: docs.html
 
 This page contains a list of all the functions you'll be using when working with the robot this week. As programmers, we call these kinds of pages **Documentation**, because they document what everything means and how it is used. Feel free to refer back to this page to check up on what functions might be useful for your programs as you perform the exercies.
 
+
+## C++ Documentation
+
+### Logical Operators
+
+| Logical Operator | Meaning             | Example of True Statement |
+|---|---|:---:|
+|`>`   | greater than                 | `5 > 4`                 |
+|`>=`   | greater than or equal to     | `5 >= 5`                |
+|`<`   | less than	                   | `2 < 5`                 |
+|`<=`   | less than or equal to        | `2 <= 3`                |
+|`==`   | is exactly the same as       | `3 == 3`                |
+|`!=`   | is not the same as           | `3 != 5`                |
+
+### Conditional Operators
+
+| Conditional Operator | Meaning | Example of True Statement |
+| :--- | :--- | :---: |
+| `&&` | Both conditions must be true | `(2 > 1) && (5 != 0)` |
+| `||` | Either condition must be true | `(1 > 2) || (5 != 0)` |
+| `!` | True if the condition is false | `!(1 > 2)` |
+
 ## Robot Documentation
 These are the functions available to you for working with the robot:
 
