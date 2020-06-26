@@ -110,7 +110,7 @@ roslaunch robocamp empty_camp.launch
 Rosrun commands look like this:
 
 ```
-rosrun <package_name> <file_name>
+rosrun <package_name> <node_name>
 ```
 
 One common rosrun you'll probably be using is
@@ -118,7 +118,12 @@ One common rosrun you'll probably be using is
 ```
 rosrun robocamp teleop_robot
 ```
-**TOOD** *kinda placeholder too*
+
+Our generator script `create-package` will always make the name of your node `node`, so when you run your code, you'll do something like
+
+```
+rosrun ex_6_1_2 node
+```
 
 ### bool ros::Rate::sleep()
 

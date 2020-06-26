@@ -48,7 +48,8 @@ Let's explore what's going on here.
 #include "botnroll/botnroll_wrapper.h"
 ```
 
-Hopefully these first three lines should seem vaguely familar - we're once again **including** other libraries to work with our code. In this case, the libraries we are including are the ROS libraries, and the robot libraries we've written to help you control your robot.
+Hopefully these first lines should seem vaguely familiar - we're once again **including** other libraries to work with our code. In this case, the libraries we are including are the ROS libraries, and the robot libraries we've written to help you control your robot.
+
 
 ```cpp
 int main(int argc, char **argv) {
@@ -124,34 +125,45 @@ Although you're still writing code in C++, we will be using a different build sy
 
 We've built a custom script for your to generate new ROS programs for you. To create a new file, make sure you are in your catkin workspace, and do:
 
+
 {{site.data.alerts.terminal_commands}}
-TODO
+./create-package exercise_name
 {{site.data.alerts.terminal_commands_end}}
 
-You should see **TODO** *What do they see*. If you don't see this, make sure you ask a counselor for help!
+You'll replace *exercise_name* with what you want to name your file. To keep track of your files, we recommend naming them similarly to how we've named your exercises. For example, this first exercise is exercise 4.1.1, so we would do
+
+```
+./create_package ex_4_1_1
+```
+
+You should see a new folder appear inside of your catkin workspace named ex_4_1_1. Inside of this folder will be three files: CMakeLists.txt, package.xml, and src.
+
+Inside src, you should see ex_4_1_1_node.cpp. This is where you will write your code! By default, we've filled it with the boilerplate ROS program we showed you at the beginning of this page.
 
 Next, we'll want to build our program. To do this, do
 
 {{site.data.alerts.terminal_commands}}
-catkin build \<exercise_name\>
+catkin build ex_4_1_1
 {{site.data.alerts.terminal_commands_end}}
+
+{{site.data.alerts.tip}}
+The Gazebo simulator is very complex, so it might slow down your computer. You'll want to make sure it is not running when you run <code>catkin build</code> to make the build go faster.
+{{site.data.alerts.end}}
 
 In order to use the robot, you'll need to **roslaunch** a gazebo simulation. For the first few exercises, we'll be using the open world that we've built for you. To launch it, you'll run a similar roslaunch command to the one you ran at the beginning of the camp:
 
-{{site.alerts.terminal_commands}}
+{{site.data.alerts.terminal_commands}}
 roslaunch robocamp empty_camp.launch
-{{site.alerts.terminal_commands_end}}
+{{site.data.alerts.terminal_commands_end}}
 
 To run **your** code, you'll do the **rosrun** command, which we also mentioned earlier. For this specific example, you'll do:
 
 ```
-rosrun <exercise_name> <file_name>
+rosrun ex_4_1_1 node
 ```
 
-**TODO** *Modify this so that we're using specific examples here*
-
 {{site.data.alerts.tip}}
-The Gazebo simulator is very complex, so it might slow down your computer. You'll want to make sure it is not running when you run <code>catkin build</code> to make the build go faster.
+By default, we've made it so that the name of your node will always just be <code>node</code>. The only thing that will change is the name of the package, which will always be the argument you pass into <code>create-package</code>
 {{site.data.alerts.end}}
 
 If you ever need a refresher on how all of this works, feel free to go back to the [documentation](docs.html)!
@@ -160,16 +172,11 @@ If you ever need a refresher on how all of this works, feel free to go back to t
 
 - Write your first Hello World program on the robot!
 
-- Create a new progam **TODO** *However that works*
-
-- Copy the short program above into your package to set up your program, and save your program inside your workspace. Just like the other exercises, give your program and the folder you work in the same name. **TODO** *This might be obsolete depending on how the compiling section ends up*
-
 - Make this program say "Hello World!" on the first line in the LCD, and "Texas RoboCamp!" on the second line.
-
 
 ## Sleep
 
-One function that you will find helpful this week is `sleep`. This is a function of the `ros::Rate` class, and allows for your program to wait for a short period of time. Although the `sleep` function doesn't have any parameters - this is because it uses the `frequency` member variable in the `ros::Rate` class .
+One function that you will find helpful this week is `sleep`. This is a function of the `ros::Rate` class, and allows for your program to wait for a short period of time. The `sleep` function doesn't have any parameters - this is because it uses the `frequency` member variable in the `ros::Rate` class.
 
 ```cpp
 ros::Rate::Rate(double frequency)
