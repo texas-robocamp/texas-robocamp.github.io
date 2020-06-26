@@ -13,7 +13,7 @@ Now that you've learned the basics of C++, we can move on to programming on the 
 ## A Brief Introduction to ROS
 You will be using the **Robot Operating System** (ROS) to develop software for your robot. ROS is an open-source meta-operating system for robots which is used around the world for robotics software development and research. 
 
-We've developed software for you to use ROS without needing to explore the complexities of this system, but if you're interested in exploring ROS after the camp, their [website](http://wiki.ros.org) provides many tutorials and has a vast community of developers.
+We've developed software for you to use ROS without needing to explore the complexities of this system, but if you're interested in exploring ROS after the camp, their [website](http://wiki.ros.org) provides many tutorials and has a vast community of developers. Feel free to check it out after the camp to learn more about how ROS works!
 
 ### A Boilerplate ROS Program
 
@@ -118,13 +118,51 @@ one.lcd1("How are you today?");
 one.lcd2("I'm doing great thanks");
 ```
 
+## Compiling and Running a ROS Program
+
+Although you're still writing code in C++, we will be using a different build system to turn our ROS code into code that can be executed by your computer. You might remember that we mentioned **catkin workspaces** before you began the camp - we're going to start working in them now.
+
+We've built a custom script for your to generate new ROS programs for you. To create a new file, make sure you are in your catkin workspace, and do:
+
+{{site.data.alerts.terminal_commands}}
+TODO
+{{site.data.alerts.terminal_commands_end}}
+
+You should see **TODO** *What do they see*. If you don't see this, make sure you ask a counselor for help!
+
+Next, we'll want to build our program. To do this, do
+
+{{site.data.alerts.terminal_commands}}
+catkin build \<exercise_name\>
+{{site.data.alerts.terminal_commands_end}}
+
+In order to use the robot, you'll need to **roslaunch** a gazebo simulation. For the first few exercises, we'll be using the open world that we've built for you. To launch it, you'll run a similar roslaunch command to the one you ran at the beginning of the camp:
+
+{{site.alerts.terminal_commands}}
+roslaunch robocamp empty_camp.launch
+{{site.alerts.terminal_commands_end}}
+
+To run **your** code, you'll do the **rosrun** command, which we also mentioned earlier. For this specific example, you'll do:
+
+```
+rosrun <exercise_name> <file_name>
+```
+
+**TODO** *Modify this so that we're using specific examples here*
+
+{{site.data.alerts.tip}}
+The Gazebo simulator is very complex, so it might slow down your computer. You'll want to make sure it is not running when you run <code>catkin build</code> to make the build go faster.
+{{site.data.alerts.end}}
+
+If you ever need a refresher on how all of this works, feel free to go back to the [documentation](docs.html)!
+
 ### Exercise 4.1.1
 
 - Write your first Hello World program on the robot!
 
 - Create a new progam **TODO** *However that works*
 
-- Copy the short program above into your package to set up your program, and save your program inside your workspace. Just like the other exercises, give your program and the folder you work in the same name.
+- Copy the short program above into your package to set up your program, and save your program inside your workspace. Just like the other exercises, give your program and the folder you work in the same name. **TODO** *This might be obsolete depending on how the compiling section ends up*
 
 - Make this program say "Hello World!" on the first line in the LCD, and "Texas RoboCamp!" on the second line.
 

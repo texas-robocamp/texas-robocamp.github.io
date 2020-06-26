@@ -13,13 +13,6 @@ permalink: first_few_functions.html
 
 We've gone ahead and included a separate page with all the documentation for using the robot [here](docs.html), but we'll be introducing you to the various functions our robot as they become useful. Feel free to come back to this page or the documentation to check up on what these functions do.
 
-
-{{ site.data.alerts.tip }}
-
-There are a handful of functions that you're simply unlikely to ever use on the robot. Most are documented in the Software Manual, though some are not, and are documented <a href="/less_used_functions.html">here</a>. Some of those functions appear in the above list.
-
-{{ site.data.alerts.end }}
-
 ## `LEDs`
 
 ```cpp
@@ -57,12 +50,18 @@ These functions will return the distance (in meters) from the left or right obst
 
 ### Exercise 4.2.1
 
-**TODO** *This would be a good place to have them connect the LEDs with the obstacle sensors*
+**TODO** *Are we doing thresholding then? I'm thinkning for here we just tell them to print if sensor > 5.0 but then in the next exercise we have them figure out good thresholding later.*
 
 - Start by copying the "empty" program from ["Robot Programming Introduction"](/robot_programming_introduction.html) into your ~~Arduino IDE~~, and saving it in a sensible place.
 - Write a short program that will print "Left Sensor Activated" when the left sensor is activated, "Right Sensor Activated" when the right sensor is activated, and "Both Sensors Activated" when both sensors are activated on the LCD on the robot.
+  - For this program, you'll be launching a new world. This launch file uses the same robocamp package, but the file name is now **TODO** *filename*
 
 {% include callout_red_cup.html task="[Exercises 4.2.1 - 4.2.5]" %}
+
+
+### Exercise 4.2.2
+
+- Instead of just printing which sensor is activated, turn on the corresponding LED to indicate which obstacle sensor has been triggered.
 
 ## Next Step
 

@@ -8,9 +8,11 @@ permalink: line_following.html
 
 In this tutorial, you're going to make the robot follow a line on the ground.
 
+You'll be using the racetrack.launch launch file for these exercises.
+
 At the end, you will be invited to race the other groups.
 
-Awesome.
+*Awesome.*
 
 ## Exercise 7.1.1 - Automatically Finding the Line
 

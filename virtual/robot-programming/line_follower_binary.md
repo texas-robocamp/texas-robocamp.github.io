@@ -66,7 +66,7 @@ Each of those blocks is hooked up to a separate channel of the ADC. Consequently
 
 ### The Line Follower Test Target
 
-- Launch the target world.
+- You'll be using the **TODO** *filename* launch file for these exercises.
 
 ### Program the Exercise
 
@@ -78,12 +78,12 @@ Here's what your program should do.
 - Print a space following each value from the line follower.
 - Print a new line at the end of the 8 values.
 
-**TODO** *How do we want them to print? We could just go on the LCD but that might clutter the whole thing?*
+**TODO** *How do we want them to print? We could just go on the LCD but that might clutter the whole thing? We need to test this*
 
 When you hook this up, the numbers are going to scream past on the screen really quickly, so we suggest adding a `sleep` after the for loop to make everything much easier to read.
 
 
-*I think this is still true?*
+*I think this is still true? Need to test this*
 
 {{ site.data.alerts.tip }}
 <ul>
@@ -100,7 +100,7 @@ The easiest way to implement this is with a for loop and the `int readAdc(byte)`
 
 ### Try the Line Follower
 
-- Move the robot around under the line target. **TODO** *explain how to do this*
+- Move the robot around under the line target. You'll want to **rosrun** the teleop_botnroll executable for this!
 - You should notice that the numbers where the black line is present are different from the numbers where there is no black.
   - How are they different?
 
