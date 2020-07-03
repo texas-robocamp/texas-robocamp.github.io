@@ -6,7 +6,7 @@ sidebar: tutorials
 permalink: functions.html
 ---
 
-A <b>function</b> is a group of instructions. Often, functions are used to organize code by breaking long programs into shorter functions that are combined into the longer program.
+A <b>function</b> is a group of instructions. Often, functions are used to organize code by breaking long programs into shorter functions that together make up the composition of the longer program.
 
 We might have a `getLetter` function that asks the user for a lowercase letter, or an `averageNumbers` function that averages a list of numbers.
 
@@ -26,7 +26,7 @@ We begin by declaring the <b>return type</b> of main to be an integer. This tell
 
 Usually, this is accomplished through a <b>return statement</b>.
 
-`main()` generally returns a 1 if there were an error and 0 if the program completes successfully.
+`main()` generally returns a 1 if there was an error and 0 if the program completes successfully.
 
 We'll talk more about return types soon.
 
