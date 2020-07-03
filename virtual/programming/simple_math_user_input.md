@@ -6,13 +6,13 @@ sidebar: virtual
 permalink: simple_math_user_input.html
 ---
 
+Let's look at an example C++ program. This program will ask the user their weight on Earth, store that information, convert that weight to their weight on the moon, and then print their moon weight.
+
 An object that weighs 1.0 pounds on Earth would weigh 0.1654 pounds on the moon.
 
-In C++, multiplication is represented with the `*` symbol.
+In C++, multiplication is represented with the * symbol.
 
-This program will ask the user their Earth weight, store that information, do the conversion, and then print their moon weight.
-
-The program will save all the numbers it needs in **variables**. A variable stores a number or a mathematical formula.
+The program will save all the numbers it needs in <b>variables</b>. A variable stores a number or a mathematical formula.
 
 For example:
 
@@ -144,7 +144,7 @@ Operator |	Operation
 /	     | division
 %	     | modulus (remainder)
 
-When you divide two integers, the remainder of the two numbers is left out. This is called **truncation** and the value was **truncated**.
+When you divide two integers, the remainder of the two numbers is left out. This is called **truncation**.
 
 In integer division., `5 / 2` will give you 2, not 2.5. If you want the full value, you must use floats.
 
@@ -159,7 +159,7 @@ rem = 5%2;
 
 **TODO** *Should we mention definition vs assignment? I feel like that's important information*
 
-This is very useful in programming, since you can easily decide is a number is even, odd, or a multiple of some other number.
+This is very useful in programming, since you can easily decide if a number is even, odd, or a multiple of some other number.
 
 ## Exercise 3.2.2:
 

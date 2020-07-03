@@ -6,7 +6,7 @@ sidebar: virtual
 permalink: functions.html
 ---
 
-A **function** is a group of instructions. Usually, functions are used to organize code by breaking long programs into shorter functions that are combined into the longer program.
+A **function** is a group of instructions. Usually, functions are used to organize code by breaking long programs into shorter functions that together make up the composition of the longer program.
 
 We might have a `getLetter` function that asks the user for a lowercase letter, or an `averageNumbers` function that averages a list of numbers.
 
@@ -26,7 +26,7 @@ We begin by declaring the **return type** of main to be an `int` (integer). This
 
 Usually, this is accomplished through a **return statement**.
 
-`main()` generally returns a 1 if there were an error and 0 if the program completes successfully. We'll talk more about return types soon.
+`main()` generally returns a 1 if there was an error and 0 if the program completes successfully. We'll talk more about return types soon.
 
 We then write the name of the function, main, and follow it with a set of parentheses.
 
@@ -238,7 +238,7 @@ int main(){
    float numToSquare, theSquaredNumber;
 
    numToSquare = 5.5;
-   otherNumToSquare2 = 4.4;
+   otherNumToSquare = 4.4;
    theSquaredNumber = squareANum(numToSquare);  //catch the returned value
    squareANum(otherNumToSquare); //executes, but we lose the value. We never caught it!
    cout << numToSquare << " squared equals " << theSquaredNumber << endl;
