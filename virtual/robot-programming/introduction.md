@@ -21,13 +21,14 @@ Here's a simple, brief program that you can copy as a sort of "empty" program to
 
 ```cpp
 #include <ros/ros.h>
-#include "botnroll/botnroll_wrapper.h"
+#include <unistd.h>
+#include "texas_robocamp/texbot_wrapper.h"
 
 int main(int argc, char **argv) {
     
     ros::init(argc, argv, "robot");
 
-    BnrOneA bot;
+    TexBot bot;
 
     while(ros::ok()) {
         //Your code goes here!    
@@ -45,10 +46,11 @@ Let's explore what's going on here.
 
 ```cpp
 #include <ros/ros.h>
-#include "botnroll/botnroll_wrapper.h"
+#include <unistd.h>
+#include "texas_robocamp/texbot_wrapper.h"
 ```
 
-Hopefully these first lines should seem vaguely familiar - we're once again **including** other libraries to work with our code. In this case, the libraries we are including are the ROS libraries, and the robot libraries we've written to help you control your robot.
+Hopefully these first lines should seem vaguely familiar - we're once again **including** other libraries to work with our code. In this case, the libraries we are including are the ROS libraries, libraries that provide access to the OS, and the robot libraries we've written to help you control your robot.
 
 
 ```cpp
@@ -57,7 +59,6 @@ int main(int argc, char **argv) {
 
 This function should look somewhat familiar as well - it's the `main` function! Unlike previous `main` functions you've seen so far, this one has two parameters, argc and argv. These can be used to pass in arguments from your terminal, but since we won't ever be using these arguments, you don't need to worry about them.
 
-**TODO** *Should we explain argc and argv? They're never gonna pass in args this way so I feel like it's just extra info that would be confusing..*
 
 ```cpp
 ros::init(argc, argv, "robot");
@@ -66,10 +67,10 @@ ros::init(argc, argv, "robot");
 This function starts up our ROS process. ROS calls these **nodes**, and allows for arguments to be passed in via the command line with `argc` and `argv`. The last argument defines the name of the node - in this case, the name is "robot".
 
 ```cpp
-BnrOneA bot;
+TexBot bot;
 ```
 
-Here, we're creating an instance of the `BnrOneA` object, and calling it `bot`. 
+Here, we're creating an instance of the `TexBot` object, and calling it `bot`. 
 
 This object is a **class** just like the `BankAccount` class you developed earlier in the programming portion of this camp, and much like the `BankAccount` class, it contains a number of variables and functions, some of which are private and some of which are public. We'll explore these in more detail later on.
 
@@ -83,7 +84,7 @@ This should seem familiar as well - it's another **while loop**. Whereas earlier
 ros::spinOnce();
 ```
 
-This function lets our node update its information. For our purposes, it lets the BnrOneA object update its sensor data so that we can be aware of what's going on in the simulation. Without this function, our node would have no idea what is going on in the simulator, so it is vital that you leave this line here. We recommend writing all of your code before this line.
+This function lets our node update its information. For our purposes, it lets the `TexBot` object update its sensor data so that we can be aware of what's going on in the simulation. Without this function, our node would have no idea what is going on in the simulator, so it is vital that you leave this line here. We recommend writing all of your code before this line.
 
 ```cpp
 return 0;
@@ -176,29 +177,15 @@ If you ever need a refresher on how all of this works, feel free to go back to t
 
 ## Sleep
 
-One function that you will find helpful this week is `sleep`. This is a function of the `ros::Rate` class, and allows for your program to wait for a short period of time. The `sleep` function doesn't have any parameters - this is because it uses the `frequency` member variable in the `ros::Rate` class.
-
 ```cpp
-ros::Rate::Rate(double frequency)
+int usleep(useconds_t useconds)
 ```
 
-This is the constructor for an instance of the `ros::Rate` class. Like we said earlier, it has a single parameter, `double frequency`. As a reminder, the unit used for frequencies is Hz, which is 1/seconds.This means that the larger the frequency is, the shorter the sleep time will be.
+One function that you will find helpful this week is `usleep`. This is a function of the unistd library, which gives us access to some of the operating system.
 
-{{ site.data.alerts.tip }}
-Did you notice the <em>namespace</em> <code>ros::</code> for this constructor? You'll need to make sure you type the namespace when you create an instance of a Rate object, just like we do with <code>ros::init</code>
-{{ site.data.alerts.end }}
+Calling this function will cause your program to wait for `useconds` milliseconds.
 
-```cpp
-bool ros::Rate::sleep()
-```
-
-This function pauses the program for any remaining time left in the cycle. 
-
-Basically, you want to use `sleep` whenever you want the robot to enter a state for a specified period of time, or when you want to slow down and break down a program so you can see what the robot is doing. Maybe the robot should drive forward for 1 second and then stop, or maybe the robot should simply take a pause after doing something so you can see where one thing stops and another begins. `sleep` allows you do do this.
-
-{{ site.data.alerts.tip }}
-sleep time = 1/frequency seconds 
-{{ site.data.alerts.end }}
+You'll want to use `usleep` whenever you want to keep a robot in a certain state for some time, or if you want to slow down your program to debug information.
 
 
 ### Exercise 4.1.2

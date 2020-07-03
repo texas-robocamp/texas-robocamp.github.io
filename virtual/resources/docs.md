@@ -42,6 +42,12 @@ g++ HelloWorld.cpp -o Hello
 | `||` | Either condition must be true | `(1 > 2) || (5 != 0)` |
 | `!` | True if the condition is false | `!(1 > 2)` |
 
+
+### int usleep(useconds_t useconds)
+
+This function pauses the program for `useconds` milliseconds. 
+
+
 ## Robot Documentation
 These are the functions available to you for working with the robot:
 
@@ -57,7 +63,7 @@ Returns the distance between the left obstacle sensor and the nearest obstacle. 
 
 Returns the distance between the right obstacle sensor and the nearest obstacle. Output is from [0.1,10.0]
 
-### int readAdc(int sensorNum)
+### int readLineSensor(int sensorNum)
 
 Returns the sensor value currently being read at the `sensorNum` [0-7] position of the line sensor. The value returned is from [0,255].
 
@@ -123,17 +129,6 @@ Our generator script `create-package` will always make the name of your node `no
 
 ```
 rosrun ex_6_1_2 node
-```
-
-### bool ros::Rate::sleep()
-
-This function pauses the program for any remaining time left in the `Rate` cycle. The time for this is defined by the constructor for the instance of `ros::Rate` being used.
-
-As an example:
-
-```cpp
-ros::Rate r(10);
-r.sleep();
 ```
 
 

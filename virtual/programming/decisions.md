@@ -214,8 +214,16 @@ if ((newBalance < fee) || (!(newBalance <= accountBalance))){
 }
 ```
 
+Here's a quick overview of all of the conditional operators. We've also included this in the documentation for future reference.
+
+| Conditional Operator | Meaning | Example of True Statement |
+| :--- | :--- | :---: |
+| `&&` | Both conditions must be true | `(2 > 1) && (5 != 0)` |
+| `||` | Either condition must be true | `(1 > 2) || (5 != 0)` |
+| `!` | True if the condition is false | `!(1 > 2)` |
+
 {{site.data.alerts.tip}}
-Did you notice that the last two conditional statements are testing for the same conditions? This is because <code>a > b</code> is the same thing as <code>!(a <= b)</code>. Try plugging in values for <code>a</code> and <code>b</code> to see why!
+Did you notice that the last two conditional statements were testing for the same conditions? This is because <code>a > b</code> is the same thing as <code>!(a <= b)</code>. Try plugging in values for <code>a</code> and <code>b</code> to see why!
 {{site.data.alerts.end}}
 
 ### Exercise 3.5.2:
