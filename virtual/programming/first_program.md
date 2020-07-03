@@ -32,10 +32,14 @@ Ok, we're ready to write our first program!
 cd ~/exercises
 mkdir ex04_Hello_World
 cd ex04_Hello_World
-sublime_text &
+code .
 {{ site.data.alerts.terminal_commands_end }}
 
-Copy the following program into Sublime.
+{{site.data.alerts.tip}}
+The line <code>code .</code> is how we can open up VSCode via the command line interface. The . symbol means that we are talking about the current working directory - in this case, that would be ex04_Hello_World
+{{site.data.alerts.end}}
+
+Copy the following program into VSCode.
 
 Save the file as ~/exercises/ex04_Hello_World/HelloWorld.cpp
 
