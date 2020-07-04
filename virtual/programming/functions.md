@@ -1,11 +1,3 @@
----
-title: "Functions"
-tags: [c++]
-keywords: c++
-sidebar: virtual
-permalink: functions.html
----
-
 A **function** is a group of instructions. Usually, functions are used to organize code by breaking long programs into shorter functions that are combined into the longer program.
 
 We might have a `getLetter` function that asks the user for a lowercase letter, or an `averageNumbers` function that averages a list of numbers.

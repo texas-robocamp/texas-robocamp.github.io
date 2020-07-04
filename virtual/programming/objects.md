@@ -1,11 +1,3 @@
----
-title: "Classes and Objects"
-tags: [c++]
-keywords: c++
-sidebar: virtual
-permalink: objects.html
----
-
 ## Classes
 
 Sometimes we want to group different kinds of data together.

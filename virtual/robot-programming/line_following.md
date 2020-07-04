@@ -1,11 +1,3 @@
----
-title: "Line Following"
-tags: [robot programming]
-keywords:
-sidebar: virtual 
-permalink: line_following.html
----
-
 In this tutorial, you're going to make the robot follow a line on the ground.
 
 You'll be using the racetrack.launch launch file for these exercises.

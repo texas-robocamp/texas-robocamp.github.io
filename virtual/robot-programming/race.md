@@ -1,11 +1,3 @@
----
-title: "Challenge: Race!"
-tags: [robot programming]
-keywords:
-sidebar: virtual 
-permalink: race.html
----
-
 Now we're going to race our robot against each other.
 
 ## Challenge 8: Race!

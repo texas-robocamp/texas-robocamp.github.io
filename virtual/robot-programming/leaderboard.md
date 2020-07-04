@@ -1,11 +1,3 @@
----
-title: "Leaderboard"
-tags: [robot programming]
-keywords: leaderboard
-sidebar: virtual
-permalink: leaders.html
----
-
 User | Proportional Time | PD Time | PID Time |
 ---- | :---: | :---: | :---: |
 Kevin | 1:20 | 0:50 | 0:30 |

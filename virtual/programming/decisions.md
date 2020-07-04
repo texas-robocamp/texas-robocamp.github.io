@@ -1,12 +1,3 @@
----
-title: "Decisions"
-tags: [c++]
-keywords: c++
-sidebar: virtual
-permalink: decisions.html
----
-
-
 In this section, we're going to learn how to control the flow of a C++ program. Sometimes, you want your program to do one thing if certain conditions are met and to do another thing if other conditions are met. We make decisions and control the flow of the program using logical expressions and if-else statements.
 
 Earlier, we asked you how the `withdraw` function might be different from the `deposit` function for your `BankAccount` class. The difference is that you cannot withdraw more money than you have! 

@@ -1,11 +1,3 @@
----
-title: "Simple Math and User Input"
-tags: [c++]
-keywords: c++
-sidebar: virtual
-permalink: simple_math_user_input.html
----
-
 An object that weighs 1.0 pounds on Earth would weigh 0.1654 pounds on the moon.
 
 In C++, multiplication is represented with the `*` symbol.

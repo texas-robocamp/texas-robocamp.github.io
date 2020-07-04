@@ -1,11 +1,3 @@
----
-title: "The Line Follower"
-tags: [Binary]
-keywords:
-sidebar: virtual 
-permalink: line_follower.html
----
-
 In this tutorial, we're going to do quite a lot, and it's going to be challenging. We've given you quite a lot of direction here, so you should be able to figure out how to do it. You're going to need a lot of help from the counselors. This is the hardest program you've written so far this camp. It will be challenging, but that's okay! This is how you learn.
 
 We're going to tell you what this program does so you can see where this is all going.

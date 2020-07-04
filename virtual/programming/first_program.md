@@ -1,11 +1,3 @@
----
-title: "First Program: Hello World"
-tags: [c++]
-keywords: c++
-sidebar: virtual
-permalink: first_program.html
----
-
 {% include callout_synchronize.html comment="Do this section <strike>at the pace of the slower partner, so both of</strike> slowly, so you completely understand it. We will be lecturing <em>who will be lecturing? If it's counselors, this is a piece of curricula we need to be on the same page about. May want to make a script.</em> along with students performing the tutorial, so if you are ahead and have a question, please wait for the <strike>class</strike> room to catch up or for a period when there is no lecturing." %}
 
 It's customary when you learn a new programming language, to write a program to display the text "Hello World." Displaying text is often referred to as "printing" it, so we're going to learn how to print "Hello World".

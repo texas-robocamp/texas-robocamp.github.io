@@ -1,12 +1,3 @@
----
-title: "Repetition"
-tags: [c++]
-keywords: c++
-sidebar: virtual
-permalink: repetition.html
----
-
-
 Sometimes we want our code to execute multiple times. It would be really unfortunate if we had to keep typing the same exact lines of code again and again—what if we didn't know exactly how many times we wanted the code to repeat? Fortunately, we have **loops** to help us out. A loop is a section of code that the computer runs over and over again until it reaches some stopping criteria. There are two kinds of loops that we will work with: `for` loops and `while` loops.
 
 ## For Loops

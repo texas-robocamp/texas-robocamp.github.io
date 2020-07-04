@@ -1,12 +1,6 @@
----
-title: "Firing Up the Robot"
-tags: [robot]
-keywords: robot 
-sidebar: virtual 
-permalink: robot_startup.html
----
-
-{% include note.html content="There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the next synchronization marker. Don't worry about reading all of this material, and please proceed to the yellow synchronization marker on this page when it is time." %}
+{{site.data.alerts.note}}
+There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the next synchronization marker. Don't worry about reading all of this material, and please proceed to the yellow synchronization marker on this page when it is time.
+{{site.data.alerts.end}}
 
 ## Gazebo Simulator
 

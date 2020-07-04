@@ -1,11 +1,3 @@
----
-title: "Documentation"
-tags: [resource]
-keywords: documentation
-sidebar: virtual
-permalink: docs.html
----
-
 This page contains a list of all the functions you'll be using when working with the robot this week. As programmers, we call these kinds of pages **Documentation**, because they document what everything means and how it is used. Feel free to refer back to this page to check up on what functions might be useful for your programs as you perform the exercies.
 
 

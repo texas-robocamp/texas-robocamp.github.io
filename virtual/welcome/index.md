@@ -1,12 +1,3 @@
----
-title: "Texas RoboCamp"
-keywords: homepage
-tags: [getting_started]
-sidebar: virtual 
-topnav: topnav
-permalink: index.html
----
-
 *As an aside, having a table of contents here looks clunky since we only have one title. We should look into removing it if that's possible*
 
 This site serves as your home base for reference material relating to the Texas RoboCamp and for the camp's tutorials and exercises.

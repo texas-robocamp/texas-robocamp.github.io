@@ -1,11 +1,3 @@
----
-title: "Challenge: Turn and Push"
-tags: [robot programming]
-keywords:
-sidebar: virtual 
-permalink: turn_and_push.html
----
-
 In this tutorial, you will learn a simple way to allow your robot to navigate its environment. Variations of what happens in this paper have been adapted for many robots, including space vehicles and the Roomba vacuum cleaning robot.
 
 ## Grey Walter's Tortoises

@@ -1,14 +1,3 @@
----
-title: "First Few Functions & Exploring the Obstacle Detector"
-tags: [robot programming]
-keywords:
-sidebar: virtual 
-permalink: first_few_functions.html
----
-
-
-
-
 ## Documentation 
 
 We've gone ahead and included a separate page with all the documentation for using the robot [here](docs.html), but we'll be introducing you to the various functions our robot as they become useful. Feel free to come back to this page or the documentation to check up on what these functions do.

@@ -1,11 +1,3 @@
----
-title: "Cloning the Tutorials"
-tags: [cloning]
-keywords: cloning
-sidebar: virtual
-permalink: cloning.html
----
-
 ## Git
 
 Git is a version control system. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Explaining the details of this would ~~waste time~~ **TODO** *Since we're virtual it might be worth actually discussing git for time*, so we're just going to tell you what to type here.

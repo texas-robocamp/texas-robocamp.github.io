@@ -2,13 +2,13 @@ tip: '<div class="alert alert-success" role="alert"><i class="fa fa-check-square
 note: '<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note: </b>'
 important: '<div class="alert alert-warning" role="alert"><i class="fa fa-warning"></i> <b>Important: </b>'
 warning: '<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning: </b>'
+
+callout_red_cup: '<div markdown="span" class="bs-callout bs-callout-danger red-cup"><img class="cup-icon" src="images/cup.svg" /> <b>Red Cup: </b>'
+
 end: '</div>'
 
-terminal_commands: '<div class="alert alert-dark" role="alert">
-                   Run these commands in a terminal:
-                   <pre>'
-terminal_commands_end: '</pre>
-                   </div>'
+terminal_commands: '<div class="alert alert-dark" role="alert">Run these commands in a terminal:<pre>'
+terminal_commands_end: '</pre></div>'
 
 callout_danger: '<div class="bs-callout bs-callout-danger">'
 callout_default: '<div class="bs-callout bs-callout-default">'
@@ -20,3 +20,4 @@ callout_warning: '<div class="bs-callout bs-callout-warning">'
 hr_faded: '<hr class="faded"/>'
 hr_shaded: '<hr class="shaded"/>'
 hr: '<hr />'
+

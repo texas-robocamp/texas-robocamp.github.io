@@ -1,11 +1,3 @@
----
-title: "Arrays"
-tags: [c++]
-keywords: c++
-sidebar: virtual
-permalink: arrays.html
----
-
 ## Arrays
 
 Sometimes we want to store lists of data together in one place. For example, it might be handy to have a list of all your grades from science class. You could go back later and average all the grades in the list together to find out your final grade in science. In C++, such lists are called **arrays**

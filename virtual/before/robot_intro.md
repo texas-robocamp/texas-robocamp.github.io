@@ -1,11 +1,3 @@
----
-title: "Introduction to the Robot"
-tags: [robot]
-keywords: robot introduction
-sidebar: virtual
-permalink: robot_introduction.html
----
-
 ## Say Hello to *Robot Name*
 
 Introducing...*ROBOT NAME!*

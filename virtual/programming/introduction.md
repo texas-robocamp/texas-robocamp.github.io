@@ -1,11 +1,3 @@
----
-title: "Introduction to C++ Programming"
-tags: [c++]
-keywords: c++
-sidebar: virtual 
-permalink: programming_introduction.html
----
-
 ## Overview
 
 C++ is a programming language. It most of the applications you use are written in C++ or a similar language. You will write the programs to control your robot in C++. Like a spoken language, a programming language has a vocabulary and grammar rules. A C++ program can be thought of as a list of instructions, in order, for the computer to carry out.

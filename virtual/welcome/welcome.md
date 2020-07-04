@@ -1,11 +1,3 @@
----
-title: "Welcome!"
-tags: [welcome]
-keywords: welcome
-sidebar: virtual 
-permalink: welcome.html
----
-
 First, welcome to camp! ~~You should be seated at a workstation next to your partner. If you have not yet taken the time to introduce yourselves to each other, spend a minute or two to get to know each other. You'll be working together all week.~~ 
 
 **TODO** *We're gonna need a new intro*
