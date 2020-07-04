@@ -12,7 +12,7 @@ void ledLeft(boolean state)
 void ledRight(boolean state)
 ```
 
-These functions turn on and off the left and right LEDs respectively, based on whether it is passed `true` or `false`. **TODO** *Do we want to provide an example for this?*, so look there if you want to use the LED.
+These functions turn on and off the left and right LEDs respectively, based on whether it is passed `true` or `false`. 
 
 ## `lcd#`
 

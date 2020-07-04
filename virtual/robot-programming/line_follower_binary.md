@@ -32,27 +32,13 @@ Just kidding. We want you to find the threshold for yourself. Ours is much bigge
 
 ## Back to the Robot Documentation
 
-The `Robot` class still has a significant amount of functionality that we haven't yet touched, one of those is the use of the analog-to-digital converter
+The `TexBot` class still has a significant amount of functionality that we haven't yet touched, one of those is the use of the analog-to-digital converter
 
-### `int readAdc(int sensorNum)`
+### `int readLineSensor(int sensorNum)`
 
-On our real robot, a line sensor has an 8-channel analog to digital converter on it. This allows us to hook electronics components up to the robot and read information off of them. The data comes in as analog data; that is to say, electrical voltages. An **analog-to-digital (ADC)** converter converts these voltages to digital information, allowing us to use it in our computer programs.
+On our robot, we use a greyscale camera to develop a line sensor. We take the image from the sensor, and split it up into eight columns - one for each array position - then return the average amount of intensity for each section.
 
-{{ site.data.alerts.tip }}
-<ul>
-<li>You can think of the analog data sort of like a dimmer switch on a light. More electricity makes the light brighter. The problem for the microcontroller is that it doesn't work with voltages as analog circuits do. It works with binary, discrete representations. The <b>analog-to-digital (ADC)</b> will convert the voltage into a number that can be understood by the computer.</li>
-</ul>
-{{ site.data.alerts.end }}
-
-For the purposes of our simulation, we actually use a camera to visualize the ground, and then split up the image into eight separate greyscale rectangles - one for each index of the line sensor.
-
-
-## The Line Follower Device
-**TODO** *If we want them to see the line follower, we're gonna need to make the camera a different color or something, right now it's just a little grey cube (I think)*
-
-Look under your robot at the line follower. **TODO** *At some point we need to explain basic usage of Gazebo* It has 8 little black blocks on it. These blocks are used to detect how much light us coming up off the ground to the robot.
-
-Each of those blocks is hooked up to a separate channel of the ADC. Consequently, the ADC will read each of them and return a value between 0-1023 *is this still true?*.
+The value `sensorNum` determines which section of the sensor you are getting the intensity for. The range for intensity is [0,255].
 
 ## Exercise 6.1.1
 
@@ -65,7 +51,7 @@ Each of those blocks is hooked up to a separate channel of the ADC. Consequently
 For this exercise we want you to read the values off of the line follower, while running it over the line target. You're going to need to write a short program to do this.
 
 Here's what your program should do.
-- Read each of the values from the line follower using the `readAdc` function(s).
+- Read each of the values from the line follower using the `readLineSensor` function.
 - Print each value ~~onto the USB port using the `Serial.print` functions.~~
 - Print a space following each value from the line follower.
 - Print a new line at the end of the 8 values.
@@ -119,7 +105,7 @@ The next few exercises will build up to a small user interface that will allow y
 - Have `loop` call `printAsterisks`.
 
 ```cpp
-void printAsterisks(BnrOneA robot) {
+void printAsterisks(TexBot robot) {
 
 }
 
@@ -127,7 +113,7 @@ int main(int argc, char **argv) {
     
     ros::init(argc, argv, "robot");
 
-    BnrOneA bot;
+    TexBot bot;
 
     while(ros::ok()) {
 
@@ -141,7 +127,7 @@ int main(int argc, char **argv) {
 ```
 
 {{ site.data.alerts.tip }}
-It's going to be tempting to put a <code>sleep</code> in here somewhere. Do yourself a favor and resist that urge. Your program will work better and look better if you avoid this.
+It's going to be tempting to put a <code>usleep</code> in here somewhere. Do yourself a favor and resist that urge. Your program will work better and look better if you avoid this.
 {{ site.data.alerts.end }}
 
 There's a type that we didn't tell you about way back in ["Simple Math and User Input"](/simple_math_user_input.html) called `char`.
@@ -179,7 +165,7 @@ In practice, we try not to make too many variables global, because this can lead
 ```cpp
 char lineUI[16]; //global variable
 
-void printAsterisks(BnrOneA bot) {
+void printAsterisks(TexBot bot) {
 
   for(int i = 0; i < 16; i++) {
     lineUI[i] = '*';
@@ -234,8 +220,8 @@ Now we're going to write another UI. This should all go into your current progra
 - Add a new global variable, `double thresh`, and set it to zero.
 - In `printAsterisks` print the value of `thresh` on line 2 of the robot's LCD.
 - Add some code to the loop block that responds to button presses. 
-  - When button 1 is pushed, add .01 to `thresh`.
-  - When button 2 is pushed, subtract .01 from `thresh`.
+  - When button 1 is pushed, add 1 to `thresh`.
+  - When button 2 is pushed, subtract 1 from `thresh`.
 - Try it out. The number on the second line should rise when pressing the top button and drop when pressing the lower button.
 
 {% include callout_red_cup.html task="[Exercise 6.1.3]" %}

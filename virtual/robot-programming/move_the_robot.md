@@ -14,6 +14,8 @@ The values of `speedL` and `speedR` range from -100 to 100, where -100 is the ma
 
 Passing in `bot.move(0,0)` will stop the robot.
 
+If you ever lose the robot or want to just move it back to the beginning, push the reset button!
+
 {{ site.data.alerts.tip }}
 You can turn the robot by moving the motors at different speeds. 
 <ul>
@@ -116,7 +118,7 @@ This will let you try different things with the robot's motors to see how the ro
 
 {{ site.data.alerts.tip }}
 <ul>
-<li>Try low values at first. The robot can move faster than you are likely to expect it to move!</li>
+<li>You can use the UI you've made to adjust the speeds of the wheels to see these behaviors!</li>
 </ul>
 {{ site.data.alerts.end }}
 
