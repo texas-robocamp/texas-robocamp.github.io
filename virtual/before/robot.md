@@ -14,16 +14,37 @@ We will be using ROS and the Gazebo simulator to design and test our robot softw
 
 ## Installing Our Codebase
 
-The majority of software is installed via `apt`, which is the **Advanced Package Tool**. Apt is a vital piece of software for Ubuntu, as it manages software updates. You can think of it as a command-line version of an app store you might have on your computer or smartphone.
+### Installing with VirtualBox
 
-We've created an apt package for you to install our codebase onto your Linux machine.
+*TODO describe VirtualBox*
+
+Steps to install:
+
+1. Go to https://www.virtualbox.org/wiki/Downloads.
+2. Download the latest version of VirtualBox for your computer.
+3. Open the installer and follow the on-screen instructions to finish installing VirtualBox.
+4. Download the VirtualBox appliance file through the link we provide. *TODO not sure whether this will be public*
+5. Open the appliance file and click the "Import" button to add the Ubuntu virtual machine to VirtualBox. (When this has finished, you can safely delete the appliance file.)
+
+Once the machine has been added, start it by selecting "Texas RoboCamp 2020" in the left sidebar of VirtualBox and clicking "Start".
+
+{{site.data.alerts.tip}}
+If you are ever asked to log in to the virtual machine, use "bevo" for the username and "robocamp" for the password.
+{{site.data.alerts.end}}
+
+### Installing on an existing Ubuntu installation
+
+The code for this camp requires Ubuntu 18.04. It is not compatible with older or newer versions, such as Ubuntu 20.04. If you do not have Ubuntu 18.04 already installed, we recommend using the VirtualBox installation method above.
+
+However, if you do have Ubuntu 18.04 installed, you can quickly install the packages for the camp. Just open a terminal and type the following command: *TODO the link is not yet public*
 
 {{site.data.alerts.terminal_commands}}
-sudo apt update
-sudo apt install <em>our_package</em>
+wget -O [link TODO]/setup.sh | sudo sh
 {{site.data.alerts.terminal_commands_end}}
 
-**TODO** *This is all placeholder stuff, I imagine installation will not be this easy and we'll need to update the sources list and all that jazz*
+{{site.data.alerts.tip}}
+If you would like to upgrade to a newer version of Ubuntu after the camp, you will need to uninstall the camp code. You can do that by typing this command in a terminal: `sudo apt remove ros-melodic-*`
+{{site.data.alerts.end}}
 
 ## Catkin Workspaces
 
