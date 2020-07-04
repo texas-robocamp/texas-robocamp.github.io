@@ -151,10 +151,10 @@ catkin build ex_4_1_1
 The Gazebo simulator is very complex, so it might slow down your computer. You'll want to make sure it is not running when you run <code>catkin build</code> to make the build go faster.
 {{site.data.alerts.end}}
 
-In order to use the robot, you'll need to **roslaunch** a gazebo simulation. For the first few exercises, we'll be using the open world that we've built for you. To launch it, you'll run a similar roslaunch command to the one you ran at the beginning of the camp:
+In order to use the robot, you'll need to **roslaunch** a gazebo simulation. For the first few exercises, we'll be using the boxed world that we've built for you. To launch it, you'll run a similar roslaunch command to the one you ran at the beginning of the camp:
 
 {{site.data.alerts.terminal_commands}}
-roslaunch robocamp empty_camp.launch
+roslaunch texas_robocamp box_world.launch
 {{site.data.alerts.terminal_commands_end}}
 
 To run **your** code, you'll do the **rosrun** command, which we also mentioned earlier. For this specific example, you'll do:
