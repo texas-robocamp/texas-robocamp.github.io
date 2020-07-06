@@ -1,3 +1,10 @@
+*TODO: Add specific download links for each OS and terminal installation instructions for Linux*<br>
+*TODO: Look into adding mirror links or CDN for the OVA file*<br>
+*TODO: Add instructions about getting a black screen, for which you may have to restart*<br>
+*TODO: Manually install chrome*<br>
+*TODO: source ros on the command line at the beginning, then add it to bashrc during Robot Programming*
+
+
 {{site.data.alerts.note}}
 There is reading material for you to enjoy while you wait for the tutorial to begin. The group section will start at the next synchronization marker. Don't worry about reading all of this material, and please proceed to the yellow synchronization marker on this page when it is time.
 {{site.data.alerts.end}}
@@ -14,11 +21,26 @@ We will be using ROS and the Gazebo simulator to design and test our robot softw
 
 Steps to install:
 
-1. Go to https://www.virtualbox.org/wiki/Downloads.
-2. Download the latest version of VirtualBox for your computer.
-3. Open the installer and follow the on-screen instructions to finish installing VirtualBox.
-4. Download the VirtualBox appliance file through the link we provide. *TODO not sure whether this will be public*
-5. Open the appliance file and click the "Import" button to add the Ubuntu virtual machine to VirtualBox. (When this has finished, you can safely delete the appliance file.)
+1. Make sure you have at least 25 GB of free space on your computer.
+2. Go to https://www.virtualbox.org/wiki/Downloads.
+3. Download the latest version of VirtualBox for your computer.
+4. Open the installer and follow the on-screen instructions to finish installing VirtualBox.
+5. Download the VirtualBox appliance file. https://drive.google.com/file/d/1Pa0S5--T66YkMCJNL-3R6OIck2CiP1e4/view <br>*TODO: remove this, do clean install instead*
+6. Open the appliance file and click the "Import" button to add the Ubuntu virtual machine to VirtualBox. (When this has finished, you can safely delete the appliance file.)
+
+Steps for clean installation of Ubuntu 18.04:
+
+1. Download the Ubuntu 18.04 iso file. https://releases.ubuntu.com/18.04/ubuntu-18.04.4-desktop-amd64.iso
+2. Launch VirtualBox and click "New".
+3. Name the operating system "Texas Robocamp 2020 - Custom".
+4. Make sure Type is set to Linux and Version is set to Ubuntu (64-bit) and press next.
+5. Set memory to 2048 MB.
+6. Set hard drive space to 25GB and leave default values for everything else.
+7. Right click the new VM operating system and click "Settings".
+8. Go to "Storage", then "Controller: SATA", then click the CD icon with a plus and select your ISO file.<br>
+*TODO: Fill in the rest for settting up the VM*<br>
+
+
 
 Once the machine has been added, start it by selecting "Texas RoboCamp 2020" in the left sidebar of VirtualBox and clicking "Start".
 
