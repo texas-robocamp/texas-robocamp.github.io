@@ -14,9 +14,9 @@ A **class** defines a **type** of object, the **variables** inside the object (s
 
 To start an object, type the keyword `class` and then choose a class name.
 
-{{ site.data.alerts.tip }}
+{{site.data.alerts.tip}}
 Though not required, a common convention followed by programmers is to begin class names with an uppercase letter).
-{{ site.data.alerts.end }}
+{{site.data.alerts.end}}
 
 ## A Skeleton of a Class
  For our bank account example, we'll name the class `BankAccount`:
@@ -53,9 +53,9 @@ class BankAccount {
 };
 ```
 
-{{ site.data.alerts.tip }}
+{{site.data.alerts.tip}}
 Notice that the variables are declared in the same way as before, indicating the type and giving them descriptive names.
-{{ site.data.alerts.end }}
+{{site.data.alerts.end}}
 
 ## The Public Keyword
 
@@ -303,6 +303,10 @@ There are a few new things to note:
 
       - In this case, we have our `bobBankAccount` object, followed by a dot, followed by the function call. Just as with the function calls you've made previously, you start with the function name, followed by any arguments wrapped in parentheses.
 
+{{site.data.alerts.callout_red_cup}}
+[Exercise 3.4.1]
+{{site.data.alerts.end}}
+
 ### Exercise 3.4.2:
 
 - Add another bank account to the example above.
@@ -314,7 +318,9 @@ There are a few new things to note:
 You'll need to write the withdraw function. How is it similar to the deposit function? How is it different? What happens if you attempt to withdraw an amount greater than your balance?
 {{ site.data.alerts.end }}
 
-{% include callout_red_cup.html task="[Exercise 3.4.1, Exercise 3.4.2]" %}
+{{site.data.alerts.callout_red_cup}}
+[Exercise 3.4.2]
+{{site.data.alerts.end}}
 
 ### Exercise 3.4.3:
 
@@ -331,7 +337,10 @@ The fields should include:
 
 You are welcome to add some extra fields of your own. Create a default constructor, some methods to set the fields, and a method to print the information in the fields. Then make some instances of the superhero class using your favorite superheroes for inspiration, set the fields appropriately, and print their information.
 
-{% include callout_red_cup.html task="[Exercise 3.4.3]" %}
+
+{{site.data.alerts.callout_red_cup}}
+[Exercise 3.4.3]
+{{site.data.alerts.end}}
 
 ## Next Step
 

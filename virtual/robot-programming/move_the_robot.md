@@ -33,9 +33,13 @@ You can turn the robot by moving the motors at different speeds.
 We recommend setting both speeds to 25 for this exercise so you can easily observe the stopping behavior as well as master its usage before crashing your robot into the wall at top speed.
 {{ site.data.alerts.end }}
 
-{% include callout_red_cup.html task="[Exercise 4.3.1]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.1]
+{{ site.data.alerts.end }}
 
-{% include note.html content="Counselors should take students out to the bridge or to a wall in the 3rd floor lab to observe that this behaves properly before proceeding." %}
+{{ site.data.alerts.note }}
+Counselors should take students out to the bridge or to a wall in the 3rd floor lab to observe that this behaves properly before proceeding.
+{{ site.data.alerts.end }}
 
 ## Building a Simple Interface Using the LCD and Buttons
 
@@ -91,7 +95,18 @@ Now your program should allow you to increase and decrease `leftVal` and `rightV
 
 - Use `if` statements, the modulo (`%`) operator, or other logic to limit the range of `leftVal` and `rightVal` to be between -100 and 100.
 
-{% include callout_red_cup.html task="[Exercise 4.3.2, 4.3.3, 4.3.4, 4.3.5]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.2]
+{{ site.data.alerts.end }}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.3]
+{{ site.data.alerts.end }}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.4]
+{{ site.data.alerts.end }}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.5]
+{{ site.data.alerts.end }}
 
 ## Controlling the Robot's Motors
 
@@ -106,6 +121,10 @@ This will let you try different things with the robot's motors to see how the ro
 - At the bottom of the block, you should detect whether or not an obstacle is in front of the robot.
   - If there is an obstacle, the robot should stop, using `move`.
   - If there is not an obstacle, it should put leftVal and rightVal into the left and right motors, respectively, using `move`.
+
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.6]
+{{ site.data.alerts.end }}
 
 ### Exercise 4.3.7
 
@@ -122,7 +141,9 @@ This will let you try different things with the robot's motors to see how the ro
 </ul>
 {{ site.data.alerts.end }}
 
-{% include callout_red_cup.html task="[Exercise 4.3.6, 4.3.7]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.7]
+{{ site.data.alerts.end }}
 
 ## Next Step
 

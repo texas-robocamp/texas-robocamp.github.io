@@ -45,12 +45,18 @@ These functions will return the distance (in meters) from the left or right obst
 - Write a short program that will print "Left Sensor Activated" when the left sensor is activated, "Right Sensor Activated" when the right sensor is activated, and "Both Sensors Activated" when both sensors are activated on the LCD on the robot.
   - For this program, you'll be launching a new world. This launch file uses the same robocamp package, but the file name is now **TODO** *filename*
 
-{% include callout_red_cup.html task="[Exercises 4.2.1 - 4.2.5]" %}
+{{site.data.alerts.callout_red_cup}}
+[Exercises 4.2.1
+{{site.data.alerts.end}}
 
 
 ### Exercise 4.2.2
 
 - Instead of just printing which sensor is activated, turn on the corresponding LED to indicate which obstacle sensor has been triggered.
+
+{{site.data.alerts.callout_red_cup}}
+[Exercises 4.2.2
+{{site.data.alerts.end}}
 
 ## Next Step
 

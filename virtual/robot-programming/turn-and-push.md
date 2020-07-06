@@ -30,8 +30,9 @@ Following light is not part of this challenge
 
 If your program is successful, when encountering a wall, it should eventually turn so as to avoid hitting the wall, rather than becoming stuck! We will test the success of your robot by running it in `maze.launch`. If the robot can get to the other side, you have passed the Turn & Push Challenge, and receive all of the bragging rights associated therewith.
 
-{% include callout_red_cup.html task="[Challenge 5]" comment="Please flip your cup to red to indicate that you're ready to test your robot."%}
-
+{{site.data.alerts.callout_red_cup}}
+[Challenge 5]
+{{site.data.alerts.end}}
 
 ## Next Step
 

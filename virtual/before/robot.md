@@ -104,9 +104,9 @@ Angular Speed: 0.50
 
 When you have this terminal pane selected, you can use this program to drive the robot around manually. Don't forget about this program, as you will likely find yourself needing to manually drive the robot around to test different functionalities later.
 
-{% include callout_red_cup.html task="[Tutorial 2]" comment="Please flip your cup to red to indicate that you're ready to have your robot tested."%}
-
-{% include note.html content="If anything didn't work, please <em>What are we doing here</em>"%}
+{{site.data.alerts.callout_red_cup}}
+[Tutorial 2] Please flip your cup to red to indicate that you're ready to have your robot tested.
+{{site.data.alerts.callout_red_cup}}
 
 ## Next Step
 

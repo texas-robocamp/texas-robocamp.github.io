@@ -9,7 +9,9 @@ First, a few preliminaries.
 
 ## ~~Cups~~ **TODO** Some Way to Communicate You Need Help
 
-{% include note.html content="None of the info in this paragraph is relevant in the virtual space, other than RED meaning help and BLUE being the default color." %}
+{{site.data.alerts.note}}
+None of the info in this paragraph is relevant in the virtual space, other than RED meaning help and BLUE being the default color.
+{{site.data.alerts.end}}
 
 - Explain the communication system
 
@@ -19,7 +21,9 @@ First, a few preliminaries.
 
 There are some activities that we will do as one big group. For instance, sections of the tutorial are accompanied by brief lectures or group activities. Sections that are done as a group will be marked with a yellow box to indicate that you should wait to synchronize with the other campers.
 
-{% include callout_synchronize.html  comment="This is just to show you what it looks like. Keep going." %}
+{{site.data.alerts.callout_synchronize}}
+This is just to show you what it looks like. Keep going.
+{{site.data.alerts.end}}
 
 > Are we still planning on global syncs? I imagine we'll still want to use this tool but we could probably use our interface to force syncs if we need them.
 
@@ -27,17 +31,19 @@ There are some activities that we will do as one big group. For instance, sectio
 
 Sometimes we need to tell you something tangential to the line of thought of the tutorial, but important to point out. Tips look like this.
 
-{% include tip.html content="Don't get distracted by the tips. They're intended to help you, not side-track you." %}
+{{site.data.alerts.tip}}
+Don't get distracted by the tips. They're intended to help you, not side-track you.
+{{site.data.alerts.end}}
 
 ## Command Line Instructions
 
 Sometimes we just want you to type something into the computer and we just tell you what it is. You should literally copy-paste these commands when you see a box like this. The commands below are just an example, and are harmless, but not productive.
 
-{{ site.data.alerts.terminal_commands }}
+{{site.data.alerts.terminal_commands}}
 cd
 ls
 pwd
-{{ site.data.alerts.terminal_commands_end }}
+{{site.data.alerts.terminal_commands_end}}
 
 ## Tutorials
 
@@ -73,7 +79,9 @@ At designated points through your progress on this website, you will be asked to
 
 It will look like this:
 
-{% include callout_red_cup.html task="[Tutorial 1]" %}
+{{site.data.alerts.callout_red_cup}}
+[Tutorial 1]
+{{site.data.alerts.end}}
 
 > Are we still going to use this callout? If so, we may want to consider changing it so that it's not saying Red Cup
 

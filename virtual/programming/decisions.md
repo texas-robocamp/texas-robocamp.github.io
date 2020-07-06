@@ -56,7 +56,9 @@ else{
 
 When we use if statements, we put the **conditional clause**, which is the logical expression we are checking or testing, in parentheses after the word "if". Then we put all of the code that we want the computer to execute *if* the conditional clause is true inside of curly braces. After an `if`, we can have: an `else if`, which works exactly the same as an `if` but is only checked by the computer when the if statement is false, or an `else`, which is the code that is executed if the `if` statement is false, or nothing.
 
-{% include note.html content="Please ask questions if any of this explanation didn't make sense—-we are happy to explain in person. (Just turn your cups to red!)" %}
+{{site.data.alerts.note}}
+Please ask questions if any of this explanation didn't make sense—-we are happy to explain in person. (Just turn your cups to red!)
+{{site.data.alerts.end}}
 
 We now know everything we need to be able to write the withdraw function. We will use an if-else pattern for this program, so we will first check if the remaining balance is greater than 0, and if that is false we will check if balance is greater than our minimum balance, and if that is also false, then we will update our balance.
 
@@ -125,12 +127,12 @@ int main(){
 }
 ```
 
-{{ site.data.alerts.tip }}
+{{site.data.alerts.tip}}
   <ul>
   <li>In the above code we use, \n, which will also give you a new line, like endl</li>
   <li>\n is one of a set of what are called "escape characters"</li>
   </ul>
-{{ site.data.alerts.end }}
+{{site.data.alerts.end}}
 
 ### Exercise 3.5.1:
 
@@ -138,7 +140,9 @@ int main(){
 
 For example, if the user attempts to withdraw more money than they have, you should probably let them know that you didn't change the balance. If a fee is applied, you might want to let the user know how much money the fee was, and what balance they should be maintaining.
 
-{% include callout_red_cup.html task="[Exercise 3.5.1]" %}
+{{site.data.alerts.callout_red_cup}}
+[Exercise 3.5.1]
+{{site.data.alerts.end}}
 
 Thanks for enabling better communication!
 
@@ -222,7 +226,9 @@ Did you notice that the last two conditional statements were testing for the sam
 - Our `deposit` function has a similar bug right now with negative numbers. Modify it so that you can only input positive values.
 - Most banks also have a deposit limit. Create a member variable `float depositLimit` and modify your `deposit` function to also prevent users from depositing too much money at once.
 
-{% include callout_red_cup.html task="[Exercise 3.5.2]" %}
+{{site.data.alerts.callout_red_cup}}
+[Exercise 3.5.2]
+{{site.data.alerts.end}}
 
 ## Switch-statements
 
@@ -259,7 +265,9 @@ switch (option) {
 
   - You'll need to store the amount to withdraw in a similar way to how we've stored the amount to deposit in the 0 case.
 
-{% include callout_red_cup.html task="[Exercise 3.5.3]" %}
+{{site.data.alerts.callout_red_cup}}
+[Exercise 3.5.3]
+{{site.data.alerts.end}}
 
 ## Next Step
 
