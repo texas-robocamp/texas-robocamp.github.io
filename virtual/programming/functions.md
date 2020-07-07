@@ -64,7 +64,6 @@ The way that this program works is the following: the computer begins running th
 
 - Modify the program so that main calls `printGreeting()` twice. How does the output change?
 
-**TODO** *This exercise seems like busywork. As a bridge to the next exercise, maybe we have them write a new void function that prints "Hello \<name\>!" as a string literal?*
 
 ## Parameters
 
