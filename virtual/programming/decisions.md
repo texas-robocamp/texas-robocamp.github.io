@@ -128,10 +128,8 @@ int main(){
 ```
 
 {{site.data.alerts.tip}}
-  <ul>
-  <li>In the above code we use, \n, which will also give you a new line, like endl</li>
-  <li>\n is one of a set of what are called "escape characters"</li>
-  </ul>
+* In the above code we use, \n, which will also give you a new line, like endl
+* \n is one of a set of what are called "escape characters"
 {{site.data.alerts.end}}
 
 ### Exercise 3.5.1:
@@ -218,7 +216,7 @@ Here's a quick overview of all of the conditional operators. We've also included
 | `!` | True if the condition is false | `!(1 > 2)` |
 
 {{site.data.alerts.tip}}
-Did you notice that the last two conditional statements were testing for the same conditions? This is because <code>a > b</code> is the same thing as <code>!(a <= b)</code>. Try plugging in values for <code>a</code> and <code>b</code> to see why!
+Did you notice that the last two conditional statements were testing for the same conditions? This is because `a > b` is the same thing as `!(a <= b)`. Try plugging in values for `a` and `b` to see why!
 {{site.data.alerts.end}}
 
 ### Exercise 3.5.2:

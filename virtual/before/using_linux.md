@@ -23,7 +23,7 @@ By default, the Ubuntu logo will be displayed on the launcher to the left of the
 
     * No, neither browser is better than the other for this camp. This is purely a matter of personal preference.
 
-3. Go to <https://utcs-robotics-camp.github.io/> to get to this site. *They're already here, do we need to explain this to them?*
+3. Go to https://utcs-robotics-camp.github.io/ to get to this site. *They're already here, do we need to explain this to them?*
 
 
 ## Getting to a Terminal

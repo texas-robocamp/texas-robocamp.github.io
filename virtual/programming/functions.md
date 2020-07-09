@@ -30,7 +30,9 @@ Finally we have a code **block** inside curly braces.
 
 ## Exercise 3.3.1: Example Function
 
-{% include note.html content="We're taking off the training wheels! Organize your code yourself now into directories that you create. Try to keep on top of being organized - one idea would be to make directories for each group of exercies (i.e directory 3_3 stores all the code for exercises 3.3.1-3.3.5). Be prepared to demo everything to camp staff to verify your progress." %}
+{{ site.data.alerts.note }}
+We're taking off the training wheels! Organize your code yourself now into directories that you create. Try to keep on top of being organized - one idea would be to make directories for each group of exercies (i.e directory 3_3 stores all the code for exercises 3.3.1-3.3.5). Be prepared to demo everything to camp staff to verify your progress.
+{{ site.data.alerts.end }}
 
 
 Let's try writing a very simple function that prints the greeting "Hello World!". We will **call** (run) this function from main. It won't take any parameters or return anything, so the **return type** of this function will be **void**, the return type for a function which returns nothing. Here's how we would set it up:
@@ -69,18 +71,15 @@ The way that this program works is the following: the computer begins running th
 
 Parameters allow you **pass values** to a function.
 
-We're going to change `printGreeting` so that it prints out "Hello, \<name\>", where name is some name that the user enters.
+We're going to change `printGreeting` so that it prints out "Hello, <name>", where name is some name that the user enters.
 
 `printGreeting` will be passed the name to print out from `main`.
 
 The general layout of this program will be:
 
 1. Start in `main`
-
 2. Get a name from the user
-
 3. Send that name to `printGreeting`
-
 4. Print out the hello message, return to `main`
 
 {{ site.data.alerts.tip }}
@@ -92,11 +91,11 @@ When a function takes a parameter, we tell the function the type of the paramete
 For `printGreeting` the parameter will be a `string`. We will call it `name`.
 
 {{ site.data.alerts.tip }}
-<code>name</code> is <b>scoped</b> to <code>printGreeting</code>. It can be referred to and used like a variable, but only inside this function.
+`name` is **scoped** to `printGreeting`. It can be referred to and used like a variable, but only inside this function.
 {{ site.data.alerts.end }}
 
 {{ site.data.alerts.tip }}
-Scoping applies to variables, too. If you declare a variable inside <code>printGreeting</code>, you cannot use it outside of <code>printGreeting</code>.
+Scoping applies to variables, too. If you declare a variable inside `printGreeting`, you cannot use it outside of `printGreeting`.
 {{ site.data.alerts.end }}
 
 **TODO** *It might be a good idea to immediately give them an example of this kind of scoping so they have something concrete to work with. Maybe make a variable for the literal "Hello" ? Might be overkill but I think it would help get the point across*
@@ -145,7 +144,7 @@ While the computer is executing the code in `printGreeting`, it can't use the va
 When the computer finishes executing `printGreeting` and returns to `main`, it can once again use the variable `userName` - but now it can no longer use `name`. This is again a case of scoping, which is where the variable is defined and can be used.
 
 {{ site.data.alerts.tip }}
-Code blocks are a great way to keep track of scoping! Any variables that are declared inside of a block (enclosed by <code>{}</code>) can only be used inside of that block.
+Code blocks are a great way to keep track of scoping! Any variables that are declared inside of a block (enclosed by `{}`) can only be used inside of that block.
 {{ site.data.alerts.end }}
 
 As we mentioned before, one of the reasons that functions are so great is that we can reuse them and give them different arguments. For example, without changing the `printGreeting` function at all, we can use it to print greetings to three different people:
@@ -181,7 +180,9 @@ Using the code above as a base, add a call to printGreeting() in main so that yo
 
 Now that you've been greeted...
 
-{% include callout_red_cup.html task="[Exercise 3.3.1, Exercise 3.3.2, Exercise 3.3.3]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 3.3.1, Exercise 3.3.2, Exercise 3.3.3]
+{{ site.data.alerts.end }}
 
 ## Returning Results
 
@@ -308,7 +309,9 @@ You are 49 years old.
 You will be 50 next January.
 ```
 
-{% include callout_red_cup.html task="[Exercise 3.3.4, Exercise 3.3.5]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 3.3.4, Exercise 3.3.5]
+{{ site.data.alerts.end }}
 
 ## Next Step
 

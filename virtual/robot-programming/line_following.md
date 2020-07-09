@@ -20,7 +20,9 @@ We think that you're ready for a slightly harder tutorial. So I'm just going to 
 - Put this into a **function**.
 - Test that your detector works by using the `printAsterisks` function from the previous tutorial.
 
-{% include callout_red_cup.html task="[Exercise 7.1.1]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 7.1.1]
+{{ site.data.alerts.end }}
 
 
 ## Exercise 7.1.2 - Describing Where the Line Is
@@ -34,7 +36,9 @@ Right in the middle would be 3.5.
 - Write a function that scales the output of the automatic line finding to range from -1 to 1, using the facts listed here.
 - Print your asterisks on the first line of the LCD, and the value returned by this function on the second line.
 
-{% include callout_red_cup.html task="[Exercise 7.1.2]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 7.1.2]
+{{ site.data.alerts.end }}
 
 ## Exercise 7.1.3 - A Proportional Controller for Line Following
 
@@ -51,12 +55,13 @@ As realized on our robot, this will look something like this.
   - `c` is your constant weight, or **constant gain** (`K_c`).
   - `x` is your **proportional weight**, or, as it is better known **proportional gain** (`K_p`).
     - This weight will have to be fine-tuned by you!
-
 - Write a program that creates a proportional controller, using the facts that have been written here.
 - Write an interface using the push buttons on the robot to allow you to adjust the constant and linear weights up and down.
 - Test your robot in the racetrack world and try it on our race course using the proportional controller.
 
-{% include callout_red_cup.html task="[Exercise 7.1.3]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 7.1.3]
+{{ site.data.alerts.end }}
 
 ## Exercise 7.1.4 - A Proportional Derivative (PD) Controller for Line Following
 
@@ -74,7 +79,7 @@ Think of your robot as sampling two points on a curve, and the angle that you wa
 If this doesn't make sense to you, get a counselor to help you. If it doesn't make sense to them, get them to get Justin, and make them listen to the explanation too.
 {{ site.data.alerts.end }}
 
-What this all means is that you can take the potential calculated in Exercise 7.1.2 at your current time step, subtract the potential computed at the <i>previous</i> time step (a time step being one execution of your `loop` function) and arrive at the derivative that you want.
+What this all means is that you can take the potential calculated in Exercise 7.1.2 at your current time step, subtract the potential computed at the *previous* time step (a time step being one execution of your `loop` function) and arrive at the derivative that you want.
 
 You now have 3 terms for your controller:
 - **Constant gain** (`K_c`).
@@ -84,14 +89,17 @@ You now have 3 terms for your controller:
 The formulas for your controller now look like 
 
 ```
-K_c + (K_p * p + K_d * d)` `K_c - (K_p * p + K_d * d)
+K_c + (K_p * p + K_d * d)
+K_c - (K_p * p + K_d * d)
 ```
 
 - Implement this on your robot.
 - Add `K_d` to your user interface.
-- Take your robot out to the bridge and try it on our race course using the PD controller.
+- Try your robot on the race course using the PD controller.
 
-{% include callout_red_cup.html task="[Exercise 7.1.4]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 7.1.4]
+{{ site.data.alerts.end }}
 
 ## Exercise 7.1.5 - A Proportional Integral Derivative (PID) Controller for Line Following (Optional)
 
@@ -108,9 +116,11 @@ In practice, you can compute your numerical integral by adding up your errors ov
 
 - Implement this on your robot.
 - Add `K_i` to your interface.
-- Take your robot out to the bridge and try it on our race course using the PD controller.
+- Test your robot on the race course using the PID controller.
 
-{% include callout_red_cup.html task="[Exercise 7.1.5]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 7.1.5]
+{{ site.data.alerts.end }}
 
 
 ## Next Step

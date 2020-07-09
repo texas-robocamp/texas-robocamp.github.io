@@ -1,14 +1,8 @@
-title: "Simple Math and User Input"
-tags: [c++]
-keywords: c++
-sidebar: virtual
-permalink: simple_math_user_input.html
-
 An object that weighs 1.0 pounds on Earth would weigh 0.1654 pounds on the moon.
 
 In C++, multiplication is represented with the * symbol.
 
-The program will save all the numbers it needs in <b>variables</b>. A variable stores a number or a mathematical formula.
+The program will save all the numbers it needs in **variables**. A variable stores a number or a mathematical formula.
 
 For example:
 
@@ -18,19 +12,17 @@ y = 5 * x;
 ```
 
 {{ site.data.alerts.tip }}
-Unlike in mathematical formulas, the `=` sign means <b>assignment</b>. It sets the value of the variable, but does not state that those two things are equal.
+Unlike in mathematical formulas, the `=` sign means **assignment**. It sets the value of the variable, but does not state that those two things are equal.
 
 So in this short program:
-<br>
-y = 0;
-<br>
-x = y;
-<br>
-y = 5;
-<br>
-<br>
 
-At the end, <code>x</code> has <code>0</code> in it, NOT <code>5</code>.
+```cpp
+y = 0;
+x = y;
+y = 5;
+```
+
+At the end, `x` has `0` in it, NOT `5`.
 {{ site.data.alerts.end }}
 
 {{ site.data.alerts.tip }}
@@ -83,7 +75,7 @@ cin >> myVariable;
 ```
 
 {{ site.data.alerts.tip }}
-Note the similarity to <code>cout</code>.
+Note the similarity to `cout`.
 {{ site.data.alerts.end }}
 
 When the computer reaches `cin` in the program, it will display a prompt for the user to type. The user can then type and hit the Enter key, and the computer saves whatever the user typed to the variable called `myVariable`.
@@ -100,8 +92,10 @@ This sends the whole sequence of things to cout to be displayed.
 
 ## Exercise 3.2.1: Full Program
 
-{% include note.html content="Any text preceded by `//` is a comment.
-<br>Comments are ignored by the compiler and are used by programmers to explain parts of their code." %}
+{{ site.data.alerts.note }}
+Any text preceded by `//` is a comment.
+Comments are ignored by the compiler and are used by programmers to explain parts of their code.
+{{ site.data.alerts.end }}
 
 {{ site.data.alerts.tip }}
 It's good practice to have short comments in your code, so you can remember what it does later.
@@ -169,7 +163,9 @@ What's the mathematical opposite of multiplication?
 
 Write a program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
 
-{% include callout_red_cup.html task="[Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3]
+{{ site.data.alerts.end }}
 
 ## Next Step
 

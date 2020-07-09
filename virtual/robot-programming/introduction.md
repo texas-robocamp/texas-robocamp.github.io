@@ -139,7 +139,7 @@ catkin build ex_4_1_1
 {{site.data.alerts.terminal_commands_end}}
 
 {{site.data.alerts.tip}}
-The Gazebo simulator is very complex, so it might slow down your computer. You'll want to make sure it is not running when you run <code>catkin build</code> to make the build go faster.
+The Gazebo simulator is very complex, so it might slow down your computer. You'll want to make sure it is not running when you run `catkin build` to make the build go faster.
 {{site.data.alerts.end}}
 
 In order to use the robot, you'll need to **roslaunch** a gazebo simulation. For the first few exercises, we'll be using the boxed world that we've built for you. To launch it, you'll run a similar roslaunch command to the one you ran at the beginning of the camp:
@@ -155,7 +155,7 @@ rosrun ex_4_1_1 node
 ```
 
 {{site.data.alerts.tip}}
-By default, we've made it so that the name of your node will always just be <code>node</code>. The only thing that will change is the name of the package, which will always be the argument you pass into <code>create-package</code>
+By default, we've made it so that the name of your node will always just be `node`. The only thing that will change is the name of the package, which will always be the argument you pass into `create-package`
 {{site.data.alerts.end}}
 
 If you ever need a refresher on how all of this works, feel free to go back to the [documentation](docs.html)!
@@ -192,7 +192,9 @@ Modify your program to:
 You can modify this exercise to use whatever cheer you like. The point is to learn how the code works.
 {{ site.data.alerts.end }}
 
-{% include callout_red_cup.html task="[Exercise 4.1.1, Exercise 4.1.2]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.1.1, 4.1.2]
+{{ site.data.alerts.end }}
 
 ## Next Step
 

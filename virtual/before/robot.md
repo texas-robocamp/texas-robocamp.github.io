@@ -1,7 +1,11 @@
-*TODO: Add specific download links for each OS and terminal installation instructions for Linux*<br>
-*TODO: Look into adding mirror links or CDN for the OVA file*<br>
-*TODO: Add instructions about getting a black screen, for which you may have to restart*<br>
-*TODO: Manually install chrome*<br>
+*TODO: Add specific download links for each OS and terminal installation instructions for Linux*
+
+*TODO: Look into adding mirror links or CDN for the OVA file*
+
+*TODO: Add instructions about getting a black screen, for which you may have to restart*
+
+*TODO: Manually install chrome*
+
 *TODO: source ros on the command line at the beginning, then add it to bashrc during Robot Programming*
 
 
@@ -25,7 +29,8 @@ Steps to install:
 2. Go to https://www.virtualbox.org/wiki/Downloads.
 3. Download the latest version of VirtualBox for your computer.
 4. Open the installer and follow the on-screen instructions to finish installing VirtualBox.
-5. Download the VirtualBox appliance file. https://drive.google.com/file/d/1Pa0S5--T66YkMCJNL-3R6OIck2CiP1e4/view <br>*TODO: remove this, do clean install instead*
+5. Download the VirtualBox appliance file. https://drive.google.com/file/d/1Pa0S5--T66YkMCJNL-3R6OIck2CiP1e4/view
+    *TODO: remove this, do clean install instead*
 6. Open the appliance file and click the "Import" button to add the Ubuntu virtual machine to VirtualBox. (When this has finished, you can safely delete the appliance file.)
 
 Steps for clean installation of Ubuntu 18.04:
@@ -37,8 +42,8 @@ Steps for clean installation of Ubuntu 18.04:
 5. Set memory to 2048 MB.
 6. Set hard drive space to 25GB and leave default values for everything else.
 7. Right click the new VM operating system and click "Settings".
-8. Go to "Storage", then "Controller: SATA", then click the CD icon with a plus and select your ISO file.<br>
-*TODO: Fill in the rest for settting up the VM*<br>
+8. Go to "Storage", then "Controller: SATA", then click the CD icon with a plus and select your ISO file.
+    *TODO: Fill in the rest for settting up the VM*
 
 
 
@@ -96,7 +101,7 @@ rosrun <package_name> <file_name>
 ```
 
 {{site.data.alerts.tip}}
-The syntax for both <code>roslaunch</code> and <code>rosrun</code> commands are nearly identical! Don't forget that <code>roslaunch</code> is for launch files and <code>rosrun</code> is for individual nodes
+The syntax for both `roslaunch` and `rosrun` commands are nearly identical! Don't forget that `roslaunch` is for launch files and `rosrun` is for individual nodes
 {{site.data.alerts.end}}
 
 We're going to use this exercise to verify that your robot operates properly.  
@@ -128,7 +133,7 @@ When you have this terminal pane selected, you can use this program to drive the
 
 {{site.data.alerts.callout_red_cup}}
 [Tutorial 2] Please flip your cup to red to indicate that you're ready to have your robot tested.
-{{site.data.alerts.callout_red_cup}}
+{{site.data.alerts.end}}
 
 ## Next Step
 

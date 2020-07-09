@@ -64,15 +64,11 @@ When you hook this up, the numbers are going to scream past on the screen really
 *I think this is still true? Need to test this*
 
 {{ site.data.alerts.tip }}
-<ul>
-<li>
-The easiest way to implement this is with a for loop and the `int readAdc(byte)` function.
-</li>
-<li>Count from 0 to 7 using the for loop.</li>
-<li>Inside the loop, read the value in the corresponding ADC channel.</li>
-<li> <strike>`Serial.print`</strike> <em>cout</em> that value and a space.</li>
-<li>After the for loop, use <strike>`Serial.println`.</strike> <em>cout << endl</em></li>
-</ul>
+* The easiest way to implement this is with a for loop and the `int readAdc(byte)` function.
+* Count from 0 to 7 using the for loop.
+* Inside the loop, read the value in the corresponding ADC channel.
+* ~~`Serial.print`~~ `cout` that value and a space.
+* After the for loop, use ~~`Serial.println`.~~ `cout << endl`
 {{ site.data.alerts.end }}
 
 
@@ -82,7 +78,9 @@ The easiest way to implement this is with a for loop and the `int readAdc(byte)`
 - You should notice that the numbers where the black line is present are different from the numbers where there is no black.
   - How are they different?
 
-{% include callout_red_cup.html task="[Exercise 6.1.1]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 6.1.1]
+{{ site.data.alerts.end }}
 
 ## Thresholding
 
@@ -127,7 +125,7 @@ int main(int argc, char **argv) {
 ```
 
 {{ site.data.alerts.tip }}
-It's going to be tempting to put a <code>usleep</code> in here somewhere. Do yourself a favor and resist that urge. Your program will work better and look better if you avoid this.
+It's going to be tempting to put a `usleep` in here somewhere. Do yourself a favor and resist that urge. Your program will work better and look better if you avoid this.
 {{ site.data.alerts.end }}
 
 There's a type that we didn't tell you about way back in ["Simple Math and User Input"](/simple_math_user_input.html) called `char`.
@@ -141,13 +139,11 @@ One way to represent text is called a C string. This is different from a C++ `st
 
 *I feel like this is a major detail that students might just gloss over. May want to elaborate more?*
 
-Every number from 0-255 is associated with a unique, printable character. This is called <b>ASCII</b>.
+Every number from 0-255 is associated with a unique, printable character. This is called **ASCII**.
 
 {{ site.data.alerts.tip }}
-<ul>
-<li>ASCII - American Standard Code for Information Interchange</li>
-<li>There's a good article on Wikipedia about learning ASCII if you really want to, but it won't be especially relevant to what we're doing here, so, save that for after camp!</li>
-</ul>
+* ASCII - American Standard Code for Information Interchange
+* There's a good article on Wikipedia about learning ASCII if you really want to, but it won't be especially relevant to what we're doing here, so, save that for after camp!
 {{ site.data.alerts.end }}
 
 - Remember the `bot.lcd1` command? Use that in your program to print 2 asterisks ("*") on the top line of the LCD on your robot.
@@ -180,7 +176,7 @@ void loop() {
 }
 ```
 
-- What the heck is '*'?
+- What the heck is `'*'`?
   - Single quotes surround a **character-literal** in C.
   - Just like a string can be surrounded in double-quotes (which is called a **string-literal**), a single character can be surrounded in single-quotes.
 - You probably also noticed that I set `lineUI[16] = 0;`
@@ -208,10 +204,12 @@ However, we run into a problem. There are 8 sensors on the line sensor, and 16 c
   - Try it out!
 
 {{ site.data.alerts.tip }}
-If these steps don't make sense, try just printing out the values of <code>i*2</code> and <code>i*2+1</code>. You should notice a pattern!
+If these steps don't make sense, try just printing out the values of `i*2` and `i*2+1`. You should notice a pattern!
 {{ site.data.alerts.end }}
 
-{% include callout_red_cup.html task="[Exercise 6.1.2]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 6.1.2]
+{{ site.data.alerts.end }}
 
 ## Exercise 6.1.3
 
@@ -224,7 +222,9 @@ Now we're going to write another UI. This should all go into your current progra
   - When button 2 is pushed, subtract 1 from `thresh`.
 - Try it out. The number on the second line should rise when pressing the top button and drop when pressing the lower button.
 
-{% include callout_red_cup.html task="[Exercise 6.1.3]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 6.1.3]
+{{ site.data.alerts.end }}
 
 ## Exercise 6.1.4
 
@@ -240,7 +240,9 @@ Now we're going to make it so you only see where the line is under the line foll
 - Move the target around and see how the robot can now "see" the line.
   - Ideally, you only see the line in one place on the LCD, and it is only 2 asterisks wide.
 
-{% include callout_red_cup.html task="[Exercise 6.1.4]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 6.1.4]
+{{ site.data.alerts.end }}
 
 
 ## Next Step

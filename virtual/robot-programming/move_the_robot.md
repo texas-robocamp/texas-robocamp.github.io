@@ -18,10 +18,8 @@ If you ever lose the robot or want to just move it back to the beginning, push t
 
 {{ site.data.alerts.tip }}
 You can turn the robot by moving the motors at different speeds. 
-<ul>
-<li>-100, 100 would turn the robot as hard to the left as possible</li>
-<li>100, 50, would turn the robot less sharply to the right, navigating the robot in a circle..</li>
-</ul>
+* -100, 100 would turn the robot as hard to the left as possible
+* 100, 50, would turn the robot less sharply to the right, navigating the robot in a circle..
 {{ site.data.alerts.end }}
 
 ### Exercise 4.3.1
@@ -38,7 +36,7 @@ We recommend setting both speeds to 25 for this exercise so you can easily obser
 {{ site.data.alerts.end }}
 
 {{ site.data.alerts.note }}
-Counselors should take students out to the bridge or to a wall in the 3rd floor lab to observe that this behaves properly before proceeding.
+Counselors should ~~take students out to the bridge or to a wall in the 3rd floor lab to~~ observe that this behaves properly before proceeding. *TODO is this necessary?*
 {{ site.data.alerts.end }}
 
 ## Building a Simple Interface Using the LCD and Buttons
@@ -49,6 +47,7 @@ int readButton();
 
 The `readButton` function indicates which of the buttons Button 1, Button 2, or Button 3 is being pressed. The function returns an int, with the possible values:
 
+Value | Meaning
 ---|---
 0 | no button is being pressed
 1 | Button 1 pressed
@@ -58,9 +57,7 @@ The `readButton` function indicates which of the buttons Button 1, Button 2, or 
 ### Exercise 4.3.2
 
 {{ site.data.alerts.tip }}
-<ul>
-<li>Exercises 4.3.2 - 4.3.5 combined are the largest programming exercise in the camp so far, and the hardest we've asked you to do yet. If you are not sure what this exercise expects, ask the counselors to show you a demo.</li>
-</ul>
+Exercises 4.3.2 - 4.3.5 combined are the largest programming exercise in the camp so far, and the hardest we've asked you to do yet. If you are not sure what this exercise expects, ask the counselors to show you a demo.
 {{ site.data.alerts.end }}
 
 - Create a new program
@@ -139,9 +136,7 @@ This will let you try different things with the robot's motors to see how the ro
   - Can you make it go backwards?
 
 {{ site.data.alerts.tip }}
-<ul>
-<li>You can use the UI you've made to adjust the speeds of the wheels to see these behaviors!</li>
-</ul>
+* You can use the UI you've made to adjust the speeds of the wheels to see these behaviors!
 {{ site.data.alerts.end }}
 
 {{ site.data.alerts.callout_red_cup }}

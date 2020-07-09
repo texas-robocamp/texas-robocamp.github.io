@@ -33,7 +33,7 @@ A class definition is encompassed by curly braces and has a trailing semi-colon.
 ## Member Variables
 Now we need to add some variables.
 
-Variables inside a class are called <b>member variables</b> or <b>attributes</b>.
+Variables inside a class are called **member variables** or **attributes**.
 
 The member variables for this class are:
 
@@ -74,7 +74,7 @@ class BankAccount {
 ```
 
 {{ site.data.alerts.tip }}
-You can also declare a class's variables and functions to be <code>private</code>, which will be covered later.
+You can also declare a class's variables and functions to be `private`, which will be covered later.
 {{ site.data.alerts.end }}
 
 ## Constructors
@@ -235,7 +235,7 @@ class BankAccount {
 Now that these variables are private, our object is actually fairly useless right now. We left the constructor public, so we can create new objects, but all our data is inaccessible from outside the class because it's declared private. To make our object useful, we'll introduce member functions, which define actions that can be performed on or with the member variables.
 
 {{ site.data.alerts.tip }}
-Consider what behavior a <code>BankAccount</code> should exhibit. What sorts of actions are necessary? Think a minute and then read on!
+Consider what behavior a `BankAccount` should exhibit. What sorts of actions are necessary? Think a minute and then read on!
 {{ site.data.alerts.end }}
 
 
@@ -297,7 +297,7 @@ There are a few new things to note:
 
   - The syntax for defining a member function is the same as any other function, only it goes inside the class definition.
 
-  -Inside our member functions we have access to our member variables, as if we had declared them locally inside the function.
+  - Inside our member functions we have access to our member variables, as if we had declared them locally inside the function.
 
   - Outside of the class definition, we use the dot notation to call an object's member functions.
 

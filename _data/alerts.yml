@@ -4,7 +4,7 @@ important: '<div class="alert alert-warning" role="alert"><i class="fa fa-warnin
 warning: '<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning: </b>'
 
 callout_red_cup: '<div markdown="span" class="bs-callout bs-callout-danger red-cup"><img class="cup-icon" src="images/cup.svg" /> <b>Red Cup: </b>'
-callout_synchronize: '<div class="bs-callout bs-callout-warning synchronize"><b>Synchronize {{ include.task }}:</b>'
+callout_synchronize: '<div class="bs-callout bs-callout-warning synchronize"><b>Synchronize:</b>'
 
 end: '</div>'
 

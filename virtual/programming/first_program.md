@@ -1,4 +1,6 @@
-{% include callout_synchronize.html comment="Do this section <strike>at the pace of the slower partner, so both of</strike> slowly, so you completely understand it. We will be lecturing <em>who will be lecturing? If it's counselors, this is a piece of curricula we need to be on the same page about. May want to make a script.</em> along with students performing the tutorial, so if you are ahead and have a question, please wait for the <strike>class</strike> room to catch up or for a period when there is no lecturing." %}
+{{ site.data.alerts.callout_synchronize }}
+Do this section ~~at the pace of the slower partner, so both of~~ slowly, so you completely understand it. We will be lecturing ***who will be lecturing? If it's counselors, this is a piece of curricula we need to be on the same page about. May want to make a script.*** along with students performing the tutorial, so if you are ahead and have a question, please wait for the ~~class~~ room to catch up or for a period when there is no lecturing.
+{{ site.data.alerts.end }}
 
 It's customary when you learn a new programming language, to write a program to display the text "Hello World." Displaying text is often referred to as "printing" it, so we're going to learn how to print "Hello World".
 
@@ -6,17 +8,17 @@ It's customary when you learn a new programming language, to write a program to 
 
 Most C++ programs begin in a function called `main`.
 
-A <b>function</b> is a group of instructions about how to do some task.
+A **function** is a group of instructions about how to do some task.
 
 The `main` function is the first function that executes when we run our C++ program.
 
-<b>Code</b> is software as written in a programming language. Someone who writes code is a <b>coder</b>.
+**Code** is software as written in a programming language. Someone who writes code is a **coder**.
 
-Sometimes, code is already written and stored in <b>libraries.</b>
+Sometimes, code is already written and stored in **libraries.**
 
 Libraries save time by providing code that does common things. When professional programmers write software such as a video game, they use libraries to render the graphics, load files, or control physics. This frees the coders who write the rules of the game to concentrate on that aspect. It also frees the ones who specialize in graphics to continually improve on the graphics code used by all of their users.
 
-The "Hello World" example uses the `iostream` library. `iostream` includes a <b>stream</b> called `cout`. `cout` allows users to write formatted text to the terminal, which is often called <b>printing</b> the text.
+The "Hello World" example uses the `iostream` library. `iostream` includes a **stream** called `cout`. `cout` allows users to write formatted text to the terminal, which is often called **printing** the text.
 
 Ok, we're ready to write our first program!
 
@@ -28,7 +30,7 @@ code .
 {{ site.data.alerts.terminal_commands_end }}
 
 {{site.data.alerts.tip}}
-The line <code>code .</code> is how we can open up VSCode via the command line interface. The . symbol means that we are talking about the current working directory - in this case, that would be ex04_Hello_World
+The line `code .` is how we can open up VSCode via the command line interface. The . symbol means that we are talking about the current working directory - in this case, that would be ex04_Hello_World
 {{site.data.alerts.end}}
 
 Copy the following program into VSCode.
@@ -53,7 +55,7 @@ Let's look at this code line-by-line.
 
 This line **includes** `iostream` into our program, making its contents available to our program. This is done during compilation, which is when the computer turns the text written in C++ into the machine code that the computer can actually run.
 
-`iostream` is what is called a <b>header</b> or a <b>header file</b>. It contains the code needed to interface a library called the *Standard Input/Output Streams Library*.
+`iostream` is what is called a **header** or a **header file**. It contains the code needed to interface a library called the *Standard Input/Output Streams Library*.
 
 Including `iostream` allows us to use `cout`.
 
@@ -66,7 +68,7 @@ using namespace std;
 This line tells the compiler that if things are included in the `std` namespace, they don't need to lead the name with `std`. In the program here, `cout` is a part of the `std` namespace. If we did not **use** the `std` namespace, we would write it as `std::cout`.
 
 {{ site.data.alerts.tip }}
-For the purposes of this camp, just include <code>using namespace std</code> in your programs. Namespacing will become important if you continue programming, but we only use one namespace in this camp.
+For the purposes of this camp, just include `using namespace std` in your programs. Namespacing will become important if you continue programming, but we only use one namespace in this camp.
 {{ site.data.alerts.end }}
 
 ```cpp
@@ -87,7 +89,7 @@ The double left-angle brackets are like an arrow pointing toward `cout`, sending
 
 After `"Hello World"` there is `<< endl`, which tells the program to end the line of text. If you don't do this, there is no guarantee that your text will show up on the screen, and it will not be followed by a **newline** which literally tells the terminal to go to a new line. This is kind of like hitting `enter` at the end of a line when you're typing text.
 
-We put quotation marks around the words we want to display (this is called a <b>string</b>). In cpp, every line of code (ones without braces) ends in a semi-colon.
+We put quotation marks around the words we want to display (this is called a **string**). In cpp, every line of code (ones without braces) ends in a semi-colon.
 
 So, you are telling the computer to send `"Hello World!"` as a string to `cout` to be displayed on the screen.
 
@@ -130,23 +132,31 @@ Hopefully, your program just compiled.
 {{ site.data.alerts.terminal_commands_end }}
 
 
-{% include note.html content="Remember, this is a relative path, so this literally tells the computer, \"Run the HelloWorld that is in this directory.\"" %}
+{{ site.data.alerts.note }}
+Remember, this is a relative path, so this literally tells the computer, "Run the HelloWorld that is in this directory."
+{{ site.data.alerts.end }}
 
-{% include note.html content="Many things can go wrong when you are programming. Turn your cups to red to get help." %}
+{{ site.data.alerts.note }}
+Many things can go wrong when you are programming. Turn your cups to red to get help.
+{{ site.data.alerts.end }}
 
-{% include callout_synchronize.html comment="Many of you will have problems right now, so, we'll synchronize to get everyone through their errors." %}
+{{ site.data.alerts.callout_synchronize }}
+Many of you will have problems right now, so, we'll synchronize to get everyone through their errors.
+{{ site.data.alerts.end }}
 
 If you ever forget how to compile a C++ program, we've provided an example in the [documentation](docs.html) that you can always reference in the future.
 
 ## Exercise 3.1:
 
-- Modify the Hello World program so that it prints, "Hello \<Your Name\>!"
+- Modify the Hello World program so that it prints, "Hello <Your Name>!"
 
     - For example, if your name is Justine, it would display, `Hello Justine!`
 
 - Next, add a second line of text that says, "Programming is actually pretty fun when you get right down to it."
 
-{% include callout_red_cup.html task="[Tutorial 3.1]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Tutorial 3.1]
+{{ site.data.alerts.end }}
 
 ## Next Step
 

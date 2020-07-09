@@ -63,7 +63,9 @@ int main(){
 
 - Change the program above so that it stores and uses 7 grades instead of 5 to calculate the average.
 
-{% include callout_red_cup.html task="[Exercise 3.7.1]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 3.7.1]
+{{ site.data.alerts.end }}
 
 Yay! Two more :)
 
@@ -71,7 +73,9 @@ Yay! Two more :)
 
 Write a program that asks a user to enter 10 numbers, puts those numbers in an array, and then prints out the numbers in the array backwards? Hint: use a loop that counts backwards.
 
-{% include callout_red_cup.html task="[Exercise 3.7.2]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 3.7.2]
+{{ site.data.alerts.end }}
 
 Almost there!
 
@@ -100,7 +104,9 @@ letterArray[3][1]="a";
 
 Determine the correct code to access the elements containing letters y and z in the diagram above.
 
-{% include callout_red_cup.html task="[Exercise 3.7.2]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 3.7.3]
+{{ site.data.alerts.end }}
 
 ## Wrap-up
 

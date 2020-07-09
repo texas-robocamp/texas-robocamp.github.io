@@ -32,7 +32,7 @@ double leftObstacleSensor()
 ```
 
 ```cpp
-double RightObstacleSensor()
+double rightObstacleSensor()
 ```
 
 These functions will return the distance (in meters) from the left or right obstacle sensor to the nearest obstacle. Each sensor is on the front of the robot, pointing out 45 degrees. The range for these values is [0.0,10.0]
@@ -46,7 +46,7 @@ These functions will return the distance (in meters) from the left or right obst
   - For this program, you'll be launching a new world. This launch file uses the same robocamp package, but the file name is now **TODO** *filename*
 
 {{site.data.alerts.callout_red_cup}}
-[Exercises 4.2.1
+[Exercise 4.2.1]
 {{site.data.alerts.end}}
 
 
@@ -55,7 +55,7 @@ These functions will return the distance (in meters) from the left or right obst
 - Instead of just printing which sensor is activated, turn on the corresponding LED to indicate which obstacle sensor has been triggered.
 
 {{site.data.alerts.callout_red_cup}}
-[Exercises 4.2.2
+[Exercise 4.2.2]
 {{site.data.alerts.end}}
 
 ## Next Step

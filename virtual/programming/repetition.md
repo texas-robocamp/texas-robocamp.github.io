@@ -115,7 +115,9 @@ The loop begins with `i=1` and increases by 2 every time. Notice that it stops b
 
 - Write a loop that prints every third number starting at 15 and going down to 6 (so 6 is included in the loop).
 
-{% include callout_red_cup.html task="[Exercise 3.6.1]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 3.6.1]
+{{ site.data.alerts.end }}
 
 Woot, woot! Making progress. :)
 
@@ -198,7 +200,9 @@ Nested loops can be a little tricky, so if they are confusing, ask for help!
 
 Good work!
 
-{% include callout_red_cup.html task="[Exercise 3.6.2]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 3.6.2]
+{{ site.data.alerts.end }}
 
 ## While Loops
 
@@ -293,7 +297,9 @@ If your program ends up in an infinite loop, you need to know how to terminate i
 
 - Bonus: Can you keep track of the number of attempts a user makes to enter a number, and then print it out when they finally enter a valid number?
 
-{% include callout_red_cup.html task="[Exercise 3.6.3]" %}
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 3.6.3]
+{{ site.data.alerts.end }}
 
 ## Next Step
 
