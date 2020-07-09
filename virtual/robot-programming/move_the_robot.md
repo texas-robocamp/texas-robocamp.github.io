@@ -71,6 +71,10 @@ The `readButton` function indicates which of the buttons Button 1, Button 2, or 
 Using a switch-statement to identify which button is being pressed will simplify your code.
 {{ site.data.alerts.end }}
 
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.2]
+{{ site.data.alerts.end }}
+
 ### Exercise 4.3.3
 
 We're going to begin to create a simple interface that will allow us to control the speeds of the motors.
@@ -80,6 +84,10 @@ We're going to begin to create a simple interface that will allow us to control 
 - Make it so that pressing Button 3 toggles `leftRight` so that if it is `true` it becomes `false` and vice-versa.
 
 At this point, your program should now say which button is being pressed on the top line if a button is currently pressed, and should switch between "Left" and "Right" on the second line whenever you press Button 3.
+
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.3]
+{{ site.data.alerts.end }}
 
 ### Exercise 4.3.4
 
@@ -91,19 +99,14 @@ At this point, your program should now say which button is being pressed on the 
 
 Now your program should allow you to increase and decrease `leftVal` and `rightVal` and select which is changed using the pushbuttons on the robot.
 
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.4]
+{{ site.data.alerts.end }}
+
 ### Exercise 4.3.5
 
 - Use `if` statements, the modulo (`%`) operator, or other logic to limit the range of `leftVal` and `rightVal` to be between -100 and 100.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.2]
-{{ site.data.alerts.end }}
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.3]
-{{ site.data.alerts.end }}
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.4]
-{{ site.data.alerts.end }}
 {{ site.data.alerts.callout_red_cup }}
 [Exercise 4.3.5]
 {{ site.data.alerts.end }}
