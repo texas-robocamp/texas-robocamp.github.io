@@ -64,9 +64,9 @@ When you hook this up, the numbers are going to scream past on the screen really
 *I think this is still true? Need to test this*
 
 {{ site.data.alerts.tip }}
-* The easiest way to implement this is with a for loop and the `int readAdc(byte)` function.
+* The easiest way to implement this is with a for loop and the `int readLineSensor(byte)` function.
 * Count from 0 to 7 using the for loop.
-* Inside the loop, read the value in the corresponding ADC channel.
+* Inside the loop, read the value in the corresponding line sensor channel.
 * ~~`Serial.print`~~ `cout` that value and a space.
 * After the for loop, use ~~`Serial.println`.~~ `cout << endl`
 {{ site.data.alerts.end }}
@@ -84,15 +84,11 @@ When you hook this up, the numbers are going to scream past on the screen really
 
 ## Thresholding
 
-If you did the last exercise properly, you should have noticed that ABOVE some value, you could assure that the number being returned by the line follower was the the line being picked up. Beneath some value, what you saw was the white paper reflecting light back.
+If you did the last exercise properly, you should have noticed that ABOVE some value, you could assure that the number being returned by the line follower was the the line being picked up. Beneath some value, what you saw was the white surface.
 
 The difference between the region where the line was and the region where there was no line is called a **threshold**. We are going to use a threshold to determine where the line is.
 
-{{ site.data.alerts.tip }}
-Also, weirdly, the line follower seems to pick up the shadows of the wheels. Don't worry about it, and simply realize that even when you account for the wheels, the threshold is still higher than the value for the shadow.
-{{ site.data.alerts.end }}
-
-Uh-oh! We're going to have you follow a line on a racetrack, but the lighting may be different! What we'll do to account for this is write a small user interface where you can tune your threshold. While we're at it, we'll also experiment with the line follower and the LCD, and learn a bit about strings in C++.
+Uh-oh! We're going to have you follow a line on a racetrack, but the lighting may be different! What we'll do to account for this is write a small user interface where you can tune your threshold. While we're at it, we'll also experiment with the line follower and the LCD, and learn a bit about strings in C++. **TODO this may no longer be relevant; the lighting won't be different**
 
 ## Exercise 6.1.2
 
@@ -230,8 +226,8 @@ Now we're going to write another UI. This should all go into your current progra
 
 Now we're going to make it so you only see where the line is under the line follower, allowing you to see the line the way that your robot does.
 
-- Make a global array of type `int` with 8 elements. Name it `adc`.
-- Modify the loop so that it reads the ADC using `one.readAdc`.
+- Make a global array of type `int` with 8 elements. Name it `adc`. **TODO should we rename this?**
+- Modify the loop so that it reads the ADC using `one.readLineSensor`.
   - Use a `for` loop so that it fills the `adc` variable.
 - Modify the `for` loop in `printAsterisks`.
   - Every time `adc[i] > thresh`, it should put 2 asterisks.
