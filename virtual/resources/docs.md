@@ -27,6 +27,16 @@ For example, if you have a file called `HelloWorld.cpp`, and want to compile it 
 g++ HelloWorld.cpp -o Hello
 ```
 
+### Types
+| Type   | Meaning | Example |
+|--------|---------|---------|
+| `int` | Any integer | `int userInput = 42;` |
+| `float` | A positive or negative decimal | `float pi = 3.1415;` |
+| `string` | A piece of text | `string message = "Hello World";` |
+| `bool` | `true` or `false` | `bool result = true;` |
+| `char` | A single character | `char letter = 'A';` |
+
+
 ### Logical Operators
 
 | Logical Operator | Meaning             | Example of True Statement |
