@@ -1,3 +1,4 @@
+# Classes and Objects
 ## Classes
 
 Sometimes we want to group different kinds of data together.
@@ -138,6 +139,7 @@ int main() {
      alisonBankAccount.accountBalance = 1000000.01;  //give Alison some money
      alisonBankAccount.name = "Alison Norman";  //assign name and address
      alisonBankAccount.address = "1600 Pennsylvania Avenue NW Washington, DC 20500";
+     return 0;
 }
 ```
 
@@ -290,6 +292,7 @@ int main(){
    BankAccount alisonBankAccount;
    BankAccount bobBankAccount;
    bobBankAccount.deposit(300.95);
+   return 0;
 }
 ```
 

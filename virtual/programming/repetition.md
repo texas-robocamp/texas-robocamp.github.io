@@ -1,4 +1,5 @@
-Sometimes we want our code to execute multiple times. It would be really unfortunate if we had to keep typing the same exact lines of code again and again—what if we didn't know exactly how many times we wanted the code to repeat? Fortunately, we have **loops** to help us out. A loop is a section of code that the computer runs over and over again until it reaches some stopping criteria. There are two kinds of loops that we will work with: `for` loops and `while` loops.
+# Repetition
+Sometimes we want our code to execute multiple times, but we don't want to keep typing the same exact lines of code again and again — and what if we don't know exactly how many times we wanted the code to repeat? Fortunately, we have **loops** to help us out. A loop is a section of code that the computer runs over and over again until it reaches some stopping criteria. There are two kinds of loops that we will work with: `for` loops and `while` loops.
 
 ## For Loops
 
@@ -7,7 +8,6 @@ A `for` loop repeats code for a specific number of times. If you know exactly ho
 ```cpp
 for (int i=0; i<5; i++){
    cout << "Hello World\n";
-   //more lines of code can go here
 }
 ```
 
@@ -46,7 +46,7 @@ i<5;
 
 The second phrase is a logical expression that works just like those we saw in the last section. When used in loops, the computer will keep executing the loop as long as the expression is true.
 
-In this example, the computer will keep looping as long as `i` *change to var* is less than 5; when `i` is greater than or equal to five, it will stop.
+In this example, the computer will keep looping as long as `i` is less than 5. When `i` is greater than or equal to five, it will stop.
 
 ```cpp
 i++
@@ -79,7 +79,7 @@ The current number is 8.
 The current number is 9.
 ```
 
-Notice how 10 doesn't print, because we told the loop to stop as soon when `i` was no longer less than 10. The first time the loop executes, `i = 0`, so the loop prints out the message "The current number is 0." and then adds one to `i`, making `i` 1. Then the loop executes again, and we print "The current number is 1." Then `i` is increased by 1 again, making it 2, etc., until it has printed 10 times.
+Notice how 10 doesn't print, because we told the loop to stop when `i` was no longer less than 10. The first time the loop executes, `i = 0`, so the loop prints out the message "The current number is 0." and then adds one to `i`, making `i` 1. Then the loop executes again, and we print "The current number is 1." Then `i` is increased by 1 again, making it 2, etc., until it has printed 10 times.
 
 We can also modify the loop so that the loop variable changes in different ways---just by changing the initialization and the modification pieces. Say we want to count backwards from 4 to 1. We can create the loop like this:
 
@@ -224,6 +224,7 @@ int main(){
    //when we reach this line, we know the user entered a number between 1 and 10,
    //or else we would still be stuck in the while loop.
    cout << "You entered " << userInput << ".\n";
+   return 0;
 }
 ```
 
@@ -256,9 +257,7 @@ If it is, we yell at the user and ask for new input, and we make sure to save th
 
 Then the program loops back to the beginning of the while loop and checks to see if `userInput` is less than 1 or greater than 10.
 
-If it still is, we execute the loop again and ask for new input.
-
-We continue this as many times as necessary until the user cooperates.
+If it still is, we execute the loop again and ask for new input. We continue this as many times as necessary until the user cooperates.
 
 As soon as the user enters a number between 1 and 10, we break out of the while loop, because we only execute the while loop if `userInput` is less than 1 or greater than 10.
 

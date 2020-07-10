@@ -1,4 +1,4 @@
-## Arrays
+# Arrays
 
 Sometimes we want to store lists of data together in one place. For example, it might be handy to have a list of all your grades from science class. You could go back later and average all the grades in the list together to find out your final grade in science. In C++, such lists are called **arrays**
 
@@ -56,6 +56,7 @@ int main(){
 
    //print out the average
    cout << "Your science class average is " << gradeAverage << ".\n";
+   return 0;
 }
 ```
 

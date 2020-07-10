@@ -36,7 +36,7 @@ The line `code .` is how we can open up VSCode via the command line interface. T
 
 In VSCode, make a new file in the ex04_Hello_World directory, and name it HelloWorld.cpp. Copy the following program into that file and save it.
 
-```cpp
+{{ site.data.alerts.callout_code }}
 #include <iostream>
 using namespace std;
 
@@ -44,7 +44,7 @@ int main(){
   cout << "Hello World!" << endl;
   return 0;
 }
-```
+{{ site.data.alerts.end }}
 
 Let's look at this code line-by-line.
 
