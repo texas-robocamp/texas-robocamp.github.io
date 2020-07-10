@@ -1,3 +1,4 @@
+# First Program: Hello World
 {{ site.data.alerts.callout_synchronize }}
 Do this section ~~at the pace of the slower partner, so both of~~ slowly, so you completely understand it. We will be lecturing ***who will be lecturing? If it's counselors, this is a piece of curricula we need to be on the same page about. May want to make a script.*** along with students performing the tutorial, so if you are ahead and have a question, please wait for the ~~class~~ room to catch up or for a period when there is no lecturing.
 {{ site.data.alerts.end }}

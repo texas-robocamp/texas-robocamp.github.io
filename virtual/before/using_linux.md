@@ -1,4 +1,4 @@
-## Introduction to Linux 
+# Introduction to Linux 
 
 Most robotics programming is done using the Linux operating system. This is mainly due to the large amount of open-source robotics software that has been developed on it - in fact, Linux itself is **open-source**. Open-source software is software that is free to use, distribute to others, and modify. This means that you can download the entire source code for Linux online - and even help contribute to it! Linux offers a variety of free easy-to-use tools for software development that will help us along our way in constructing and programming our robots. We will be using the **Ubuntu distribution** of Linux, which is one of many different distributions (versions) of the Linux operating system. Ubuntu is one of the most popular Linux distros, and is the main operating system used here in UTCS.
 

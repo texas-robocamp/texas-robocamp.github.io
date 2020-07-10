@@ -1,4 +1,5 @@
-# Part 1: Installing VirtualBox
+# Installing with VirtualBox
+## Part 1: Installing VirtualBox
 On Windows:
 1. Set up your BIOS for virtualization (the actual steps may vary slightly for your computer):
     * Restart your computer.
@@ -24,7 +25,7 @@ The first time you install VirtualBox, you will see a pop-up saying something al
 * Click “Allow”.
 {{ site.data.alerts.end }}
 
-# Part 2: Creating the virtual machine
+## Part 2: Creating the virtual machine
 1. Start downloading the installer for Ubuntu 18.04.4 from https://releases.ubuntu.com/18.04.4/ubuntu-18.04.4-desktop-amd64.iso (this is a large file, and will take some time to download).
 2. Open VirtualBox.
 3. Click the “New” button to create a virtual machine.
@@ -46,7 +47,7 @@ The first time you install VirtualBox, you will see a pop-up saying something al
 11. Under the Display tab, go to the Display section. Set the Video Memory setting as high as possible. Leave the other settings alone.
 12. Click OK.
 
-# Part 3: Installing Ubuntu
+## Part 3: Installing Ubuntu
 1. Select the “Texas Robocamp 2020” virtual machine and click Start.
 2. Click the folder icon. Click “Add” and select the Ubuntu ISO file you downloaded earlier.
 3. Click Choose, then click Start.
@@ -64,7 +65,7 @@ The first time you install VirtualBox, you will see a pop-up saying something al
 12. On the main screen, click Next on each screen until you get to the “You’re ready to go!” screen. Click Done.
 13. If you see a pop-up saying “Updated software has been released”, close the window - they will be automatically installed as part of the setup process.
 
-# Part 4: Installing the Guest Additions
+## Part 4: Installing the Guest Additions
 1. Go to the VirtualBox menu bar. Under the “Devices” menu, click “Insert Guest Additions CD image”.
 2. If you don’t see the menu, make sure you are still in the virtual machine window.
     {{ site.data.alerts.note }}
@@ -77,7 +78,7 @@ The first time you install VirtualBox, you will see a pop-up saying something al
     Whenever you are done using VirtualBox, you should turn off the virtual machine through this menu. Instead of clicking Restart, you will click Power Off.
     {{ site.data.alerts.end }}
 
-# Part 5: Installing ROS
+## Part 5: Installing ROS
 Press Control+Alt/Option+T to open a terminal.
 * Another way to open the terminal is to click on the icon with nine dots in the lower left-hand corner of the screen (3 rows x 3 columns of dots). After clicking on this icon, type “terminal” and click on the “terminal” icon.
 
@@ -108,7 +109,7 @@ Ubuntu includes Firefox by default. If you would prefer to use Google Chrome, al
 * `sudo apt install -y ./google-chrome-stable_current_amd64.deb`
 {{ site.data.alerts.end }}
 
-# Part 6: Testing your installation
+## Part 6: Testing your installation
 In your terminal window, type these commands:
 
 * `source /opt/ros/melodic/setup.bash`

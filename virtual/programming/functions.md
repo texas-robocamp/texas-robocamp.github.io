@@ -1,3 +1,5 @@
+# Functions
+
 A **function** is a group of instructions. Usually, functions are used to organize code by breaking long programs into shorter functions that together make up the composition of the longer program.
 
 We might have a `getLetter` function that asks the user for a lowercase letter, or an `averageNumbers` function that averages a list of numbers.
@@ -47,6 +49,7 @@ void printGreeting(){
 
 int main(){
    printGreeting();
+   return 0;
 }
 ```
 
@@ -116,6 +119,7 @@ int main(){
    cout << "Enter a name: ";
    cin >> userName;
    printGreeting(userName);
+   return 0;
 }
 ```
 
@@ -162,6 +166,7 @@ int main(){
    printGreeting("Alison");
    printGreeting("Brian");
    printGreeting("Clifford the Big Red Dog");
+   return 0;
 }
 ```
 
@@ -230,10 +235,11 @@ int main(){
    float numToSquare, theSquaredNumber;
 
    numToSquare = 5.5;
-   otherNumToSquare = 4.4;
+   float otherNumToSquare = 4.4;
    theSquaredNumber = squareANum(numToSquare);  //catch the returned value
    squareANum(otherNumToSquare); //executes, but we lose the value. We never caught it!
    cout << numToSquare << " squared equals " << theSquaredNumber << endl;
+   return 0;
 }
 ```
 
@@ -255,10 +261,11 @@ int main(){
    float numToSquare, theSquaredNumber;
 
    numToSquare = 5.5;
-   otherNumToSquare2 = 4.4;
+   float otherNumToSquare = 4.4;
    theSquaredNumber = squareANum(numToSquare);  
    squareANum(otherNumToSquare); 
    cout << numToSquare << " squared equals " << theSquaredNumber << endl;
+   return 0;
 }
 
 float squareANum(float num){
@@ -294,6 +301,7 @@ void printGreeting(string name, int age){
 
 int main(){
    printGreeting("Ronald McDonald", 49);
+   return 0;
 }
 ```
 

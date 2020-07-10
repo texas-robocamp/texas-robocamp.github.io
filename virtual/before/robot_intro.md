@@ -1,3 +1,4 @@
+# Setting Up
 ## Say Hello to TexBot
 
 Introducing... TexBot!

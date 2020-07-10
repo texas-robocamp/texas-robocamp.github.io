@@ -1,3 +1,5 @@
+# Simple Math and User Input
+
 An object that weighs 1.0 pounds on Earth would weigh 0.1654 pounds on the moon.
 
 In C++, multiplication is represented with the * symbol.
@@ -116,6 +118,7 @@ int main(){
   return 0;
 }
 ```
+- Copy this code into a new file named 3_2_1.cpp in a new directory named 3_2. Then compile and run this program to ensure it is working properly.
 
 {{ site.data.alerts.tip }}
 Notice how the value for earthWeight is printed with "lbs" right next to it? Cout will not add spaces between the strings and the variables you print. For readability, it's good practice to include these spaces yourself.
