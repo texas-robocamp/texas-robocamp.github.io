@@ -223,6 +223,7 @@ Did you notice that the last two conditional statements were testing for the sam
 
 - Our `deposit` function has a similar bug right now with negative numbers. Modify it so that you can only input positive values.
 - Most banks also have a deposit limit. Create a member variable `float depositLimit` and modify your `deposit` function to also prevent users from depositing too much money at once.
+- Modify the main function to allow users to input a deposit amount. Check the functionality of the previous two steps (i.e, ensure the deposit is not negative and not above the maximum limit).
 
 {{site.data.alerts.callout_red_cup}}
 [Exercise 3.5.2]
