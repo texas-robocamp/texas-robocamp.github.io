@@ -30,7 +30,7 @@ A good variable name describes the value that it stands for. When naming variabl
 {{ site.data.alerts.end }}
 
 {{ site.data.alerts.tip }}
-Variables names cannot have spaces in them and cannot start with numbers.
+Variable names cannot have spaces in them and cannot start with numbers.
 {{ site.data.alerts.end }}
 
 ## Types
@@ -39,7 +39,7 @@ C++ requires types for variables.
 
 For example, a variable storing a number with a decimal should be a `float`, which stands for floating (decimal) point number.
 
-Variables must be declared before they are used. Generally this is done by saying the variable **type** and then the names of all the variables that are that type at the first line of the function.
+Variables must be declared before they are used. Generally this is done by saying the variable **type** and then the names of all the variables that are of that type at the first line of the function.
 
 Here's a quick reference of types in C++:
 
@@ -115,11 +115,12 @@ int main(){
   conversionFactor = 0.1654;
   moonWeight = earthWeight*conversionFactor;
   cout << "Something weighing " << earthWeight << "lbs on earth would would weigh "<< moonWeight << " lbs on the moon." << endl;  //print out conversion
+  return 0;
 }
 ```
 
 {{ site.data.alerts.tip }}
-Notice how the value for earthWeight is printed with "lbs" right next to it? Cout will not add spaces between your strings and the variables you print. For readability, it's good practice to include these spaces yourself.
+Notice how the value for earthWeight is printed with "lbs" right next to it? Cout will not add spaces between the strings and the variables you print. For readability, it's good practice to include these spaces yourself.
 {{ site.data.alerts.end }}
 
 ## Operators
@@ -136,7 +137,7 @@ Operator |	Operation
 
 When you divide two integers, the remainder of the two numbers is left out. This is called **truncation**.
 
-In integer division., `5 / 2` will give you 2, not 2.5. If you want the full value, you must use floats.
+In integer division, `5 / 2` will give you 2, not 2.5. If you want the full value, you must use floats.
 
 The `%` (**modulus**) operator gives you the remainder of integer division.
 
@@ -147,7 +148,9 @@ int rem;
 rem = 5%2;
 ```
 
-**TODO** *Should we mention definition vs assignment? I feel like that's important information*
+{{ site.data.alerts.note }}
+In programming there is a difference between variable defintition and assignment. The first line in the above code block is an example of variable definition because a variable of type `int` named rem was declared. The second line is an example of variable assignment because the variable was given the value of 5%2.
+{{ site.data.alerts.end }}
 
 This is very useful in programming, since you can easily decide if a number is even, odd, or a multiple of some other number.
 

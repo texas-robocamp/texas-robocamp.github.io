@@ -20,7 +20,7 @@ Libraries save time by providing code that does common things. When professional
 
 The "Hello World" example uses the `iostream` library. `iostream` includes a **stream** called `cout`. `cout` allows users to write formatted text to the terminal, which is often called **printing** the text.
 
-Ok, we're ready to write our first program!
+Ok, we're ready to write our first program! The following commands should look familiar from our Linux tutorial.
 
 {{ site.data.alerts.terminal_commands }}
 cd ~/exercises
@@ -33,9 +33,7 @@ code .
 The line `code .` is how we can open up VSCode via the command line interface. The . symbol means that we are talking about the current working directory - in this case, that would be ex04_Hello_World
 {{site.data.alerts.end}}
 
-Copy the following program into VSCode.
-
-Save the file as ~/exercises/ex04_Hello_World/HelloWorld.cpp
+In VSCode, make a new file in the ex04_Hello_World directory, and name it HelloWorld.cpp. Copy the following program into that file and save it.
 
 ```cpp
 #include <iostream>
@@ -53,11 +51,7 @@ Let's look at this code line-by-line.
 #include <iostream>
 ``` 
 
-This line **includes** `iostream` into our program, making its contents available to our program. This is done during compilation, which is when the computer turns the text written in C++ into the machine code that the computer can actually run.
-
-`iostream` is what is called a **header** or a **header file**. It contains the code needed to interface a library called the *Standard Input/Output Streams Library*.
-
-Including `iostream` allows us to use `cout`.
+This line **includes** `iostream` into our program, making its contents available to our program. `iostream` is what is called a **header** or a **header file**. It contains the code needed to interface a library called the *Standard Input/Output Streams Library*. Including `iostream` allows us to use `cout`.
 
 In general you will enclose header names in angle brackets. When you write your own headers, you will probably enclose them in double quotes. 
 
@@ -87,7 +81,7 @@ We only have one command for this program. Here we tell the computer to use `cou
 
 The double left-angle brackets are like an arrow pointing toward `cout`, sending something into it (in this case, `"Hello World"`) to `cout`.
 
-After `"Hello World"` there is `<< endl`, which tells the program to end the line of text. If you don't do this, there is no guarantee that your text will show up on the screen, and it will not be followed by a **newline** which literally tells the terminal to go to a new line. This is kind of like hitting `enter` at the end of a line when you're typing text.
+After `"Hello World"` there is `<< endl`, which tells the program to end the line of text and follows it with a **newline**, which literally tells the terminal to go to a new line. This is kind of like hitting `enter` at the end of a line when you're typing text.
 
 We put quotation marks around the words we want to display (this is called a **string**). In cpp, every line of code (ones without braces) ends in a semi-colon.
 
@@ -103,7 +97,7 @@ We then use a closing brace to end the function, and with it, the program.
 
 ## Compiling and Executing from the Command Line
 
-Like we mentioned earlier, compiling code is the act of turning your code into a program that the machine can **execute** or run.
+Compiling code is the act of turning your code into a program that the machine can **execute** or run.
 
 To compile your code, we will use the GNU C++ compiler, better known as `g++`.
 
@@ -119,7 +113,7 @@ What does this line do?
 
 `HelloWorld.cpp` is the file to be compiled. In this case, it is the file that we just wrote. In future usages of g++, replace `HelloWorld.cpp` with the file that you intend to compile.
 
-`-o HelloWorld` tells the compiler that the program should be named `HelloWorld`. If you typed `-o MyProgram`, it would name your program `MyProgram`.
+`-o HelloWorld` tells the compiler that the compiled program should be named `HelloWorld`. If you typed `-o MyProgram`, it would name your program `MyProgram`.
 
 Hopefully, your program just compiled.
 
@@ -153,6 +147,10 @@ If you ever forget how to compile a C++ program, we've provided an example in th
     - For example, if your name is Justine, it would display, `Hello Justine!`
 
 - Next, add a second line of text that says, "Programming is actually pretty fun when you get right down to it."
+
+{{site.data.alerts.tip}}
+From here on out you will be creating new files for each exercise you do. It would be a good idea to name the files for each exercise according to the exercise name, and to create a new directory for each group of exercises you complete. For example, directory 3_1 will contain exercise 3_1.cpp, while directory 3_2 will contain exercises 3_2_1.cpp, 3_2_2.cpp, and 3_2_3.cpp
+{{site.data.alerts.end}}
 
 {{ site.data.alerts.callout_red_cup }}
 [Tutorial 3.1]

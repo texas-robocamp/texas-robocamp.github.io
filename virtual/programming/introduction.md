@@ -1,6 +1,6 @@
 ## Overview
 
-C++ is a programming language. It most of the applications you use are written in C++ or a similar language. You will write the programs to control your robot in C++. Like a spoken language, a programming language has a vocabulary and grammar rules. A C++ program can be thought of as a list of instructions, in order, for the computer to carry out.
+C++ is a programming language. Most of the applications you use are written in C++ or a similar language. You will write the programs to control your robot in C++. Like a spoken language, a programming language has a vocabulary and grammar rules. A C++ program can be thought of as a list of instructions, in order, for the computer to carry out.
 
 {{ site.data.alerts.note }}
 If you are already well-versed in programming, please complete the tutorials anyway. You should be able to do them quickly. For those of you who are new, please do not worry. You will be able to get through this material and program your robot!
