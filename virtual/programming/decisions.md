@@ -47,7 +47,7 @@ To test values and perform a set of instructions (or not) based on the result, w
 double newBalance = accountBalance - request;
 
 if (newBalance <= 0){
-  accountBalance = newBalance; // Don't withdraw anything, because the balance would be invalid
+ return; // Don't withdraw anything, because the balance would be invalid
 }
 else{
   accountBalance = newBalance; // Update the balance
@@ -113,7 +113,7 @@ class BankAccount {
 int main(){
 
     float withdrawRequest;
-    BankAccount myAccount();
+    BankAccount myAccount;
     myAccount.deposit(1000.00);
 
     cout << "Hello customer, please enter the amount you would like to withdraw: ";
@@ -246,7 +246,7 @@ switch (option) {
       float amount;
       cout << "Enter deposit amount: ";
       cin >> amount; // Store the amount to deposit
-      myAccount.deposit(deposit);
+      myAccount.deposit(amount);
       break; // This terminates the switch so we don't check all the other cases.
   case 1: // if the option is 1
       // do something else
