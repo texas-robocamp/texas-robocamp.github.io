@@ -83,14 +83,11 @@ Almost there!
 
 One really cool feature of arrays is that you can have **multidimensional arrays**. Let's return to the motel example from earlier, where we had a one-story motel. Imagine that we add a second floor to the motel of exactly the same length as the ground floor. Let's pretend we had to give a motel guest directions to their room. We would start by telling them the floor that they were on, and then which room on that floor was theirs. Multi-dimensional arrays work the same way, except the floors are numbered from 0. To make this a little clearer, consider this diagram below, which represents an array called `letterArray`:
 
-|row/col|	0	|1	|2	|3	|4|
-|-|-|-|-|-|-|
-0|	|y	| | |	w|
-1|	| |	x| | |
-2| |	z| | | |
-
-
-**TODO** *This table is missing a column, not sure where to put it*
+|row/col|0|1|2|3|4|
+|-------|-|-|-|-|-|
+|0      | |y| | |w|
+|1      | | |x| | |
+|2      | |z| | | |
 
 We can see that the position of the letter w is row 0, column 4. We can write this position as `letterArray[0][4]`. The position of letter x is row 1, column 2, so we write that as `letterArray[1][2]`. Remember, row first, then column.
 

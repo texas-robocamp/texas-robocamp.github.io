@@ -11,9 +11,7 @@ Most robotics programming is done using the Linux operating system. This is main
 
 ### Getting to a Web Browser
 
-By default, the Ubuntu logo will be displayed on the launcher to the left of the monitor in the bottom left-hand corner.
-
-**TODO** *Random idea but we could totally change the icon to be Bevo or the little robocamp bot. It's apparently just /usr/share/icons/Adwaita/scalable/actions/view-app-grid-symbolic.svg*
+A grid of nine dots will be displayed on the launcher to the left of the monitor in the bottom left-hand corner.
 
 1. Click on the grid icon.
 

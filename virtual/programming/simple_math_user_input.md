@@ -50,8 +50,6 @@ int	    | 4 or 134
 string	| "Hello World"
 bool	| true/false
 
-**TODO** *also mention types in the global documentation*
-
 Let's write an algorithm for this conversion program together. Here's what we'll have it do:
 
 1. Save the conversion factor (0.1654) as the variable `conversionFactor`
