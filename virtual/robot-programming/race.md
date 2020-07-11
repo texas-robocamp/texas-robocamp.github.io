@@ -1,6 +1,5 @@
+# Challenge 8: Race!
 Now we're going to race our robot against each other.
-
-## Challenge 8: Race!
 
 - Add an entry to your user interface to allow you to start the robot by pressing Button 1.
 - Modify your line follower program to allow the robot to complete the race course as fast as possible.

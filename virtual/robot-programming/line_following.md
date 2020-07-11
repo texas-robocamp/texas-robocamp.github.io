@@ -1,3 +1,4 @@
+# Line Following
 In this tutorial, you're going to make the robot follow a line on the ground.
 
 You'll be using the racetrack.launch launch file for these exercises.
@@ -12,9 +13,9 @@ In the previous tutorial, you found the line by setting a threshold. You can act
 
 We think that you're ready for a slightly harder tutorial. So I'm just going to tell you how this is done.
 
-- Check the first ADC channel.
+- Check the first sensor channel.
 - Store its value in a variable.
-- Use a **loop** to check each ADC channel.
+- Use a **loop** to check each of the eight channels.
 - **If** a channel has a higher value than the one stored, store that value.
 - Always store the channel corresponding to the highest value as well.
 - Put this into a **function**.

@@ -1,3 +1,4 @@
+# The Line Follower
 In this tutorial, we're going to do quite a lot, and it's going to be challenging. We've given you quite a lot of direction here, so you should be able to figure out how to do it. You're going to need a lot of help from the counselors. This is the hardest program you've written so far this camp. It will be challenging, but that's okay! This is how you learn.
 
 We're going to tell you what this program does so you can see where this is all going.
@@ -44,7 +45,7 @@ The value `sensorNum` determines which section of the sensor you are getting the
 
 ### The Line Follower Test Target
 
-- You'll be using the **TODO** *filename* launch file for these exercises.
+- You'll be using the `racetrack.launch` launch file for these exercises.
 
 ### Program the Exercise
 
@@ -74,7 +75,7 @@ When you hook this up, the numbers are going to scream past on the screen really
 
 ### Try the Line Follower
 
-- Move the robot around under the line target. You'll want to **rosrun** the teleop_botnroll executable for this!
+- Move the robot around under the line target. You'll want to **rosrun** the `teleop_texbot` executable for this!
 - You should notice that the numbers where the black line is present are different from the numbers where there is no black.
   - How are they different?
 
