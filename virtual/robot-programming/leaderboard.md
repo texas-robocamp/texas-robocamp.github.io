@@ -1,3 +1,4 @@
+# Leaderboard
 User | Proportional Time | PD Time | PID Time |
 ---- | :---: | :---: | :---: |
 Kevin | 1:20 | 0:50 | 0:30 |
