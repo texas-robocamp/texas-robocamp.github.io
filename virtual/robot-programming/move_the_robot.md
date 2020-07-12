@@ -1,7 +1,7 @@
 # Exploring the Robot's Motion
 In this tutorial, you will create a program that uses the buttons to control the speed of the left and right motors separately. You will then use this program to learn how the robot can perform simple turns, speed up, and apply its brakes.
 
-For these exercises, you'll be using the **TODO** *filename* launch file.
+For these exercises, you'll be using the `box.launch` launch file.
 
 ## The Move Function
 
@@ -25,7 +25,7 @@ You can turn the robot by moving the motors at different speeds.
 
 ### Exercise 4.3.1
 
-- Again, Start by copying the "empty" program from ["Robot Programming Introduction"](/robot_programming_introduction.html) into your ~~Arduino IDE~~ **TODO** *however the script thing works*, and saving it in a sensible place.
+- Again, Start by copying the "empty" program from ["Robot Programming Introduction"](/robot_programming_introduction.html) into a new file in VSCode.
 - Fill in the program so the robot moves when it's started, using `move`, and stops when it sees an obstacle.
 
 {{ site.data.alerts.tip }}
@@ -34,10 +34,6 @@ We recommend setting both speeds to 25 for this exercise so you can easily obser
 
 {{ site.data.alerts.callout_red_cup }}
 [Exercise 4.3.1]
-{{ site.data.alerts.end }}
-
-{{ site.data.alerts.note }}
-Counselors should ~~take students out to the bridge or to a wall in the 3rd floor lab to~~ observe that this behaves properly before proceeding. *TODO is this necessary?*
 {{ site.data.alerts.end }}
 
 ## Building a Simple Interface Using the LCD and Buttons
@@ -56,10 +52,6 @@ Value | Meaning
 3 | Button 3 pressed
 
 ### Exercise 4.3.2
-
-{{ site.data.alerts.tip }}
-Exercises 4.3.2 - 4.3.5 combined are the largest programming exercise in the camp so far, and the hardest we've asked you to do yet. If you are not sure what this exercise expects, ask the counselors to show you a demo.
-{{ site.data.alerts.end }}
 
 - Create a new program
 
@@ -120,8 +112,8 @@ This will let you try different things with the robot's motors to see how the ro
 - Create a new program combining your UI from Exercise 4.3.5 with the motor code from 4.3.1.
 - loop block should take the user input from the buttons at the top of the function.
 - At the bottom of the block, you should detect whether or not an obstacle is in front of the robot.
-  - If there is an obstacle, the robot should stop, using `move`.
-  - If there is not an obstacle, it should put leftVal and rightVal into the left and right motors, respectively, using `move`.
+  - If there is an obstacle, the robot should stop, using the `move` function.
+  - If there is not an obstacle, it should put leftVal and rightVal into the left and right motors, respectively, using `move` as well.
 
 {{ site.data.alerts.callout_red_cup }}
 [Exercise 4.3.6]
@@ -129,7 +121,7 @@ This will let you try different things with the robot's motors to see how the ro
 
 ### Exercise 4.3.7
 
-- Go back to the empty camp launch file, and try a few different things with the robot's motors.
+- Go back to the `box.launch` launch file, and try a few different things with the robot's motors.
   - Can you make the robot make a big circle to the right?
   - Can you make it make a big circle to the left?
   - Do you understand why this happens?
