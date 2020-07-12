@@ -44,7 +44,7 @@ Let's try writing a very simple function that prints the greeting "Hello World!"
 using namespace std;
 
 void printGreeting(){
-   cout << "Hello World!\n";
+   cout << "Hello World!" << endl;
 }
 
 int main(){
