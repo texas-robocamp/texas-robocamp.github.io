@@ -297,11 +297,6 @@ The first time you install VMWare, you may see a pop-up saying something along 	
 
              * Continue with the rest of installation normally, with default options selected
 
-             * At the end of installation, go back to System Preferences -> Security and Privacy -> Privacy -> Full Disk Access and check VMWare. 
-
-                {{ site.data.alerts.img_75 }}
-                images/macsecurity.png
-                {{ site.data.alerts.img_75_end }}
       * **Windows**:
           * Continue with default options selected until the “Custom Setup” screen
 
@@ -377,6 +372,12 @@ images/vmwizardmac.png
 10. Go to Display and uncheck “Accelerate 3D Graphics” (unless you have a discrete GPU)
 
 11. Close settings and launch VM (it should launch automatically)
+
+	* **(Mac)** Once the VM is configured, before launching, quit VMWare completely and go to System Preferences -> Security and Privacy -> Privacy -> Full Disk Access and check VMWare. Then relaunch VMWare and the VM.
+
+        {{ site.data.alerts.img_75 }}
+        images/macsecurity.png
+        {{ site.data.alerts.img_75_end }}
 
 12. If prompted to Download/Install VMWare Tools, press “Download and Install”
 
