@@ -11,6 +11,7 @@ end: '</div>'
 terminal_commands: '<div class="alert alert-dark" role="alert">Run these commands in a terminal:<pre>'
 terminal_commands_end: '</pre></div>'
 
+callout_code_div: '<div class="code-window"'
 callout_danger: '<div class="bs-callout bs-callout-danger">'
 callout_default: '<div class="bs-callout bs-callout-default">'
 callout_primary: '<div class="bs-callout bs-callout-primary">'
