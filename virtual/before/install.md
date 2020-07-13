@@ -281,7 +281,7 @@ Congrats! You have now successfully set up your VirtualBox system. Now move to t
 
         * Open the installer and double click the icon to start installation
 
-    * **Windows**: Download VMWare Workstation Player from https://www.vmware.com/products/fusion/fusion-evaluation.html and run the installer
+    * **Windows**: Download VMWare Workstation Player from https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html and run the installer
 3. Follow the instructions to install VMWare with defaults selected
     * **Mac**:
 {{ site.data.alerts.important }}
