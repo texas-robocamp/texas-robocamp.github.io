@@ -4,10 +4,7 @@ Most robotics programming is done using the Linux operating system. This is main
 
 ### Logging In
 
-1. ~~Enter the user name given to you, and hit Enter.~~ *They'll have this set up in their own way?*
-2. On the next screen, first click on the gear and select "ubuntu" from the menu.
-3. Type in the password assigned to you, hit Enter, and you should be taken to a desktop screen.
-4. A box will pop up telling you about keyboard shortcuts. Click the X and move on to the interesting stuff.
+1. This year you'll already know how to log in from setting up your machine. Log in as you did when you set up your machine.
 
 ### Getting to a Web Browser
 
@@ -97,28 +94,19 @@ Here are a few shortcuts that you can use when forming paths.
 
 Here's a quick exercise to try this all out.
 
-```
+
+{{ site.data.alerts.terminal_commands }}
 mkdir linux_exercise
-
 ls
-
 cd linux_exercise
-
 ls ..
-
 cd ..
-
 ls
-
 mkdir linux_exercise/subdirectory
-
 cd ~/linux_exercise/subdirectory
-
 pwd
-
 cd ~
-
-```
+{{ site.data.alerts.terminal_commands_end }}
 
 This is basically a text-based version of double clicking on folders, but the command line is a powerful tool which you will use all week.
 
