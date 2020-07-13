@@ -42,7 +42,7 @@ The steps for installing from a Live Thumb Drive are quick, however, the dowload
 
 ### Create the Drive (Mac and Windows)
 
-* Download the Persistent Live Thumb Drive image from SITE
+* Download the Persistent Live Thumb Drive image from  (texas-robocamp_persistent_v1.iso.gz) from [http://justinhart.net/files/texas-robocamp/](http://justinhart.net/files/texas-robocamp/)
 
 * Unzip the compressed image. The uncompressed image is very large, 64 GB. Make sure you have sufficient drive space before proceeding.
 
@@ -69,7 +69,7 @@ This software will overwrite anything on the target device, so you need to make 
     * sudo apt update
     * sudo apt install mkusb usb-pack-efi
 
-* Download the Live Thumb Drive image from SITE
+* Download the Live Thumb Drive image (texas-robocamp_live_v1.iso) from [http://justinhart.net/files/texas-robocamp/](http://justinhart.net/files/texas-robocamp/)
 
 * Install the Live Thumb Drive image using the "mkusb" command from the terminal.
 
