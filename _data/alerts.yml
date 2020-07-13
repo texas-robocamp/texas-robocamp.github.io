@@ -22,3 +22,8 @@ hr_faded: '<hr class="faded"/>'
 hr_shaded: '<hr class="shaded"/>'
 hr: '<hr />'
 
+img_50: '<img width="50%" src="'
+img_50_end: '">'
+
+img_75: '<img width="75%" src="'
+img_75_end: '">'

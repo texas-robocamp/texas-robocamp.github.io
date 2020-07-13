@@ -1,11 +1,119 @@
+# Get Ready for Camp!
+Before you can attend camp, we need you to set up your computer! Follow the instructions on this page to prepare your machine for camp! Get started early. This is not easy, but we're happy to help you get set up for camp!
+
+
+{{ site.data.alerts.important }}
+If you run into problems, we can be reached at *texas.robocamp@gmail.com*. **Also make sure to cc *camp@cs.utexas.edu*, or else we will not be able to send a reply!**
+{{ site.data.alerts.end }}
+
+# The Texas RoboCamp Software
+We will use several tools commonly used in robotics research.
+
+These are:
+
+* Ubuntu Linux - Linux is an open source operating system, and Ubuntu is what is called a "distribution" of Linux.
+
+* ROS (Robot Operating System) - ROS is an open source middleware layer commonly used in robotics applications.
+
+* Gazebo - Gazebo is a robot simulator, which runs a simulated robot in a 3D virtual environment.
+
+
 # Installation
-## Installing with a Thumb Drive
-TODO
+
+Since you will be working from home, we will need a way for you to run these tools on your home machine. There are three options here.
+
+* Native Ubuntu 18.04 Installation - We recommend this only for people who already have Linux installed on their machines. We only support Ubuntu 18.04 for the Texas RoboCamp, as this is the target platform of ROS Melodic. If you are running a different version of Ubuntu, please run 18.04 either from a virtual machine or from the thumb drive.
+
+* Live Thumb Drive - We distributed 64 GB USB 3.0 thumb drives to all of you. Running from a thumb drive involves downloading an image from the internet and writing it to the drive. You then boot your machine from the thumb drive every time you want to us Linux.
+
+* Virtual Machine - We also provide instructions for how to run a virtual machine on your computer. A virtual machine provides a way to run a "guest" operating system inside your computer's OS, which will allow you to run Linux on a Windows machine or a Mac with no problems.
+
+Next steps:
+
+* If you want to run from a Live Thumb Drive, proceed to the next section ("Running from a Live Thumb Drive").
+
+* If you want to run from a Virtual Machine, skip to "Installing with a Virtual Machine"
+
+* If you want to run from a Native Ubuntu 18.04 Installation, skip to "Setting up the Robocamp Software"
+
+## Running from a Live Thumb Drive
+
+The steps for installing from a Live Thumb Drive are quick, however, the dowloads involved are quite large. Please set up your computer well in advance of camp! These images will take hours to download.
+
+### Create the Drive (Mac and Windows)
+
+* Download the Persistent Live Thumb Drive image from SITE
+
+* Unzip the compressed image. The uncompressed image is very large, 64 GB. Make sure you have sufficient drive space before proceeding.
+
+* Write the image to the drive (for Windows)
+
+    * Download Rufus - [https://rufus.ie/](https://rufus.ie/)
+    * Follow the instructions from the Rufus website. Use the texas-robocamp_live_v1.iso image to write to your thumb drive, rather than an Ubuntu image. Take the default options when writing your thumb drive.
+
+* Write the image to the drive (for Mac)
+    * Follow the instructions on this website [https://itsfoss.com/create-bootable-ubuntu-usb-drive-mac-os/](https://itsfoss.com/create-bootable-ubuntu-usb-drive-mac-os/)
+    * Use the texas-robocamp_live_v1.iso image rather than an Ubuntu image.
+
+### Create the Drive (Ubuntu Linux)
+
+
+{{ site.data.alerts.important }}
+Carefully read the prompts to make sure that you are installing only to the 64 GB Samsung FIT USB drive that we sent you!
+
+This software will overwrite anything on the target device, so you need to make sure that it is the correct device!
+{{ site.data.alerts.end }}
+
+* Install mkusb
+    * sudo add-apt-repository ppa:mkusb/ppa
+    * sudo apt update
+    * sudo apt install mkusb usb-pack-efi
+
+* Download the Live Thumb Drive image from SITE
+
+* Install the Live Thumb Drive image using the "mkusb" command from the terminal.
+
+    * You want "i" for install on the first menu.
+
+    * You want "p" for persistent on the second menu.
+
+    * Select the texas-robocamp_live_v1.iso as your image, then follow the prompts to complete installation.
+
+
+
+
+### Boot to the Drive
+
+* Reboot your computer
+
+* While the machine is rebooting, get to the Boot Menu, which allows you to pick which device you should boot from. This is typically done by hitting F10, F11, or F12 while the machine is rebooting.
+
+    * You have to be quick doing this! As soon as your machine starts to reboot, hit F10, F11, and/or F12 repeatedly until you see the boot menu.
+
+    * When you get to the boot menu, select the option for the UEFI Samsung FIT USB drive.
+
+* The next option asks what mode you want to run Ubuntu in. You want "persistent live," as this will enable you to save your work.
+
+
+{{ site.data.alerts.img_75 }}
+images/grub_menu.jpg
+{{ site.data.alerts.img_75_end }}
+
+
+
+{{ site.data.alerts.important }}
+Congrats! You have now successfully set up your Live Thumb Drive. 
+
+Your thumb drive already has all of the software that you need for the Texas RoboCamp installed, so skip to "Testing Your Installation" to check that your system works correctly.
+{{ site.data.alerts.end }}
+
+
+
 ## Installing with a Virtual Machine
 
 ### What is a Virtual Machine?
 
-A Virtual Machine (VM) is like a computer inside of your computer. It is an environment that runs like a normal program on your machine, but it emulates a fully-functional operating system, just like if you bought another computer! It has its own virtual hard drive, memory, CPU, and devices that it creates using resources from your computer. 
+A Virtual Machine (VM) is like a computer inside of your computer. It is an environment that runs like a normal program on your machine, but it emulates a fully-functional system, just like if you bought another computer! It has its own virtual hard drive, memory, CPU, and devices that it creates using resources from your computer. 
 
 We will be creating a virtual machine that we can use to run and develop software from during the course of the camp.
 
@@ -22,7 +130,10 @@ Before we get started, if you have a Windows machine, you will have to first all
 
 5. Save the changes and restart.
 
-![Image of BIOS Menu](images/bios.png) 
+
+{{ site.data.alerts.img_75 }}
+images/bios.png
+{{ site.data.alerts.img_75_end }}
 
 {{ site.data.alerts.note }}
 The officially supported virtual machine software for this camp is **VirtualBox**. If you would prefer to use **VMWare** (an alternate software) instead, there are installation instructions for trial versions after this section. Both will work for the purposes of this camp.
@@ -100,7 +211,9 @@ The first time you install VirtualBox, you may see a pop-up saying something alo
 
 Once you are done, your screen should look something like this.
 
-![Image of VirtualBox Menu](images/virtualboxmenu.png) 
+{{ site.data.alerts.img_75 }}
+images/virtualboxmenu.png
+{{ site.data.alerts.img_75_end }}
 
 ### Installing Ubuntu
 1. Select the “Texas Robocamp 2020” virtual machine and click Start.
@@ -134,7 +247,9 @@ Once you are done, your screen should look something like this.
 
 Your screen should look something like this when your installation is complete.
 
-![Image of Ubuntu Desktop](images/ubuntudesktop.png) 
+{{ site.data.alerts.img_75 }}
+images/ubuntudesktop.png
+{{ site.data.alerts.img_75_end }}
 
 ### Installing the Guest Additions
 1. Go to the VirtualBox menu bar. Under the “Devices” menu, click “Insert Guest Additions CD image”.
@@ -182,13 +297,17 @@ The first time you install VMWare, you may see a pop-up saying something along 	
 
              * At the end of installation, go back to System Preferences -> Security and Privacy -> Privacy -> Full Disk Access and check VMWare. 
 
-        	   ![Image of Mac security](images/macsecurity.png) 
+                {{ site.data.alerts.img_75 }}
+                images/macsecurity.png
+                {{ site.data.alerts.img_75_end }}
       * **Windows**:
           * Continue with default options selected until the “Custom Setup” screen
 
           * Check the option to include the Enhanced Keyboard Driver
 
-		      ![Image of Custom setup screen](images/vmwaresetup.png) 
+                {{ site.data.alerts.img_75 }}
+                images/vmwaresetup.png
+                {{ site.data.alerts.img_75_end }}
 
           * Continue with the rest of the setup normally (with default settings)
 
@@ -201,9 +320,13 @@ The first time you install VMWare, you may see a pop-up saying something along 	
 
 3. Find and add your downloaded Ubuntu ISO File (drag and drop for Mac)
 
-![Image of Windows VMWare Wizard](images/vmwizardwindows.png) 
+{{ site.data.alerts.img_75 }}
+images/vmwizardwindows.png
+{{ site.data.alerts.img_75_end }}
 
-![Image of Mac VMWare Wizard](images/vmwizardmac.png)
+{{ site.data.alerts.img_75 }}
+images/vmwizardmac.png
+{{ site.data.alerts.img_75_end }}
 
 4. Make sure easy install is checked
 
@@ -217,7 +340,10 @@ The first time you install VMWare, you may see a pop-up saying something along 	
         * Finish creating your VM and the option to configure settings will automatically come up upon launch
 
         * You can also press the wrench icon at the top of the VM Window to access settings
-	 	![Image of Mac Settings](images/macsettings.png)
+
+        {{ site.data.alerts.img_75 }}
+        images/macsettings.png
+        {{ site.data.alerts.img_75_end }}
 
     * **Windows**:
         * Option to set Hard Disk Size will show up in creation process
@@ -226,11 +352,15 @@ The first time you install VMWare, you may see a pop-up saying something along 	
 
         * Select “Store virtual disk as a single file”
 		
-		 ![Image of Windows VMWare HD setup](images/windowshd.png)
+        {{ site.data.alerts.img_75 }}
+        images/windowshd.png
+        {{ site.data.alerts.img_75_end }}
 
         * Option to configure settings will pop up during VM creation process, you can do so by clicking “Customize Hardware”
 
-		 ![Image of Windows settings](images/windowssettings.png)
+        {{ site.data.alerts.img_75 }}
+        images/windowssettings.png
+        {{ site.data.alerts.img_75_end }}
 
 7. **(Mac)** Go to Hard Disk and set 15 GB Hard Drive Space 
      * Go to advanced settings and select “Pre allocate disk space” and unselect “Split into multiple files”, then click apply
@@ -257,7 +387,9 @@ When starting the VM, you may get a message *“Cannot connect virtual device be
 
 Your screen should look something like this when your installation is complete.
 
-![Image of Ubuntu Desktop](images/ubuntudesktop.png) 
+{{ site.data.alerts.img_75 }}
+images/ubuntudesktop.png
+{{ site.data.alerts.img_75_end }}
 
 {{ site.data.alerts.important }}
 Congrats! You have now successfully set up your VMWare system. Now move to the bottom of this page to install the Robocamp software.
@@ -314,7 +446,7 @@ Ubuntu includes Firefox by default. If you would prefer to use Google Chrome, al
 		{{ site.data.alerts.terminal_commands_end }}
 {{ site.data.alerts.end }}
 
-### Testing
+# Testing Your Installation
 Close the current terminal and open up a new one using Ctrl-Alt-T.
 {{ site.data.alerts.terminal_commands }}
 * `source /opt/ros/melodic/setup.bash`
@@ -323,7 +455,9 @@ Close the current terminal and open up a new one using Ctrl-Alt-T.
 
 You should see two windows appear. One will have the UT logo and our simulated robot in the middle.
 
-![Image of a successful install](images/successful_install.png)
+{{ site.data.alerts.img_75 }}
+images/successful_install.png
+{{ site.data.alerts.img_75_end }}
 
 Open a new terminal by right clicking in the terminal window and clicking “open tab”.
 
@@ -348,7 +482,11 @@ If everything looks good, go back to the terminal and press Control+C in both wi
 * Click Power Off.
 
 {{ site.data.alerts.important }}
-Email us to tell us that you have successfully installed your software for the camp (include your FPS!), or to report any problems. We can be reached at *texas.robocamp@gmail.com*. **Also make sure to cc *camp@cs.utexas.edu*, or else we will not be able to send a reply!**
+Email us to tell us that you have successfully installed your software for the camp, or to report any problems.
+
+In your email, make sure report how many FPS gazebo is running at!
+
+We can be reached at *texas.robocamp@gmail.com*. **Also make sure to cc *camp@cs.utexas.edu*, or else we will not be able to send a reply!**
 {{ site.data.alerts.end }}
 
 
