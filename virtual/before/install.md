@@ -273,6 +273,9 @@ Congrats! You have now successfully set up your VirtualBox system. Now move to t
 
 
 ### **Installing VMWare** *(Alternative for VirtualBox)*
+{{ site.data.alerts.note }}
+Installing with VMWare will require 20GB of free space on your hard drive. If you have less than this, opt for VirtualBox instead.
+{{ site.data.alerts.end }}
 ### Downloading
 1. Start downloading the installer for Ubuntu 18.04.4 from https://releases.ubuntu.com/18.04.4/ubuntu-18.04.4-desktop-amd64.iso (this is a large file, and will take some time to download).
 2. Download and run the VMWare Installer (Fusion for Mac, Workstation Player for Windows) and walk through the installation prompts on the screen
@@ -281,7 +284,7 @@ Congrats! You have now successfully set up your VirtualBox system. Now move to t
 
         * Open the installer and double click the icon to start installation
 
-    * **Windows**: Download VMWare Workstation Player from https://www.vmware.com/products/fusion/fusion-evaluation.html and run the installer
+    * **Windows**: Download VMWare Workstation Player from https://www.vmware.com/products/workstation-player/workstation-player-evaluation.html and run the installer
 3. Follow the instructions to install VMWare with defaults selected
     * **Mac**:
 {{ site.data.alerts.important }}
@@ -347,7 +350,7 @@ images/vmwizardmac.png
     * **Windows**:
         * Option to set Hard Disk Size will show up in creation process
 
-        * Set Hard disk size to 15 GB
+        * Set Hard disk size to 20 GB
 
         * Select “Store virtual disk as a single file”
 		
@@ -361,7 +364,7 @@ images/vmwizardmac.png
         images/windowssettings.png
         {{ site.data.alerts.img_75_end }}
 
-7. **(Mac)** Go to Hard Disk and set 15 GB Hard Drive Space 
+7. **(Mac)** Go to Hard Disk and set 20 GB Hard Drive Space 
      * Go to advanced settings and select “Pre allocate disk space” and unselect “Split into multiple files”, then click apply
 
 8. Go to Memory (or Processors & Memory for Mac) and set 4GB (4096MB) memory, or about half of your available RAM
