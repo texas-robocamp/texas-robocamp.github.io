@@ -44,16 +44,15 @@ The steps for installing from a Live Thumb Drive are quick, however, the dowload
 
 * Download the Persistent Live Thumb Drive image from  (texas-robocamp_persistent_v1.iso.gz) from [http://justinhart.net/files/texas-robocamp/](http://justinhart.net/files/texas-robocamp/)
 
-* Unzip the compressed image. The uncompressed image is very large, 64 GB. Make sure you have sufficient drive space before proceeding.
-
 * Write the image to the drive (for Windows)
 
     * Download Rufus - [https://rufus.ie/](https://rufus.ie/)
-    * Follow the instructions from the Rufus website. Use the texas-robocamp_live_v1.iso image to write to your thumb drive, rather than an Ubuntu image. Take the default options when writing your thumb drive.
+    * Follow the instructions from the Rufus website. Use the texas-robocamp_persistent_v1.iso.gz image to write to your thumb drive, rather than an Ubuntu image. Take the default options when writing your thumb drive.
 
 * Write the image to the drive (for Mac)
+    * Unzip the compressed image. The uncompressed image is very large, 64 GB. Make sure you have sufficient drive space before proceeding.
     * Follow the instructions on this website [https://itsfoss.com/create-bootable-ubuntu-usb-drive-mac-os/](https://itsfoss.com/create-bootable-ubuntu-usb-drive-mac-os/)
-    * Use the texas-robocamp_live_v1.iso image rather than an Ubuntu image.
+    * Use the texas-robocamp_persistent_v1.iso image rather than an Ubuntu image.
 
 ### Create the Drive (Ubuntu Linux)
 
