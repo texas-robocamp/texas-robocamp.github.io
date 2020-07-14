@@ -54,6 +54,8 @@ The steps for installing from a Live Thumb Drive are quick, however, the dowload
     * Follow the instructions on this website [https://itsfoss.com/create-bootable-ubuntu-usb-drive-mac-os/](https://itsfoss.com/create-bootable-ubuntu-usb-drive-mac-os/)
     * Use the texas-robocamp_persistent_v1.iso image rather than an Ubuntu image.
 
+Once you've created the drive, skip to "Boot to the Drive".
+
 ### Create the Drive (Ubuntu Linux)
 
 
