@@ -387,7 +387,7 @@ images/vmwizardmac.png
     * If prompted to install Software Updates, just close the window (we will install them anyway in the process)
 
 {{ site.data.alerts.tip }}
-When starting the VM, you may get a message *“Cannot connect virtual device because no corresponding device is available on the host."* This is because your machine doesn't have a CD/DVD drive. Press yes to bypass the message.
+When starting the VM, you may get a message *“Cannot connect virtual device because no corresponding device is available on the host."* This is because your machine doesn't have a CD/DVD drive. Press no so that the VM will stop looking for the device upon startup.
 {{ site.data.alerts.end }}
 
 Your screen should look something like this when your installation is complete.
