@@ -9,9 +9,10 @@ We've developed software for you to use ROS without needing to explore the compl
 
 ### A Boilerplate ROS Program
 
-Here's a simple, brief program that you can copy as a sort of "empty" program to start your projects with.
+To get us started, here's a simple, brief ROS program that is a sort of "empty" program:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <ros/ros.h>
 #include <unistd.h>
 #include "texas_robocamp/texbot_wrapper.h"
@@ -31,56 +32,75 @@ int main(int argc, char **argv) {
 
     return 0;
 }
-
 ```
+{{ site.data.alerts.end }}
 
 Let's explore what's going on here.
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <ros/ros.h>
 #include <unistd.h>
 #include "texas_robocamp/texbot_wrapper.h"
 ```
+{{ site.data.alerts.end }}
 
 Hopefully these first lines should seem vaguely familiar - we're once again **including** other libraries to work with our code. In this case, the libraries we are including are the ROS libraries, libraries that provide access to the OS, and the robot libraries we've written to help you control your robot.
 
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 int main(int argc, char **argv) {
 ```
+{{ site.data.alerts.end }}
 
 This function should look somewhat familiar as well - it's the `main` function! Unlike previous `main` functions you've seen so far, this one has two parameters, argc and argv. These can be used to pass in arguments from your terminal, but since we won't ever be using these arguments, you don't need to worry about them.
 
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 ros::init(argc, argv, "robot");
 ```
+{{ site.data.alerts.end }}
 
 This function starts up our ROS process. ROS calls these **nodes**, and allows for arguments to be passed in via the command line with `argc` and `argv`. The last argument defines the name of the node - in this case, the name is "robot".
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 TexBot bot;
 ```
+{{ site.data.alerts.end }}
 
 Here, we're creating an instance of the `TexBot` object, and calling it `bot`. 
 
 This object is a **class** just like the `BankAccount` class you developed earlier in the programming portion of this camp, and much like the `BankAccount` class, it contains a number of variables and functions, some of which are private and some of which are public. We'll explore these in more detail later on.
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 while(ros::ok()) {
 ```
+{{ site.data.alerts.end }}
 
 This should seem familiar as well - it's another **while loop**. Whereas earlier you saw the condition be a logical expression involving numbers, this loop will execute for as long as the function `ros::ok()` returns `true`. In general, this will always be true until you close your program.
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 ros::spinOnce();
 ```
+{{ site.data.alerts.end }}
 
-This function lets our node update its information. For our purposes, it lets the `TexBot` object update its sensor data so that we can be aware of what's going on in the simulation. Without this function, our node would have no idea what is going on in the simulator, so it is vital that you leave this line here. We recommend writing all of your code before this line.
+This function lets our node update its information. For our purposes, it lets the `TexBot` object update its sensor data so that we can be aware of what's going on in the simulation. We recommend writing all of your code before this line.
 
-```cpp
+{{site.data.alerts.important}}
+It is vital that you leave this line here! Without this function, our node would have no idea what is going on in the simulator.
+{{site.data.alerts.end}}
+
+{{ site.data.alerts.callout_code_div }}
+```
 return 0;
 ```
+{{ site.data.alerts.end }}
+
 
 Here we see our usual return statement from main, which simply returns zero. This line will only be executed when `ros::ok()` is `false`, so don't write any code outside of the `while` loop because it will not be executed until after the ROS node is finished running.
 
@@ -97,9 +117,11 @@ We will continue to refer to the screen as an LCD and name our function `lcd` so
 
 ### The `lcd` Function
 
+{{ site.data.alerts.callout_code_div }}
 ```
 void lcd#(const std::string &line)
 ```
+{{ site.data.alerts.end }}
 
 This function is actually one of two `lcd#` functions. The robot has two lines of LCD output. Calling `lcd1` or `lcd2` specifies which line you would like for your text to appear on. There is no concept of a "carriage return," "\n," or `endl` that is useful here.
 
@@ -107,57 +129,65 @@ The parameter here `const std::string &line` might look a little confusing; this
 
 Here is an example of how you could use these functions:
 
+{{ site.data.alerts.callout_code_div }}
 ```
-one.lcd1("How are you today?");
-one.lcd2("I'm doing great thanks");
+bot.lcd1("How are you today?");
+bot.lcd2("I'm doing great thanks");
 ```
+{{ site.data.alerts.end }}
+
+The lcd functions must be called on the TexBot object - you attach the function to the object with a period. For our purposes, our TexBot is always named "bot", so anytime you want to call the lcd functions you will always use `bot.lcd1()` or `bot.lcd2()`.
 
 ## Compiling and Running a ROS Program
 
 Although you're still writing code in C++, we will be using a different build system to turn our ROS code into code that can be executed by your computer. You might remember that we mentioned **catkin workspaces** before you began the camp - we're going to start working in them now.
 
-We've built a custom script for your to generate new ROS programs for you. To create a new file, make sure you are in your catkin workspace, and do:
-
-
 {{site.data.alerts.terminal_commands}}
-./create-package exercise_name
+source /opt/ros/melodic/setup.bash
 {{site.data.alerts.terminal_commands_end}}
 
-You'll replace *exercise_name* with what you want to name your file. To keep track of your files, we recommend naming them similarly to how we've named your exercises. For example, this first exercise is exercise 4.1.1, so we would do
+You should have already cloned the robocamp_exercises folder into your new workspace. Inside that folder we have provided you with the directory structure and cpp files you will write your code in.
 
-```
-./create_package ex_4_1_1
-```
-
-You should see a new folder appear inside of your catkin workspace named ex_4_1_1. Inside of this folder will be three files: CMakeLists.txt, package.xml, and src.
-
-Inside src, you should see ex_4_1_1_node.cpp. This is where you will write your code! By default, we've filled it with the boilerplate ROS program we showed you at the beginning of this page.
+Inside the robocamp_exercises directory, you will see six directories named "4_1", "4_2", "4_3", etc. These are **packages**, which each contain a src folder. Inside the src folder are the cpp files for each individual exercise. By default, we've filled each cpp file with the boilerplate ROS program we showed you at the beginning of this page.
 
 Next, we'll want to build our program. To do this, do
 
 {{site.data.alerts.terminal_commands}}
-catkin build ex_4_1_1
+catkin build 4_1
 {{site.data.alerts.terminal_commands_end}}
+
+It is important to run this command after you've made any changes to your program and before you try to run it. You can think of it as a ROS equivalent of the g++ command we used in our C++ exercises. The syntax is always:
+
+catkin build <package_name>
+
 
 {{site.data.alerts.tip}}
 The Gazebo simulator is very complex, so it might slow down your computer. You'll want to make sure it is not running when you run `catkin build` to make the build go faster.
 {{site.data.alerts.end}}
 
-In order to use the robot, you'll need to **roslaunch** a gazebo simulation. For the first few exercises, we'll be using the boxed world that we've built for you. To launch it, you'll run a similar roslaunch command to the one you ran at the beginning of the camp:
+In order to actually use the robot, you'll need to run what are called launch files. These are files which group up smaller executable programs so that we don't have to run all of them individually. Using the **roslaunch** command will fire up the gazebo simulation. The syntax for this is:
+
+roslaunch <package_name> <file_name>
+
+For the first few exercises, we'll be using the boxed world that we've built for you.
 
 {{site.data.alerts.terminal_commands}}
-roslaunch texas_robocamp box_world.launch
+roslaunch texas_robocamp box.launch
 {{site.data.alerts.terminal_commands_end}}
 
-To run **your** code, you'll do the **rosrun** command, which we also mentioned earlier. For this specific example, you'll do:
+Launch files aren't the only way to run a ROS program however; like we said earlier, they're actually launching smaller executables that are called ROS **nodes**. To launch a single node, do:
 
-```
-rosrun ex_4_1_1 node
-```
+rosrun <package_name> <file_name>
 
 {{site.data.alerts.tip}}
-By default, we've made it so that the name of your node will always just be `node`. The only thing that will change is the name of the package, which will always be the argument you pass into `create-package`
+The syntax for both `roslaunch` and `rosrun` commands are nearly identical! Don't forget that `roslaunch` is for launch files and `rosrun` is for individual nodes
 {{site.data.alerts.end}}
+
+To run **your** code, you'll do the **rosrun** command, which we also mentioned earlier. For this specific example, open a new terminal and do:
+
+{{site.data.alerts.terminal_commands}}
+rosrun 4_1 ex_4_1_1
+{{site.data.alerts.terminal_commands_end}}
 
 If you ever need a refresher on how all of this works, feel free to go back to the [documentation](docs.html)!
 
@@ -169,13 +199,15 @@ If you ever need a refresher on how all of this works, feel free to go back to t
 
 ## Sleep
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 int usleep(useconds_t useconds)
 ```
+{{ site.data.alerts.end }}
 
 One function that you will find helpful this week is `usleep`. This is a function of the unistd library, which gives us access to some of the operating system.
 
-Calling this function will cause your program to wait for `useconds` milliseconds.
+Calling this function will cause your program to wait for `useconds` microseconds.
 
 You'll want to use `usleep` whenever you want to keep a robot in a certain state for some time, or if you want to slow down your program to debug information.
 
