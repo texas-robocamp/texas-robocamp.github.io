@@ -79,7 +79,24 @@ At this point, your program should now say which button is being pressed on the 
 [Exercise 4.3.3]
 {{ site.data.alerts.end }}
 
+## Button Toggles
+
+Right now, when you press Button 3, you've probably noticed that the value for `leftRight` changes rapidly. This is due to the fact that pressing and holding the button causes the button to be pressed multiple times.
+
+To make the button toggle, we want to change the value of `leftRight` only when we have pressed Button 3 for the first time.
+
 ### Exercise 4.3.4
+
+- Add another boolean variable to the top of your program. Call it `threePressed` and set it to false.
+- Instead of only checking to see if Button 3 has been pressed when changing the value of `leftRight`, make sure that Button 3 has not already been pressed.
+  - We will now also set `threePressed` to `true` when we change the value of `leftRight` to show that the button has been pressed.
+- If Button 3 was not the button that got pressed, set `wasThree` back to `false` so it can be pressed again later.
+
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.4]
+{{ site.data.alerts.end }}
+
+### Exercise 4.3.5
 
 - Add two more variables before the `ros::ok()` loop, `int leftVal` and `int rightVal`.
 - Set both to zero at the start of the program.
@@ -90,15 +107,29 @@ At this point, your program should now say which button is being pressed on the 
 Now your program should allow you to increase and decrease `leftVal` and `rightVal` and select which is changed using the pushbuttons on the robot.
 
 {{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.4]
+[Exercise 4.3.5]
 {{ site.data.alerts.end }}
 
-### Exercise 4.3.5
+### Exercise 4.3.6
+
+We'll want to fix Button 1 and 2 so that they don't increment at too high of a rate.
+
+- Add one more variable before the `ros::ok()` loop: `int count`. Set it to zero.
+- Instead of always checking to see if Button 1 or 2 have been pressed, only check at a large interval.
+  - We can do this by seeing if `count` is a multiple of a large number.
+  - For example, only check the buttons if `count` is a multiple of 7000. You can do this with the `%` operator!
+- Make sure that you still set the value for `wasThree` properly, even if you don't check to see if Button 1 or Button 2 are pressed.
+
+{{ site.data.alerts.callout_red_cup }}
+[Exercise 4.3.6]
+{{ site.data.alerts.end }}
+
+### Exercise 4.3.7
 
 - Use `if` statements, the modulo (`%`) operator, or other logic to limit the range of `leftVal` and `rightVal` to be between -100 and 100.
 
 {{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.5]
+[Exercise 4.3.7]
 {{ site.data.alerts.end }}
 
 ## Controlling the Robot's Motors
@@ -107,19 +138,19 @@ What we're going to have you do now is combine the user interface that you just 
 
 This will let you try different things with the robot's motors to see how the robot can move and turn, as well as stop before it hits an obstacle.
 
-### Exercise 4.3.6
+### Exercise 4.3.8
 
-- Create a new program combining your UI from Exercise 4.3.5 with the motor code from 4.3.1.
+- Create a new program combining your UI from Exercise 4.3.7 with the motor code from 4.3.1.
 - loop block should take the user input from the buttons at the top of the function.
 - At the bottom of the block, you should detect whether or not an obstacle is in front of the robot.
   - If there is an obstacle, the robot should stop, using the `move` function.
   - If there is not an obstacle, it should put leftVal and rightVal into the left and right motors, respectively, using `move` as well.
 
 {{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.6]
+[Exercise 4.3.8]
 {{ site.data.alerts.end }}
 
-### Exercise 4.3.7
+### Exercise 4.3.9
 
 - Go back to the `box.launch` launch file, and try a few different things with the robot's motors.
   - Can you make the robot make a big circle to the right?
@@ -133,7 +164,7 @@ This will let you try different things with the robot's motors to see how the ro
 {{ site.data.alerts.end }}
 
 {{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.7]
+[Exercise 4.3.9]
 {{ site.data.alerts.end }}
 
 ## Next Step

@@ -55,7 +55,7 @@ The steps for installing from a Live Thumb Drive are quick, however, the dowload
     * Use the texas-robocamp_persistent_v1.iso image rather than an Ubuntu image.
 
 ### Create the Drive (for Ubuntu Linux)
-
+Once you've created the drive, skip to "Boot to the Drive".
 
 {{ site.data.alerts.important }}
 Carefully read the prompts to make sure that you are installing only to the 64 GB Samsung FIT USB drive that we sent you!
@@ -297,11 +297,6 @@ The first time you install VMWare, you may see a pop-up saying something along 	
 
              * Continue with the rest of installation normally, with default options selected
 
-             * At the end of installation, go back to System Preferences -> Security and Privacy -> Privacy -> Full Disk Access and check VMWare. 
-
-                {{ site.data.alerts.img_75 }}
-                images/macsecurity.png
-                {{ site.data.alerts.img_75_end }}
       * **Windows**:
           * Continue with default options selected until the “Custom Setup” screen
 
@@ -378,13 +373,19 @@ images/vmwizardmac.png
 
 11. Close settings and launch VM (it should launch automatically)
 
+	* **(Mac)** Once the VM is configured, before launching, quit VMWare completely and go to System Preferences -> Security and Privacy -> Privacy -> Full Disk Access and check VMWare. Then relaunch VMWare and the VM.
+
+        {{ site.data.alerts.img_75 }}
+        images/macsecurity.png
+        {{ site.data.alerts.img_75_end }}
+
 12. If prompted to Download/Install VMWare Tools, press “Download and Install”
 
 13. Wait for installation to complete automatically, then log in and press next on all the prompts for the “Welcome to Ubuntu” window
     * If prompted to install Software Updates, just close the window (we will install them anyway in the process)
 
 {{ site.data.alerts.tip }}
-When starting the VM, you may get a message *“Cannot connect virtual device because no corresponding device is available on the host."* This is because your machine doesn't have a CD/DVD drive. Press yes to bypass the message.
+When starting the VM, you may get a message *“Cannot connect virtual device because no corresponding device is available on the host."* This is because your machine doesn't have a CD/DVD drive. Press no so that the VM will stop looking for the device upon startup.
 {{ site.data.alerts.end }}
 
 Your screen should look something like this when your installation is complete.
