@@ -185,9 +185,9 @@ Using the code above as a base, add a call to printGreeting() in main so that yo
 
 Now that you've been greeted...
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 3.3.1, Exercise 3.3.2, Exercise 3.3.3]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.3.1, 3_3_1{{+}}
+{{+}}Tutorial 3.3.2, 3_3_2{{+}}
+{{+}}Tutorial 3.3.3, 3_3_3{{+}}
 
 ## Returning Results
 
@@ -317,9 +317,8 @@ You are 49 years old.
 You will be 50 next January.
 ```
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 3.3.4, Exercise 3.3.5]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.3.4, 3_3_4{{+}}
+{{+}}Tutorial 3.3.5, 3_3_5{{+}}
 
 ## Next Step
 
