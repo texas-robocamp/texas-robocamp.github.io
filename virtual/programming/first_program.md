@@ -19,7 +19,7 @@ Sometimes, code is already written and stored in **libraries.**
 
 Libraries save time by providing code that does common things. When professional programmers write software such as a video game, they use libraries to render the graphics, load files, or control physics. This frees the coders who write the rules of the game to concentrate on that aspect. It also frees the ones who specialize in graphics to continually improve on the graphics code used by all of their users.
 
-The "Hello World" example uses the *iostream* library. *iostream* includes a **stream** called *cout*. *cout* allows users to write formatted text to the terminal, which is often called **printing** the text.
+The "Hello World" example uses the `iostream` library. `iostream` includes a **stream** called `cout`. `cout` allows users to write formatted text to the terminal, which is often called **printing** the text.
 
 Ok, we're ready to write our first program! The following commands should look familiar from our Linux tutorial.
 
@@ -54,7 +54,7 @@ Let's look at this code line-by-line.
 #include <iostream>
 ``` 
 
-This line **includes** *iostream* into our program, making its contents available to our program. *iostream* is what is called a **header** or a **header file**. It contains the code needed to interface a library called the *Standard Input/Output Streams Library*. Including *iostream* allows us to use *cout*.
+This line **includes** `iostream` into our program, making its contents available to our program. `iostream` is what is called a **header** or a **header file**. It contains the code needed to interface a library called the *Standard Input/Output Streams Library*. Including `iostream` allows us to use `cout`.
 
 In general you will enclose header names in angle brackets. When you write your own headers, you will probably enclose them in double quotes. 
 
@@ -155,9 +155,7 @@ If you ever forget how to compile a C++ program, we've provided an example in th
 From here on out you will be creating new files for each exercise you do. It would be a good idea to name the files for each exercise according to the exercise name, and to create a new directory for each group of exercises you complete. For example, directory 3_1 will contain exercise 3_1.cpp, while directory 3_2 will contain exercises 3_2_1.cpp, 3_2_2.cpp, and 3_2_3.cpp
 {{site.data.alerts.end}}
 
-{{ site.data.alerts.callout_red_cup }}
-[Tutorial 3.1]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.1, 3_1{{+}}
 
 ## Next Step
 

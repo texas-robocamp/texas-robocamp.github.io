@@ -8,9 +8,7 @@ cd
 git clone https://github.com/texas-robocamp/exercises.git
 {{site.data.alerts.terminal_commands_end}}
 
-{{site.data.alerts.callout_red_cup}}
-[Exercise 2]
-{{site.data.alerts.end}}
+{{+}}Exercise 2, 2{{+}}
 
 **TODO** *We do need to change the callout but I wonder if there's a way to edit it so that if we don't change anything else, we could just put this page in the root dir and not need two copies of it*
 

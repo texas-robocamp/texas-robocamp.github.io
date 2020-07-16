@@ -40,7 +40,7 @@ Next steps:
 
 The steps for installing from a Live Thumb Drive are quick, however, the dowloads involved are quite large. Please set up your computer well in advance of camp! These images will take hours to download.
 
-### Create the Drive (Mac and Windows)
+### Create the Drive (for Mac and Windows)
 
 * Download the Persistent Live Thumb Drive image from  (texas-robocamp_persistent_v1.iso.gz) from [http://justinhart.net/files/texas-robocamp/](http://justinhart.net/files/texas-robocamp/)
 
@@ -54,7 +54,7 @@ The steps for installing from a Live Thumb Drive are quick, however, the dowload
     * Follow the instructions on this website [https://itsfoss.com/create-bootable-ubuntu-usb-drive-mac-os/](https://itsfoss.com/create-bootable-ubuntu-usb-drive-mac-os/)
     * Use the texas-robocamp_persistent_v1.iso image rather than an Ubuntu image.
 
-### Create the Drive (Ubuntu Linux)
+### Create the Drive (for Ubuntu Linux)
 
 
 {{ site.data.alerts.important }}

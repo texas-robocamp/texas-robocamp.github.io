@@ -1,4 +1,10 @@
-First, welcome to camp! ~~You should be seated at a workstation next to your partner. If you have not yet taken the time to introduce yourselves to each other, spend a minute or two to get to know each other. You'll be working together all week.~~ 
+First, welcome to camp!
+
+
+{{site.data.alerts.note}}
+We know that you are excited to be here, and to finally be started on the exercises. If we are currently doing some group activity, like an icebreaker or group instruction, please pay attention to that and turn your attention back to the website when it has concluded. We promise that there will be ample time for these activities.
+{{site.data.alerts.end}}
+
 
 **TODO** *We're gonna need a new intro*
 
@@ -47,7 +53,7 @@ pwd
 
 ## Tutorials
 
-This camp comprises a series of mostly self-paced tutorials. Each tutorial is documented on this website. You can navigate the tutorials using the navigation bar on the left. You can always return to the top of the website by clicking on the "Texas RoboCamp" logo in the upper left-hand corner.
+The tutorials that you will be doing for this camp are self-paced and documented on this website. You can navigate the tutorials using the navigation bar on the left. You can always return to the top of the website by clicking on the "Texas RoboCamp" logo in the upper left-hand corner.
 
 ## ~~Where You Sit~~ **TODO** Zoom Room Management
 
@@ -79,9 +85,7 @@ At designated points through your progress on this website, you will be asked to
 
 It will look like this:
 
-{{site.data.alerts.callout_red_cup}}
-[Tutorial 1]
-{{site.data.alerts.end}}
+{{+}}Tutorial 1, 1{{+}}
 
 > Are we still going to use this callout? If so, we may want to consider changing it so that it's not saying Red Cup
 
