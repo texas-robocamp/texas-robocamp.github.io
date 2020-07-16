@@ -47,47 +47,35 @@ Let's explore what's going on here.
 
 Hopefully these first lines should seem vaguely familiar - we're once again **including** other libraries to work with our code. In this case, the libraries we are including are the ROS libraries, libraries that provide access to the OS, and the robot libraries we've written to help you control your robot.
 
-
-{{ site.data.alerts.callout_code_div }}
 ```
 int main(int argc, char **argv) {
 ```
-{{ site.data.alerts.end }}
 
 This function should look somewhat familiar as well - it's the `main` function! Unlike previous `main` functions you've seen so far, this one has two parameters, argc and argv. These can be used to pass in arguments from your terminal, but since we won't ever be using these arguments, you don't need to worry about them.
 
-
-{{ site.data.alerts.callout_code_div }}
 ```
 ros::init(argc, argv, "robot");
 ```
-{{ site.data.alerts.end }}
 
 This function starts up our ROS process. ROS calls these **nodes**, and allows for arguments to be passed in via the command line with `argc` and `argv`. The last argument defines the name of the node - in this case, the name is "robot".
 
-{{ site.data.alerts.callout_code_div }}
 ```
 TexBot bot;
 ```
-{{ site.data.alerts.end }}
 
 Here, we're creating an instance of the `TexBot` object, and calling it `bot`. 
 
 This object is a **class** just like the `BankAccount` class you developed earlier in the programming portion of this camp, and much like the `BankAccount` class, it contains a number of variables and functions, some of which are private and some of which are public. We'll explore these in more detail later on.
 
-{{ site.data.alerts.callout_code_div }}
 ```
 while(ros::ok()) {
 ```
-{{ site.data.alerts.end }}
 
 This should seem familiar as well - it's another **while loop**. Whereas earlier you saw the condition be a logical expression involving numbers, this loop will execute for as long as the function `ros::ok()` returns `true`. In general, this will always be true until you close your program.
 
-{{ site.data.alerts.callout_code_div }}
 ```
 ros::spinOnce();
 ```
-{{ site.data.alerts.end }}
 
 This function lets our node update its information. For our purposes, it lets the `TexBot` object update its sensor data so that we can be aware of what's going on in the simulation. We recommend writing all of your code before this line.
 
@@ -95,12 +83,9 @@ This function lets our node update its information. For our purposes, it lets th
 It is vital that you leave this line here! Without this function, our node would have no idea what is going on in the simulator.
 {{site.data.alerts.end}}
 
-{{ site.data.alerts.callout_code_div }}
 ```
 return 0;
 ```
-{{ site.data.alerts.end }}
-
 
 Here we see our usual return statement from main, which simply returns zero. This line will only be executed when `ros::ok()` is `false`, so don't write any code outside of the `while` loop because it will not be executed until after the ROS node is finished running.
 
@@ -117,11 +102,9 @@ We will continue to refer to the screen as an LCD and name our function `lcd` so
 
 ### The `lcd` Function
 
-{{ site.data.alerts.callout_code_div }}
 ```
 void lcd#(const std::string &line)
 ```
-{{ site.data.alerts.end }}
 
 This function is actually one of two `lcd#` functions. The robot has two lines of LCD output. Calling `lcd1` or `lcd2` specifies which line you would like for your text to appear on. There is no concept of a "carriage return," "\n," or `endl` that is useful here.
 
@@ -199,11 +182,9 @@ If you ever need a refresher on how all of this works, feel free to go back to t
 
 ## Sleep
 
-{{ site.data.alerts.callout_code_div }}
 ```
 int usleep(useconds_t useconds)
 ```
-{{ site.data.alerts.end }}
 
 One function that you will find helpful this week is `usleep`. This is a function of the unistd library, which gives us access to some of the operating system.
 
