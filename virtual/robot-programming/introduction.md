@@ -100,7 +100,7 @@ This is a great example of one of these design choices. In simulation, printing 
 
 We will continue to refer to the screen as an LCD and name our function `lcd` so that if there were actual development on the physical robot, we would only have to change the behavior of our robot object instead of the code printing to the LCD. 
 
-### The `lcd` Function
+### The lcd Function
 
 ```
 void lcd#(const std::string &line)
@@ -136,17 +136,21 @@ Inside the robocamp_exercises directory, you will see six directories named "4_1
 Next, we'll want to build our program. To do this, do
 
 {{site.data.alerts.terminal_commands}}
-catkin build 4_1
+catkin build
 {{site.data.alerts.terminal_commands_end}}
 
-It is important to run this command after you've made any changes to your program and before you try to run it. You can think of it as a ROS equivalent of the g++ command we used in our C++ exercises. The syntax is always:
-
-catkin build <package_name>
-
+It is important to run this command after you've made any changes to your program and before you try to run it. You can think of it as a ROS equivalent of the g++ command we used in our C++ exercises.
 
 {{site.data.alerts.tip}}
 The Gazebo simulator is very complex, so it might slow down your computer. You'll want to make sure it is not running when you run `catkin build` to make the build go faster.
 {{site.data.alerts.end}}
+
+Now run this command to automatically source your setup.bash:
+
+{{site.data.alerts.terminal_commands}}
+echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
+source ~/.bashrc
+{{site.data.alerts.terminal_commands_end}}
 
 In order to actually use the robot, you'll need to run what are called launch files. These are files which group up smaller executable programs so that we don't have to run all of them individually. Using the **roslaunch** command will fire up the gazebo simulation. The syntax for this is:
 
@@ -166,7 +170,7 @@ rosrun <package_name> <file_name>
 The syntax for both `roslaunch` and `rosrun` commands are nearly identical! Don't forget that `roslaunch` is for launch files and `rosrun` is for individual nodes
 {{site.data.alerts.end}}
 
-To run **your** code, you'll do the **rosrun** command, which we also mentioned earlier. For this specific example, open a new terminal and do:
+To run **your** code, you'll always do the **rosrun** command, which we also mentioned earlier. Whenever you are running multiple launch files or nodes, you always need one terminal open for each. For this specific example, split your terminal and in the new terminal do:
 
 {{site.data.alerts.terminal_commands}}
 rosrun 4_1 ex_4_1_1
@@ -195,7 +199,7 @@ You'll want to use `usleep` whenever you want to keep a robot in a certain state
 
 ### Exercise 4.1.2
 
-Modify your program to:
+In the ex_4_1_2.cpp file we have provided you, copy in your code from Exercise 4.1.1 and modify your program to:
 
 - Say: "Hello World!" on the first line in the LCD, and "Texas RoboCamp!" on the second line.
 - Wait 2 seconds
