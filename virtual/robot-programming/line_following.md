@@ -108,7 +108,7 @@ Probably the best known controller is the PID controller, where I stands for **i
 
 **TODO** *Again let's find or make a neat little picture to show what this is for the folks who aren't aware of what an integral is*
 
-In practice, you can compute your numerical integral by adding up your errors over time to arrive at area under the curve for your potential.
+In practice, you can compute your numerical integral by adding up your potentials over time to arrive at area under the curve for your potential.
 
 - **Constant gain** (`K_c`).
 - **Proportional gain** (`K_p`).
