@@ -210,9 +210,9 @@ In the ex_4_1_2.cpp file we have provided you, copy in your code from Exercise 4
 You can modify this exercise to use whatever cheer you like. The point is to learn how the code works.
 {{ site.data.alerts.end }}
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.1.1, 4.1.2]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 4.1.1, 4_1_1{{+}}
+{{+}}Tutorial 4.1.2, 4_1_2{{+}}
+
 
 ## Next Step
 

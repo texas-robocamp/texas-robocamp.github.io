@@ -1,17 +1,16 @@
-# Exploring the Obstacle Detector
+# Robot Functions
 ## Documentation 
 
 We've gone ahead and included a separate page with all the documentation for using the robot [here](docs.html), but we'll be introducing you to the various functions our robot as they become useful. Feel free to come back to this page or the documentation to check up on what these functions do.
 
 ## `LEDs`
 
-```cpp
-void ledLeft(boolean state)
+{{ site.data.alerts.callout_code_div }}
 ```
-
-```cpp
+void ledLeft(boolean state)
 void ledRight(boolean state)
 ```
+{{ site.data.alerts.end }}
 
 These functions turn on and off the left and right LEDs respectively, based on whether it is passed `true` or `false`. 
 
@@ -28,36 +27,45 @@ will print out "Bob is 10 years old!"
 
 ## Obstacle Sensors
 
-```cpp
-double leftObstacleSensor()
+{{ site.data.alerts.callout_code_div }}
 ```
-
-```cpp
+double leftObstacleSensor()
 double rightObstacleSensor()
 ```
+{{ site.data.alerts.end }}
+
 
 These functions will return the distance (in meters) from the left or right obstacle sensor to the nearest obstacle. Each sensor is on the front of the robot, pointing out 45 degrees. The range for these values is [0.0,10.0]
 
+All of these functions are accessed in the same way as we accessed the lcd function. In order to call these functions you must attach them to your TexBot object, "bot", with a period.
+
+## Thresholding
+
+In order for the obstacle sensors to be of any meaningful use, we will need to use thresholding. If we want a function of the robot to be triggered based on how close the robot is to an obstacle, we need to check if the returned value from the obstacle sensor functions is greater or smaller than a certain value. That value is your **threshold**. 
+
+In the next two exercises you will need to come up with a good threshold with which to compare the distance between your robot and a wall to trigger changes in the lcd screens and leds.
+
 ### Exercise 4.2.1
 
-**TODO** *Are we doing thresholding then? I'm thinkning for here we just tell them to print if sensor > 5.0 but then in the next exercise we have them figure out good thresholding later.*
-
-- Start by copying the "empty" program from ["Robot Programming Introduction"](/robot_programming_introduction.html) into your ~~Arduino IDE~~, and saving it in a sensible place.
+- Navigate to and open the ex_4_2_1.cpp file located in the src folder of the 4_2 package. It should already be filled with the "empty program" from ["Robot Programming Introduction"](/robot_programming_introduction.html)
 - Write a short program that will print "Left Sensor Activated" when the left sensor is activated, "Right Sensor Activated" when the right sensor is activated, and "Both Sensors Activated" when both sensors are activated on the LCD on the robot.
-  - For this program, you'll be launching a new world. This launch file uses the same robocamp package, but the file name is now **TODO** *filename*
+- To test the program:
+  - **roslaunch** the box.world launch file
+  - **rosrun** your code
+  - In order to move the robot closer to a wall, you will have to teleop the robot. If you can't remember how to do that, check the [documentation](/docs.html).
 
-{{site.data.alerts.callout_red_cup}}
-[Exercise 4.2.1]
-{{site.data.alerts.end}}
+{{+}}Tutorial 4.2.1, 4_2_1{{+}}
 
 
 ### Exercise 4.2.2
 
 - Instead of just printing which sensor is activated, turn on the corresponding LED to indicate which obstacle sensor has been triggered.
 
-{{site.data.alerts.callout_red_cup}}
-[Exercise 4.2.2]
+{{site.data.alerts.note}}
+Many of you may have issues with this exercise, so please call a counselor!
 {{site.data.alerts.end}}
+
+{{+}}Tutorial 4.2.2, 4_2_2{{+}}
 
 ## Next Step
 
