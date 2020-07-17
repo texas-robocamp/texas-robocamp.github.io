@@ -178,9 +178,12 @@ What's the mathematical opposite of multiplication?
 
 Write a new program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.2.1, 3_2_1{{+}}
+
+{{+}}Tutorial 3.2.2, 3_2_2{{+}}
+
+{{+}}Tutorial 3.2.3, 3_2_3{{+}}
+
 
 ## Next Step
 

@@ -2,11 +2,11 @@
 
 Most robotics programming is done using the Linux operating system. This is mainly due to the large amount of open-source robotics software that has been developed on it - in fact, Linux itself is **open-source**. Open-source software is software that is free to use, distribute to others, and modify. This means that you can download the entire source code for Linux online - and even help contribute to it! Linux offers a variety of free easy-to-use tools for software development that will help us along our way in constructing and programming our robots. We will be using the **Ubuntu distribution** of Linux, which is one of many different distributions (versions) of the Linux operating system. Ubuntu is one of the most popular Linux distros, and is the main operating system used here in UTCS.
 
-### Logging In
+# Log In
 
-1. This year you'll already know how to log in from setting up your machine. Log in as you did when you set up your machine.
+1. You may or may not need to use your username and password, depending on how you are accessing Linux.
 
-### Getting to a Web Browser
+# Getting to a Web Browser
 
 A grid of nine dots will be displayed on the launcher to the left of the monitor in the bottom left-hand corner.
 
@@ -18,10 +18,10 @@ A grid of nine dots will be displayed on the launcher to the left of the monitor
 
     * No, neither browser is better than the other for this camp. This is purely a matter of personal preference.
 
-3. Go to https://utcs-robotics-camp.github.io/ to get to this site. *They're already here, do we need to explain this to them?*
+3. Go to https://texas-robocamp.com/ to get to this site. Of course, you're already here.
 
 
-## Getting to a Terminal
+# Getting to a Terminal
 
 1. Click on the applications overview button
 
@@ -29,7 +29,7 @@ A grid of nine dots will be displayed on the launcher to the left of the monitor
 
 3. A terminal window will open.
 
-### Terminator
+## Terminator
 
 There are lots of different alternatives to the basic terminal. We **highly** recommend that you use Terminator, which is already installed on your machine. Terminator works very similarly to the basic terminal, but has the added feature of being able to have multiple panes open at once in the same window. We will often need multiple terminals open; using terminator makes it easier to keep track of these.
 
@@ -39,15 +39,15 @@ There are lots of different alternatives to the basic terminal. We **highly** re
 
 - `ctrl` + `shift` + `w`: Close the current window
 
-## The Super Key
+# The Super Key
 
 Much like how Windows has the start key and MacOS has the command key, Linux has what we call the `super` key. By default, this will be either your start or command key. Pressing `super` by itself will also open the applications overview.
 
-## Changing Windows
+# Changing Windows
 
 This is similar to operating systems such as Windows and Mac OS. Hit `alt`+`tab` or `super`+`tab` to cycle windows, or click on the icons on the launcher.
 
-## Snapping Windows
+# Snapping Windows
 The version of Linux we're using let's you easily maximize windows and snap them to half of the screen. To do so, simply press `super`+`arrow-key` 
 
 - `Super`+`Up`: make the window fill the screen 
@@ -58,13 +58,13 @@ The version of Linux we're using let's you easily maximize windows and snap them
 
 - `Super`+`Down`: Unsnap the window, returning it to its normal size
 
-## Locking Frequently-Used Programs to the Launcher
+# Locking Frequently-Used Programs to the Launcher
 
 1. Right-click on the application that you would like to lock to the launcher.
 
 2. Click "Lock to Launcher."
 
-## Basic Linux Commands
+# Basic Linux Commands
 
 Here a few commands you will need during the course of this camp. Try them out.
 
@@ -88,8 +88,8 @@ Here are a few shortcuts that you can use when forming paths.
  Shortcut | Meaning | Detail 
  ------- | ------- | ------
  ~     | Home directory.            | A space set aside for each user to store their files. 
- .     | The current directory.     |                                                       
- ..    | The parent directory.      |                                                       
+ .     | The current directory.     | Where you are now, in the filesystem.                                                      
+ ..    | The parent directory.      | The directory in which the current directory is stored.                                                      
  /     | The root directory.        | The very top of the computer's filesystem.            
 
 Here's a quick exercise to try this all out.
@@ -110,7 +110,7 @@ cd ~
 
 This is basically a text-based version of double clicking on folders, but the command line is a powerful tool which you will use all week.
 
-## Tab Completion
+# Tab Completion
 
 The command line has tab-completion. If you start typing the name of a file, directory, or command and hit tab, it will finish the name for you. If there is more than one match, all possible options are displayed.
 
@@ -118,10 +118,10 @@ The command line has tab-completion. If you start typing the name of a file, dir
 Don't forget about tab completion! It's a HUGE timesaver, especially when you have to type long commands.
 {{site.data.alerts.end}}
 
-## Bash History
+# Bash History
 By default, all of your previous commands are stored in the order you typed them in ~/.bash_history. This allows for you to easily run previous commands without having to type them over and over, simply by hitting the `up-arrow` on your keyboard while you're in the terminal. Try it right now, and you should see `cd ~` appear on your screen (unless you've typed a new command since we explored the basic commands.)
 
-## VSCode 
+# VSCode 
 
 We will using an IDE called Visual Studio Code (VSCode) to develop our software during the camp. An **IDE** is an Integrated Development Environment, and they are very useful when writing software due to features like syntax highlighting, code completion, debugging tools, etc. VSCode has an large library of extensions that can be used to add new features on top of it - you can even design your own extensions to help you out if you can't find the right tool for the job! 
 
@@ -132,7 +132,7 @@ To open VSCode you can do one of two things:
 * Open the applications overview and type `vscode` and select the icon for VSCode.
 
 
-## Shutting Down
+# Shutting Down
 
 Before you finish for the day, make sure you save all your work and turn off the computer. Open the account menu in the top right-hand corner of your screen, click the shut down icon, and select shut down from the power options.
 
@@ -140,7 +140,7 @@ Before you finish for the day, make sure you save all your work and turn off the
 Please do not unplug the USB before your computer has fully shut down, as this may corrupt files on the USB. If you are experiencing technical difficulties, notify one of the camp staff.
 {{site.data.alerts.end}}
 
-## Next Step
+# Next Step
 
 **TODO** *This link isn't real*
 Proceed to ["Introduction to the Robot"](/robot_introduction.html)

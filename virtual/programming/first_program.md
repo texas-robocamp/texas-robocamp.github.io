@@ -22,7 +22,6 @@ Libraries save time by providing code that does common things. When professional
 The "Hello World" example uses the *iostream* library. *iostream* includes a **stream** called *cout*. A stream is a series of characters - in this case, *cout* allows users to write a series of formatted text characters to the terminal, which is often called **printing** the text.
 
 
-
 Ok, we're ready to write our first program! The following commands should look familiar from our Linux tutorial.
 
 {{ site.data.alerts.terminal_commands }}
@@ -58,7 +57,7 @@ Let's look at this code line-by-line.
 #include <iostream>
 ``` 
 
-This line **includes** *iostream* into our program, making its contents available to our program. *iostream* is what is called a **header** or a **header file**. It contains the code needed to interface a library called the *Standard Input/Output Streams Library*. Including *iostream* allows us to use *cout*.
+This line **includes** `iostream` into our program, making its contents available to our program. `iostream` is what is called a **header** or a **header file**. It contains the code needed to interface a library called the *Standard Input/Output Streams Library*. Including `iostream` allows us to use `cout`.
 
 In general you will enclose header names in angle brackets. When you write your own headers, you will probably enclose them in double quotes. 
 
@@ -158,9 +157,7 @@ If you ever forget how to compile a C++ program, we've provided an example in th
 From here on out you will be creating new files for each exercise you do. It would be a good idea to name the files for each exercise according to the exercise name. For example, directory 3_1 will contain exercise ex_3_1.cpp, and directory 3_2 will contain exercises ex_3_2_1.cpp, ex_3_2_2.cpp, and ex_3_2_3.cpp
 {{site.data.alerts.end}}
 
-{{ site.data.alerts.callout_red_cup }}
-[Tutorial 3.1]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.1, 3_1{{+}}
 
 ## Next Step
 

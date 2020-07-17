@@ -8,9 +8,7 @@ cd ~
 git clone https://github.com/texas-robocamp/cpp_exercises.git
 {{site.data.alerts.terminal_commands_end}}
 
-{{site.data.alerts.callout_red_cup}}
-[Exercise 2]
-{{site.data.alerts.end}}
+{{+}}Exercise 2, 2{{+}}
 
 ## Next Step
 
