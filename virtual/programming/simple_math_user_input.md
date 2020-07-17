@@ -8,10 +8,12 @@ The program will save all the numbers it needs in **variables**. A variable stor
 
 For example:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 x = 4;
 y = 5 * x;
 ```
+{{ site.data.alerts.end }}
 
 {{ site.data.alerts.tip }}
 Unlike in mathematical formulas, the `=` sign means **assignment**. It sets the value of the variable, but does not state that those two things are equal.
@@ -48,7 +50,7 @@ Here's a quick reference of types in C++:
 Type    | Example
 --------|-------------
 float	| 0.124 or 4.0
-int	    | 4 or 134
+int	    | 4 or -134
 string	| "Hello World"
 bool	| true/false
 
@@ -60,7 +62,7 @@ Let's write an algorithm for this conversion program together. Here's what we'll
 
 3. Save the weight to a variable called `earthWeight`
 
-4. Multiply earthWeight and conversionFactor and save the result as the variable `moonWeight`
+4. Multiply `earthWeight` and `conversionFactor` and save the result as the variable `moonWeight`
 
 5. Display `moonWeight` to the user
 
@@ -85,7 +87,7 @@ When the computer reaches `cin` in the program, it will display a prompt for the
 To print out the person's weight on the moon, use a second `<<`, just like before `endl` in the previous tutorial.
 
 ```
-cout << "Something weighing " << earthWeight << "lbs on earth would would weigh "<< moonWeight << " lbs on the moon." << endl;
+cout << "Something weighing " << earthWeight << "lbs on earth would weigh "<< moonWeight << " lbs on the moon." << endl;
 ```
 
 This sends the whole sequence of things to cout to be displayed.
@@ -101,7 +103,8 @@ Comments are ignored by the compiler and are used by programmers to explain part
 It's good practice to have short comments in your code, so you can remember what it does later.
 {{ site.data.alerts.end }}
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <iostream>
 using namespace std;
 
@@ -114,15 +117,21 @@ int main(){
   cin >> earthWeight; //Store what the user types as earthWeight
   conversionFactor = 0.1654;
   moonWeight = earthWeight*conversionFactor;
-  cout << "Something weighing " << earthWeight << "lbs on earth would would weigh "<< moonWeight << " lbs on the moon." << endl;  //print out conversion
+  //print out conversion
+  cout << "Something weighing " << earthWeight << "lbs on earth would weigh "<< moonWeight << " lbs on the moon." << endl;  
   return 0;
 }
 ```
-- Copy this code into a new file named 3_2_1.cpp in a new directory named 3_2. Then compile and run this program to ensure it is working properly.
+{{ site.data.alerts.end }}
+
+- Copy this code into a new file named ex_3_2_1.cpp in the directory named 3_2. Then compile and run this program to ensure it is working properly.
+
+If you ever forget how to compile and run your code, feel free to go back to the [documentation](docs.html)
 
 {{ site.data.alerts.tip }}
 Notice how the value for earthWeight is printed with "lbs" right next to it? Cout will not add spaces between the strings and the variables you print. For readability, it's good practice to include these spaces yourself.
 {{ site.data.alerts.end }}
+
 
 ## Operators
 
@@ -144,10 +153,12 @@ The `%` (**modulus**) operator gives you the remainder of integer division.
 
 So if you want the remainder of `5 / 2` (which is 1), you would say:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 int rem;
 rem = 5%2;
 ```
+{{ site.data.alerts.end }}
 
 {{ site.data.alerts.note }}
 In programming there is a difference between variable defintition and assignment. The first line in the above code block is an example of variable definition because a variable of type `int` named rem was declared. The second line is an example of variable assignment because the variable was given the value of 5%2.
@@ -157,7 +168,7 @@ This is very useful in programming, since you can easily decide if a number is e
 
 ## Exercise 3.2.2:
 
-Write a program that takes a weight on the moon and converts it to Earth weight.
+Write a new program that takes a weight on the moon and converts it to Earth weight.
 
 {{ site.data.alerts.tip }}
 What's the mathematical opposite of multiplication?
@@ -165,7 +176,7 @@ What's the mathematical opposite of multiplication?
 
 ## Exercise 3.2.3:
 
-Write a program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
+Write a new program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
 
 {{ site.data.alerts.callout_red_cup }}
 [Exercise 3.2.1, Exercise 3.2.2, Exercise 3.2.3]

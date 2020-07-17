@@ -22,11 +22,13 @@ Though not required, a common convention followed by programmers is to begin cla
 ## A Skeleton of a Class
  For our bank account example, we'll name the class `BankAccount`:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 class BankAccount {
 
 };
 ```
+{{ site.data.alerts.end }}
 
 A class definition is encompassed by curly braces and has a trailing semi-colon.
 
@@ -45,7 +47,8 @@ The member variables for this class are:
 
 Adding these to our skeleton definition we get the following:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 class BankAccount {
      int accountNumber;
      float accountBalance;
@@ -53,6 +56,7 @@ class BankAccount {
      string address;
 };
 ```
+{{ site.data.alerts.end }}
 
 {{site.data.alerts.tip}}
 Notice that the variables are declared in the same way as before, indicating the type and giving them descriptive names.
@@ -64,7 +68,8 @@ Let's suppose that we want to be able to access the variables belonging to a cla
 
 The `public` keyword indicates that the member variables (and functions—we'll add those later) that follow are available to the rest of the program to use.
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 class BankAccount {
   public:
      int accountNumber;
@@ -73,6 +78,7 @@ class BankAccount {
      string address;
 };
 ```
+{{ site.data.alerts.end }}
 
 {{ site.data.alerts.tip }}
 You can also declare a class's variables and functions to be `private`, which will be covered later.
@@ -90,7 +96,8 @@ A constructor is defined in the the same way as a function; the only differences
 
 For a brand new `BankAccount`, when we don't yet know anything about the data that will be put into it, default values of zeroes and empty strings will be fine; we can always set them to something else later. Thus, our `BankAccount` constructor is defined as follows:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 class BankAccount {
   public:
       int accountNumber;
@@ -106,6 +113,7 @@ class BankAccount {
       }
 };
 ```
+{{ site.data.alerts.end }}
 
 We have now defined a basic data structure that holds bank account information, and so we can now write a program that creates a `BankAccount` object and sets the values of its variables.
 
@@ -113,7 +121,8 @@ We have now defined a basic data structure that holds bank account information, 
 Just like functions must be declared before we can use them (appearing before their first use in the source code), classes must be declared before they are used to create objects.
 {{ site.data.alerts.end }}
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <iostream>
 using namespace std;
 
@@ -142,6 +151,7 @@ int main() {
      return 0;
 }
 ```
+{{ site.data.alerts.end }}
 
 Look at the first line in main. We've created a `BankAccount` object called `alisonBankAccount`, and it has been initialized using the default constructor.
 
@@ -151,7 +161,7 @@ We use the dot to access and set the public variables of an object, as seen in t
 
 In dot notation, we access member variables by first writing the name of the object (e.g., `alisonBankAccount`), then a dot, then the name of the variable we want (e.g., `accountNumber`). This becomes 
 
-```cpp
+```
 alisonBankAccount.accountNumber
 ```
 
@@ -163,7 +173,8 @@ For example, let's say that in addition to Alison's bank account, we'll make an 
 
 Here's the same code as above, but now we've added a second instance of the `BankAccount` class:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 //make two different bank accounts
 BankAccount alisonBankAccount;
 BankAccount bobBankAccount;
@@ -180,8 +191,9 @@ bobBankAccount.accountBalance = 2.52;
 //i.e. add 300.95 to the current value of accountBalance
 bobBankAccount.accountBalance += 300.95;
 
-cout << "Bob has $" << bobBankAccount.accountBalance << ".  Yay Bob!\n";
+cout << "Bob has $" << bobBankAccount.accountBalance << ".  Yay Bob!" << endl;
 ```
+{{ site.data.alerts.end }}
 
 We can give Alison and Bob's `BankAccount` objects completely different information, and we can also modify the values that the fields hold. Notice how Bob made a timely deposit with the line:
 
@@ -216,7 +228,8 @@ Consider the usefulness of using public functions to modify private data, as opp
 
 Returning to our `BankAccount` class, let's go ahead and declare our member variables as private, as shown below.
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 class BankAccount {
   private:
      int accountNumber;
@@ -232,6 +245,7 @@ class BankAccount {
       }
 };
 ```
+{{ site.data.alerts.end }}
 
 ## Member Functions
 Now that these variables are private, our object is actually fairly useless right now. We left the constructor public, so we can create new objects, but all our data is inaccessible from outside the class because it's declared private. To make our object useful, we'll introduce member functions, which define actions that can be performed on or with the member variables.
@@ -245,7 +259,8 @@ People need to be able to deposit to and withdraw from their accounts, as well a
 
 `deposit()` would need a float as an argument, which is the amount being deposited, and then would need to update the `accountBalance` variable appropriately. It doesn't need to return anything. Since this is a member function, we write its instructions inside the class definition, like this:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <iostream>
 using namespace std;
 
@@ -271,6 +286,7 @@ class BankAccount {
      string address;
 };
 ```
+{{ site.data.alerts.end }}
 
 Everything under the public keyword and above the private keyword is our class's public members, and everything below the private keyword is the class's private members. We want both functions to be public; they are the rest of the program's interface with our `BankAccount` data.
 
@@ -280,13 +296,16 @@ Now when we want to deposit money in main, we won't need to type:
 bobBankAccount.accountBalance += 300.95;
 ```
 
+And instead, we type: 
+
 ```
 bobBankAccount.deposit(300.95);
 ```
 
 Thus, our modified main looks like this:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 int main(){
 
    BankAccount alisonBankAccount;
@@ -295,6 +314,7 @@ int main(){
    return 0;
 }
 ```
+{{ site.data.alerts.end }}
 
 There are a few new things to note:
 
@@ -315,6 +335,7 @@ There are a few new things to note:
 - Add another bank account to the example above.
 - Deposit $500 dollars into Alison's account.
 - Then withdraw $400 from Bob's account and place it in the account you created.
+  - You'll need to make a new public function, `withdraw`, to accomplish this
 - Then print out the balances from all three accounts.
 
 {{ site.data.alerts.tip }}

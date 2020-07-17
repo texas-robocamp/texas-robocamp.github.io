@@ -5,14 +5,17 @@ Sometimes we want our code to execute multiple times, but we don't want to keep 
 
 A `for` loop repeats code for a specific number of times. If you know exactly how many times you want some lines of code to repeat, you'll want to use this type of loop. For example, let's say we want to print "Hello World" five times. We could write the following `for` loop:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 for (int i=0; i<5; i++){
-   cout << "Hello World\n";
+   cout << "Hello World" << endl;
 }
 ```
+{{ site.data.alerts.end }}
 
 This will print:
 
+{{ site.data.alerts.callout_code_div }}
 ```
 Hello World
 Hello World
@@ -20,6 +23,7 @@ Hello World
 Hello World
 Hello World
 ```
+{{ site.data.alerts.end }}
 
 Let's dissect this code:
 
@@ -58,14 +62,17 @@ Then, inside curly braces, we put all the code that we want to execute each time
 
 Now we will look at another example. Say we want to count from 0 to 9, and we want to print out the number each time. We can easily use a loop to do this:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 for (int i=0; i<10; i++){
-   cout << "The current number is " << i << ".\n";
+   cout << "The current number is " << i << "." << endl;
 }
 ```
+{{ site.data.alerts.end }}
 
 This will print:
 
+{{ site.data.alerts.callout_code_div }}
 ```
 The current number is 0.
 The current number is 1.
@@ -78,37 +85,52 @@ The current number is 7.
 The current number is 8.
 The current number is 9.
 ```
+{{ site.data.alerts.end }}
 
 Notice how 10 doesn't print, because we told the loop to stop when `i` was no longer less than 10. The first time the loop executes, `i = 0`, so the loop prints out the message "The current number is 0." and then adds one to `i`, making `i` 1. Then the loop executes again, and we print "The current number is 1." Then `i` is increased by 1 again, making it 2, etc., until it has printed 10 times.
 
 We can also modify the loop so that the loop variable changes in different ways---just by changing the initialization and the modification pieces. Say we want to count backwards from 4 to 1. We can create the loop like this:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 for (int i=4; i>=1; i--){
-   cout << "The current number is " << i << ".\n";
+   cout << "The current number is " << i << "." << endl;
 }
 ```
+{{ site.data.alerts.end }}
 
 Here, we begin with `i` set to 4. We loop while `i > = 1`. We tell the computer to subtract one from `i` each time the loop runs with `i--`. This loop prints:
-```cpp
+
+{{ site.data.alerts.callout_code_div }}
+```
 The current number is 4.
 The current number is 3.
 The current number is 2.
 The current number is 1.
 ```
+{{ site.data.alerts.end }}
+
 We can also count by numbers other than one and negative one. Let's say we only want to print out odd numbers. We could change the loop to count by 2s from 1 to 7 in the following way:
-```cpp
+
+{{ site.data.alerts.callout_code_div }}
+```
 for (int i=1; i<9; i+=2){
-   cout << "The current number is " << i << ".\n";
+   cout << "The current number is " << i << "." << endl;
 }
 ```
+{{ site.data.alerts.end }}
+
 With this loop initialization, we get the following output:
-```cpp
+
+{{ site.data.alerts.callout_code_div }}
+```
 The current number is 1.
 The current number is 3.
 The current number is 5.
 The current number is 7.
 ```
+{{ site.data.alerts.end }}
+
 The loop begins with `i=1` and increases by 2 every time. Notice that it stops before reaching 9. To make more complicated loops, all you have to do is think carefully about the loop counter. Where do you want it to start? Where should it stop? How do you want to count?
 
 ### Exercise 3.6.1:
@@ -125,6 +147,7 @@ Woot, woot! Making progress. :)
 
 You can also **nest** loops inside one another. Let's say we want to do a simple summation program. Imagine we want to sum each number from 1 to 4 with each number from 1 to 4. So, we essentially want to do this:
 
+{{ site.data.alerts.callout_code_div }}
 ```
 num1	+	num2	=	Sum
 1	+	1	=	2
@@ -136,29 +159,35 @@ num1	+	num2	=	Sum
 2	+	3	=	5
 2	+	4	=	6
 ```
+{{ site.data.alerts.end }}
 
 At the end, we will have 16 sums (4x4).
 
 In code, we can find these sums using two for loops, one nested inside the other. Let's think of `num1` as the value of one loop and `num2` as the value of the other loop. We know from the examples above how to generate a loop that generates the numbers from 1 to 4, so we will do this for num1:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 for (int num1=1; num1<5; num1++){
    //put code here
 }
 ```
+{{ site.data.alerts.end }}
 
 We know that for each value of `num1`, we want to sum it with all values of `num2`, which are the numbers 1 to 4. So we can use another for loop to generate those numbers. Since we want to generate all the values of `num2` for each value of `num1`, let's put the `num2` for loop inside of the `num1` for loop, like this:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 for (int num1=1; num1<5; num1++){  // num1 for-loop
    for (int num2=1; num2<5; num2++){  //num2 for-loop
-      cout << num1 << " + " << num2 << " = " << num1+num2 << "\n";  //prints out num1+num2
+      cout << num1 << " + " << num2 << " = " << num1+num2 << endl;  //prints out num1+num2
    }
 }
 ```
+{{ site.data.alerts.end }}
 
 And this gives us the output:
 
+{{ site.data.alerts.callout_code_div }}
 ```
 1 + 1 = 2
 1 + 2 = 3
@@ -177,6 +206,7 @@ And this gives us the output:
 4 + 3 = 7
 4 + 4 = 8
 ```
+{{ site.data.alerts.end }}
 
 Notice that the first number that prints out is the `num1` variable, and the second number is the `num2` variable, and the final number is the sum of `num1` and `num2`. 
 
@@ -194,9 +224,12 @@ Nested loops can be a little tricky, so if they are confusing, ask for help!
 
 ### Exercise 3.6.2:
 
-- Write a program that multiplies all the odd numbers between 1 and 9 by all the even numbers between 2 and 10. 
+- Write a program that multiplies all the odd numbers between 1 and 9 (including 9) by all the even numbers between 2 and 10 (including 10) . 
 
-  - Hint: follow the example above, but don't forget to change your loop initializations.
+
+{{ site.data.alerts.tip }}
+Follow the example above, but don't forget to change your loop initializations!
+{{ site.data.alerts.end }}
 
 Good work!
 
@@ -208,7 +241,8 @@ Good work!
 
 We typically use `while` loops *when we don't know how many times the loop should execute*. For example, let's say you are trying to get input from a user that is a number between 1 and 10. **While** the user keeps typing in numbers that are too large or too small, you can ask her for new input until she enters a number between 1 and 10. Here's what this while loop would look like:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 int main(){
    int userInput;
 
@@ -223,35 +257,42 @@ int main(){
    }
    //when we reach this line, we know the user entered a number between 1 and 10,
    //or else we would still be stuck in the while loop.
-   cout << "You entered " << userInput << ".\n";
+   cout << "You entered " << userInput << "." << endl;
    return 0;
 }
 ```
+{{ site.data.alerts.end }}
 
 You'll notice that the logical expressions appear again—this time in the parentheses after the while. Once again, the loop will continue as long as this expression is true.
 
 Let's walk through what is happening in this program.
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 int userInput;
 
 //get input from user
 cout << "Enter a number between 1 and 10: ";
 cin >> userInput;
 ```
+{{ site.data.alerts.end }}
 
 We first get some input from the user.
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 while((userInput < 1) || (userInput > 10)){
 ```
+{{ site.data.alerts.end }}
 
 We begin the while loop by checking the input to see if it is less than 1 or greater than 10.
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
   cout << "Read directions!  Enter a number between 1 and 10: ";
   cin >> userInput;  //get new input from the user
 ```
+{{ site.data.alerts.end }}
 
 If it is, we yell at the user and ask for new input, and we make sure to save the new input to `userInput`. (Why is this so important? We'll see in a bit.)
 
@@ -261,20 +302,24 @@ If it still is, we execute the loop again and ask for new input. We continue thi
 
 As soon as the user enters a number between 1 and 10, we break out of the while loop, because we only execute the while loop if `userInput` is less than 1 or greater than 10.
 
-```cpp
-cout << "You entered " << userInput << ".\n";
+{{ site.data.alerts.callout_code_div }}
 ```
+cout << "You entered " << userInput << "." << endl;
+```
+{{ site.data.alerts.end }}
 
 We then print out the number.
 
 In the above program, we made sure to save the new user input to the same variable as the old user input. This step is important because that's the variable being evaluated in the logical expression—if we didn't update it, the while loop would never stop! To illustrate this, let's change the above while loop to make it incorrect by introducing another variable called `newUserInput`:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 while((userInput < 1) || (userInput > 10)){
    cout << "Read directions!  Enter a number between 1 and 10: ";
    cin >> newUserInput;  //get new input from the user and save it to new variable
 }
 ```
+{{ site.data.alerts.end }}
 
 This loop begins by checking to see if `userInput` is less than 1 or greater than 10. Let's say that `userInput` equals 100, so the loop will run.
 
@@ -288,7 +333,6 @@ In fact, this loop will run forever! This is called an **infinite loop**. To avo
 If your program ends up in an infinite loop, you need to know how to terminate it. Go into your terminal and type Ctrl-C to terminate it if this happens.
 {{ site.data.alerts.end }}
 
-**TODO** *It wouldn't make sense to add this here, but an interesting piece of bonus content could be signal handlers?*
 
 ### Exercise 3.6.3:
 

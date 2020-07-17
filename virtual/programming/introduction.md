@@ -7,7 +7,7 @@ If you are already well-versed in programming, please complete the tutorials any
 {{ site.data.alerts.end }}
 
 
-To program, first create a step-by-step plan for how the computer will do what you wan it to do. This plan is an algorithm.
+To program, first create a step-by-step plan for how the computer will do what you want it to do. This plan is an algorithm.
 
 For example, an algorithm for making a bowl of cereal might be:
 

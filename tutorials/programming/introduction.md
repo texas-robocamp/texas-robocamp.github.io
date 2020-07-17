@@ -13,7 +13,7 @@ C++ is a programming language. It most of the applications you use are written i
 {% include note.html content="If you are already well-versed in programming, please complete the tutorials anyway. You should be able to do them quickly. For those of you who are new, please do not worry. You will be able to get through this material and program your robot!" %}
 
 
-To program, first create a step-by-step plan for how the computer will do what you wan it to do. This plan is an algorithm.
+To program, first create a step-by-step plan for how the computer will do what you want it to do. This plan is an algorithm.
 
 For example, an algorithm for making a bowl of cereal might be:
 

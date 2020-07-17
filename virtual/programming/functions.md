@@ -10,11 +10,13 @@ Functions allow code to be **modular** --- write a function once, and use that f
 
 Recall the function `main()`
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 int main(){
      //code goes here
 }
 ```
+{{ site.data.alerts.end }}
 
 We begin by declaring the **return type** of main to be an `int` (integer). This tells the computer that we intend for main to send back an integer when it is finished.
 
@@ -32,14 +34,10 @@ Finally we have a code **block** inside curly braces.
 
 ## Exercise 3.3.1: Example Function
 
-{{ site.data.alerts.note }}
-We're taking off the training wheels! Organize your code yourself now into directories that you create. Try to keep on top of being organized - one idea would be to make directories for each group of exercies (i.e directory 3_3 stores all the code for exercises 3.3.1-3.3.5). Be prepared to demo everything to camp staff to verify your progress.
-{{ site.data.alerts.end }}
-
-
 Let's try writing a very simple function that prints the greeting "Hello World!". We will **call** (run) this function from main. It won't take any parameters or return anything, so the **return type** of this function will be **void**, the return type for a function which returns nothing. Here's how we would set it up:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <iostream>
 using namespace std;
 
@@ -52,6 +50,7 @@ int main(){
    return 0;
 }
 ```
+{{ site.data.alerts.end }}
 
 Here, we made the printGreeting function exactly like we made main. We declared its `return` type to be void, named it `printGreeting`, and put no parameters inside the parentheses. Inside the curly braces, we wrote the same code we used for our very first C++ program.
 
@@ -103,17 +102,20 @@ Scoping applies to variables, too. If you declare a variable inside `printGreeti
 
 **TODO** *It might be a good idea to immediately give them an example of this kind of scoping so they have something concrete to work with. Maybe make a variable for the literal "Hello" ? Might be overkill but I think it would help get the point across*
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 void printGreeting(string name){
    cout << "Hello " << name << "!" << endl;
 }
 ```
+{{ site.data.alerts.end }}
 
 Anything that calls the `printGreeting` function needs to provide a `string` value that will be called name inside the function.
 
 We will need to get input from the user and provide that input when we call the `printGreeting` function from `main`:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 int main(){
    string userName;
    cout << "Enter a name: ";
@@ -122,6 +124,7 @@ int main(){
    return 0;
 }
 ```
+{{ site.data.alerts.end }}
 
 Here, we get a value for `string userName` from the user and send it to the `printGreeting` function by placing it inside the parentheses.
 
@@ -133,32 +136,43 @@ Before going further, we need to discuss the difference between arguments and pa
 printGreeting(userName);
 ```
 
-Arguments differ from parameters in that arguments are what you send to a function and parameters are what a function expects to receive. When the `printGreeting` function is called from `main`, the **argument** is `userName`.
+Arguments differ from parameters in that arguments are what you send to a function and parameters are what a function expects to receive. 
 
-```cpp
+When the `printGreeting` function is called from `main`, the **argument** is `userName`.
+
+{{ site.data.alerts.callout_code_div }}
+```
 void printGreeting(string name){
    cout << "Hello " << name << "!" << endl;
 }
 ```
+{{ site.data.alerts.end }}
 
 During the execution of this code, the value for `userName` is copied to the **parameter** `name` in `printGreeting`.
 
-While the computer is executing the code in `printGreeting`, it can't use the variable `userName`. This is because `userName` is only defined (available) in `main` (due to **scoping**). This is why we have the parameter `name` - the value of `userName` gets copied to `name` so that the program has access to that data. 
+While the computer is executing the code in `printGreeting`, it can't use the variable `userName`. This is because `userName` is only defined (available) in `main` (due to **scoping**). 
 
-When the computer finishes executing `printGreeting` and returns to `main`, it can once again use the variable `userName` - but now it can no longer use `name`. This is again a case of scoping, which is where the variable is defined and can be used.
+This is why we have the parameter `name` - the value of `userName` gets copied to `name` so that the program has access to that data. 
+
+When the computer finishes executing `printGreeting` and returns to `main`, it can once again use the variable `userName` - but now it can no longer use `name`. 
+
+This is again a case of scoping, which is where the variable is defined and can be used.
 
 {{ site.data.alerts.tip }}
 Code blocks are a great way to keep track of scoping! Any variables that are declared inside of a block (enclosed by `{}`) can only be used inside of that block.
 {{ site.data.alerts.end }}
 
-As we mentioned before, one of the reasons that functions are so great is that we can reuse them and give them different arguments. For example, without changing the `printGreeting` function at all, we can use it to print greetings to three different people:
+As we mentioned before, one of the reasons that functions are so great is that we can reuse them and give them different arguments. 
 
-```cpp
+For example, without changing the `printGreeting` function at all, we can use it to print greetings to three different people:
+
+{{ site.data.alerts.callout_code_div }}
+```
 #include <iostream>
 using namespace std;
 
 void printGreeting(string name){
-   cout << "Hello " << name << "!\n";
+   cout << "Hello " << name << "!" << endl;
 }
 
 
@@ -169,14 +183,17 @@ int main(){
    return 0;
 }
 ```
+{{ site.data.alerts.end }}
 
 And we would get the following output:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 Hello Alison!
 Hello Brian!
 Hello Clifford the Big Red Dog!
 ```
+{{ site.data.alerts.end }}
 
 That's pretty convenient. 
 
@@ -205,7 +222,8 @@ This is called the **return statement**, and it is *always* the last line execut
 
 Now we're ready to write our function:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 float squareANum(float num){
    float numSquared;
 
@@ -213,6 +231,7 @@ float squareANum(float num){
    return numSquared;
 }
 ```
+{{ site.data.alerts.end }}
 
 Notice that since we're returning a float value, we have the return type as `float` instead of `void`, and then tell the computer to `return numSquared` to the function that called it.
 
@@ -220,7 +239,8 @@ Since we are returning something to `main`, we need to set up a variable to stor
 
 This part of programming is like playing a game of catch. You can imagine that `squareANum` and `main` are playing a game of catch, and `squareANum` is throwing a ball named `numSquared` at `main`. If `main` doesn't catch the ball, the ball will fall in the grass and be lost. In programming, `main` "catches the ball" by having a variable in place to store the return value---if it doesn't, the value is gone forever. Since we want to store the result, we'll set our call to `squareANum` in `main` equal to the variable `theSquaredNumber`. Here's the whole program:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <iostream>
 using namespace std;
 
@@ -242,6 +262,7 @@ int main(){
    return 0;
 }
 ```
+{{ site.data.alerts.end }}
 
 Note that in order to call a function, you must either:
 
@@ -251,7 +272,8 @@ Note that in order to call a function, you must either:
 
 A **function prototype** is the return type, name, and parameter followed by a semicolon. These usually appear before the first function and after the include files, and let us call functions that haven't been defined before `main` For instance, the prototype for `squareANum` would be:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <iostream>
 using namespace std;
 
@@ -276,10 +298,11 @@ float squareANum(float num){
 }
 
 ```
+{{ site.data.alerts.end }}
 
 ### Exercise 3.3.4:
 
-- Write a program similar to the one above that triples a number and adds 5 to it.
+- Write a new program similar to the one above that triples a number and adds 5 to it.
 
 ## Multiple Parameters
 
@@ -287,7 +310,8 @@ We can also write functions that take multiple parameters---and those parameters
 
 For example, we can modify the `printGreeting` function so that it takes both a `string name` and an `int age`, and prints out a message about that person's age:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <iostream>
 #include <string>
 
@@ -304,6 +328,7 @@ int main(){
    return 0;
 }
 ```
+{{ site.data.alerts.end }}
 
 We just have to remember to send the function **all parameters** it expects as arguments when we call it, in the **exact order** they are listed. Although we can have different numbers and types of parameters, a function can only return one value, so think carefully about what result you want from a function before you write it.
 
@@ -311,11 +336,13 @@ We just have to remember to send the function **all parameters** it expects as a
 
 - Modify the `printGreeting` function to also take a `string birthdayMonth` parameter, and print out a message that tells them how old they will be the next time it is that month. For the Ronald McDonald example, the output might be:
 
+{{ site.data.alerts.callout_code_div }}
 ```
 Hello Ronald McDonald.
 You are 49 years old.
 You will be 50 next January.
 ```
+{{ site.data.alerts.end }}
 
 {{ site.data.alerts.callout_red_cup }}
 [Exercise 3.3.4, Exercise 3.3.5]

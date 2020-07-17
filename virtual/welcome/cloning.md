@@ -1,18 +1,16 @@
 ## Git
 
-Git is a version control system. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. Explaining the details of this would ~~waste time~~ **TODO** *Since we're virtual it might be worth actually discussing git for time*, so we're just going to tell you what to type here.
+Git is a version control system. It allows multiple programmers to collaborate on long-term projects by synchronizing code across their machines. We will be using git to provide a file structure for the C++ and robot programming exercises. Let's go ahead and clone (copy to our local machine) the C++ exercises.
 
 
 {{site.data.alerts.terminal_commands}}
-cd
-git clone https://github.com/texas-robocamp/exercises.git
+cd ~
+git clone https://github.com/texas-robocamp/cpp_exercises.git
 {{site.data.alerts.terminal_commands_end}}
 
 {{site.data.alerts.callout_red_cup}}
 [Exercise 2]
 {{site.data.alerts.end}}
-
-**TODO** *We do need to change the callout but I wonder if there's a way to edit it so that if we don't change anything else, we could just put this page in the root dir and not need two copies of it*
 
 ## Next Step
 

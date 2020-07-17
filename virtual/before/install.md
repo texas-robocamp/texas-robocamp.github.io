@@ -3,7 +3,7 @@ Before you can attend camp, we need you to set up your computer! Follow the inst
 
 
 {{ site.data.alerts.important }}
-If you run into problems, we can be reached at *texas.robocamp@gmail.com*. **Also make sure to cc *camp@cs.utexas.edu*, or else we will not be able to send a reply!**
+If you run into problems, we can be reached at *texas.robocamp@gmail.com*.
 {{ site.data.alerts.end }}
 
 # The Texas RoboCamp Software
@@ -487,11 +487,10 @@ If everything looks good, go back to the terminal and press Control+C in both wi
 * Click Power Off.
 
 {{ site.data.alerts.important }}
-Email us to tell us that you have successfully installed your software for the camp, or to report any problems.
+Email us to tell us at *texas.robocamp@gmail.com* to tell us that you have successfully installed your software for the camp, or to report any problems.
 
 In your email, make sure report how many FPS gazebo is running at!
 
-We can be reached at *texas.robocamp@gmail.com*. **Also make sure to cc *camp@cs.utexas.edu*, or else we will not be able to send a reply!**
 {{ site.data.alerts.end }}
 
 

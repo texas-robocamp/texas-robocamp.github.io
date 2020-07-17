@@ -27,6 +27,21 @@ For example, if you have a file called `HelloWorld.cpp`, and want to compile it 
 g++ HelloWorld.cpp -o Hello
 ```
 
+### Running C++ Code
+
+To run the code you just compiled, you would make sure your terminal is in the same directory as the compiled executable, and type
+
+```
+./executable_name
+```
+
+For example, if you had named the executable (the name is what's after the -o option) Hello, you would do:
+
+```
+./Hello
+```
+
+
 ### Types
 | Type   | Meaning | Example |
 |--------|---------|---------|

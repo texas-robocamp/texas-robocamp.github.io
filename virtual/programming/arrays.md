@@ -14,17 +14,20 @@ The brackets with the number mean that we are constructing an array that is five
 
 Now that we've declared an array, we need to put things inside it. Inside our main function, we'll enter five grades into the array. When you put a value into an array, you have to tell the computer where to put it, just like the front desk in a motel would assign you a room. Like rooms in a motel, locations, or elements, in an array are numbered—in an array, though, the numbers are from 0 to one less than the size of the array. In `gradeArray`, then, there are five elements, which are numbered 0, 1, 2, 3, and 4. We talk about a specific elements of an array by writing the name of the array and then putting the location number in brackets, like this: `gradeArray[0]` . Let's put some values into them in the following code:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 gradeArray[0] = 98.3;
 gradeArray[1] = 91.1;
 gradeArray[2] = 89.8;
 gradeArray[3] = 90.5;
 gradeArray[4] = 95.0;
 ```
+{{ site.data.alerts.end }}
 
 Now that we have our grades in an array, we want to calculate our final grade by averaging them all together. To do so, we need to visit each element in the array (imagine going from door to door in a motel) and add together the values in each position. Finally, we need to divide them by the number of values in the array. To do this systematically, we can use a for loop. We will loop through each element in the array and add its value to a variable called `gradeSum` that we initialize ahead of time. After we finish the loop, we will divide `gradeSum` by 5 to get the average. Here's the code for this program:
 
-```cpp
+{{ site.data.alerts.callout_code_div }}
+```
 #include <iostream>
 using namespace std;
 
@@ -59,6 +62,7 @@ int main(){
    return 0;
 }
 ```
+{{ site.data.alerts.end }}
 
 ### Exercise 3.7.1:
 
