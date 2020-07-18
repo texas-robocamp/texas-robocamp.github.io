@@ -68,9 +68,7 @@ int main(){
 
 - Change the program above so that it stores and uses 7 grades instead of 5 to calculate the average.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 3.7.1]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.7.1, 3_7_1{{+}}
 
 Yay! Two more :)
 
@@ -78,9 +76,7 @@ Yay! Two more :)
 
 Write a program that asks a user to enter 10 numbers, puts those numbers in an array, and then prints out the numbers in the array backwards? Hint: use a loop that counts backwards.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 3.7.2]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.7.2, 3_7_2{{+}}
 
 Almost there!
 
@@ -106,9 +102,7 @@ letterArray[3][1]="a";
 
 Determine the correct code to access the elements containing letters y and z in the diagram above.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 3.7.3]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.7.3, 3_7_3{{+}}
 
 ## Wrap-up
 

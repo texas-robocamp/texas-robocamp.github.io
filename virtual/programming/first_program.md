@@ -1,6 +1,6 @@
 # First Program: Hello World
 {{ site.data.alerts.callout_synchronize }}
-Do this section ~~at the pace of the slower partner, so both of~~ slowly, so you completely understand it. We will be lecturing ***who will be lecturing? If it's counselors, this is a piece of curricula we need to be on the same page about. May want to make a script.*** along with students performing the tutorial, so if you are ahead and have a question, please wait for the ~~class~~ room to catch up or for a period when there is no lecturing.
+Do this section slowly, so you completely understand it. We will be lecturing ***who will be lecturing? If it's counselors, this is a piece of curricula we need to be on the same page about. May want to make a script.*** along with students performing the tutorial, so if you are ahead and have a question, please wait for the room to catch up or for a period when there is no lecturing.
 {{ site.data.alerts.end }}
 
 It's customary when you learn a new programming language, to write a program to display the text "Hello World." Displaying text is often referred to as "printing" it, so we're going to learn how to print "Hello World".

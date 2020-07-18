@@ -166,6 +166,8 @@ In programming there is a difference between variable defintition and assignment
 
 This is very useful in programming, since you can easily decide if a number is even, odd, or a multiple of some other number.
 
+{{+}}Tutorial 3.2.1, 3_2_1{{+}}
+
 ## Exercise 3.2.2:
 
 Write a new program that takes a weight on the moon and converts it to Earth weight.
@@ -174,13 +176,11 @@ Write a new program that takes a weight on the moon and converts it to Earth wei
 What's the mathematical opposite of multiplication?
 {{ site.data.alerts.end }}
 
+{{+}}Tutorial 3.2.2, 3_2_2{{+}}
+
 ## Exercise 3.2.3:
 
 Write a new program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
-
-{{+}}Tutorial 3.2.1, 3_2_1{{+}}
-
-{{+}}Tutorial 3.2.2, 3_2_2{{+}}
 
 {{+}}Tutorial 3.2.3, 3_2_3{{+}}
 

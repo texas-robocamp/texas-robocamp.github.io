@@ -137,9 +137,7 @@ The loop begins with `i=1` and increases by 2 every time. Notice that it stops b
 
 - Write a loop that prints every third number starting at 15 and going down to 6 (so 6 is included in the loop).
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 3.6.1]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.6.1, 3_6_1{{+}}
 
 Woot, woot! Making progress. :)
 
@@ -233,9 +231,7 @@ Follow the example above, but don't forget to change your loop initializations!
 
 Good work!
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 3.6.2]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.6.2, 3_6_2{{+}}
 
 ## While Loops
 
@@ -340,9 +336,7 @@ If your program ends up in an infinite loop, you need to know how to terminate i
 
 - Bonus: Can you keep track of the number of attempts a user makes to enter a number, and then print it out when they finally enter a valid number?
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 3.6.3]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 3.6.3, 3_6_3{{+}}
 
 ## Next Step
 

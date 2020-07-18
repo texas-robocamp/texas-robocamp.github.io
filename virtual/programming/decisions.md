@@ -60,7 +60,7 @@ else{
 When we use if statements, we put the **conditional clause**, which is the logical expression we are checking or testing, in parentheses after the word "if". Then we put all of the code that we want the computer to execute *if* the conditional clause is true inside of curly braces. After an `if`, we can have: an `else if`, which works exactly the same as an `if` but is only checked by the computer when the if statement is false, or an `else`, which is the code that is executed if the `if` statement is false, or nothing.
 
 {{site.data.alerts.note}}
-Please ask questions if any of this explanation didn't make sense—-we are happy to explain in person. (Just turn your cups to red!)
+Please ask questions if any of this explanation didn't make sense—-we are happy to explain in person.
 {{site.data.alerts.end}}
 
 We now know everything we need to be able to write the withdraw function. We will use an if-else pattern for this program, so we will first check if the remaining balance is greater than 0, and if that is false we will check if balance is greater than our minimum balance, and if that is also false, then we will update our balance.
@@ -140,10 +140,7 @@ For example, if the user attempts to withdraw more money than they have, you sho
 
 Thanks for enabling better communication!
 
-{{site.data.alerts.callout_red_cup}}
-[Exercise 3.5.1]
-{{site.data.alerts.end}}
-
+{{+}}Tutorial 3.5.1, 3_5_1{{+}}
 
 ## Nested if-statements
 
@@ -234,9 +231,7 @@ Did you notice that the last two conditional statements were testing for the sam
 - Most banks also have a deposit limit. Create a member variable `float depositLimit` and modify your `deposit` function to also prevent users from depositing too much money at once.
 - Modify the main function to allow users to input a deposit amount. Check the functionality of the previous two steps (i.e, ensure the deposit is not negative and not above the maximum limit).
 
-{{site.data.alerts.callout_red_cup}}
-[Exercise 3.5.2]
-{{site.data.alerts.end}}
+{{+}}Tutorial 3.5.2, 3_5_2{{+}}
 
 ## Switch-statements
 
@@ -277,9 +272,7 @@ int main() {
 - Complete the example above so that when the program runs, a user can type a 1 to withdraw money from their account, and a 2 to display their current balance.
   - You'll need to store the amount to withdraw in a similar way to how we've stored the amount to deposit in the 0 case.
 
-{{site.data.alerts.callout_red_cup}}
-[Exercise 3.5.3]
-{{site.data.alerts.end}}
+{{+}}Tutorial 3.5.3, 3_5_3{{+}}
 
 ## Next Step
 

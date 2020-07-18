@@ -87,7 +87,7 @@ You can also declare a class's variables and functions to be `private`, which wi
 ## Constructors
 In order to create a `BankAccount` object, we first need to define a **constructor**.
 
-The **constructor** is a piece of code that executes when a new ~~object~~ *instance?* of this class is created. Inside the constructor, we set the initial values for any member variables we have. Otherwise, our program may not work as we intend.
+The **constructor** is a piece of code that executes when a new *instance* (object) of this class is created. Inside the constructor, we set the initial values for any member variables we have. Otherwise, our program may not work as we intend.
 
 A constructor is defined in the the same way as a function; the only differences are:
 
@@ -216,6 +216,8 @@ These objects do a great job of cleaning up our code—consider having to keep t
 
 - Using this code as a base, subtract some money to Alison's account and then output her balance.
 
+{{+}}Tutorial 3.4.1, 3_4_1{{+}}
+
 ## The Private Keyword
 
 There is another keyword that is the cousin of `public`, and that is `private`.
@@ -326,10 +328,6 @@ There are a few new things to note:
 
       - In this case, we have our `bobBankAccount` object, followed by a dot, followed by the function call. Just as with the function calls you've made previously, you start with the function name, followed by any arguments wrapped in parentheses.
 
-{{site.data.alerts.callout_red_cup}}
-[Exercise 3.4.1]
-{{site.data.alerts.end}}
-
 ### Exercise 3.4.2:
 
 - Add another bank account to the example above.
@@ -342,9 +340,7 @@ There are a few new things to note:
 You'll need to write the withdraw function. How is it similar to the deposit function? How is it different? What happens if you attempt to withdraw an amount greater than your balance?
 {{ site.data.alerts.end }}
 
-{{site.data.alerts.callout_red_cup}}
-[Exercise 3.4.2]
-{{site.data.alerts.end}}
+{{+}}Tutorial 3.4.2, 3_4_2{{+}}
 
 ### Exercise 3.4.3:
 
@@ -361,10 +357,7 @@ The fields should include:
 
 You are welcome to add some extra fields of your own. Create a default constructor, some methods to set the fields, and a method to print the information in the fields. Then make some instances of the superhero class using your favorite superheroes for inspiration, set the fields appropriately, and print their information.
 
-
-{{site.data.alerts.callout_red_cup}}
-[Exercise 3.4.3]
-{{site.data.alerts.end}}
+{{+}}Tutorial 3.4.3, 3_4_3{{+}}
 
 ## Next Step
 

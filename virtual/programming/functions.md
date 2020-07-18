@@ -64,10 +64,13 @@ The way that this program works is the following: the computer begins running th
 
 - Type in the code above and see that it executes.
 
+{{+}}Tutorial 3.3.1, 3_3_1{{+}}
+
 ### Exercise 3.3.2:
 
 - Modify the program so that main calls `printGreeting()` twice. How does the output change?
 
+{{+}}Tutorial 3.3.2, 3_3_2{{+}}
 
 ## Parameters
 
@@ -200,11 +203,9 @@ That's pretty convenient.
 ### Exercise 3.3.3:
 Using the code above as a base, add a call to printGreeting() in main so that you are also greeted.
 
-Now that you've been greeted...
-
-{{+}}Tutorial 3.3.1, 3_3_1{{+}}
-{{+}}Tutorial 3.3.2, 3_3_2{{+}}
 {{+}}Tutorial 3.3.3, 3_3_3{{+}}
+
+Now that you've been greeted...
 
 ## Returning Results
 
@@ -304,6 +305,8 @@ float squareANum(float num){
 
 - Write a new program similar to the one above that triples a number and adds 5 to it.
 
+{{+}}Tutorial 3.3.4, 3_3_4{{+}}
+
 ## Multiple Parameters
 
 We can also write functions that take multiple parameters---and those parameters can even have different types!
@@ -344,7 +347,6 @@ You will be 50 next January.
 ```
 {{ site.data.alerts.end }}
 
-{{+}}Tutorial 3.3.4, 3_3_4{{+}}
 {{+}}Tutorial 3.3.5, 3_3_5{{+}}
 
 ## Next Step
