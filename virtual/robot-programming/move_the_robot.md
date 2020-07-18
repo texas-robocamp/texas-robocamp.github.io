@@ -90,7 +90,7 @@ To make the button toggle, we want to change the value of `leftRight` only when 
 - Add another boolean variable to the top of your program. Call it `threePressed` and set it to false.
 - Instead of only checking to see if Button 3 has been pressed when changing the value of `leftRight`, make sure that Button 3 has not already been pressed.
   - We will now also set `threePressed` to `true` when we change the value of `leftRight` to show that the button has been pressed.
-- If Button 3 was not the button that got pressed, set `wasThree` back to `false` so it can be pressed again later.
+- If Button 3 was not the button that got pressed, set `threePressed` back to `false` so it can be pressed again later.
 
 {{ site.data.alerts.callout_red_cup }}
 [Exercise 4.3.4]
@@ -118,7 +118,7 @@ We'll want to fix Button 1 and 2 so that they don't increment at too high of a r
 - Instead of always checking to see if Button 1 or 2 have been pressed, only check at a large interval.
   - We can do this by seeing if `count` is a multiple of a large number.
   - For example, only check the buttons if `count` is a multiple of 7000. You can do this with the `%` operator!
-- Make sure that you still set the value for `wasThree` properly, even if you don't check to see if Button 1 or Button 2 are pressed.
+- Make sure that you still set the value for `threePressed` properly, even if you don't check to see if Button 1 or Button 2 are pressed.
 
 {{ site.data.alerts.callout_red_cup }}
 [Exercise 4.3.6]
