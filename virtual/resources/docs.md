@@ -10,7 +10,6 @@ cd | *cd* new | Enters a different directory.
 pwd | *pwd* | Tells you what directory you are in. "Present Working Directory"
 
 ### Opening VSCode
-
 ```
 code <file>
 ```
@@ -19,11 +18,15 @@ where *file* is the name of the file you would like to open.
 
 You can also do this with directories!
 
+### Copy-Paste inside the Terminal
+
+**Ctrl + Shift + C**: Copy from the terminal
+
+**Ctrl + Shift + V**: Paste inside the terminal
+
 ### Quit a Program
 
-**Ctrl + C**
-
-Use this to close your running programs from the terminal!
+**Ctrl + C**: Quit any running programs from the terminal
 
 ## C++ Documentation
 
