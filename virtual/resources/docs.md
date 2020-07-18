@@ -1,9 +1,15 @@
 # Documentation
 This page contains a list of all the functions you'll be using when working with the robot this week. As programmers, we call these kinds of pages **Documentation**, because they document what everything means and how it is used. Feel free to refer back to this page to check up on what functions might be useful for your programs as you perform the exercies.
 
-## Opening VSCode via the CLI
+## Basic Terminal Commands
+Command | Example | What it does
+------- | ------- | ------------
+ls | *ls .* | Lists the contents of the current directory.
+mkdir | *mkdir* new | Makes a directory.
+cd | *cd* new | Enters a different directory.
+pwd | *pwd* | Tells you what directory you are in. "Present Working Directory"
 
-To open a file in VSCode through your command line interface, do
+### Opening VSCode
 
 ```
 code <file>
@@ -13,6 +19,11 @@ where *file* is the name of the file you would like to open.
 
 You can also do this with directories!
 
+### Quit a Program
+
+**Ctrl + C**
+
+Use this to close your running programs from the terminal!
 
 ## C++ Documentation
 
@@ -168,5 +179,17 @@ In our robocamp exercises repository, the package and node names will correspond
 ```
 rosrun 6_1 ex_6_1_1
 ```
+
+## Gazebo Mouse Controls
+### Zoom In and Out:
+- **With a Mouse**: Use the scroll wheel
+
+- **With a Trackpad**: Two finger scroll
+
+### Pan:
+Click and drag
+
+### Orbit (Rotate):
+Shift + Drag
 
 
