@@ -31,4 +31,4 @@ Algorithms are detailed and exact. When you program, the language will enforce t
 
 ## Next Step
 
-Proceed to ["First Program: Hello World"](first_program.html)
+Proceed to ["Cloning the Programming Tutorials"](cloning.html)
