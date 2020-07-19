@@ -123,13 +123,9 @@ The lcd functions must be called on the TexBot object - you attach the function 
 
 ## Compiling and Running a ROS Program
 
-Although you're still writing code in C++, we will be using a different build system to turn our ROS code into code that can be executed by your computer. You might remember that we mentioned **catkin workspaces** before you began the camp - we're going to start working in them now.
+Although you're still writing code in C++, we will be using a different build system to turn our ROS code into code that can be executed by your computer.
 
-{{site.data.alerts.terminal_commands}}
-source /opt/ros/melodic/setup.bash
-{{site.data.alerts.terminal_commands_end}}
-
-You should have already cloned the robocamp_exercises folder into your new workspace. Inside that folder we have provided you with the directory structure and cpp files you will write your code in.
+You should have already cloned the robocamp_exercises folder into your new **catkin workspace**. Inside that folder we have provided you with the directory structure and cpp files you will write your code in.
 
 Inside the robocamp_exercises directory, you will see six directories named "4_1", "4_2", "4_3", etc. These are **packages**, which each contain a src folder. Inside the src folder are the cpp files for each individual exercise. By default, we've filled each cpp file with the boilerplate ROS program we showed you at the beginning of this page.
 

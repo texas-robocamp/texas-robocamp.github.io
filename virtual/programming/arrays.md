@@ -116,4 +116,4 @@ Feel free to use your red cup at any time to get help and instruction from camp 
 
 ## Next Step
 
-Proceed to ["Robot Programming Introduction"](robot_programming_introduction.html)
+Proceed to ["Cloning the Robotics Exercises"](robot_cloning.html)
