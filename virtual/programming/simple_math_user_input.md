@@ -26,7 +26,7 @@ x = y;
 y = 5;
 ```
 
-At the end, `x` has `0` in it, NOT `5`.
+At the end, x has 0 in it, not 5!
 {{ site.data.alerts.end }}
 
 {{ site.data.alerts.tip }}

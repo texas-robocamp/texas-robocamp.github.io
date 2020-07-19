@@ -1,4 +1,4 @@
-First, welcome to camp!
+# Welcome to camp!
 
 
 {{site.data.alerts.note}}
@@ -6,22 +6,11 @@ We know that you are excited to be here, and to finally be started on the exerci
 {{site.data.alerts.end}}
 
 
-**TODO** *We're gonna need a new intro*
-
-
-This week you will go through a mostly self-paced tutorial on how to program your robot. Your tutorial will be interspersed with instruction, challenges and activities on the robot, and ~~outside activities like visits to tech companies and lectures from scientists working in robotics.~~ *are we doing any kind of outreach stuff?* We have done everything that we could think of to pack as much fun as possible into this week.
+This week you will go through a mostly self-paced tutorial on how to program your robot. Your tutorial will be interspersed with instruction, challenges and activities on the robot, and lectures from scientists working in robotics. We have done everything that we could think of to pack as much fun as possible into this week.
 
 First, a few preliminaries.
 
-## ~~Cups~~ **TODO** Some Way to Communicate You Need Help
 
-{{site.data.alerts.note}}
-None of the info in this paragraph is relevant in the virtual space, other than RED meaning help and BLUE being the default color.
-{{site.data.alerts.end}}
-
-- Explain the communication system
-
-- Have them test the usage of the communication system to make sure it works
 
 ## Synchronizing Groups
 
@@ -31,11 +20,9 @@ There are some activities that we will do as one big group. For instance, sectio
 This is just to show you what it looks like. Keep going.
 {{site.data.alerts.end}}
 
-> Are we still planning on global syncs? I imagine we'll still want to use this tool but we could probably use our interface to force syncs if we need them.
-
 ## Tips
 
-Sometimes we need to tell you something tangential to the line of thought of the tutorial, but important to point out. Tips look like this.
+Sometimes we need to tell you something tangential to the line of thought of the tutorial, but important to point out. These will come in the form of "Tip", "Warning", "Note", and "Important. They will look something like this.
 
 {{site.data.alerts.tip}}
 Don't get distracted by the tips. They're intended to help you, not side-track you.
@@ -43,7 +30,7 @@ Don't get distracted by the tips. They're intended to help you, not side-track y
 
 ## Command Line Instructions
 
-Sometimes we just want you to type something into the computer and we just tell you what it is. You should literally copy-paste these commands when you see a box like this. The commands below are just an example, and are harmless, but not productive.
+Sometimes we just want you to type something into the computer and we just tell you what it is. You should literally copy-paste these commands when you see a box like this. The commands below are just an example of what they will look like.
 
 {{site.data.alerts.terminal_commands}}
 cd
@@ -55,9 +42,9 @@ pwd
 
 The tutorials that you will be doing for this camp are self-paced and documented on this website. You can navigate the tutorials using the navigation bar on the left. You can always return to the top of the website by clicking on the "Texas RoboCamp" logo in the upper left-hand corner.
 
-## ~~Where You Sit~~ **TODO** Zoom Room Management
+## Zoom Room Management
 
-Every time you enter ~~the lab~~ zoom, your assigned ~~seat~~ room will change. This is so we can group campers together who are working on similar activities, so we can better help you as a group. ~~Please make sure to look for the sign indicating where you should sit every time you enter into the lab, and sit in the corresponding area.~~ *We're just automating this, right? So no need to explain it? I know we also discussed letting the campers pick rooms if they decide they want to stay with a counselor so we might want to mention that here*
+Every time you enter zoom, your assigned breakout room will change. This is so we can group campers together who are working on similar activities, so we can better help you as a group. If you decide you would like to stay with a certain counselor, please let us know and we will do our best to accommodate you. 
 
 ## Challenges and Activities
 
@@ -65,32 +52,26 @@ Tutorials prepare you for programming challenges and activities by providing you
 
 Once you have learned enough skills to solve a programming challenge or take part in an activity, the tutorial will present you with an activity or challenge to participate in.
 
-Because the week is self-paced, feel free to take longer on activities and challenges that you really enjoy. Be wary that some later activities and challenges build on skills that you develop in earlier ones, so make sure that you *do* complete each activity.
-
-There are bonus activities at the end of the camp, which invite you to become creative in the way that you use what you have learned or improve the performance of something that you have written to try to improve the performance of your robot.
+Because the week is self-paced, it is up to you on how long you would like to spend on each activity. Be wary that some later activities and challenges build on skills that you develop in earlier ones, so make sure that you *do* complete each activity.
 
 ## Tracking your Progress
 
-### Progress Logs
+### Marking Your Progress and Asking for Help
 
-Your progress will be logged in a progress log. You're about to see what your first progress log looks like.
+There are various exercises you will complete throughout the week, and we do not expect you to be able to breeze through them without any questions. Along with each exercise you will see a red **Tutorial** bar, and there will be options to click if you want a counselor to come help you, or check off that exercise.
 
-**TODO** *I think this part is still relevant in that we should introduce them to whatever progress interface we build. Physical version of these instructions is about printing paper - they won't be doing that this year.*
-
-*There was a section here about pair programming - we're not doing that anymore*
-
-### ~~Red Cups~~ Some Way to Mark Progress
-
-At designated points through your progress on this website, you will be asked to notify camp staff of your progress.
-
-It will look like this:
+This is what they will look like:
 
 {{+}}Tutorial 1, 1{{+}}
 
-> Are we still going to use this callout? If so, we may want to consider changing it so that it's not saying Red Cup
+Whenever you click on one of these boxes, the counselors will be notified and one will come to assist you as soon as possible.
 
-At this point, please ~~**actually** flip your cup to red.~~ mark your progress with the web interface. 
+{{site.data.alerts.important}}
+After you have completed an exercise, please do not move onto the next exercise until a counselor has come to check your work.
+{{site.data.alerts.end}}
+
+At this point, please mark your progress with the web interface.
 
 ## Next Step
 
-Proceed to ["Cloning the Tutorials."](/cloning.html)
+Proceed to ["Introduction."](/programming_introduction.html)

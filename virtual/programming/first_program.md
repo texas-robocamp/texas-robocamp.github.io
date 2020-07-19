@@ -137,10 +137,6 @@ Hopefully, your program just compiled.
 Remember, this is a relative path, so this literally tells the computer, "Run the HelloWorld that is in this directory."
 {{ site.data.alerts.end }}
 
-{{ site.data.alerts.note }}
-Many things can go wrong when you are programming. Turn your cups to red to get help.
-{{ site.data.alerts.end }}
-
 {{ site.data.alerts.callout_synchronize }}
 Many of you will have problems right now, so, we'll synchronize to get everyone through their errors.
 {{ site.data.alerts.end }}
