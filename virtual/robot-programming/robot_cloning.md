@@ -2,7 +2,7 @@
 
 Just like with the C++ exercises, we have provided you with a directory structure of ROS packages and files in which you will complete the robotics exercises. 
 
-First, to make sure you have the latest version of the packages:
+Before we begin, make sure you have the latest version of the packages:
 
 {{site.data.alerts.terminal_commands}}
 sudo apt update
