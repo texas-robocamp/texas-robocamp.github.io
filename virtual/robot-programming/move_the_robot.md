@@ -25,16 +25,13 @@ You can turn the robot by moving the motors at different speeds.
 
 ### Exercise 4.3.1
 
-- Again, Start by copying the "empty" program from ["Robot Programming Introduction"](/robot_programming_introduction.html) into a new file in VSCode.
-- Fill in the program so the robot moves when it's started, using `move`, and stops when it sees an obstacle.
+- Fill in the "empty" program in ex_4_3_1.cpp so the robot moves when it's started, using `move`, and stops when it sees an obstacle.
 
 {{ site.data.alerts.tip }}
 We recommend setting both speeds to 25 for this exercise so you can easily observe the stopping behavior as well as master its usage before crashing your robot into the wall at top speed.
 {{ site.data.alerts.end }}
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.1]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 4.3.1, 4_3_1{{+}}
 
 ## Building a Simple Interface Using the LCD and Buttons
 
@@ -51,9 +48,14 @@ Value | Meaning
 2 | Button 2 pressed
 3 | Button 3 pressed
 
-### Exercise 4.3.2
+This function, just like the lcd, led, and move functions, must also be called on the TexBot object.
 
-- Create a new program
+{{ site.data.alerts.note }}
+The following exercises will build off of each other. Please keep your code for each exercise in their separate cpp files, but as you work through these exercises feel free to copy your code from the previous exercise into the file for the next exercise and make your modifications in the new program.
+{{ site.data.alerts.end }}
+
+
+### Exercise 4.3.2
 
 - In this program, print which button is being pressed on the top line of the LCD, "No button," "Button 1," "Button 2," "Button 3."
 
@@ -61,9 +63,8 @@ Value | Meaning
 Using a switch-statement to identify which button is being pressed will simplify your code.
 {{ site.data.alerts.end }}
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.2]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 4.3.2, 4_3_2{{+}}
+
 
 ### Exercise 4.3.3
 
@@ -75,9 +76,7 @@ We're going to begin to create a simple interface that will allow us to control 
 
 At this point, your program should now say which button is being pressed on the top line if a button is currently pressed, and should switch between "Left" and "Right" on the second line whenever you press Button 3.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.3]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 4.3.3, 4_3_3{{+}}
 
 ## Button Toggles
 
@@ -92,9 +91,8 @@ To make the button toggle, we want to change the value of `leftRight` only when 
   - We will now also set `threePressed` to `true` when we change the value of `leftRight` to show that the button has been pressed.
 - If Button 3 was not the button that got pressed, set `threePressed` back to `false` so it can be pressed again later.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.4]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 4.3.4, 4_3_4{{+}}
+
 
 ### Exercise 4.3.5
 
@@ -104,11 +102,10 @@ To make the button toggle, we want to change the value of `leftRight` only when 
 - Make it so that pressing Button 2 decrements `leftVal` by 1 if `leftRight` is `false`, and `rightVal` by 1 if `leftRight` is `true`.
 - Display the values of `leftVal` and `rightVal` on LCD line 1. Remove the code that displays which button is being pressed.
 
-Now your program should allow you to increase and decrease `leftVal` and `rightVal` and select which is changed using the pushbuttons on the robot.
+Now your program should allow you to increase and decrease `leftVal` and `rightVal` and select which is changed using the pushbuttons on the robot. You may notice that your values change in large increments. This will be fixed in the next exercise!
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.5]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 4.3.5, 4_3_5{{+}}
+
 
 ### Exercise 4.3.6
 
@@ -119,18 +116,16 @@ We'll want to fix Button 1 and 2 so that they don't increment at too high of a r
   - We can do this by seeing if `count` is a multiple of a large number.
   - For example, only check the buttons if `count` is a multiple of 7000. You can do this with the `%` operator!
 - Make sure that you still set the value for `threePressed` properly, even if you don't check to see if Button 1 or Button 2 are pressed.
+- Don't forget to increment `count` once every time the `ros::ok()` loop executes!
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.6]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 4.3.6, 4_3_6{{+}}
+
 
 ### Exercise 4.3.7
 
 - Use `if` statements, the modulo (`%`) operator, or other logic to limit the range of `leftVal` and `rightVal` to be between -100 and 100.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.7]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 4.3.7, 4_3_7{{+}}
 
 ## Controlling the Robot's Motors
 
@@ -146,9 +141,6 @@ This will let you try different things with the robot's motors to see how the ro
   - If there is an obstacle, the robot should stop, using the `move` function.
   - If there is not an obstacle, it should put leftVal and rightVal into the left and right motors, respectively, using `move` as well.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.8]
-{{ site.data.alerts.end }}
 
 ### Exercise 4.3.9
 
@@ -163,9 +155,8 @@ This will let you try different things with the robot's motors to see how the ro
 * You can use the UI you've made to adjust the speeds of the wheels to see these behaviors!
 {{ site.data.alerts.end }}
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 4.3.9]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 4.3.8, 4_3_8{{+}}
+{{+}}Tutorial 4.3.9, 4_3_9{{+}}
 
 ## Next Step
 
