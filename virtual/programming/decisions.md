@@ -25,13 +25,13 @@ The following chart shows all the logical operators, most of which should be fam
 
 
 | Logical Operator | Meaning             | Example of True Statement |
-|---:|---|:---:|
-|`>`   | greater than                 | `5 > 4`                 |
-|`>=`   | greater than or equal to     | `5 >= 5`                |
-|`<`   | less than	                   | `2 < 5`                 |
-|`<=`   | less than or equal to        | `2 <= 3`                |
-|`==`   | is exactly the same as       | `3 == 3`                |
-|`!=`   | is not the same as           | `3 != 5`                |
+|:---:|---|:---:|
+|>   | greater than                 | 5 > 4                 |
+|>=   | greater than or equal to     | 5 >= 5                |
+|<   | less than	                   | 2 < 5                 |
+|<=   | less than or equal to        | 2 <= 3                |
+|==   | is exactly the same as       | 3 == 3                |
+|!=   | is not the same as           | 3 != 5                |
 
 
 The last two operations, `==` and `!=`, are called equivalency operators because they check if two things are exactly the same, or equivalent. For example, 9==9 is true because 9 is exactly the same as 9. Additionally, if we have a variable `myVar` and is set to 9, then `myVar==9` is true. However, 9=="nine" is false because an integer (9) is never exactly the same as a `string` ("nine"). 

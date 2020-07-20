@@ -98,6 +98,12 @@ You can use a multidimensional array in exactly the same way as a one-dimensiona
 letterArray[3][1]="a";
 ```
 
+To declare a 3x3 multidimensional array of chars, you would do:
+
+```cpp
+char letterArray[3][3];
+```
+
 ### Exercise 3.7.3:
 
 Determine the correct code to access the elements containing letters y and z in the diagram above.
@@ -108,11 +114,7 @@ Determine the correct code to access the elements containing letters y and z in 
 
 Congratulations! You have finished the C++ tutorial!
 
-Now you can move on to programming the robot. Since you have already done an Arduino tutorial, and you've now done a C++ tutorial, you're on your own for this one!
-
-{{ site.data.alerts.tip }}
-Feel free to use your red cup at any time to get help and instruction from camp staff.
-{{ site.data.alerts.end }}
+Now you can move on to programming the robot.
 
 ## Next Step
 

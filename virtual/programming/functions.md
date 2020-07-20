@@ -95,15 +95,6 @@ When a function takes a parameter, we tell the function the type of the paramete
 
 For `printGreeting` the parameter will be a `string`. We will call it `name`.
 
-{{ site.data.alerts.tip }}
-`name` is **scoped** to `printGreeting`. It can be referred to and used like a variable, but only inside this function.
-{{ site.data.alerts.end }}
-
-{{ site.data.alerts.tip }}
-Scoping applies to variables, too. If you declare a variable inside `printGreeting`, you cannot use it outside of `printGreeting`.
-{{ site.data.alerts.end }}
-
-**TODO** *It might be a good idea to immediately give them an example of this kind of scoping so they have something concrete to work with. Maybe make a variable for the literal "Hello" ? Might be overkill but I think it would help get the point across*
 
 {{ site.data.alerts.callout_code_div }}
 ```
@@ -130,6 +121,32 @@ int main(){
 {{ site.data.alerts.end }}
 
 Here, we get a value for `string userName` from the user and send it to the `printGreeting` function by placing it inside the parentheses.
+
+## As an Aside - Scoping 
+
+In the previous example code,`name` is **scoped** to `printGreeting`. It can be referred to and used like a variable, but only inside this function.
+
+Scoping applies to variables, too. If you declare a variable inside `printGreeting`, you cannot use it outside of `printGreeting`.
+
+As an example, consider the following piece of code:
+
+{{ site.data.alerts.callout_code_div }}
+```
+void printGreeting(string name){
+   string myName;
+   cout << "Hello " << name << "! My name is " << myName << "." << endl;
+}
+
+int main(){
+   printGreeting("Hannah");
+   cout << "Hello " << myName << "!" <<endl;
+}
+```
+{{ site.data.alerts.end }}
+
+This code is invalid, because the variable `myName` was declared inside `printGreeting`, and therefore its scope is limited to that function. `main` cannot access that variable.
+
+We will discuss **scoping** a bit more in the next section.
 
 ### Arguments vs Parameters
 
@@ -158,8 +175,6 @@ While the computer is executing the code in `printGreeting`, it can't use the va
 This is why we have the parameter `name` - the value of `userName` gets copied to `name` so that the program has access to that data. 
 
 When the computer finishes executing `printGreeting` and returns to `main`, it can once again use the variable `userName` - but now it can no longer use `name`. 
-
-This is again a case of scoping, which is where the variable is defined and can be used.
 
 {{ site.data.alerts.tip }}
 Code blocks are a great way to keep track of scoping! Any variables that are declared inside of a block (enclosed by `{}`) can only be used inside of that block.
