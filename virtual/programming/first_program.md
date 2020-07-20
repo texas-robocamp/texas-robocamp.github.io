@@ -143,7 +143,7 @@ Many of you will have problems right now, so, we'll synchronize to get everyone 
 
 If you ever forget how to compile a C++ program, we've provided an example in the [documentation](docs.html) that you can always reference in the future.
 
-## Exercise 3.1:
+### Exercise 3.1:
 
 - Modify the Hello World program so that it prints, "Hello <Your Name>!"
     - For example, if your name is Justine, it would display, *Hello Justine!*

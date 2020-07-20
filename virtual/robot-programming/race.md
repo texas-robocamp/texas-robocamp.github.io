@@ -29,6 +29,7 @@ When you are confident in your robot's abilities, request a counselor and we wil
 {{ site.data.alerts.note }}
 Don't worry if your simulation runs slower. The timer accounts for this and adjusts accordingly!
 {{ site.data.alerts.end }}
+
 {{+}}Challenge 8, 8{{+}}
 
 

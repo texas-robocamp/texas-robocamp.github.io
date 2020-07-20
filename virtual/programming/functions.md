@@ -32,7 +32,7 @@ For our purposes, they are empty for main, but we'll see them in action in other
 
 Finally we have a code **block** inside curly braces.
 
-## Exercise 3.3.1: Example Function
+### Exercise 3.3.1: Example Function
 
 Let's try writing a very simple function that prints the greeting "Hello World!". We will **call** (run) this function from main. It won't take any parameters or return anything, so the **return type** of this function will be **void**, the return type for a function which returns nothing. Here's how we would set it up:
 

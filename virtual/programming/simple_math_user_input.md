@@ -92,7 +92,7 @@ cout << "Something weighing " << earthWeight << "lbs on earth would weigh "<< mo
 
 This sends the whole sequence of things to cout to be displayed.
 
-## Exercise 3.2.1: Full Program
+### Exercise 3.2.1: Full Program
 
 {{ site.data.alerts.note }}
 Any text preceded by `//` is a comment.
@@ -168,7 +168,7 @@ This is very useful in programming, since you can easily decide if a number is e
 
 {{+}}Tutorial 3.2.1, 3_2_1{{+}}
 
-## Exercise 3.2.2:
+### Exercise 3.2.2:
 
 Write a new program that takes a weight on the moon and converts it to Earth weight.
 
@@ -178,7 +178,7 @@ What's the mathematical opposite of multiplication?
 
 {{+}}Tutorial 3.2.2, 3_2_2{{+}}
 
-## Exercise 3.2.3:
+### Exercise 3.2.3:
 
 Write a new program that asks the user for two numbers, and then prints out the sum of the two numbers. Hint: Use multiple cin commands.
 

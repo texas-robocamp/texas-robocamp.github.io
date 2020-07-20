@@ -7,7 +7,7 @@ At the end, you will be invited to race the other groups.
 
 *Awesome.*
 
-## Exercise 7.1.1 - Automatically Finding the Line
+### Exercise 7.1.1 - Automatically Finding the Line
 
 In the previous tutorial, you found the line by setting a threshold. You can actually automatically find the line as well, by choosing the line sensor with the highest value.
 
@@ -21,12 +21,11 @@ We think that you're ready for a slightly harder tutorial. So I'm just going to 
 - Put this into a **function**.
 - Test that your detector works by using the `printAsterisks` function from the previous tutorial.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 7.1.1]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 7.1.1, 7_1_1{{+}}
 
 
-## Exercise 7.1.2 - Describing Where the Line Is
+
+### Exercise 7.1.2 - Describing Where the Line Is
 
 If the line is in the channel all the way to the left, the method above should give you 0.
 
@@ -37,11 +36,10 @@ Right in the middle would be 3.5.
 - Write a function that scales the output of the automatic line finding to range from -1 to 1, using the facts listed here.
 - Print your asterisks on the first line of the LCD, and the value returned by this function on the second line.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 7.1.2]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 7.1.2, 7_1_2{{+}}
 
-## Exercise 7.1.3 - A Proportional Controller for Line Following
+
+### Exercise 7.1.3 - A Proportional Controller for Line Following
 
 You may be familiar with the formula for the slope of a line. That would be `y = mx + c`. The term m is slope. (You may have seen this as `y = mx + b`, it's the same thing.)
 
@@ -60,11 +58,10 @@ As realized on our robot, this will look something like this.
 - Write an interface using the push buttons on the robot to allow you to adjust the constant and linear weights up and down.
 - Test your robot in the racetrack world and try it on our race course using the proportional controller.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 7.1.3]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 7.1.3, 7_1_3{{+}}
 
-## Exercise 7.1.4 - A Proportional Derivative (PD) Controller for Line Following
+
+### Exercise 7.1.4 - A Proportional Derivative (PD) Controller for Line Following
 
 You probably noticed that your robot jerked around when using the proportional controller. This is known as "bang-bang control," and we try to prevent it from happening.
 
@@ -98,11 +95,10 @@ K_c - (K_p * p + K_d * d)
 - Add `K_d` to your user interface.
 - Try your robot on the race course using the PD controller.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 7.1.4]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 7.1.4, 7_1_4{{+}}
 
-## Exercise 7.1.5 - A Proportional Integral Derivative (PID) Controller for Line Following (Optional)
+
+### Exercise 7.1.5 - A Proportional Integral Derivative (PID) Controller for Line Following (Optional)
 
 Probably the best known controller is the PID controller, where I stands for **integral**, and, yes, it means the same thing as in calculus.
 
@@ -119,9 +115,7 @@ In practice, you can compute your numerical integral by adding up your potential
 - Add `K_i` to your interface.
 - Test your robot on the race course using the PID controller.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 7.1.5]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 7.1.5, 7_1_5{{+}}
 
 
 ## Next Step

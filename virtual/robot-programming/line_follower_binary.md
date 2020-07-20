@@ -41,13 +41,9 @@ On our robot, we use a greyscale camera to develop a line sensor. We take the im
 
 The value `sensorNum` determines which section of the sensor you are getting the intensity for. The range for intensity is [0,255].
 
-## Exercise 6.1.1
-
-### The Line Follower Test Target
+### Exercise 6.1.1: The Line Follower Test
 
 - You'll be using the `racetrack.launch` launch file for these exercises.
-
-### Program the Exercise
 
 For this exercise we want you to read the values off of the line follower, while running it over the line target. You're going to need to write a short program to do this.
 
@@ -79,9 +75,8 @@ When you hook this up, the numbers are going to scream past on the screen really
 - You should notice that the numbers where the black line is present are different from the numbers where there is no black.
   - How are they different?
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 6.1.1]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 6.1.1, 6_1_1{{+}}
+
 
 ## Thresholding
 
@@ -91,7 +86,7 @@ The difference between the region where the line was and the region where there 
 
 Uh-oh! We're going to have you follow a line on a racetrack, but the lighting may be different! What we'll do to account for this is write a small user interface where you can tune your threshold. While we're at it, we'll also experiment with the line follower and the LCD, and learn a bit about strings in C++. **TODO this may no longer be relevant; the lighting won't be different**
 
-## Exercise 6.1.2
+### Exercise 6.1.2
 
 The next few exercises will build up to a small user interface that will allow you to see the line the way that your robot sees it!
 
@@ -204,9 +199,8 @@ However, we run into a problem. There are 8 sensors on the line sensor, and 16 c
 If these steps don't make sense, try just printing out the values of `i*2` and `i*2+1`. You should notice a pattern!
 {{ site.data.alerts.end }}
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 6.1.2]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 6.1.2, 6_1_2{{+}}
+
 
 ## Exercise 6.1.3
 
@@ -219,9 +213,8 @@ Now we're going to write another UI. This should all go into your current progra
   - When button 2 is pushed, subtract 1 from `thresh`.
 - Try it out. The number on the second line should rise when pressing the top button and drop when pressing the lower button.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 6.1.3]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 6.1.3, 6_1_3{{+}}
+
 
 ## Exercise 6.1.4
 
@@ -237,9 +230,8 @@ Now we're going to make it so you only see where the line is under the line foll
 - Move the target around and see how the robot can now "see" the line.
   - Ideally, you only see the line in one place on the LCD, and it is only 2 asterisks wide.
 
-{{ site.data.alerts.callout_red_cup }}
-[Exercise 6.1.4]
-{{ site.data.alerts.end }}
+{{+}}Tutorial 6.1.4, 6_1_4{{+}}
+
 
 
 ## Next Step

@@ -20,7 +20,7 @@ By turning and pushing, the robot would eventually make its way around the obsta
 
 The Roomba does something similar as it vacuums. When its bump sensor is hit, it turns and begins its wandering behavior again.
 
-## Exercise 5
+### Exercise 5
 
 Following light is not part of this challenge, but we will be having the TexBot emulate the tortoise's **turn and push** behavior using our obstacle sensor.
 
