@@ -95,7 +95,7 @@ We can see that the position of the letter w is row 0, column 4. We can write th
 You can use a multidimensional array in exactly the same way as a one-dimensional array, and you can assign values the same way, too:
 
 ```cpp
-letterArray[3][1]="a";
+letterArray[3][1]='a';
 ```
 
 To declare a 3x3 multidimensional array of chars, you would do:

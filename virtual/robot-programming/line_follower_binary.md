@@ -5,8 +5,6 @@ We're going to tell you what this program does so you can see where this is all 
 
 The first program that you will write will allow you to see the numbers returned by the line follower. It lets you explore the raw, numerical data that the device sees, and how each number is in a position corresponding to the line. What I've said will make sense once you've tried it out.
 
-**TODO** *Still not sure what to do about this paragraph. Do we explain the abstraction going on here?*
-
 The second program that you write will allow you to **threshold** the data coming off of the line follower, to determine what is a line and what is not. It will use the LCD on the robot to print asterisks wherever the line is under the line follower, and dashes wherever there isn't.
 
 That will look something like this.
@@ -35,7 +33,7 @@ Just kidding. We want you to find the threshold for yourself. Ours is much bigge
 
 The `TexBot` class still has a significant amount of functionality that we haven't yet touched, one of those is the use of the analog-to-digital converter
 
-### `int readLineSensor(int sensorNum)`
+### int readLineSensor(int sensorNum)
 
 On our robot, we use a greyscale camera to develop a line sensor. We take the image from the sensor, and split it up into eight columns - one for each array position - then return the average amount of intensity for each section.
 
@@ -49,23 +47,18 @@ For this exercise we want you to read the values off of the line follower, while
 
 Here's what your program should do.
 - Read each of the values from the line follower using the `readLineSensor` function.
-- Print each value ~~onto the USB port using the `Serial.print` functions.~~
+- Print each value onto the terminal.
 - Print a space following each value from the line follower.
 - Print a new line at the end of the 8 values.
 
-**TODO** *How do we want them to print? We could just go on the LCD but that might clutter the whole thing? We need to test this*
-
 When you hook this up, the numbers are going to scream past on the screen really quickly, so we suggest adding a `sleep` after the for loop to make everything much easier to read.
 
-
-*I think this is still true? Need to test this*
-
 {{ site.data.alerts.tip }}
-* The easiest way to implement this is with a for loop and the `int readLineSensor(byte)` function.
+* The easiest way to implement this is with a for loop and the `int readLineSensor(int)` function.
 * Count from 0 to 7 using the for loop.
 * Inside the loop, read the value in the corresponding line sensor channel.
-* ~~`Serial.print`~~ `cout` that value and a space.
-* After the for loop, use ~~`Serial.println`.~~ `cout << endl`
+* `cout` that value and a space.
+* After the for loop, use `cout << endl`
 {{ site.data.alerts.end }}
 
 
@@ -84,7 +77,7 @@ If you did the last exercise properly, you should have noticed that ABOVE some v
 
 The difference between the region where the line was and the region where there was no line is called a **threshold**. We are going to use a threshold to determine where the line is.
 
-Uh-oh! We're going to have you follow a line on a racetrack, but the lighting may be different! What we'll do to account for this is write a small user interface where you can tune your threshold. While we're at it, we'll also experiment with the line follower and the LCD, and learn a bit about strings in C++. **TODO this may no longer be relevant; the lighting won't be different**
+We're going to have you follow a line on a racetrack! What we'll do to account for this is write a small user interface where you can tune your threshold. While we're at it, we'll also experiment with the line follower and the LCD, and learn a bit about strings in C++.
 
 ### Exercise 6.1.2
 
@@ -95,7 +88,7 @@ The next few exercises will build up to a small user interface that will allow y
 - Have `loop` call `printAsterisks`.
 
 ```cpp
-void printAsterisks(TexBot robot) {
+void printAsterisks(TexBot bot) {
 
 }
 
@@ -129,8 +122,6 @@ So, a `char` is a number from [0,255] which is used to represent a character.
 
 One way to represent text is called a C string. This is different from a C++ `string`. A C string is an **array** of type `char`. 
 
-*I feel like this is a major detail that students might just gloss over. May want to elaborate more?*
-
 Every number from 0-255 is associated with a unique, printable character. This is called **ASCII**.
 
 {{ site.data.alerts.tip }}
@@ -151,7 +142,7 @@ You're about to see your first example of a **global variable**. We've mentioned
 In practice, we try not to make too many variables global, because this can lead to confusing behavior in more complicated programs. Sometimes, however, we want every part of our program to have access to a variable. In these cases, we choose to make our variables global.
 
 ```cpp
-char lineUI[16]; //global variable
+char lineUI[17]; //global variable
 
 void printAsterisks(TexBot bot) {
 
@@ -162,7 +153,8 @@ void printAsterisks(TexBot bot) {
   bot.lcd1(lineUI);
 }
 
-void loop() {
+int main() {
+  //some parts of main are excluded in this example code
   printAsterisks();
   bot.lcd2(lineUI); //Notice how we can reference lineUI in both functions!
 }
@@ -180,7 +172,7 @@ Null termination allows us to have shorter or longer strings stored in the same 
 
 - Go ahead and run the program from the example above. Don't forget to add any declarations and things that I didn't put into the code snippet!
 
-### Modify the `for` Loop from above
+### Modify the For Loop from above
 
 In our UI, what we want is for the top line to show us where the line is. Eventually, there will be asterisks where the line is, and dashes everywhere else.
 
@@ -204,7 +196,7 @@ If these steps don't make sense, try just printing out the values of `i*2` and `
 
 ## Exercise 6.1.3
 
-Now we're going to write another UI. This should all go into your current program.
+Now we're going to write another UI. Copy your code from Exercise 6.1.2 into the new file (ex_6_1_3.cpp) and continue modifying in there.
 
 - Add a new global variable, `double thresh`, and set it to zero.
 - In `printAsterisks` print the value of `thresh` on line 2 of the robot's LCD.
@@ -220,12 +212,12 @@ Now we're going to write another UI. This should all go into your current progra
 
 Now we're going to make it so you only see where the line is under the line follower, allowing you to see the line the way that your robot does.
 
-- Make a global array of type `int` with 8 elements. Name it `adc`. **TODO should we rename this?**
-- Modify the loop so that it reads the ADC using `one.readLineSensor`.
+- Make a global array of type `int` with 8 elements. Name it `lineSensor`. 
+- Modify the loop so that it reads the ADC using `bot.readLineSensor`.
   - Use a `for` loop so that it fills the `adc` variable.
 - Modify the `for` loop in `printAsterisks`.
-  - Every time `adc[i] > thresh`, it should put 2 asterisks.
-  - Every time `adc[i]` is not `> thresh`, it should put 2 dashes.
+  - Every time `lineSensor[i] > thresh`, it should put 2 asterisks.
+  - Every time `lineSensor[i]` is not `> thresh`, it should put 2 dashes.
 - Run your program. Put the line target under the line follower. Push the up button until there are only asterisks under the line follower sensors that are over the line, and dashes everywhere else.
 - Move the target around and see how the robot can now "see" the line.
   - Ideally, you only see the line in one place on the LCD, and it is only 2 asterisks wide.

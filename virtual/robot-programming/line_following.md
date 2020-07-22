@@ -69,8 +69,6 @@ We can improve on our control by adding the **derivative term**. Derivative come
 
 If you've taken calculus, you've heard of the **finite differences method.** What it basically says is that you can approximate instantaneous slope of a tangent line (its rate of change, or derivative) by subtracting one point from another point along a cuve. This works well if the two points are close together.
 
-**TODO** *Let's add a picture here because the words sound hard but the theory is super simple*
-
 Think of your robot as sampling two points on a curve, and the angle that you want the robot to steer at as the tangent line on the curve.
 
 {{ site.data.alerts.tip }}
@@ -101,8 +99,6 @@ K_c - (K_p * p + K_d * d)
 ### Exercise 7.1.5 - A Proportional Integral Derivative (PID) Controller for Line Following (Optional)
 
 Probably the best known controller is the PID controller, where I stands for **integral**, and, yes, it means the same thing as in calculus.
-
-**TODO** *Again let's find or make a neat little picture to show what this is for the folks who aren't aware of what an integral is*
 
 In practice, you can compute your numerical integral by adding up your potentials over time to arrive at area under the curve for your potential.
 
