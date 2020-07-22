@@ -24,7 +24,7 @@ Your challenge will be to:
 
 - Get your robot around the track in the fastest time possible! *(Note: do NOT include functionality to change any parameters while the race is running.)*
 
-When you are confident in your robot's abilities, request a counselor and we will watch your robot and then upload your best time to the [leaderboard](leaders.html)!
+When you are confident in your robot's abilities, request a counselor and we will watch your robot and then upload your best time to the leaderboard!
 
 {{ site.data.alerts.note }}
 Don't worry if your simulation runs slower. The timer accounts for this and adjusts accordingly!
