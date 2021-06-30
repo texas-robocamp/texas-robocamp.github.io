@@ -6,7 +6,7 @@ sidebar: tutorials
 permalink: functions.html
 ---
 
-A <b>functions</b> is a group of instructions. Often, functions are used to organize code by breaking long programs into shorter functions that are combined into the longer program.
+A <b>function</b> is a group of instructions. Often, functions are used to organize code by breaking long programs into shorter functions that together make up the composition of the longer program.
 
 We might have a `getLetter` function that asks the user for a lowercase letter, or an `averageNumbers` function that averages a list of numbers.
 
@@ -26,7 +26,7 @@ We begin by declaring the <b>return type</b> of main to be an integer. This tell
 
 Usually, this is accomplished through a <b>return statement</b>.
 
-`main()` generally returns a 1 if there were an error and 0 if the program completes successfully.
+`main()` generally returns a 1 if there was an error and 0 if the program completes successfully.
 
 We'll talk more about return types soon.
 
@@ -124,9 +124,9 @@ int main(){
 
 Here, we got a `string userName` from the user and sent it to the `printGreeting` function by placing it inside the parentheses.
 
-Before going further, we to discuss the difference between arguments and parameters. The value that is placed in the parentheses is called the <b>argument</b> to the function. (Or, if there are more than one, they are the arguments) Arguments differ from parameters in that arguments are what you send to a function and parameters are what a function expects to receive.
+Before going further, we need to discuss the difference between arguments and parameters. The value that is placed in the parentheses is called the <b>argument</b> to the function. (Or, if there are more than one, they are the arguments) Arguments differ from parameters in that arguments are what you send to a function and parameters are what a function expects to receive.
 
-When the `printGreeting` function is called from `main`, the argument `userName`'s value is copied to the parameter `name` in `printGreeting`. While the computer is executing the code in `printGreeting`, it can't use the variable `userName`, because that variable is only defined (available) in main (due to scoping). So that's why we have a parameter name—the value of `userName` gets copied to name so that the program has access to that data. When the computer finished executing `printGreeting` and returns to `main`, it can again use the variable `userName`, but it can no longer use `name`. This is again a case of scoping, which is where the variable is defined and can be used.
+When the `printGreeting` function is called from `main`, the argument `userName`'s value is copied to the parameter `name` in `printGreeting`. While the computer is executing the code in `printGreeting`, it can't use the variable `userName`, because that variable is only defined (available) in main (due to scoping). So that's why we have a parameter name—the value of `userName` gets copied to `name` so that the program has access to that data. When the computer finishes executing `printGreeting` and returns to `main`, it can again use the variable `userName`, but it can no longer use `name`. This is again a case of scoping, which is where the variable is defined and can be used.
 
 As we mentioned before, on of the reasons that functions are so great is that we can reuse them and give them different arguments. For example, without changing the `printGreeting` function at all, we can use it to print greetings to three different people:
 

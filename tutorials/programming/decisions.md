@@ -89,7 +89,9 @@ int main(){
 
 For example, if the driver was going over 60 mph, the program could print "You should severely punish the driver for endangering people!" and for a non-speeding ticket, the program could print, "Congratulate the driver on maintaining a safe speed."
 
-{% include callout_red_cup.html task="[Exercise 3.5.1]" %}
+{{site.data.alerts.callout_red_cup}}
+[Exercise 3.5.1]
+{{site.data.alerts.end}}
 
 Thanks for enabling better communication. Don't forget to switch drivers!
 
@@ -157,7 +159,9 @@ if (!(wearingSeatbelt == "n")){
 
 - Finish implementing the seat belt law for the driver who goes over 40mph (just follow the format above). Then come up with another law and add it to your code. Be as creative and ridiculous as you want, and if you need help, ask for it!
 
-{% include callout_red_cup.html task="[Exercise 3.5.2]" %}
+{{site.data.alerts.callout_red_cup}}
+[Exercise 3.5.2]
+{{site.data.alerts.end}}
 
 ## Switch-statements
 
@@ -186,7 +190,9 @@ switch (language) {
 
 - Complete the example above so that when the program runs, a user can type a number between 0 to 4, and get a greeting back in one of the five languages you chose.
 
-{% include callout_red_cup.html task="[Exercise 3.5.3]" %}
+{{site.data.alerts.callout_red_cup}}
+[Exercise 3.5.3]
+{{site.data.alerts.end}}
 
 ## Next Step
 

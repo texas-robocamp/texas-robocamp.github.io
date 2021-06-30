@@ -148,9 +148,13 @@ Let's go ahead and get the robot moving!
 
 We're going to use this exercise to verify that your robot operates properly. A camp staff member will bring you to an open space to drive your robot into. When you're ready to begin, flip your cup. Feel free to run your robot at your desk while you wait, but try not to create chaos in doing so.
 
-{% include callout_red_cup.html task="[Tutorial 2]" comment="Please flip your cup to red to indicate that you're ready to have your robot tested."%}
+{{site.data.alerts.callout_red_cup}}
+Please flip your cup to red to indicate that you're ready to have your robot tested.
+{{site.data.alerts.end}}
 
-{% include note.html content="Camp Staff: Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors. If it does not, inspect their code and test their hardware for assembly errors. It is important that the robots be debugged before proceeding to later Arduino tutorials."%}
+{{site.data.alerts.note}}
+Camp Staff: Bring the group to a wall or out to the bridge to test that the robot both drives forward and stops when encountering the wall, using its obstacle detection sensors. If it does not, inspect their code and test their hardware for assembly errors. It is important that the robots be debugged before proceeding to later Arduino tutorials.
+{{site.data.alerts.end}}
 
 If everything worked properly, then your robot should have driven up to the wall and stopped.
 

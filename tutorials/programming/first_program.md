@@ -111,9 +111,9 @@ Hopefully, your program just compiled.
 
 - Run your program
 
-{{ site.data.alerts.terminal_commands }}
+{{site.data.alerts.terminal_commands}}
 ./HelloWorld
-{{ site.data.alerts.terminal_commands_end }}
+{{site.data.alerts.terminal_commands_end}}
 
 
 {% include note.html content="Remember, this is a relative path, so this literally tells the computer, \"Run the HelloWorld that is in this directory.\"" %}
@@ -130,7 +130,9 @@ For example, if your name is Justine and your partner is Justin, it would displa
 
 - Next, add a second line of text that says, "Programming is actually pretty fun when you get right down to it."
 
-{% include callout_red_cup.html task="[Tutorial 3.1]" %}
+{{site.data.alerts.callout_red_cup}}
+[Tutorial 3.1]
+{{site.data.alerts.end}}
 
 ## Next Step
 

@@ -13,4 +13,6 @@ Section 7 of the [assembly guide](/assets/botnroll-one-a-w-line-follower-assembl
 
 Run each of the diagnostics. When you have your robot running the obstacle avoidance diagnostic (section 7.10), flip your cup.
 
-{% include callout_red_cup.html task=X %}
+{{site.data.alerts.callout_red_cup}}
+X
+{{site.data.alerts.end}}
